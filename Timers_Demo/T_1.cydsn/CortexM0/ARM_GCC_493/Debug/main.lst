@@ -1,0 +1,1295 @@
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.ISR_SW,"ax",%progbits
+  18              		.align	2
+  19              		.global	ISR_SW
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	ISR_SW, %function
+  23              	ISR_SW:
+  24              	.LFB34:
+  25              		.file 1 ".\\main.c"
+   1:.\main.c      **** #include <project.h>
+   2:.\main.c      **** 
+   3:.\main.c      **** #define LED_ON 0
+   4:.\main.c      **** #define LED_OFF 1
+   5:.\main.c      **** 
+   6:.\main.c      **** uint32 red_count = 0;
+   7:.\main.c      **** uint32 ms_count = 0;
+   8:.\main.c      **** 
+   9:.\main.c      **** void enable_green(uint32 state);
+  10:.\main.c      **** void enable_red(uint32 state);
+  11:.\main.c      **** 
+  12:.\main.c      **** int is_green_enabled = 1;
+  13:.\main.c      **** int is_green_disabled = 0;
+  14:.\main.c      **** 
+  15:.\main.c      **** 
+  16:.\main.c      **** 
+  17:.\main.c      **** 
+  18:.\main.c      **** CY_ISR(MY_ISR) 
+  19:.\main.c      **** {
+  20:.\main.c      ****     ms_count++;
+  21:.\main.c      ****     if(ms_count == 1000)
+  22:.\main.c      ****     {
+  23:.\main.c      ****         if(is_green_enabled)
+  24:.\main.c      ****         {
+  25:.\main.c      ****             red_count++;
+  26:.\main.c      ****             if(red_count == 2 ) 
+  27:.\main.c      ****             {
+  28:.\main.c      ****                 enable_green(0);   
+  29:.\main.c      ****                 enable_red(1);
+  30:.\main.c      ****             }
+  31:.\main.c      ****         }
+  32:.\main.c      ****         else
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 2
+
+
+  33:.\main.c      ****         {
+  34:.\main.c      ****             red_count++;
+  35:.\main.c      ****             if(red_count == 5 ) 
+  36:.\main.c      ****             {
+  37:.\main.c      ****                 enable_green(1);   
+  38:.\main.c      ****                 enable_red(0);
+  39:.\main.c      ****             }
+  40:.\main.c      ****         }
+  41:.\main.c      ****         ms_count = 0;
+  42:.\main.c      ****     }
+  43:.\main.c      **** 
+  44:.\main.c      **** }
+  45:.\main.c      **** CY_ISR(ISR_SW)
+  46:.\main.c      **** {       
+  26              		.loc 1 46 0
+  27              		.cfi_startproc
+  28 0000 08B5     		push	{r3, lr}
+  29              		.cfi_def_cfa_offset 8
+  30              		.cfi_offset 3, -8
+  31              		.cfi_offset 14, -4
+  47:.\main.c      ****         Green_LED_Write(LED_ON);
+  32              		.loc 1 47 0
+  33 0002 0020     		mov	r0, #0
+  34 0004 FFF7FEFF 		bl	Green_LED_Write
+  35              	.LVL0:
+  48:.\main.c      ****         Red_LED_Write(LED_OFF);
+  36              		.loc 1 48 0
+  37 0008 0120     		mov	r0, #1
+  38 000a FFF7FEFF 		bl	Red_LED_Write
+  39              	.LVL1:
+  49:.\main.c      ****         isr_1_StartEx(MY_ISR); 
+  40              		.loc 1 49 0
+  41 000e 0448     		ldr	r0, .L2
+  42 0010 FFF7FEFF 		bl	isr_1_StartEx
+  43              	.LVL2:
+  50:.\main.c      ****         Timer_Green_Start();
+  44              		.loc 1 50 0
+  45 0014 FFF7FEFF 		bl	Timer_Green_Start
+  46              	.LVL3:
+  51:.\main.c      ****         Pin_SW_ClearInterrupt();
+  47              		.loc 1 51 0
+  48 0018 FFF7FEFF 		bl	Pin_SW_ClearInterrupt
+  49              	.LVL4:
+  52:.\main.c      **** }
+  50              		.loc 1 52 0
+  51              		@ sp needed
+  52 001c 08BD     		pop	{r3, pc}
+  53              	.L3:
+  54 001e C046     		.align	2
+  55              	.L2:
+  56 0020 00000000 		.word	MY_ISR
+  57              		.cfi_endproc
+  58              	.LFE34:
+  59              		.size	ISR_SW, .-ISR_SW
+  60              		.section	.text.main,"ax",%progbits
+  61              		.align	2
+  62              		.global	main
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 3
+
+
+  63              		.code	16
+  64              		.thumb_func
+  65              		.type	main, %function
+  66              	main:
+  67              	.LFB35:
+  53:.\main.c      **** 
+  54:.\main.c      **** int main()
+  55:.\main.c      **** {
+  68              		.loc 1 55 0
+  69              		.cfi_startproc
+  70 0000 08B5     		push	{r3, lr}
+  71              		.cfi_def_cfa_offset 8
+  72              		.cfi_offset 3, -8
+  73              		.cfi_offset 14, -4
+  56:.\main.c      ****     SW_Int_StartEx(ISR_SW);    
+  74              		.loc 1 56 0
+  75 0002 0248     		ldr	r0, .L6
+  76 0004 FFF7FEFF 		bl	SW_Int_StartEx
+  77              	.LVL5:
+  57:.\main.c      ****     CyGlobalIntEnable; 
+  78              		.loc 1 57 0
+  79              	@ 57 ".\main.c" 1
+  80 0008 62B6     		CPSIE   i
+  81              	@ 0 "" 2
+  82              		.code	16
+  83              	.L5:
+  58:.\main.c      ****      
+  59:.\main.c      ****     for(;;);
+  84              		.loc 1 59 0 discriminator 1
+  85 000a FEE7     		b	.L5
+  86              	.L7:
+  87              		.align	2
+  88              	.L6:
+  89 000c 00000000 		.word	ISR_SW
+  90              		.cfi_endproc
+  91              	.LFE35:
+  92              		.size	main, .-main
+  93              		.section	.text.enable_red,"ax",%progbits
+  94              		.align	2
+  95              		.global	enable_red
+  96              		.code	16
+  97              		.thumb_func
+  98              		.type	enable_red, %function
+  99              	enable_red:
+ 100              	.LFB36:
+  60:.\main.c      **** }
+  61:.\main.c      ****  
+  62:.\main.c      **** void enable_red(uint32 state)
+  63:.\main.c      **** {
+ 101              		.loc 1 63 0
+ 102              		.cfi_startproc
+ 103              	.LVL6:
+ 104 0000 08B5     		push	{r3, lr}
+ 105              		.cfi_def_cfa_offset 8
+ 106              		.cfi_offset 3, -8
+ 107              		.cfi_offset 14, -4
+  64:.\main.c      ****     red_count = 0;
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 4
+
+
+ 108              		.loc 1 64 0
+ 109 0002 0022     		mov	r2, #0
+ 110 0004 034B     		ldr	r3, .L9
+ 111 0006 1A60     		str	r2, [r3]
+  65:.\main.c      ****     Red_LED_Write(state ? LED_ON : LED_OFF);        
+ 112              		.loc 1 65 0
+ 113 0008 4342     		neg	r3, r0
+ 114 000a 5841     		adc	r0, r0, r3
+ 115              	.LVL7:
+ 116 000c C0B2     		uxtb	r0, r0
+ 117 000e FFF7FEFF 		bl	Red_LED_Write
+ 118              	.LVL8:
+  66:.\main.c      **** }
+ 119              		.loc 1 66 0
+ 120              		@ sp needed
+ 121 0012 08BD     		pop	{r3, pc}
+ 122              	.L10:
+ 123              		.align	2
+ 124              	.L9:
+ 125 0014 00000000 		.word	.LANCHOR0
+ 126              		.cfi_endproc
+ 127              	.LFE36:
+ 128              		.size	enable_red, .-enable_red
+ 129              		.section	.text.enable_green,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	enable_green
+ 132              		.code	16
+ 133              		.thumb_func
+ 134              		.type	enable_green, %function
+ 135              	enable_green:
+ 136              	.LFB37:
+  67:.\main.c      **** 
+  68:.\main.c      **** void enable_green(uint32 state)
+  69:.\main.c      **** {
+ 137              		.loc 1 69 0
+ 138              		.cfi_startproc
+ 139              	.LVL9:
+ 140 0000 10B5     		push	{r4, lr}
+ 141              		.cfi_def_cfa_offset 8
+ 142              		.cfi_offset 4, -8
+ 143              		.cfi_offset 14, -4
+ 144 0002 041C     		mov	r4, r0
+  70:.\main.c      ****     Green_LED_Write(state ? LED_ON : LED_OFF);
+ 145              		.loc 1 70 0
+ 146 0004 6042     		neg	r0, r4
+ 147 0006 6041     		adc	r0, r0, r4
+ 148              	.LVL10:
+ 149 0008 C0B2     		uxtb	r0, r0
+ 150 000a FFF7FEFF 		bl	Green_LED_Write
+ 151              	.LVL11:
+  71:.\main.c      ****     is_green_enabled = state;
+ 152              		.loc 1 71 0
+ 153 000e 014B     		ldr	r3, .L12
+ 154 0010 1C60     		str	r4, [r3]
+  72:.\main.c      **** }...
+ 155              		.loc 1 72 0
+ 156              		@ sp needed
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 5
+
+
+ 157              	.LVL12:
+ 158 0012 10BD     		pop	{r4, pc}
+ 159              	.L13:
+ 160              		.align	2
+ 161              	.L12:
+ 162 0014 00000000 		.word	.LANCHOR1
+ 163              		.cfi_endproc
+ 164              	.LFE37:
+ 165              		.size	enable_green, .-enable_green
+ 166              		.section	.text.MY_ISR,"ax",%progbits
+ 167              		.align	2
+ 168              		.global	MY_ISR
+ 169              		.code	16
+ 170              		.thumb_func
+ 171              		.type	MY_ISR, %function
+ 172              	MY_ISR:
+ 173              	.LFB33:
+  19:.\main.c      **** {
+ 174              		.loc 1 19 0
+ 175              		.cfi_startproc
+ 176 0000 08B5     		push	{r3, lr}
+ 177              		.cfi_def_cfa_offset 8
+ 178              		.cfi_offset 3, -8
+ 179              		.cfi_offset 14, -4
+  20:.\main.c      ****     ms_count++;
+ 180              		.loc 1 20 0
+ 181 0002 144A     		ldr	r2, .L18
+ 182 0004 5368     		ldr	r3, [r2, #4]
+ 183 0006 0133     		add	r3, r3, #1
+ 184 0008 5360     		str	r3, [r2, #4]
+  21:.\main.c      ****     if(ms_count == 1000)
+ 185              		.loc 1 21 0
+ 186 000a FA22     		mov	r2, #250
+ 187 000c 9200     		lsl	r2, r2, #2
+ 188 000e 9342     		cmp	r3, r2
+ 189 0010 1FD1     		bne	.L14
+  23:.\main.c      ****         if(is_green_enabled)
+ 190              		.loc 1 23 0
+ 191 0012 114B     		ldr	r3, .L18+4
+ 192 0014 1B68     		ldr	r3, [r3]
+ 193 0016 002B     		cmp	r3, #0
+ 194 0018 0CD0     		beq	.L16
+  25:.\main.c      ****             red_count++;
+ 195              		.loc 1 25 0
+ 196 001a 0E4A     		ldr	r2, .L18
+ 197 001c 1368     		ldr	r3, [r2]
+ 198 001e 0133     		add	r3, r3, #1
+ 199 0020 1360     		str	r3, [r2]
+  26:.\main.c      ****             if(red_count == 2 ) 
+ 200              		.loc 1 26 0
+ 201 0022 022B     		cmp	r3, #2
+ 202 0024 12D1     		bne	.L17
+  28:.\main.c      ****                 enable_green(0);   
+ 203              		.loc 1 28 0
+ 204 0026 0020     		mov	r0, #0
+ 205 0028 FFF7FEFF 		bl	enable_green
+ 206              	.LVL13:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 6
+
+
+  29:.\main.c      ****                 enable_red(1);
+ 207              		.loc 1 29 0
+ 208 002c 0120     		mov	r0, #1
+ 209 002e FFF7FEFF 		bl	enable_red
+ 210              	.LVL14:
+ 211 0032 0BE0     		b	.L17
+ 212              	.L16:
+  34:.\main.c      ****             red_count++;
+ 213              		.loc 1 34 0
+ 214 0034 074A     		ldr	r2, .L18
+ 215 0036 1368     		ldr	r3, [r2]
+ 216 0038 0133     		add	r3, r3, #1
+ 217 003a 1360     		str	r3, [r2]
+  35:.\main.c      ****             if(red_count == 5 ) 
+ 218              		.loc 1 35 0
+ 219 003c 052B     		cmp	r3, #5
+ 220 003e 05D1     		bne	.L17
+  37:.\main.c      ****                 enable_green(1);   
+ 221              		.loc 1 37 0
+ 222 0040 0120     		mov	r0, #1
+ 223 0042 FFF7FEFF 		bl	enable_green
+ 224              	.LVL15:
+  38:.\main.c      ****                 enable_red(0);
+ 225              		.loc 1 38 0
+ 226 0046 0020     		mov	r0, #0
+ 227 0048 FFF7FEFF 		bl	enable_red
+ 228              	.LVL16:
+ 229              	.L17:
+  41:.\main.c      ****         ms_count = 0;
+ 230              		.loc 1 41 0
+ 231 004c 0022     		mov	r2, #0
+ 232 004e 014B     		ldr	r3, .L18
+ 233 0050 5A60     		str	r2, [r3, #4]
+ 234              	.L14:
+  44:.\main.c      **** }
+ 235              		.loc 1 44 0
+ 236              		@ sp needed
+ 237 0052 08BD     		pop	{r3, pc}
+ 238              	.L19:
+ 239              		.align	2
+ 240              	.L18:
+ 241 0054 00000000 		.word	.LANCHOR0
+ 242 0058 00000000 		.word	.LANCHOR1
+ 243              		.cfi_endproc
+ 244              	.LFE33:
+ 245              		.size	MY_ISR, .-MY_ISR
+ 246              		.global	is_green_disabled
+ 247              		.global	is_green_enabled
+ 248              		.global	ms_count
+ 249              		.global	red_count
+ 250              		.data
+ 251              		.align	2
+ 252              		.set	.LANCHOR1,. + 0
+ 253              		.type	is_green_enabled, %object
+ 254              		.size	is_green_enabled, 4
+ 255              	is_green_enabled:
+ 256 0000 01000000 		.word	1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 7
+
+
+ 257              		.bss
+ 258              		.align	2
+ 259              		.set	.LANCHOR0,. + 0
+ 260              		.type	red_count, %object
+ 261              		.size	red_count, 4
+ 262              	red_count:
+ 263 0000 00000000 		.space	4
+ 264              		.type	ms_count, %object
+ 265              		.size	ms_count, 4
+ 266              	ms_count:
+ 267 0004 00000000 		.space	4
+ 268              		.type	is_green_disabled, %object
+ 269              		.size	is_green_disabled, 4
+ 270              	is_green_disabled:
+ 271 0008 00000000 		.space	4
+ 272              		.text
+ 273              	.Letext0:
+ 274              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 275              		.file 3 "Generated_Source\\PSoC4/Green_LED.h"
+ 276              		.file 4 "Generated_Source\\PSoC4/Red_LED.h"
+ 277              		.file 5 "Generated_Source\\PSoC4/isr_1.h"
+ 278              		.file 6 "Generated_Source\\PSoC4/Timer_Green.h"
+ 279              		.file 7 "Generated_Source\\PSoC4/Pin_SW.h"
+ 280              		.file 8 "Generated_Source\\PSoC4/SW_Int.h"
+ 281              		.section	.debug_info,"",%progbits
+ 282              	.Ldebug_info0:
+ 283 0000 A2020000 		.4byte	0x2a2
+ 284 0004 0400     		.2byte	0x4
+ 285 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 286 000a 04       		.byte	0x4
+ 287 000b 01       		.uleb128 0x1
+ 288 000c 64010000 		.4byte	.LASF29
+ 289 0010 01       		.byte	0x1
+ 290 0011 E4000000 		.4byte	.LASF30
+ 291 0015 80000000 		.4byte	.LASF31
+ 292 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 293 001d 00000000 		.4byte	0
+ 294 0021 00000000 		.4byte	.Ldebug_line0
+ 295 0025 02       		.uleb128 0x2
+ 296 0026 01       		.byte	0x1
+ 297 0027 06       		.byte	0x6
+ 298 0028 20020000 		.4byte	.LASF0
+ 299 002c 02       		.uleb128 0x2
+ 300 002d 01       		.byte	0x1
+ 301 002e 08       		.byte	0x8
+ 302 002f 72000000 		.4byte	.LASF1
+ 303 0033 02       		.uleb128 0x2
+ 304 0034 02       		.byte	0x2
+ 305 0035 05       		.byte	0x5
+ 306 0036 F2010000 		.4byte	.LASF2
+ 307 003a 02       		.uleb128 0x2
+ 308 003b 02       		.byte	0x2
+ 309 003c 07       		.byte	0x7
+ 310 003d 2E000000 		.4byte	.LASF3
+ 311 0041 02       		.uleb128 0x2
+ 312 0042 04       		.byte	0x4
+ 313 0043 05       		.byte	0x5
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 8
+
+
+ 314 0044 0C020000 		.4byte	.LASF4
+ 315 0048 02       		.uleb128 0x2
+ 316 0049 04       		.byte	0x4
+ 317 004a 07       		.byte	0x7
+ 318 004b A0000000 		.4byte	.LASF5
+ 319 004f 02       		.uleb128 0x2
+ 320 0050 08       		.byte	0x8
+ 321 0051 05       		.byte	0x5
+ 322 0052 51010000 		.4byte	.LASF6
+ 323 0056 02       		.uleb128 0x2
+ 324 0057 08       		.byte	0x8
+ 325 0058 07       		.byte	0x7
+ 326 0059 24010000 		.4byte	.LASF7
+ 327 005d 03       		.uleb128 0x3
+ 328 005e 04       		.byte	0x4
+ 329 005f 05       		.byte	0x5
+ 330 0060 696E7400 		.ascii	"int\000"
+ 331 0064 02       		.uleb128 0x2
+ 332 0065 04       		.byte	0x4
+ 333 0066 07       		.byte	0x7
+ 334 0067 17010000 		.4byte	.LASF8
+ 335 006b 04       		.uleb128 0x4
+ 336 006c FC010000 		.4byte	.LASF9
+ 337 0070 02       		.byte	0x2
+ 338 0071 C2       		.byte	0xc2
+ 339 0072 2C000000 		.4byte	0x2c
+ 340 0076 04       		.uleb128 0x4
+ 341 0077 0B010000 		.4byte	.LASF10
+ 342 007b 02       		.byte	0x2
+ 343 007c C4       		.byte	0xc4
+ 344 007d 48000000 		.4byte	0x48
+ 345 0081 02       		.uleb128 0x2
+ 346 0082 04       		.byte	0x4
+ 347 0083 04       		.byte	0x4
+ 348 0084 65000000 		.4byte	.LASF11
+ 349 0088 02       		.uleb128 0x2
+ 350 0089 08       		.byte	0x8
+ 351 008a 04       		.byte	0x4
+ 352 008b DD000000 		.4byte	.LASF12
+ 353 008f 02       		.uleb128 0x2
+ 354 0090 01       		.byte	0x1
+ 355 0091 08       		.byte	0x8
+ 356 0092 5F010000 		.4byte	.LASF13
+ 357 0096 05       		.uleb128 0x5
+ 358 0097 3B010000 		.4byte	.LASF14
+ 359 009b 02       		.byte	0x2
+ 360 009c 7E01     		.2byte	0x17e
+ 361 009e A2000000 		.4byte	0xa2
+ 362 00a2 06       		.uleb128 0x6
+ 363 00a3 04       		.byte	0x4
+ 364 00a4 A8000000 		.4byte	0xa8
+ 365 00a8 07       		.uleb128 0x7
+ 366 00a9 02       		.uleb128 0x2
+ 367 00aa 04       		.byte	0x4
+ 368 00ab 07       		.byte	0x7
+ 369 00ac 48010000 		.4byte	.LASF15
+ 370 00b0 08       		.uleb128 0x8
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 9
+
+
+ 371 00b1 6B000000 		.4byte	.LASF16
+ 372 00b5 01       		.byte	0x1
+ 373 00b6 2D       		.byte	0x2d
+ 374 00b7 00000000 		.4byte	.LFB34
+ 375 00bb 24000000 		.4byte	.LFE34-.LFB34
+ 376 00bf 01       		.uleb128 0x1
+ 377 00c0 9C       		.byte	0x9c
+ 378 00c1 15010000 		.4byte	0x115
+ 379 00c5 09       		.uleb128 0x9
+ 380 00c6 08000000 		.4byte	.LVL0
+ 381 00ca 53020000 		.4byte	0x253
+ 382 00ce D8000000 		.4byte	0xd8
+ 383 00d2 0A       		.uleb128 0xa
+ 384 00d3 01       		.uleb128 0x1
+ 385 00d4 50       		.byte	0x50
+ 386 00d5 01       		.uleb128 0x1
+ 387 00d6 30       		.byte	0x30
+ 388 00d7 00       		.byte	0
+ 389 00d8 09       		.uleb128 0x9
+ 390 00d9 0E000000 		.4byte	.LVL1
+ 391 00dd 64020000 		.4byte	0x264
+ 392 00e1 EB000000 		.4byte	0xeb
+ 393 00e5 0A       		.uleb128 0xa
+ 394 00e6 01       		.uleb128 0x1
+ 395 00e7 50       		.byte	0x50
+ 396 00e8 01       		.uleb128 0x1
+ 397 00e9 31       		.byte	0x31
+ 398 00ea 00       		.byte	0
+ 399 00eb 09       		.uleb128 0x9
+ 400 00ec 14000000 		.4byte	.LVL2
+ 401 00f0 75020000 		.4byte	0x275
+ 402 00f4 02010000 		.4byte	0x102
+ 403 00f8 0A       		.uleb128 0xa
+ 404 00f9 01       		.uleb128 0x1
+ 405 00fa 50       		.byte	0x50
+ 406 00fb 05       		.uleb128 0x5
+ 407 00fc 03       		.byte	0x3
+ 408 00fd 00000000 		.4byte	MY_ISR
+ 409 0101 00       		.byte	0
+ 410 0102 0B       		.uleb128 0xb
+ 411 0103 18000000 		.4byte	.LVL3
+ 412 0107 86020000 		.4byte	0x286
+ 413 010b 0B       		.uleb128 0xb
+ 414 010c 1C000000 		.4byte	.LVL4
+ 415 0110 8D020000 		.4byte	0x28d
+ 416 0114 00       		.byte	0
+ 417 0115 0C       		.uleb128 0xc
+ 418 0116 12010000 		.4byte	.LASF17
+ 419 011a 01       		.byte	0x1
+ 420 011b 36       		.byte	0x36
+ 421 011c 5D000000 		.4byte	0x5d
+ 422 0120 00000000 		.4byte	.LFB35
+ 423 0124 10000000 		.4byte	.LFE35-.LFB35
+ 424 0128 01       		.uleb128 0x1
+ 425 0129 9C       		.byte	0x9c
+ 426 012a 42010000 		.4byte	0x142
+ 427 012e 0D       		.uleb128 0xd
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 10
+
+
+ 428 012f 08000000 		.4byte	.LVL5
+ 429 0133 98020000 		.4byte	0x298
+ 430 0137 0A       		.uleb128 0xa
+ 431 0138 01       		.uleb128 0x1
+ 432 0139 50       		.byte	0x50
+ 433 013a 05       		.uleb128 0x5
+ 434 013b 03       		.byte	0x3
+ 435 013c 00000000 		.4byte	ISR_SW
+ 436 0140 00       		.byte	0
+ 437 0141 00       		.byte	0
+ 438 0142 08       		.uleb128 0x8
+ 439 0143 15020000 		.4byte	.LASF18
+ 440 0147 01       		.byte	0x1
+ 441 0148 3E       		.byte	0x3e
+ 442 0149 00000000 		.4byte	.LFB36
+ 443 014d 18000000 		.4byte	.LFE36-.LFB36
+ 444 0151 01       		.uleb128 0x1
+ 445 0152 9C       		.byte	0x9c
+ 446 0153 7A010000 		.4byte	0x17a
+ 447 0157 0E       		.uleb128 0xe
+ 448 0158 21000000 		.4byte	.LASF20
+ 449 015c 01       		.byte	0x1
+ 450 015d 3E       		.byte	0x3e
+ 451 015e 76000000 		.4byte	0x76
+ 452 0162 00000000 		.4byte	.LLST0
+ 453 0166 0D       		.uleb128 0xd
+ 454 0167 12000000 		.4byte	.LVL8
+ 455 016b 64020000 		.4byte	0x264
+ 456 016f 0A       		.uleb128 0xa
+ 457 0170 01       		.uleb128 0x1
+ 458 0171 50       		.byte	0x50
+ 459 0172 05       		.uleb128 0x5
+ 460 0173 F3       		.byte	0xf3
+ 461 0174 01       		.uleb128 0x1
+ 462 0175 50       		.byte	0x50
+ 463 0176 30       		.byte	0x30
+ 464 0177 29       		.byte	0x29
+ 465 0178 00       		.byte	0
+ 466 0179 00       		.byte	0
+ 467 017a 08       		.uleb128 0x8
+ 468 017b FE000000 		.4byte	.LASF19
+ 469 017f 01       		.byte	0x1
+ 470 0180 44       		.byte	0x44
+ 471 0181 00000000 		.4byte	.LFB37
+ 472 0185 18000000 		.4byte	.LFE37-.LFB37
+ 473 0189 01       		.uleb128 0x1
+ 474 018a 9C       		.byte	0x9c
+ 475 018b B1010000 		.4byte	0x1b1
+ 476 018f 0E       		.uleb128 0xe
+ 477 0190 21000000 		.4byte	.LASF20
+ 478 0194 01       		.byte	0x1
+ 479 0195 44       		.byte	0x44
+ 480 0196 76000000 		.4byte	0x76
+ 481 019a 21000000 		.4byte	.LLST1
+ 482 019e 0D       		.uleb128 0xd
+ 483 019f 0E000000 		.4byte	.LVL11
+ 484 01a3 53020000 		.4byte	0x253
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 11
+
+
+ 485 01a7 0A       		.uleb128 0xa
+ 486 01a8 01       		.uleb128 0x1
+ 487 01a9 50       		.byte	0x50
+ 488 01aa 04       		.uleb128 0x4
+ 489 01ab 74       		.byte	0x74
+ 490 01ac 00       		.sleb128 0
+ 491 01ad 30       		.byte	0x30
+ 492 01ae 29       		.byte	0x29
+ 493 01af 00       		.byte	0
+ 494 01b0 00       		.byte	0
+ 495 01b1 08       		.uleb128 0x8
+ 496 01b2 27000000 		.4byte	.LASF21
+ 497 01b6 01       		.byte	0x1
+ 498 01b7 12       		.byte	0x12
+ 499 01b8 00000000 		.4byte	.LFB33
+ 500 01bc 5C000000 		.4byte	.LFE33-.LFB33
+ 501 01c0 01       		.uleb128 0x1
+ 502 01c1 9C       		.byte	0x9c
+ 503 01c2 0F020000 		.4byte	0x20f
+ 504 01c6 09       		.uleb128 0x9
+ 505 01c7 2C000000 		.4byte	.LVL13
+ 506 01cb 7A010000 		.4byte	0x17a
+ 507 01cf D9010000 		.4byte	0x1d9
+ 508 01d3 0A       		.uleb128 0xa
+ 509 01d4 01       		.uleb128 0x1
+ 510 01d5 50       		.byte	0x50
+ 511 01d6 01       		.uleb128 0x1
+ 512 01d7 30       		.byte	0x30
+ 513 01d8 00       		.byte	0
+ 514 01d9 09       		.uleb128 0x9
+ 515 01da 32000000 		.4byte	.LVL14
+ 516 01de 42010000 		.4byte	0x142
+ 517 01e2 EC010000 		.4byte	0x1ec
+ 518 01e6 0A       		.uleb128 0xa
+ 519 01e7 01       		.uleb128 0x1
+ 520 01e8 50       		.byte	0x50
+ 521 01e9 01       		.uleb128 0x1
+ 522 01ea 31       		.byte	0x31
+ 523 01eb 00       		.byte	0
+ 524 01ec 09       		.uleb128 0x9
+ 525 01ed 46000000 		.4byte	.LVL15
+ 526 01f1 7A010000 		.4byte	0x17a
+ 527 01f5 FF010000 		.4byte	0x1ff
+ 528 01f9 0A       		.uleb128 0xa
+ 529 01fa 01       		.uleb128 0x1
+ 530 01fb 50       		.byte	0x50
+ 531 01fc 01       		.uleb128 0x1
+ 532 01fd 31       		.byte	0x31
+ 533 01fe 00       		.byte	0
+ 534 01ff 0D       		.uleb128 0xd
+ 535 0200 4C000000 		.4byte	.LVL16
+ 536 0204 42010000 		.4byte	0x142
+ 537 0208 0A       		.uleb128 0xa
+ 538 0209 01       		.uleb128 0x1
+ 539 020a 50       		.byte	0x50
+ 540 020b 01       		.uleb128 0x1
+ 541 020c 30       		.byte	0x30
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 12
+
+
+ 542 020d 00       		.byte	0
+ 543 020e 00       		.byte	0
+ 544 020f 0F       		.uleb128 0xf
+ 545 0210 02020000 		.4byte	.LASF22
+ 546 0214 01       		.byte	0x1
+ 547 0215 06       		.byte	0x6
+ 548 0216 76000000 		.4byte	0x76
+ 549 021a 05       		.uleb128 0x5
+ 550 021b 03       		.byte	0x3
+ 551 021c 00000000 		.4byte	red_count
+ 552 0220 0F       		.uleb128 0xf
+ 553 0221 B2000000 		.4byte	.LASF23
+ 554 0225 01       		.byte	0x1
+ 555 0226 07       		.byte	0x7
+ 556 0227 76000000 		.4byte	0x76
+ 557 022b 05       		.uleb128 0x5
+ 558 022c 03       		.byte	0x3
+ 559 022d 00000000 		.4byte	ms_count
+ 560 0231 0F       		.uleb128 0xf
+ 561 0232 ED000000 		.4byte	.LASF24
+ 562 0236 01       		.byte	0x1
+ 563 0237 0C       		.byte	0xc
+ 564 0238 5D000000 		.4byte	0x5d
+ 565 023c 05       		.uleb128 0x5
+ 566 023d 03       		.byte	0x3
+ 567 023e 00000000 		.4byte	is_green_enabled
+ 568 0242 0F       		.uleb128 0xf
+ 569 0243 BB000000 		.4byte	.LASF25
+ 570 0247 01       		.byte	0x1
+ 571 0248 0D       		.byte	0xd
+ 572 0249 5D000000 		.4byte	0x5d
+ 573 024d 05       		.uleb128 0x5
+ 574 024e 03       		.byte	0x3
+ 575 024f 00000000 		.4byte	is_green_disabled
+ 576 0253 10       		.uleb128 0x10
+ 577 0254 CD000000 		.4byte	.LASF26
+ 578 0258 03       		.byte	0x3
+ 579 0259 1D       		.byte	0x1d
+ 580 025a 64020000 		.4byte	0x264
+ 581 025e 11       		.uleb128 0x11
+ 582 025f 6B000000 		.4byte	0x6b
+ 583 0263 00       		.byte	0
+ 584 0264 10       		.uleb128 0x10
+ 585 0265 41000000 		.4byte	.LASF27
+ 586 0269 04       		.byte	0x4
+ 587 026a 1D       		.byte	0x1d
+ 588 026b 75020000 		.4byte	0x275
+ 589 026f 11       		.uleb128 0x11
+ 590 0270 6B000000 		.4byte	0x6b
+ 591 0274 00       		.byte	0
+ 592 0275 10       		.uleb128 0x10
+ 593 0276 2C020000 		.4byte	.LASF28
+ 594 027a 05       		.byte	0x5
+ 595 027b 18       		.byte	0x18
+ 596 027c 86020000 		.4byte	0x286
+ 597 0280 11       		.uleb128 0x11
+ 598 0281 96000000 		.4byte	0x96
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 13
+
+
+ 599 0285 00       		.byte	0
+ 600 0286 12       		.uleb128 0x12
+ 601 0287 0F000000 		.4byte	.LASF32
+ 602 028b 06       		.byte	0x6
+ 603 028c 5A       		.byte	0x5a
+ 604 028d 13       		.uleb128 0x13
+ 605 028e 4F000000 		.4byte	.LASF33
+ 606 0292 07       		.byte	0x7
+ 607 0293 21       		.byte	0x21
+ 608 0294 6B000000 		.4byte	0x6b
+ 609 0298 14       		.uleb128 0x14
+ 610 0299 00000000 		.4byte	.LASF34
+ 611 029d 08       		.byte	0x8
+ 612 029e 18       		.byte	0x18
+ 613 029f 11       		.uleb128 0x11
+ 614 02a0 96000000 		.4byte	0x96
+ 615 02a4 00       		.byte	0
+ 616 02a5 00       		.byte	0
+ 617              		.section	.debug_abbrev,"",%progbits
+ 618              	.Ldebug_abbrev0:
+ 619 0000 01       		.uleb128 0x1
+ 620 0001 11       		.uleb128 0x11
+ 621 0002 01       		.byte	0x1
+ 622 0003 25       		.uleb128 0x25
+ 623 0004 0E       		.uleb128 0xe
+ 624 0005 13       		.uleb128 0x13
+ 625 0006 0B       		.uleb128 0xb
+ 626 0007 03       		.uleb128 0x3
+ 627 0008 0E       		.uleb128 0xe
+ 628 0009 1B       		.uleb128 0x1b
+ 629 000a 0E       		.uleb128 0xe
+ 630 000b 55       		.uleb128 0x55
+ 631 000c 17       		.uleb128 0x17
+ 632 000d 11       		.uleb128 0x11
+ 633 000e 01       		.uleb128 0x1
+ 634 000f 10       		.uleb128 0x10
+ 635 0010 17       		.uleb128 0x17
+ 636 0011 00       		.byte	0
+ 637 0012 00       		.byte	0
+ 638 0013 02       		.uleb128 0x2
+ 639 0014 24       		.uleb128 0x24
+ 640 0015 00       		.byte	0
+ 641 0016 0B       		.uleb128 0xb
+ 642 0017 0B       		.uleb128 0xb
+ 643 0018 3E       		.uleb128 0x3e
+ 644 0019 0B       		.uleb128 0xb
+ 645 001a 03       		.uleb128 0x3
+ 646 001b 0E       		.uleb128 0xe
+ 647 001c 00       		.byte	0
+ 648 001d 00       		.byte	0
+ 649 001e 03       		.uleb128 0x3
+ 650 001f 24       		.uleb128 0x24
+ 651 0020 00       		.byte	0
+ 652 0021 0B       		.uleb128 0xb
+ 653 0022 0B       		.uleb128 0xb
+ 654 0023 3E       		.uleb128 0x3e
+ 655 0024 0B       		.uleb128 0xb
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 14
+
+
+ 656 0025 03       		.uleb128 0x3
+ 657 0026 08       		.uleb128 0x8
+ 658 0027 00       		.byte	0
+ 659 0028 00       		.byte	0
+ 660 0029 04       		.uleb128 0x4
+ 661 002a 16       		.uleb128 0x16
+ 662 002b 00       		.byte	0
+ 663 002c 03       		.uleb128 0x3
+ 664 002d 0E       		.uleb128 0xe
+ 665 002e 3A       		.uleb128 0x3a
+ 666 002f 0B       		.uleb128 0xb
+ 667 0030 3B       		.uleb128 0x3b
+ 668 0031 0B       		.uleb128 0xb
+ 669 0032 49       		.uleb128 0x49
+ 670 0033 13       		.uleb128 0x13
+ 671 0034 00       		.byte	0
+ 672 0035 00       		.byte	0
+ 673 0036 05       		.uleb128 0x5
+ 674 0037 16       		.uleb128 0x16
+ 675 0038 00       		.byte	0
+ 676 0039 03       		.uleb128 0x3
+ 677 003a 0E       		.uleb128 0xe
+ 678 003b 3A       		.uleb128 0x3a
+ 679 003c 0B       		.uleb128 0xb
+ 680 003d 3B       		.uleb128 0x3b
+ 681 003e 05       		.uleb128 0x5
+ 682 003f 49       		.uleb128 0x49
+ 683 0040 13       		.uleb128 0x13
+ 684 0041 00       		.byte	0
+ 685 0042 00       		.byte	0
+ 686 0043 06       		.uleb128 0x6
+ 687 0044 0F       		.uleb128 0xf
+ 688 0045 00       		.byte	0
+ 689 0046 0B       		.uleb128 0xb
+ 690 0047 0B       		.uleb128 0xb
+ 691 0048 49       		.uleb128 0x49
+ 692 0049 13       		.uleb128 0x13
+ 693 004a 00       		.byte	0
+ 694 004b 00       		.byte	0
+ 695 004c 07       		.uleb128 0x7
+ 696 004d 15       		.uleb128 0x15
+ 697 004e 00       		.byte	0
+ 698 004f 27       		.uleb128 0x27
+ 699 0050 19       		.uleb128 0x19
+ 700 0051 00       		.byte	0
+ 701 0052 00       		.byte	0
+ 702 0053 08       		.uleb128 0x8
+ 703 0054 2E       		.uleb128 0x2e
+ 704 0055 01       		.byte	0x1
+ 705 0056 3F       		.uleb128 0x3f
+ 706 0057 19       		.uleb128 0x19
+ 707 0058 03       		.uleb128 0x3
+ 708 0059 0E       		.uleb128 0xe
+ 709 005a 3A       		.uleb128 0x3a
+ 710 005b 0B       		.uleb128 0xb
+ 711 005c 3B       		.uleb128 0x3b
+ 712 005d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 15
+
+
+ 713 005e 27       		.uleb128 0x27
+ 714 005f 19       		.uleb128 0x19
+ 715 0060 11       		.uleb128 0x11
+ 716 0061 01       		.uleb128 0x1
+ 717 0062 12       		.uleb128 0x12
+ 718 0063 06       		.uleb128 0x6
+ 719 0064 40       		.uleb128 0x40
+ 720 0065 18       		.uleb128 0x18
+ 721 0066 9742     		.uleb128 0x2117
+ 722 0068 19       		.uleb128 0x19
+ 723 0069 01       		.uleb128 0x1
+ 724 006a 13       		.uleb128 0x13
+ 725 006b 00       		.byte	0
+ 726 006c 00       		.byte	0
+ 727 006d 09       		.uleb128 0x9
+ 728 006e 898201   		.uleb128 0x4109
+ 729 0071 01       		.byte	0x1
+ 730 0072 11       		.uleb128 0x11
+ 731 0073 01       		.uleb128 0x1
+ 732 0074 31       		.uleb128 0x31
+ 733 0075 13       		.uleb128 0x13
+ 734 0076 01       		.uleb128 0x1
+ 735 0077 13       		.uleb128 0x13
+ 736 0078 00       		.byte	0
+ 737 0079 00       		.byte	0
+ 738 007a 0A       		.uleb128 0xa
+ 739 007b 8A8201   		.uleb128 0x410a
+ 740 007e 00       		.byte	0
+ 741 007f 02       		.uleb128 0x2
+ 742 0080 18       		.uleb128 0x18
+ 743 0081 9142     		.uleb128 0x2111
+ 744 0083 18       		.uleb128 0x18
+ 745 0084 00       		.byte	0
+ 746 0085 00       		.byte	0
+ 747 0086 0B       		.uleb128 0xb
+ 748 0087 898201   		.uleb128 0x4109
+ 749 008a 00       		.byte	0
+ 750 008b 11       		.uleb128 0x11
+ 751 008c 01       		.uleb128 0x1
+ 752 008d 31       		.uleb128 0x31
+ 753 008e 13       		.uleb128 0x13
+ 754 008f 00       		.byte	0
+ 755 0090 00       		.byte	0
+ 756 0091 0C       		.uleb128 0xc
+ 757 0092 2E       		.uleb128 0x2e
+ 758 0093 01       		.byte	0x1
+ 759 0094 3F       		.uleb128 0x3f
+ 760 0095 19       		.uleb128 0x19
+ 761 0096 03       		.uleb128 0x3
+ 762 0097 0E       		.uleb128 0xe
+ 763 0098 3A       		.uleb128 0x3a
+ 764 0099 0B       		.uleb128 0xb
+ 765 009a 3B       		.uleb128 0x3b
+ 766 009b 0B       		.uleb128 0xb
+ 767 009c 49       		.uleb128 0x49
+ 768 009d 13       		.uleb128 0x13
+ 769 009e 11       		.uleb128 0x11
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 16
+
+
+ 770 009f 01       		.uleb128 0x1
+ 771 00a0 12       		.uleb128 0x12
+ 772 00a1 06       		.uleb128 0x6
+ 773 00a2 40       		.uleb128 0x40
+ 774 00a3 18       		.uleb128 0x18
+ 775 00a4 9742     		.uleb128 0x2117
+ 776 00a6 19       		.uleb128 0x19
+ 777 00a7 01       		.uleb128 0x1
+ 778 00a8 13       		.uleb128 0x13
+ 779 00a9 00       		.byte	0
+ 780 00aa 00       		.byte	0
+ 781 00ab 0D       		.uleb128 0xd
+ 782 00ac 898201   		.uleb128 0x4109
+ 783 00af 01       		.byte	0x1
+ 784 00b0 11       		.uleb128 0x11
+ 785 00b1 01       		.uleb128 0x1
+ 786 00b2 31       		.uleb128 0x31
+ 787 00b3 13       		.uleb128 0x13
+ 788 00b4 00       		.byte	0
+ 789 00b5 00       		.byte	0
+ 790 00b6 0E       		.uleb128 0xe
+ 791 00b7 05       		.uleb128 0x5
+ 792 00b8 00       		.byte	0
+ 793 00b9 03       		.uleb128 0x3
+ 794 00ba 0E       		.uleb128 0xe
+ 795 00bb 3A       		.uleb128 0x3a
+ 796 00bc 0B       		.uleb128 0xb
+ 797 00bd 3B       		.uleb128 0x3b
+ 798 00be 0B       		.uleb128 0xb
+ 799 00bf 49       		.uleb128 0x49
+ 800 00c0 13       		.uleb128 0x13
+ 801 00c1 02       		.uleb128 0x2
+ 802 00c2 17       		.uleb128 0x17
+ 803 00c3 00       		.byte	0
+ 804 00c4 00       		.byte	0
+ 805 00c5 0F       		.uleb128 0xf
+ 806 00c6 34       		.uleb128 0x34
+ 807 00c7 00       		.byte	0
+ 808 00c8 03       		.uleb128 0x3
+ 809 00c9 0E       		.uleb128 0xe
+ 810 00ca 3A       		.uleb128 0x3a
+ 811 00cb 0B       		.uleb128 0xb
+ 812 00cc 3B       		.uleb128 0x3b
+ 813 00cd 0B       		.uleb128 0xb
+ 814 00ce 49       		.uleb128 0x49
+ 815 00cf 13       		.uleb128 0x13
+ 816 00d0 3F       		.uleb128 0x3f
+ 817 00d1 19       		.uleb128 0x19
+ 818 00d2 02       		.uleb128 0x2
+ 819 00d3 18       		.uleb128 0x18
+ 820 00d4 00       		.byte	0
+ 821 00d5 00       		.byte	0
+ 822 00d6 10       		.uleb128 0x10
+ 823 00d7 2E       		.uleb128 0x2e
+ 824 00d8 01       		.byte	0x1
+ 825 00d9 3F       		.uleb128 0x3f
+ 826 00da 19       		.uleb128 0x19
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 17
+
+
+ 827 00db 03       		.uleb128 0x3
+ 828 00dc 0E       		.uleb128 0xe
+ 829 00dd 3A       		.uleb128 0x3a
+ 830 00de 0B       		.uleb128 0xb
+ 831 00df 3B       		.uleb128 0x3b
+ 832 00e0 0B       		.uleb128 0xb
+ 833 00e1 27       		.uleb128 0x27
+ 834 00e2 19       		.uleb128 0x19
+ 835 00e3 3C       		.uleb128 0x3c
+ 836 00e4 19       		.uleb128 0x19
+ 837 00e5 01       		.uleb128 0x1
+ 838 00e6 13       		.uleb128 0x13
+ 839 00e7 00       		.byte	0
+ 840 00e8 00       		.byte	0
+ 841 00e9 11       		.uleb128 0x11
+ 842 00ea 05       		.uleb128 0x5
+ 843 00eb 00       		.byte	0
+ 844 00ec 49       		.uleb128 0x49
+ 845 00ed 13       		.uleb128 0x13
+ 846 00ee 00       		.byte	0
+ 847 00ef 00       		.byte	0
+ 848 00f0 12       		.uleb128 0x12
+ 849 00f1 2E       		.uleb128 0x2e
+ 850 00f2 00       		.byte	0
+ 851 00f3 3F       		.uleb128 0x3f
+ 852 00f4 19       		.uleb128 0x19
+ 853 00f5 03       		.uleb128 0x3
+ 854 00f6 0E       		.uleb128 0xe
+ 855 00f7 3A       		.uleb128 0x3a
+ 856 00f8 0B       		.uleb128 0xb
+ 857 00f9 3B       		.uleb128 0x3b
+ 858 00fa 0B       		.uleb128 0xb
+ 859 00fb 27       		.uleb128 0x27
+ 860 00fc 19       		.uleb128 0x19
+ 861 00fd 3C       		.uleb128 0x3c
+ 862 00fe 19       		.uleb128 0x19
+ 863 00ff 00       		.byte	0
+ 864 0100 00       		.byte	0
+ 865 0101 13       		.uleb128 0x13
+ 866 0102 2E       		.uleb128 0x2e
+ 867 0103 00       		.byte	0
+ 868 0104 3F       		.uleb128 0x3f
+ 869 0105 19       		.uleb128 0x19
+ 870 0106 03       		.uleb128 0x3
+ 871 0107 0E       		.uleb128 0xe
+ 872 0108 3A       		.uleb128 0x3a
+ 873 0109 0B       		.uleb128 0xb
+ 874 010a 3B       		.uleb128 0x3b
+ 875 010b 0B       		.uleb128 0xb
+ 876 010c 27       		.uleb128 0x27
+ 877 010d 19       		.uleb128 0x19
+ 878 010e 49       		.uleb128 0x49
+ 879 010f 13       		.uleb128 0x13
+ 880 0110 3C       		.uleb128 0x3c
+ 881 0111 19       		.uleb128 0x19
+ 882 0112 00       		.byte	0
+ 883 0113 00       		.byte	0
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 18
+
+
+ 884 0114 14       		.uleb128 0x14
+ 885 0115 2E       		.uleb128 0x2e
+ 886 0116 01       		.byte	0x1
+ 887 0117 3F       		.uleb128 0x3f
+ 888 0118 19       		.uleb128 0x19
+ 889 0119 03       		.uleb128 0x3
+ 890 011a 0E       		.uleb128 0xe
+ 891 011b 3A       		.uleb128 0x3a
+ 892 011c 0B       		.uleb128 0xb
+ 893 011d 3B       		.uleb128 0x3b
+ 894 011e 0B       		.uleb128 0xb
+ 895 011f 27       		.uleb128 0x27
+ 896 0120 19       		.uleb128 0x19
+ 897 0121 3C       		.uleb128 0x3c
+ 898 0122 19       		.uleb128 0x19
+ 899 0123 00       		.byte	0
+ 900 0124 00       		.byte	0
+ 901 0125 00       		.byte	0
+ 902              		.section	.debug_loc,"",%progbits
+ 903              	.Ldebug_loc0:
+ 904              	.LLST0:
+ 905 0000 00000000 		.4byte	.LVL6
+ 906 0004 0C000000 		.4byte	.LVL7
+ 907 0008 0100     		.2byte	0x1
+ 908 000a 50       		.byte	0x50
+ 909 000b 0C000000 		.4byte	.LVL7
+ 910 000f 18000000 		.4byte	.LFE36
+ 911 0013 0400     		.2byte	0x4
+ 912 0015 F3       		.byte	0xf3
+ 913 0016 01       		.uleb128 0x1
+ 914 0017 50       		.byte	0x50
+ 915 0018 9F       		.byte	0x9f
+ 916 0019 00000000 		.4byte	0
+ 917 001d 00000000 		.4byte	0
+ 918              	.LLST1:
+ 919 0021 00000000 		.4byte	.LVL9
+ 920 0025 08000000 		.4byte	.LVL10
+ 921 0029 0100     		.2byte	0x1
+ 922 002b 50       		.byte	0x50
+ 923 002c 08000000 		.4byte	.LVL10
+ 924 0030 12000000 		.4byte	.LVL12
+ 925 0034 0100     		.2byte	0x1
+ 926 0036 54       		.byte	0x54
+ 927 0037 12000000 		.4byte	.LVL12
+ 928 003b 18000000 		.4byte	.LFE37
+ 929 003f 0500     		.2byte	0x5
+ 930 0041 03       		.byte	0x3
+ 931 0042 00000000 		.4byte	is_green_enabled
+ 932 0046 00000000 		.4byte	0
+ 933 004a 00000000 		.4byte	0
+ 934              		.section	.debug_aranges,"",%progbits
+ 935 0000 3C000000 		.4byte	0x3c
+ 936 0004 0200     		.2byte	0x2
+ 937 0006 00000000 		.4byte	.Ldebug_info0
+ 938 000a 04       		.byte	0x4
+ 939 000b 00       		.byte	0
+ 940 000c 0000     		.2byte	0
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 19
+
+
+ 941 000e 0000     		.2byte	0
+ 942 0010 00000000 		.4byte	.LFB34
+ 943 0014 24000000 		.4byte	.LFE34-.LFB34
+ 944 0018 00000000 		.4byte	.LFB35
+ 945 001c 10000000 		.4byte	.LFE35-.LFB35
+ 946 0020 00000000 		.4byte	.LFB36
+ 947 0024 18000000 		.4byte	.LFE36-.LFB36
+ 948 0028 00000000 		.4byte	.LFB37
+ 949 002c 18000000 		.4byte	.LFE37-.LFB37
+ 950 0030 00000000 		.4byte	.LFB33
+ 951 0034 5C000000 		.4byte	.LFE33-.LFB33
+ 952 0038 00000000 		.4byte	0
+ 953 003c 00000000 		.4byte	0
+ 954              		.section	.debug_ranges,"",%progbits
+ 955              	.Ldebug_ranges0:
+ 956 0000 00000000 		.4byte	.LFB34
+ 957 0004 24000000 		.4byte	.LFE34
+ 958 0008 00000000 		.4byte	.LFB35
+ 959 000c 10000000 		.4byte	.LFE35
+ 960 0010 00000000 		.4byte	.LFB36
+ 961 0014 18000000 		.4byte	.LFE36
+ 962 0018 00000000 		.4byte	.LFB37
+ 963 001c 18000000 		.4byte	.LFE37
+ 964 0020 00000000 		.4byte	.LFB33
+ 965 0024 5C000000 		.4byte	.LFE33
+ 966 0028 00000000 		.4byte	0
+ 967 002c 00000000 		.4byte	0
+ 968              		.section	.debug_line,"",%progbits
+ 969              	.Ldebug_line0:
+ 970 0000 05010000 		.section	.debug_str,"MS",%progbits,1
+ 970      02009300 
+ 970      00000201 
+ 970      FB0E0D00 
+ 970      01010101 
+ 971              	.LASF34:
+ 972 0000 53575F49 		.ascii	"SW_Int_StartEx\000"
+ 972      6E745F53 
+ 972      74617274 
+ 972      457800
+ 973              	.LASF32:
+ 974 000f 54696D65 		.ascii	"Timer_Green_Start\000"
+ 974      725F4772 
+ 974      65656E5F 
+ 974      53746172 
+ 974      7400
+ 975              	.LASF20:
+ 976 0021 73746174 		.ascii	"state\000"
+ 976      6500
+ 977              	.LASF21:
+ 978 0027 4D595F49 		.ascii	"MY_ISR\000"
+ 978      535200
+ 979              	.LASF3:
+ 980 002e 73686F72 		.ascii	"short unsigned int\000"
+ 980      7420756E 
+ 980      7369676E 
+ 980      65642069 
+ 980      6E7400
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 20
+
+
+ 981              	.LASF27:
+ 982 0041 5265645F 		.ascii	"Red_LED_Write\000"
+ 982      4C45445F 
+ 982      57726974 
+ 982      6500
+ 983              	.LASF33:
+ 984 004f 50696E5F 		.ascii	"Pin_SW_ClearInterrupt\000"
+ 984      53575F43 
+ 984      6C656172 
+ 984      496E7465 
+ 984      72727570 
+ 985              	.LASF11:
+ 986 0065 666C6F61 		.ascii	"float\000"
+ 986      7400
+ 987              	.LASF16:
+ 988 006b 4953525F 		.ascii	"ISR_SW\000"
+ 988      535700
+ 989              	.LASF1:
+ 990 0072 756E7369 		.ascii	"unsigned char\000"
+ 990      676E6564 
+ 990      20636861 
+ 990      7200
+ 991              	.LASF31:
+ 992 0080 453A5C37 		.ascii	"E:\\744\\psoc\\Timers _2\\T_1.cydsn\000"
+ 992      34345C70 
+ 992      736F635C 
+ 992      54696D65 
+ 992      7273205F 
+ 993              	.LASF5:
+ 994 00a0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 994      20756E73 
+ 994      69676E65 
+ 994      6420696E 
+ 994      7400
+ 995              	.LASF23:
+ 996 00b2 6D735F63 		.ascii	"ms_count\000"
+ 996      6F756E74 
+ 996      00
+ 997              	.LASF25:
+ 998 00bb 69735F67 		.ascii	"is_green_disabled\000"
+ 998      7265656E 
+ 998      5F646973 
+ 998      61626C65 
+ 998      6400
+ 999              	.LASF26:
+ 1000 00cd 47726565 		.ascii	"Green_LED_Write\000"
+ 1000      6E5F4C45 
+ 1000      445F5772 
+ 1000      69746500 
+ 1001              	.LASF12:
+ 1002 00dd 646F7562 		.ascii	"double\000"
+ 1002      6C6500
+ 1003              	.LASF30:
+ 1004 00e4 2E5C6D61 		.ascii	".\\main.c\000"
+ 1004      696E2E63 
+ 1004      00
+ 1005              	.LASF24:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 21
+
+
+ 1006 00ed 69735F67 		.ascii	"is_green_enabled\000"
+ 1006      7265656E 
+ 1006      5F656E61 
+ 1006      626C6564 
+ 1006      00
+ 1007              	.LASF19:
+ 1008 00fe 656E6162 		.ascii	"enable_green\000"
+ 1008      6C655F67 
+ 1008      7265656E 
+ 1008      00
+ 1009              	.LASF10:
+ 1010 010b 75696E74 		.ascii	"uint32\000"
+ 1010      333200
+ 1011              	.LASF17:
+ 1012 0112 6D61696E 		.ascii	"main\000"
+ 1012      00
+ 1013              	.LASF8:
+ 1014 0117 756E7369 		.ascii	"unsigned int\000"
+ 1014      676E6564 
+ 1014      20696E74 
+ 1014      00
+ 1015              	.LASF7:
+ 1016 0124 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1016      206C6F6E 
+ 1016      6720756E 
+ 1016      7369676E 
+ 1016      65642069 
+ 1017              	.LASF14:
+ 1018 013b 63796973 		.ascii	"cyisraddress\000"
+ 1018      72616464 
+ 1018      72657373 
+ 1018      00
+ 1019              	.LASF15:
+ 1020 0148 73697A65 		.ascii	"sizetype\000"
+ 1020      74797065 
+ 1020      00
+ 1021              	.LASF6:
+ 1022 0151 6C6F6E67 		.ascii	"long long int\000"
+ 1022      206C6F6E 
+ 1022      6720696E 
+ 1022      7400
+ 1023              	.LASF13:
+ 1024 015f 63686172 		.ascii	"char\000"
+ 1024      00
+ 1025              	.LASF29:
+ 1026 0164 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1026      4320342E 
+ 1026      392E3320 
+ 1026      32303135 
+ 1026      30333033 
+ 1027 0197 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1027      20726576 
+ 1027      6973696F 
+ 1027      6E203232 
+ 1027      31323230 
+ 1028 01ca 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1028      66756E63 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccqs8niK.s 			page 22
+
+
+ 1028      74696F6E 
+ 1028      2D736563 
+ 1028      74696F6E 
+ 1029              	.LASF2:
+ 1030 01f2 73686F72 		.ascii	"short int\000"
+ 1030      7420696E 
+ 1030      7400
+ 1031              	.LASF9:
+ 1032 01fc 75696E74 		.ascii	"uint8\000"
+ 1032      3800
+ 1033              	.LASF22:
+ 1034 0202 7265645F 		.ascii	"red_count\000"
+ 1034      636F756E 
+ 1034      7400
+ 1035              	.LASF4:
+ 1036 020c 6C6F6E67 		.ascii	"long int\000"
+ 1036      20696E74 
+ 1036      00
+ 1037              	.LASF18:
+ 1038 0215 656E6162 		.ascii	"enable_red\000"
+ 1038      6C655F72 
+ 1038      656400
+ 1039              	.LASF0:
+ 1040 0220 7369676E 		.ascii	"signed char\000"
+ 1040      65642063 
+ 1040      68617200 
+ 1041              	.LASF28:
+ 1042 022c 6973725F 		.ascii	"isr_1_StartEx\000"
+ 1042      315F5374 
+ 1042      61727445 
+ 1042      7800
+ 1043              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

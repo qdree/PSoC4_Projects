@@ -1,0 +1,5 @@
+E:\744\psoc\Timers _2\T_1.cydsn\T_1.cyprj|44387b97-2512-42a8-b6b5-318de8483d83
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4809e0bc-b228-4c5e-a6de-429d02a583c4
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ab841bef-deba-4034-9e76-5417bc2854ed
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cbe7e820-40f0-4984-97a0-8409e51687bf
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4ea8c39e-aeea-4fde-9431-eaa514ffb694

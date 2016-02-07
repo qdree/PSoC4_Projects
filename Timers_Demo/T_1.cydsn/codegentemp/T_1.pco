@@ -1,0 +1,23 @@
+# T_1
+# 2016-02-07 13:14:02Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_location "ClockBlock" m0s8clockblockcell -1 -1 0
+set_io "Green_LED(0)" iocell 0 2
+set_location "Pin_SW" logicalport -1 -1 0
+set_io "Pin_SW(0)" iocell 0 7
+set_io "Red_LED(0)" iocell 1 6
+set_location "\Timer_Green:TimerUDB:status_tc\" 0 0 0 1
+set_location "isr_1" interrupt -1 -1 1
+set_location "\Timer_Green:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 1 1 6
+set_location "\Timer_Green:TimerUDB:rstSts:stsreg\" 0 0 4
+set_location "\Timer_Green:TimerUDB:sT32:timerdp:u0\" 0 1 2
+set_location "\Timer_Green:TimerUDB:sT32:timerdp:u1\" 1 1 2
+set_location "\Timer_Green:TimerUDB:sT32:timerdp:u2\" 1 0 2
+set_location "\Timer_Green:TimerUDB:sT32:timerdp:u3\" 0 0 2
+set_location "SW_Int" interrupt -1 -1 0
+set_location "Net_450" 0 0 0 0

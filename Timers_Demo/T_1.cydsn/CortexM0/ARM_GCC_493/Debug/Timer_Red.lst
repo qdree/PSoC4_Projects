@@ -1,0 +1,2330 @@
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Timer_Red.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Timer_Red_Enable,"ax",%progbits
+  18              		.align	2
+  19              		.global	Timer_Red_Enable
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	Timer_Red_Enable, %function
+  23              	Timer_Red_Enable:
+  24              	.LFB1:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\Timer_Red.c"
+   1:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/Timer_Red.c **** * File Name: Timer_Red.c
+   3:.\Generated_Source\PSoC4/Timer_Red.c **** * Version 2.70
+   4:.\Generated_Source\PSoC4/Timer_Red.c **** *
+   5:.\Generated_Source\PSoC4/Timer_Red.c **** * Description:
+   6:.\Generated_Source\PSoC4/Timer_Red.c **** *  The Timer component consists of a 8, 16, 24 or 32-bit timer with
+   7:.\Generated_Source\PSoC4/Timer_Red.c **** *  a selectable period between 2 and 2^Width - 1.  The timer may free run
+   8:.\Generated_Source\PSoC4/Timer_Red.c **** *  or be used as a capture timer as well.  The capture can be initiated
+   9:.\Generated_Source\PSoC4/Timer_Red.c **** *  by a positive or negative edge signal as well as via software.
+  10:.\Generated_Source\PSoC4/Timer_Red.c **** *  A trigger input can be programmed to enable the timer on rising edge
+  11:.\Generated_Source\PSoC4/Timer_Red.c **** *  falling edge, either edge or continous run.
+  12:.\Generated_Source\PSoC4/Timer_Red.c **** *  Interrupts may be generated due to a terminal count condition
+  13:.\Generated_Source\PSoC4/Timer_Red.c **** *  or a capture event.
+  14:.\Generated_Source\PSoC4/Timer_Red.c **** *
+  15:.\Generated_Source\PSoC4/Timer_Red.c **** * Note:
+  16:.\Generated_Source\PSoC4/Timer_Red.c **** *
+  17:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+  18:.\Generated_Source\PSoC4/Timer_Red.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  19:.\Generated_Source\PSoC4/Timer_Red.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:.\Generated_Source\PSoC4/Timer_Red.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:.\Generated_Source\PSoC4/Timer_Red.c **** * the software package with which this file was provided.
+  22:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************/
+  23:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  24:.\Generated_Source\PSoC4/Timer_Red.c **** #include "Timer_Red.h"
+  25:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  26:.\Generated_Source\PSoC4/Timer_Red.c **** uint8 Timer_Red_initVar = 0u;
+  27:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  28:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  29:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+  30:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_Init
+  31:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+  32:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+  34:.\Generated_Source\PSoC4/Timer_Red.c **** *  Initialize to the schematic state
+  35:.\Generated_Source\PSoC4/Timer_Red.c **** *
+  36:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+  37:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+  38:.\Generated_Source\PSoC4/Timer_Red.c **** *
+  39:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+  40:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+  41:.\Generated_Source\PSoC4/Timer_Red.c **** *
+  42:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+  43:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_Init(void) 
+  44:.\Generated_Source\PSoC4/Timer_Red.c **** {
+  45:.\Generated_Source\PSoC4/Timer_Red.c ****     #if(!Timer_Red_UsingFixedFunction)
+  46:.\Generated_Source\PSoC4/Timer_Red.c ****             /* Interrupt State Backup for Critical Region*/
+  47:.\Generated_Source\PSoC4/Timer_Red.c ****             uint8 Timer_Red_interruptState;
+  48:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Interrupt state back up for Fixed Function only */
+  49:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  50:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (Timer_Red_UsingFixedFunction)
+  51:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Clear all bits but the enable bit (if it's already set) for Timer operation */
+  52:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL &= Timer_Red_CTRL_ENABLE;
+  53:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  54:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Clear the mode bits for continuous run mode */
+  55:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (CY_PSOC5A)
+  56:.\Generated_Source\PSoC4/Timer_Red.c ****             Timer_Red_CONTROL2 &= ((uint8)(~Timer_Red_CTRL_MODE_MASK));
+  57:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* Clear bits in CONTROL2 only in PSOC5A */
+  58:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  59:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (CY_PSOC3 || CY_PSOC5LP)
+  60:.\Generated_Source\PSoC4/Timer_Red.c ****             Timer_Red_CONTROL3 &= ((uint8)(~Timer_Red_CTRL_MODE_MASK));
+  61:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
+  62:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  63:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  64:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (Timer_Red_RunModeUsed != 0x0u)
+  65:.\Generated_Source\PSoC4/Timer_Red.c ****             /* Set 3rd bit of Control register to enable one shot mode */
+  66:.\Generated_Source\PSoC4/Timer_Red.c ****             Timer_Red_CONTROL |= 0x04u;
+  67:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* One Shot enabled only when RunModeUsed is not Continuous*/
+  68:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  69:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (Timer_Red_RunModeUsed == 2)
+  70:.\Generated_Source\PSoC4/Timer_Red.c ****             #if (CY_PSOC5A)
+  71:.\Generated_Source\PSoC4/Timer_Red.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
+  72:.\Generated_Source\PSoC4/Timer_Red.c ****                 interrupt) is enabled*/
+  73:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL2 |= 0x03u;
+  74:.\Generated_Source\PSoC4/Timer_Red.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL2 for PSoC5A */
+  75:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  76:.\Generated_Source\PSoC4/Timer_Red.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  77:.\Generated_Source\PSoC4/Timer_Red.c ****                 /* Set last 2 bits of control3 register if one shot(halt on
+  78:.\Generated_Source\PSoC4/Timer_Red.c ****                 interrupt) is enabled*/
+  79:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL3 |= 0x03u;
+  80:.\Generated_Source\PSoC4/Timer_Red.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL3 for PSoC3 or PSoC5LP */
+  81:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  82:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* Remove section if One Shot Halt on Interrupt is not enabled */
+  83:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  84:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (Timer_Red_UsingHWEnable != 0)
+  85:.\Generated_Source\PSoC4/Timer_Red.c ****             #if (CY_PSOC5A)
+  86:.\Generated_Source\PSoC4/Timer_Red.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+  87:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL2 |= Timer_Red_CTRL_MODE_PULSEWIDTH;
+  88:.\Generated_Source\PSoC4/Timer_Red.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
+  89:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/Timer_Red.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  91:.\Generated_Source\PSoC4/Timer_Red.c ****                 /* Clear and Set ROD and COD bits of CFG2 register */
+  92:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL3 &= ((uint8)(~Timer_Red_CTRL_RCOD_MASK));
+  93:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL3 |= Timer_Red_CTRL_RCOD;
+  94:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  95:.\Generated_Source\PSoC4/Timer_Red.c ****                 /* Clear and Enable the HW enable bit in CFG2 register */
+  96:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL3 &= ((uint8)(~Timer_Red_CTRL_ENBL_MASK));
+  97:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL3 |= Timer_Red_CTRL_ENBL;
+  98:.\Generated_Source\PSoC4/Timer_Red.c **** 
+  99:.\Generated_Source\PSoC4/Timer_Red.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+ 100:.\Generated_Source\PSoC4/Timer_Red.c ****                 Timer_Red_CONTROL3 |= Timer_Red_CTRL_MODE_CONTINUOUS;
+ 101:.\Generated_Source\PSoC4/Timer_Red.c ****             #endif /* Set Continuous Run Mode in CONTROL3 for PSoC3ES3 or PSoC5A */
+ 102:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 103:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* Configure Run Mode with hardware enable */
+ 104:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 105:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 106:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_RT1 &= ((uint8)(~Timer_Red_RT1_MASK));
+ 107:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_RT1 |= Timer_Red_SYNC;
+ 108:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 109:.\Generated_Source\PSoC4/Timer_Red.c ****         /*Enable DSI Sync all all inputs of the Timer*/
+ 110:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_RT1 &= ((uint8)(~Timer_Red_SYNCDSI_MASK));
+ 111:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_RT1 |= Timer_Red_SYNCDSI_EN;
+ 112:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 113:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Set the IRQ to use the status register interrupts */
+ 114:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL2 |= Timer_Red_CTRL2_IRQ_SEL;
+ 115:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Configuring registers of fixed function implementation */
+ 116:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 117:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Set Initial values from Configuration */
+ 118:.\Generated_Source\PSoC4/Timer_Red.c ****     Timer_Red_WritePeriod(Timer_Red_INIT_PERIOD);
+ 119:.\Generated_Source\PSoC4/Timer_Red.c ****     Timer_Red_WriteCounter(Timer_Red_INIT_PERIOD);
+ 120:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 121:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (Timer_Red_UsingHWCaptureCounter)/* Capture counter is enabled */
+ 122:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CAPTURE_COUNT_CTRL |= Timer_Red_CNTR_ENABLE;
+ 123:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_SetCaptureCount(Timer_Red_INIT_CAPTURE_COUNT);
+ 124:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Configure capture counter value */
+ 125:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 126:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UsingFixedFunction)
+ 127:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (Timer_Red_SoftwareCaptureMode)
+ 128:.\Generated_Source\PSoC4/Timer_Red.c ****             Timer_Red_SetCaptureMode(Timer_Red_INIT_CAPTURE_MODE);
+ 129:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* Set Capture Mode for UDB implementation if capture mode is software controlled */
+ 130:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 131:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (Timer_Red_SoftwareTriggerMode)
+ 132:.\Generated_Source\PSoC4/Timer_Red.c ****             #if (!Timer_Red_UDB_CONTROL_REG_REMOVED)
+ 133:.\Generated_Source\PSoC4/Timer_Red.c ****                 if (0u == (Timer_Red_CONTROL & Timer_Red__B_TIMER__TM_SOFTWARE))
+ 134:.\Generated_Source\PSoC4/Timer_Red.c ****                 {
+ 135:.\Generated_Source\PSoC4/Timer_Red.c ****                     Timer_Red_SetTriggerMode(Timer_Red_INIT_TRIGGER_MODE);
+ 136:.\Generated_Source\PSoC4/Timer_Red.c ****                 }
+ 137:.\Generated_Source\PSoC4/Timer_Red.c ****             #endif /* (!Timer_Red_UDB_CONTROL_REG_REMOVED) */
+ 138:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* Set trigger mode for UDB Implementation if trigger mode is software controlled */
+ 139:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 140:.\Generated_Source\PSoC4/Timer_Red.c ****         /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critica
+ 141:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Enter Critical Region*/
+ 142:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_interruptState = CyEnterCriticalSection();
+ 143:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 144:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Use the interrupt output of the status register for IRQ output */
+ 145:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_STATUS_AUX_CTRL |= Timer_Red_STATUS_ACTL_INT_EN_MASK;
+ 146:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 4
+
+
+ 147:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Exit Critical Region*/
+ 148:.\Generated_Source\PSoC4/Timer_Red.c ****         CyExitCriticalSection(Timer_Red_interruptState);
+ 149:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 150:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (Timer_Red_EnableTriggerMode)
+ 151:.\Generated_Source\PSoC4/Timer_Red.c ****             Timer_Red_EnableTrigger();
+ 152:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
+ 153:.\Generated_Source\PSoC4/Timer_Red.c **** 		
+ 154:.\Generated_Source\PSoC4/Timer_Red.c **** 		
+ 155:.\Generated_Source\PSoC4/Timer_Red.c ****         #if (Timer_Red_InterruptOnCaptureCount && !Timer_Red_UDB_CONTROL_REG_REMOVED)
+ 156:.\Generated_Source\PSoC4/Timer_Red.c ****             Timer_Red_SetInterruptCount(Timer_Red_INIT_INT_CAPTURE_COUNT);
+ 157:.\Generated_Source\PSoC4/Timer_Red.c ****         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*
+ 158:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 159:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_ClearFIFO();
+ 160:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Configure additional features of UDB implementation */
+ 161:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 162:.\Generated_Source\PSoC4/Timer_Red.c ****     Timer_Red_SetInterruptMode(Timer_Red_INIT_INTERRUPT_MODE);
+ 163:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 164:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 165:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 166:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 167:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_Enable
+ 168:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 169:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 170:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 171:.\Generated_Source\PSoC4/Timer_Red.c **** *  Enable the Timer
+ 172:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 173:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 174:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 175:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 176:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 177:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 178:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 179:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 180:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_Enable(void) 
+ 181:.\Generated_Source\PSoC4/Timer_Red.c **** {
+  26              		.loc 1 181 0
+  27              		.cfi_startproc
+ 182:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 183:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (Timer_Red_UsingFixedFunction)
+ 184:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_GLOBAL_ENABLE |= Timer_Red_BLOCK_EN_MASK;
+ 185:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_GLOBAL_STBY_ENABLE |= Timer_Red_BLOCK_STBY_EN_MASK;
+ 186:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Set Enable bit for enabling Fixed function timer*/
+ 187:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 188:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Remove assignment if control register is removed */
+ 189:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED || Timer_Red_UsingFixedFunction)
+ 190:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL |= Timer_Red_CTRL_ENABLE;
+  28              		.loc 1 190 0
+  29 0000 024A     		ldr	r2, .L2
+  30 0002 1178     		ldrb	r1, [r2]
+  31 0004 8023     		mov	r3, #128
+  32 0006 0B43     		orr	r3, r1
+  33 0008 1370     		strb	r3, [r2]
+ 191:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Remove assignment if control register is removed */
+ 192:.\Generated_Source\PSoC4/Timer_Red.c **** }
+  34              		.loc 1 192 0
+  35              		@ sp needed
+  36 000a 7047     		bx	lr
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 5
+
+
+  37              	.L3:
+  38              		.align	2
+  39              	.L2:
+  40 000c 73000F40 		.word	1074724979
+  41              		.cfi_endproc
+  42              	.LFE1:
+  43              		.size	Timer_Red_Enable, .-Timer_Red_Enable
+  44              		.section	.text.Timer_Red_Stop,"ax",%progbits
+  45              		.align	2
+  46              		.global	Timer_Red_Stop
+  47              		.code	16
+  48              		.thumb_func
+  49              		.type	Timer_Red_Stop, %function
+  50              	Timer_Red_Stop:
+  51              	.LFB3:
+ 193:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 194:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 195:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 196:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_Start
+ 197:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 198:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 199:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 200:.\Generated_Source\PSoC4/Timer_Red.c **** *  The start function initializes the timer with the default values, the
+ 201:.\Generated_Source\PSoC4/Timer_Red.c **** *  enables the timerto begin counting.  It does not enable interrupts,
+ 202:.\Generated_Source\PSoC4/Timer_Red.c **** *  the EnableInt command should be called if interrupt generation is required.
+ 203:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 204:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 205:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 206:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 207:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 208:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 209:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 210:.\Generated_Source\PSoC4/Timer_Red.c **** * Global variables:
+ 211:.\Generated_Source\PSoC4/Timer_Red.c **** *  Timer_Red_initVar: Is modified when this function is called for the
+ 212:.\Generated_Source\PSoC4/Timer_Red.c **** *   first time. Is used to ensure that initialization happens only once.
+ 213:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 214:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 215:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_Start(void) 
+ 216:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 217:.\Generated_Source\PSoC4/Timer_Red.c ****     if(Timer_Red_initVar == 0u)
+ 218:.\Generated_Source\PSoC4/Timer_Red.c ****     {
+ 219:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_Init();
+ 220:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 221:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_initVar = 1u;   /* Clear this bit for Initialization */
+ 222:.\Generated_Source\PSoC4/Timer_Red.c ****     }
+ 223:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 224:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Enable the Timer */
+ 225:.\Generated_Source\PSoC4/Timer_Red.c ****     Timer_Red_Enable();
+ 226:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 227:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 228:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 229:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 230:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_Stop
+ 231:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 232:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 233:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 234:.\Generated_Source\PSoC4/Timer_Red.c **** *  The stop function halts the timer, but does not change any modes or disable
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 6
+
+
+ 235:.\Generated_Source\PSoC4/Timer_Red.c **** *  interrupts.
+ 236:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 237:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 238:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 239:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 240:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 241:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 242:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 243:.\Generated_Source\PSoC4/Timer_Red.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 244:.\Generated_Source\PSoC4/Timer_Red.c **** *               has no effect on the operation of the timer.
+ 245:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 246:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 247:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_Stop(void) 
+ 248:.\Generated_Source\PSoC4/Timer_Red.c **** {
+  52              		.loc 1 248 0
+  53              		.cfi_startproc
+ 249:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Disable Timer */
+ 250:.\Generated_Source\PSoC4/Timer_Red.c ****     #if(!Timer_Red_UDB_CONTROL_REG_REMOVED || Timer_Red_UsingFixedFunction)
+ 251:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL &= ((uint8)(~Timer_Red_CTRL_ENABLE));
+  54              		.loc 1 251 0
+  55 0000 024A     		ldr	r2, .L5
+  56 0002 1178     		ldrb	r1, [r2]
+  57 0004 7F23     		mov	r3, #127
+  58 0006 0B40     		and	r3, r1
+  59 0008 1370     		strb	r3, [r2]
+ 252:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Remove assignment if control register is removed */
+ 253:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 254:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Globally disable the Fixed Function Block chosen */
+ 255:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (Timer_Red_UsingFixedFunction)
+ 256:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_GLOBAL_ENABLE &= ((uint8)(~Timer_Red_BLOCK_EN_MASK));
+ 257:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_GLOBAL_STBY_ENABLE &= ((uint8)(~Timer_Red_BLOCK_STBY_EN_MASK));
+ 258:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
+ 259:.\Generated_Source\PSoC4/Timer_Red.c **** }
+  60              		.loc 1 259 0
+  61              		@ sp needed
+  62 000a 7047     		bx	lr
+  63              	.L6:
+  64              		.align	2
+  65              	.L5:
+  66 000c 73000F40 		.word	1074724979
+  67              		.cfi_endproc
+  68              	.LFE3:
+  69              		.size	Timer_Red_Stop, .-Timer_Red_Stop
+  70              		.section	.text.Timer_Red_SetInterruptMode,"ax",%progbits
+  71              		.align	2
+  72              		.global	Timer_Red_SetInterruptMode
+  73              		.code	16
+  74              		.thumb_func
+  75              		.type	Timer_Red_SetInterruptMode, %function
+  76              	Timer_Red_SetInterruptMode:
+  77              	.LFB4:
+ 260:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 261:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 262:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 263:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_SetInterruptMode
+ 264:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 265:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 7
+
+
+ 266:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 267:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function selects which of the interrupt inputs may cause an interrupt.
+ 268:.\Generated_Source\PSoC4/Timer_Red.c **** *  The twosources are caputure and terminal.  One, both or neither may
+ 269:.\Generated_Source\PSoC4/Timer_Red.c **** *  be selected.
+ 270:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 271:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 272:.\Generated_Source\PSoC4/Timer_Red.c **** *  interruptMode:   This parameter is used to enable interrups on either/or
+ 273:.\Generated_Source\PSoC4/Timer_Red.c **** *                   terminal count or capture.
+ 274:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 275:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 276:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 277:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 278:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 279:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_SetInterruptMode(uint8 interruptMode) 
+ 280:.\Generated_Source\PSoC4/Timer_Red.c **** {
+  78              		.loc 1 280 0
+  79              		.cfi_startproc
+  80              	.LVL0:
+ 281:.\Generated_Source\PSoC4/Timer_Red.c ****     Timer_Red_STATUS_MASK = interruptMode;
+  81              		.loc 1 281 0
+  82 0000 014B     		ldr	r3, .L8
+  83 0002 1870     		strb	r0, [r3]
+ 282:.\Generated_Source\PSoC4/Timer_Red.c **** }
+  84              		.loc 1 282 0
+  85              		@ sp needed
+  86 0004 7047     		bx	lr
+  87              	.L9:
+  88 0006 C046     		.align	2
+  89              	.L8:
+  90 0008 83000F40 		.word	1074724995
+  91              		.cfi_endproc
+  92              	.LFE4:
+  93              		.size	Timer_Red_SetInterruptMode, .-Timer_Red_SetInterruptMode
+  94              		.section	.text.Timer_Red_SoftwareCapture,"ax",%progbits
+  95              		.align	2
+  96              		.global	Timer_Red_SoftwareCapture
+  97              		.code	16
+  98              		.thumb_func
+  99              		.type	Timer_Red_SoftwareCapture, %function
+ 100              	Timer_Red_SoftwareCapture:
+ 101              	.LFB5:
+ 283:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 284:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 285:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 286:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_SoftwareCapture
+ 287:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 288:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 289:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 290:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function forces a capture independent of the capture signal.
+ 291:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 292:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 293:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 294:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 295:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 296:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 297:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 298:.\Generated_Source\PSoC4/Timer_Red.c **** * Side Effects:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 8
+
+
+ 299:.\Generated_Source\PSoC4/Timer_Red.c **** *  An existing hardware capture could be overwritten.
+ 300:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 301:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 302:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_SoftwareCapture(void) 
+ 303:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 102              		.loc 1 303 0
+ 103              		.cfi_startproc
+ 304:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Generate a software capture by reading the counter register */
+ 305:.\Generated_Source\PSoC4/Timer_Red.c ****     #if(Timer_Red_UsingFixedFunction)
+ 306:.\Generated_Source\PSoC4/Timer_Red.c ****         (void)CY_GET_REG16(Timer_Red_COUNTER_LSB_PTR);
+ 307:.\Generated_Source\PSoC4/Timer_Red.c ****     #else
+ 308:.\Generated_Source\PSoC4/Timer_Red.c ****         (void)CY_GET_REG8(Timer_Red_COUNTER_LSB_PTR_8BIT);
+ 104              		.loc 1 308 0
+ 105 0000 014B     		ldr	r3, .L11
+ 106 0002 1B78     		ldrb	r3, [r3]
+ 309:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif/* (Timer_Red_UsingFixedFunction) */
+ 310:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Capture Data is now in the FIFO */
+ 311:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 107              		.loc 1 311 0
+ 108              		@ sp needed
+ 109 0004 7047     		bx	lr
+ 110              	.L12:
+ 111 0006 C046     		.align	2
+ 112              	.L11:
+ 113 0008 02000F40 		.word	1074724866
+ 114              		.cfi_endproc
+ 115              	.LFE5:
+ 116              		.size	Timer_Red_SoftwareCapture, .-Timer_Red_SoftwareCapture
+ 117              		.section	.text.Timer_Red_ReadStatusRegister,"ax",%progbits
+ 118              		.align	2
+ 119              		.global	Timer_Red_ReadStatusRegister
+ 120              		.code	16
+ 121              		.thumb_func
+ 122              		.type	Timer_Red_ReadStatusRegister, %function
+ 123              	Timer_Red_ReadStatusRegister:
+ 124              	.LFB6:
+ 312:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 313:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 314:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 315:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_ReadStatusRegister
+ 316:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 317:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 318:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 319:.\Generated_Source\PSoC4/Timer_Red.c **** *  Reads the status register and returns it's state. This function should use
+ 320:.\Generated_Source\PSoC4/Timer_Red.c **** *  defined types for the bit-field information as the bits in this register may
+ 321:.\Generated_Source\PSoC4/Timer_Red.c **** *  be permuteable.
+ 322:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 323:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 324:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 325:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 326:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 327:.\Generated_Source\PSoC4/Timer_Red.c **** *  The contents of the status register
+ 328:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 329:.\Generated_Source\PSoC4/Timer_Red.c **** * Side Effects:
+ 330:.\Generated_Source\PSoC4/Timer_Red.c **** *  Status register bits may be clear on read.
+ 331:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 332:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 9
+
+
+ 333:.\Generated_Source\PSoC4/Timer_Red.c **** uint8   Timer_Red_ReadStatusRegister(void) 
+ 334:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 125              		.loc 1 334 0
+ 126              		.cfi_startproc
+ 335:.\Generated_Source\PSoC4/Timer_Red.c ****     return (Timer_Red_STATUS);
+ 127              		.loc 1 335 0
+ 128 0000 014B     		ldr	r3, .L14
+ 129 0002 1878     		ldrb	r0, [r3]
+ 130 0004 C0B2     		uxtb	r0, r0
+ 336:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 131              		.loc 1 336 0
+ 132              		@ sp needed
+ 133 0006 7047     		bx	lr
+ 134              	.L15:
+ 135              		.align	2
+ 136              	.L14:
+ 137 0008 63000F40 		.word	1074724963
+ 138              		.cfi_endproc
+ 139              	.LFE6:
+ 140              		.size	Timer_Red_ReadStatusRegister, .-Timer_Red_ReadStatusRegister
+ 141              		.section	.text.Timer_Red_ReadControlRegister,"ax",%progbits
+ 142              		.align	2
+ 143              		.global	Timer_Red_ReadControlRegister
+ 144              		.code	16
+ 145              		.thumb_func
+ 146              		.type	Timer_Red_ReadControlRegister, %function
+ 147              	Timer_Red_ReadControlRegister:
+ 148              	.LFB7:
+ 337:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 338:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 339:.\Generated_Source\PSoC4/Timer_Red.c **** #if (!Timer_Red_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
+ 340:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 341:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 342:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 343:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_ReadControlRegister
+ 344:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 345:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 346:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 347:.\Generated_Source\PSoC4/Timer_Red.c **** *  Reads the control register and returns it's value.
+ 348:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 349:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 350:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 351:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 352:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 353:.\Generated_Source\PSoC4/Timer_Red.c **** *  The contents of the control register
+ 354:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 355:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 356:.\Generated_Source\PSoC4/Timer_Red.c **** uint8 Timer_Red_ReadControlRegister(void) 
+ 357:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 149              		.loc 1 357 0
+ 150              		.cfi_startproc
+ 358:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED) 
+ 359:.\Generated_Source\PSoC4/Timer_Red.c ****         return ((uint8)Timer_Red_CONTROL);
+ 151              		.loc 1 359 0
+ 152 0000 014B     		ldr	r3, .L17
+ 153 0002 1878     		ldrb	r0, [r3]
+ 154 0004 C0B2     		uxtb	r0, r0
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 10
+
+
+ 360:.\Generated_Source\PSoC4/Timer_Red.c ****     #else
+ 361:.\Generated_Source\PSoC4/Timer_Red.c ****         return (0);
+ 362:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* (!Timer_Red_UDB_CONTROL_REG_REMOVED) */
+ 363:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 155              		.loc 1 363 0
+ 156              		@ sp needed
+ 157 0006 7047     		bx	lr
+ 158              	.L18:
+ 159              		.align	2
+ 160              	.L17:
+ 161 0008 73000F40 		.word	1074724979
+ 162              		.cfi_endproc
+ 163              	.LFE7:
+ 164              		.size	Timer_Red_ReadControlRegister, .-Timer_Red_ReadControlRegister
+ 165              		.section	.text.Timer_Red_WriteControlRegister,"ax",%progbits
+ 166              		.align	2
+ 167              		.global	Timer_Red_WriteControlRegister
+ 168              		.code	16
+ 169              		.thumb_func
+ 170              		.type	Timer_Red_WriteControlRegister, %function
+ 171              	Timer_Red_WriteControlRegister:
+ 172              	.LFB8:
+ 364:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 365:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 366:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 367:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_WriteControlRegister
+ 368:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 369:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 370:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 371:.\Generated_Source\PSoC4/Timer_Red.c **** *  Sets the bit-field of the control register.
+ 372:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 373:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 374:.\Generated_Source\PSoC4/Timer_Red.c **** *  control: The contents of the control register
+ 375:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 376:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 377:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 378:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 379:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_WriteControlRegister(uint8 control) 
+ 380:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 173              		.loc 1 380 0
+ 174              		.cfi_startproc
+ 175              	.LVL1:
+ 381:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED) 
+ 382:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL = control;
+ 176              		.loc 1 382 0
+ 177 0000 014B     		ldr	r3, .L20
+ 178 0002 1870     		strb	r0, [r3]
+ 383:.\Generated_Source\PSoC4/Timer_Red.c ****     #else
+ 384:.\Generated_Source\PSoC4/Timer_Red.c ****         control = 0u;
+ 385:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* (!Timer_Red_UDB_CONTROL_REG_REMOVED) */
+ 386:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 179              		.loc 1 386 0
+ 180              		@ sp needed
+ 181 0004 7047     		bx	lr
+ 182              	.L21:
+ 183 0006 C046     		.align	2
+ 184              	.L20:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 11
+
+
+ 185 0008 73000F40 		.word	1074724979
+ 186              		.cfi_endproc
+ 187              	.LFE8:
+ 188              		.size	Timer_Red_WriteControlRegister, .-Timer_Red_WriteControlRegister
+ 189              		.section	.text.Timer_Red_ReadPeriod,"ax",%progbits
+ 190              		.align	2
+ 191              		.global	Timer_Red_ReadPeriod
+ 192              		.code	16
+ 193              		.thumb_func
+ 194              		.type	Timer_Red_ReadPeriod, %function
+ 195              	Timer_Red_ReadPeriod:
+ 196              	.LFB9:
+ 387:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 388:.\Generated_Source\PSoC4/Timer_Red.c **** #endif /* Remove API if control register is unused */
+ 389:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 390:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 391:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 392:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_ReadPeriod
+ 393:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 394:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 395:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 396:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function returns the current value of the Period.
+ 397:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 398:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 399:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 400:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 401:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 402:.\Generated_Source\PSoC4/Timer_Red.c **** *  The present value of the counter.
+ 403:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 404:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 405:.\Generated_Source\PSoC4/Timer_Red.c **** uint16 Timer_Red_ReadPeriod(void) 
+ 406:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 197              		.loc 1 406 0
+ 198              		.cfi_startproc
+ 407:.\Generated_Source\PSoC4/Timer_Red.c ****    #if(Timer_Red_UsingFixedFunction)
+ 408:.\Generated_Source\PSoC4/Timer_Red.c ****        return ((uint16)CY_GET_REG16(Timer_Red_PERIOD_LSB_PTR));
+ 409:.\Generated_Source\PSoC4/Timer_Red.c ****    #else
+ 410:.\Generated_Source\PSoC4/Timer_Red.c ****        return (CY_GET_REG16(Timer_Red_PERIOD_LSB_PTR));
+ 199              		.loc 1 410 0
+ 200 0000 014B     		ldr	r3, .L23
+ 201 0002 1888     		ldrh	r0, [r3]
+ 202 0004 80B2     		uxth	r0, r0
+ 411:.\Generated_Source\PSoC4/Timer_Red.c ****    #endif /* (Timer_Red_UsingFixedFunction) */
+ 412:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 203              		.loc 1 412 0
+ 204              		@ sp needed
+ 205 0006 7047     		bx	lr
+ 206              	.L24:
+ 207              		.align	2
+ 208              	.L23:
+ 209 0008 44100F40 		.word	1074729028
+ 210              		.cfi_endproc
+ 211              	.LFE9:
+ 212              		.size	Timer_Red_ReadPeriod, .-Timer_Red_ReadPeriod
+ 213              		.section	.text.Timer_Red_WritePeriod,"ax",%progbits
+ 214              		.align	2
+ 215              		.global	Timer_Red_WritePeriod
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 12
+
+
+ 216              		.code	16
+ 217              		.thumb_func
+ 218              		.type	Timer_Red_WritePeriod, %function
+ 219              	Timer_Red_WritePeriod:
+ 220              	.LFB10:
+ 413:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 414:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 415:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 416:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_WritePeriod
+ 417:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 418:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 419:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 420:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function is used to change the period of the counter.  The new period
+ 421:.\Generated_Source\PSoC4/Timer_Red.c **** *  will be loaded the next time terminal count is detected.
+ 422:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 423:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 424:.\Generated_Source\PSoC4/Timer_Red.c **** *  period: This value may be between 1 and (2^Resolution)-1.  A value of 0 will
+ 425:.\Generated_Source\PSoC4/Timer_Red.c **** *          result in the counter remaining at zero.
+ 426:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 427:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 428:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 429:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 430:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 431:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_WritePeriod(uint16 period) 
+ 432:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 221              		.loc 1 432 0
+ 222              		.cfi_startproc
+ 223              	.LVL2:
+ 433:.\Generated_Source\PSoC4/Timer_Red.c ****     #if(Timer_Red_UsingFixedFunction)
+ 434:.\Generated_Source\PSoC4/Timer_Red.c ****         uint16 period_temp = (uint16)period;
+ 435:.\Generated_Source\PSoC4/Timer_Red.c ****         CY_SET_REG16(Timer_Red_PERIOD_LSB_PTR, period_temp);
+ 436:.\Generated_Source\PSoC4/Timer_Red.c ****     #else
+ 437:.\Generated_Source\PSoC4/Timer_Red.c ****         CY_SET_REG16(Timer_Red_PERIOD_LSB_PTR, period);
+ 224              		.loc 1 437 0
+ 225 0000 014B     		ldr	r3, .L26
+ 226 0002 1880     		strh	r0, [r3]
+ 438:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed functi
+ 439:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 227              		.loc 1 439 0
+ 228              		@ sp needed
+ 229 0004 7047     		bx	lr
+ 230              	.L27:
+ 231 0006 C046     		.align	2
+ 232              	.L26:
+ 233 0008 44100F40 		.word	1074729028
+ 234              		.cfi_endproc
+ 235              	.LFE10:
+ 236              		.size	Timer_Red_WritePeriod, .-Timer_Red_WritePeriod
+ 237              		.section	.text.Timer_Red_ReadCapture,"ax",%progbits
+ 238              		.align	2
+ 239              		.global	Timer_Red_ReadCapture
+ 240              		.code	16
+ 241              		.thumb_func
+ 242              		.type	Timer_Red_ReadCapture, %function
+ 243              	Timer_Red_ReadCapture:
+ 244              	.LFB11:
+ 440:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 13
+
+
+ 441:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 442:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 443:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_ReadCapture
+ 444:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 445:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 446:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 447:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function returns the last value captured.
+ 448:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 449:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 450:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 451:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 452:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 453:.\Generated_Source\PSoC4/Timer_Red.c **** *  Present Capture value.
+ 454:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 455:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 456:.\Generated_Source\PSoC4/Timer_Red.c **** uint16 Timer_Red_ReadCapture(void) 
+ 457:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 245              		.loc 1 457 0
+ 246              		.cfi_startproc
+ 458:.\Generated_Source\PSoC4/Timer_Red.c ****    #if(Timer_Red_UsingFixedFunction)
+ 459:.\Generated_Source\PSoC4/Timer_Red.c ****        return ((uint16)CY_GET_REG16(Timer_Red_CAPTURE_LSB_PTR));
+ 460:.\Generated_Source\PSoC4/Timer_Red.c ****    #else
+ 461:.\Generated_Source\PSoC4/Timer_Red.c ****        return (CY_GET_REG16(Timer_Red_CAPTURE_LSB_PTR));
+ 247              		.loc 1 461 0
+ 248 0000 014B     		ldr	r3, .L29
+ 249 0002 1888     		ldrh	r0, [r3]
+ 250 0004 80B2     		uxth	r0, r0
+ 462:.\Generated_Source\PSoC4/Timer_Red.c ****    #endif /* (Timer_Red_UsingFixedFunction) */
+ 463:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 251              		.loc 1 463 0
+ 252              		@ sp needed
+ 253 0006 7047     		bx	lr
+ 254              	.L30:
+ 255              		.align	2
+ 256              	.L29:
+ 257 0008 84100F40 		.word	1074729092
+ 258              		.cfi_endproc
+ 259              	.LFE11:
+ 260              		.size	Timer_Red_ReadCapture, .-Timer_Red_ReadCapture
+ 261              		.section	.text.Timer_Red_WriteCounter,"ax",%progbits
+ 262              		.align	2
+ 263              		.global	Timer_Red_WriteCounter
+ 264              		.code	16
+ 265              		.thumb_func
+ 266              		.type	Timer_Red_WriteCounter, %function
+ 267              	Timer_Red_WriteCounter:
+ 268              	.LFB12:
+ 464:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 465:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 466:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 467:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_WriteCounter
+ 468:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 469:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 470:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 471:.\Generated_Source\PSoC4/Timer_Red.c **** *  This funtion is used to set the counter to a specific value
+ 472:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 473:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 14
+
+
+ 474:.\Generated_Source\PSoC4/Timer_Red.c **** *  counter:  New counter value.
+ 475:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 476:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 477:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 478:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 479:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 480:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_WriteCounter(uint16 counter) 
+ 481:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 269              		.loc 1 481 0
+ 270              		.cfi_startproc
+ 271              	.LVL3:
+ 482:.\Generated_Source\PSoC4/Timer_Red.c ****    #if(Timer_Red_UsingFixedFunction)
+ 483:.\Generated_Source\PSoC4/Timer_Red.c ****         /* This functionality is removed until a FixedFunction HW update to
+ 484:.\Generated_Source\PSoC4/Timer_Red.c ****          * allow this register to be written
+ 485:.\Generated_Source\PSoC4/Timer_Red.c ****          */
+ 486:.\Generated_Source\PSoC4/Timer_Red.c ****         CY_SET_REG16(Timer_Red_COUNTER_LSB_PTR, (uint16)counter);
+ 487:.\Generated_Source\PSoC4/Timer_Red.c ****         
+ 488:.\Generated_Source\PSoC4/Timer_Red.c ****     #else
+ 489:.\Generated_Source\PSoC4/Timer_Red.c ****         CY_SET_REG16(Timer_Red_COUNTER_LSB_PTR, counter);
+ 272              		.loc 1 489 0
+ 273 0000 014B     		ldr	r3, .L32
+ 274 0002 1880     		strh	r0, [r3]
+ 490:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fix
+ 491:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 275              		.loc 1 491 0
+ 276              		@ sp needed
+ 277 0004 7047     		bx	lr
+ 278              	.L33:
+ 279 0006 C046     		.align	2
+ 280              	.L32:
+ 281 0008 04100F40 		.word	1074728964
+ 282              		.cfi_endproc
+ 283              	.LFE12:
+ 284              		.size	Timer_Red_WriteCounter, .-Timer_Red_WriteCounter
+ 285              		.section	.text.Timer_Red_ReadCounter,"ax",%progbits
+ 286              		.align	2
+ 287              		.global	Timer_Red_ReadCounter
+ 288              		.code	16
+ 289              		.thumb_func
+ 290              		.type	Timer_Red_ReadCounter, %function
+ 291              	Timer_Red_ReadCounter:
+ 292              	.LFB13:
+ 492:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 493:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 494:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 495:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_ReadCounter
+ 496:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 497:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 498:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 499:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function returns the current counter value.
+ 500:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 501:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 502:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 503:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 504:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 505:.\Generated_Source\PSoC4/Timer_Red.c **** *  Present compare value.
+ 506:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 15
+
+
+ 507:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 508:.\Generated_Source\PSoC4/Timer_Red.c **** uint16 Timer_Red_ReadCounter(void) 
+ 509:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 293              		.loc 1 509 0
+ 294              		.cfi_startproc
+ 510:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Force capture by reading Accumulator */
+ 511:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Must first do a software capture to be able to read the counter */
+ 512:.\Generated_Source\PSoC4/Timer_Red.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 513:.\Generated_Source\PSoC4/Timer_Red.c ****     #if(Timer_Red_UsingFixedFunction)
+ 514:.\Generated_Source\PSoC4/Timer_Red.c ****         (void)CY_GET_REG16(Timer_Red_COUNTER_LSB_PTR);
+ 515:.\Generated_Source\PSoC4/Timer_Red.c ****     #else
+ 516:.\Generated_Source\PSoC4/Timer_Red.c ****         (void)CY_GET_REG8(Timer_Red_COUNTER_LSB_PTR_8BIT);
+ 295              		.loc 1 516 0
+ 296 0000 024B     		ldr	r3, .L35
+ 297 0002 1B78     		ldrb	r3, [r3]
+ 517:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif/* (Timer_Red_UsingFixedFunction) */
+ 518:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 519:.\Generated_Source\PSoC4/Timer_Red.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 520:.\Generated_Source\PSoC4/Timer_Red.c ****     #if(Timer_Red_UsingFixedFunction)
+ 521:.\Generated_Source\PSoC4/Timer_Red.c ****         return ((uint16)CY_GET_REG16(Timer_Red_CAPTURE_LSB_PTR));
+ 522:.\Generated_Source\PSoC4/Timer_Red.c ****     #else
+ 523:.\Generated_Source\PSoC4/Timer_Red.c ****         return (CY_GET_REG16(Timer_Red_CAPTURE_LSB_PTR));
+ 298              		.loc 1 523 0
+ 299 0004 024B     		ldr	r3, .L35+4
+ 300 0006 1888     		ldrh	r0, [r3]
+ 301 0008 80B2     		uxth	r0, r0
+ 524:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* (Timer_Red_UsingFixedFunction) */
+ 525:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 302              		.loc 1 525 0
+ 303              		@ sp needed
+ 304 000a 7047     		bx	lr
+ 305              	.L36:
+ 306              		.align	2
+ 307              	.L35:
+ 308 000c 02000F40 		.word	1074724866
+ 309 0010 84100F40 		.word	1074729092
+ 310              		.cfi_endproc
+ 311              	.LFE13:
+ 312              		.size	Timer_Red_ReadCounter, .-Timer_Red_ReadCounter
+ 313              		.section	.text.Timer_Red_ClearFIFO,"ax",%progbits
+ 314              		.align	2
+ 315              		.global	Timer_Red_ClearFIFO
+ 316              		.code	16
+ 317              		.thumb_func
+ 318              		.type	Timer_Red_ClearFIFO, %function
+ 319              	Timer_Red_ClearFIFO:
+ 320              	.LFB14:
+ 526:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 527:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 528:.\Generated_Source\PSoC4/Timer_Red.c **** #if(!Timer_Red_UsingFixedFunction) /* UDB Specific Functions */
+ 529:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 530:.\Generated_Source\PSoC4/Timer_Red.c ****     
+ 531:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 532:.\Generated_Source\PSoC4/Timer_Red.c ****  * The functions below this point are only available using the UDB
+ 533:.\Generated_Source\PSoC4/Timer_Red.c ****  * implementation.  If a feature is selected, then the API is enabled.
+ 534:.\Generated_Source\PSoC4/Timer_Red.c ****  ******************************************************************************/
+ 535:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 16
+
+
+ 536:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 537:.\Generated_Source\PSoC4/Timer_Red.c **** #if (Timer_Red_SoftwareCaptureMode)
+ 538:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 539:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 540:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 541:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_SetCaptureMode
+ 542:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 543:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 544:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 545:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function sets the capture mode to either rising or falling edge.
+ 546:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 547:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 548:.\Generated_Source\PSoC4/Timer_Red.c **** *  captureMode: This parameter sets the capture mode of the UDB capture feature
+ 549:.\Generated_Source\PSoC4/Timer_Red.c **** *  The parameter values are defined using the
+ 550:.\Generated_Source\PSoC4/Timer_Red.c **** *  #define Timer_Red__B_TIMER__CM_NONE 0
+ 551:.\Generated_Source\PSoC4/Timer_Red.c **** #define Timer_Red__B_TIMER__CM_RISINGEDGE 1
+ 552:.\Generated_Source\PSoC4/Timer_Red.c **** #define Timer_Red__B_TIMER__CM_FALLINGEDGE 2
+ 553:.\Generated_Source\PSoC4/Timer_Red.c **** #define Timer_Red__B_TIMER__CM_EITHEREDGE 3
+ 554:.\Generated_Source\PSoC4/Timer_Red.c **** #define Timer_Red__B_TIMER__CM_SOFTWARE 4
+ 555:.\Generated_Source\PSoC4/Timer_Red.c ****  identifiers
+ 556:.\Generated_Source\PSoC4/Timer_Red.c **** *  The following are the possible values of the parameter
+ 557:.\Generated_Source\PSoC4/Timer_Red.c **** *  Timer_Red__B_TIMER__CM_NONE        - Set Capture mode to None
+ 558:.\Generated_Source\PSoC4/Timer_Red.c **** *  Timer_Red__B_TIMER__CM_RISINGEDGE  - Rising edge of Capture input
+ 559:.\Generated_Source\PSoC4/Timer_Red.c **** *  Timer_Red__B_TIMER__CM_FALLINGEDGE - Falling edge of Capture input
+ 560:.\Generated_Source\PSoC4/Timer_Red.c **** *  Timer_Red__B_TIMER__CM_EITHEREDGE  - Either edge of Capture input
+ 561:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 562:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 563:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 564:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 565:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 566:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_SetCaptureMode(uint8 captureMode) 
+ 567:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 568:.\Generated_Source\PSoC4/Timer_Red.c ****     /* This must only set to two bits of the control register associated */
+ 569:.\Generated_Source\PSoC4/Timer_Red.c ****     captureMode = ((uint8)((uint8)captureMode << Timer_Red_CTRL_CAP_MODE_SHIFT));
+ 570:.\Generated_Source\PSoC4/Timer_Red.c ****     captureMode &= (Timer_Red_CTRL_CAP_MODE_MASK);
+ 571:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 572:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED)
+ 573:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Clear the Current Setting */
+ 574:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL &= ((uint8)(~Timer_Red_CTRL_CAP_MODE_MASK));
+ 575:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 576:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Write The New Setting */
+ 577:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL |= captureMode;
+ 578:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* (!Timer_Red_UDB_CONTROL_REG_REMOVED) */
+ 579:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 580:.\Generated_Source\PSoC4/Timer_Red.c **** #endif /* Remove API if Capture Mode is not Software Controlled */
+ 581:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 582:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 583:.\Generated_Source\PSoC4/Timer_Red.c **** #if (Timer_Red_SoftwareTriggerMode)
+ 584:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 585:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 586:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 587:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_SetTriggerMode
+ 588:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 589:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 590:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 591:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function sets the trigger input mode
+ 592:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 17
+
+
+ 593:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 594:.\Generated_Source\PSoC4/Timer_Red.c **** *  triggerMode: Pass one of the pre-defined Trigger Modes (except Software)
+ 595:.\Generated_Source\PSoC4/Timer_Red.c ****     #define Timer_Red__B_TIMER__TM_NONE 0x00u
+ 596:.\Generated_Source\PSoC4/Timer_Red.c ****     #define Timer_Red__B_TIMER__TM_RISINGEDGE 0x04u
+ 597:.\Generated_Source\PSoC4/Timer_Red.c ****     #define Timer_Red__B_TIMER__TM_FALLINGEDGE 0x08u
+ 598:.\Generated_Source\PSoC4/Timer_Red.c ****     #define Timer_Red__B_TIMER__TM_EITHEREDGE 0x0Cu
+ 599:.\Generated_Source\PSoC4/Timer_Red.c ****     #define Timer_Red__B_TIMER__TM_SOFTWARE 0x10u
+ 600:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 601:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 602:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 603:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 604:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 605:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_SetTriggerMode(uint8 triggerMode) 
+ 606:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 607:.\Generated_Source\PSoC4/Timer_Red.c ****     /* This must only set to two bits of the control register associated */
+ 608:.\Generated_Source\PSoC4/Timer_Red.c ****     triggerMode &= Timer_Red_CTRL_TRIG_MODE_MASK;
+ 609:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 610:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is removed 
+ 611:.\Generated_Source\PSoC4/Timer_Red.c ****     
+ 612:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Clear the Current Setting */
+ 613:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL &= ((uint8)(~Timer_Red_CTRL_TRIG_MODE_MASK));
+ 614:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 615:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Write The New Setting */
+ 616:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL |= (triggerMode | Timer_Red__B_TIMER__TM_SOFTWARE);
+ 617:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Remove code section if control register is not used */
+ 618:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 619:.\Generated_Source\PSoC4/Timer_Red.c **** #endif /* Remove API if Trigger Mode is not Software Controlled */
+ 620:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 621:.\Generated_Source\PSoC4/Timer_Red.c **** #if (Timer_Red_EnableTriggerMode)
+ 622:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 623:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 624:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 625:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_EnableTrigger
+ 626:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 627:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 628:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 629:.\Generated_Source\PSoC4/Timer_Red.c **** *  Sets the control bit enabling Hardware Trigger mode
+ 630:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 631:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 632:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 633:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 634:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 635:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 636:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 637:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 638:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_EnableTrigger(void) 
+ 639:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 640:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is removed 
+ 641:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL |= Timer_Red_CTRL_TRIG_EN;
+ 642:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Remove code section if control register is not used */
+ 643:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 644:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 645:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 646:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 647:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_DisableTrigger
+ 648:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 649:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 18
+
+
+ 650:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 651:.\Generated_Source\PSoC4/Timer_Red.c **** *  Clears the control bit enabling Hardware Trigger mode
+ 652:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 653:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 654:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 655:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 656:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 657:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 658:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 659:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 660:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_DisableTrigger(void) 
+ 661:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 662:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED )   /* Remove assignment if control register is removed
+ 663:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL &= ((uint8)(~Timer_Red_CTRL_TRIG_EN));
+ 664:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Remove code section if control register is not used */
+ 665:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 666:.\Generated_Source\PSoC4/Timer_Red.c **** #endif /* Remove API is Trigger Mode is set to None */
+ 667:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 668:.\Generated_Source\PSoC4/Timer_Red.c **** #if(Timer_Red_InterruptOnCaptureCount)
+ 669:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 670:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 671:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 672:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_SetInterruptCount
+ 673:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 674:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 675:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 676:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function sets the capture count before an interrupt is triggered.
+ 677:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 678:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 679:.\Generated_Source\PSoC4/Timer_Red.c **** *  interruptCount:  A value between 0 and 3 is valid.  If the value is 0, then
+ 680:.\Generated_Source\PSoC4/Timer_Red.c **** *                   an interrupt will occur each time a capture occurs.
+ 681:.\Generated_Source\PSoC4/Timer_Red.c **** *                   A value of 1 to 3 will cause the interrupt
+ 682:.\Generated_Source\PSoC4/Timer_Red.c **** *                   to delay by the same number of captures.
+ 683:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 684:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 685:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 686:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 687:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 688:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_SetInterruptCount(uint8 interruptCount) 
+ 689:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 690:.\Generated_Source\PSoC4/Timer_Red.c ****     /* This must only set to two bits of the control register associated */
+ 691:.\Generated_Source\PSoC4/Timer_Red.c ****     interruptCount &= Timer_Red_CTRL_INTCNT_MASK;
+ 692:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 693:.\Generated_Source\PSoC4/Timer_Red.c ****     #if (!Timer_Red_UDB_CONTROL_REG_REMOVED)
+ 694:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Clear the Current Setting */
+ 695:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL &= ((uint8)(~Timer_Red_CTRL_INTCNT_MASK));
+ 696:.\Generated_Source\PSoC4/Timer_Red.c ****         /* Write The New Setting */
+ 697:.\Generated_Source\PSoC4/Timer_Red.c ****         Timer_Red_CONTROL |= interruptCount;
+ 698:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* (!Timer_Red_UDB_CONTROL_REG_REMOVED) */
+ 699:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 700:.\Generated_Source\PSoC4/Timer_Red.c **** #endif /* Timer_Red_InterruptOnCaptureCount */
+ 701:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 702:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 703:.\Generated_Source\PSoC4/Timer_Red.c **** #if (Timer_Red_UsingHWCaptureCounter)
+ 704:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 705:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 706:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 19
+
+
+ 707:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_SetCaptureCount
+ 708:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 709:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 710:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 711:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function sets the capture count
+ 712:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 713:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 714:.\Generated_Source\PSoC4/Timer_Red.c **** *  captureCount: A value between 2 and 127 inclusive is valid.  A value of 1
+ 715:.\Generated_Source\PSoC4/Timer_Red.c **** *                to 127 will cause the interrupt to delay by the same number of
+ 716:.\Generated_Source\PSoC4/Timer_Red.c **** *                captures.
+ 717:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 718:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 719:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 720:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 721:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 722:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_SetCaptureCount(uint8 captureCount) 
+ 723:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 724:.\Generated_Source\PSoC4/Timer_Red.c ****     Timer_Red_CAP_COUNT = captureCount;
+ 725:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 726:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 727:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 728:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 729:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_ReadCaptureCount
+ 730:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 731:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 732:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 733:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function reads the capture count setting
+ 734:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 735:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 736:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 737:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 738:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 739:.\Generated_Source\PSoC4/Timer_Red.c **** *  Returns the Capture Count Setting
+ 740:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 741:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 742:.\Generated_Source\PSoC4/Timer_Red.c **** uint8 Timer_Red_ReadCaptureCount(void) 
+ 743:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 744:.\Generated_Source\PSoC4/Timer_Red.c ****     return ((uint8)Timer_Red_CAP_COUNT);
+ 745:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 746:.\Generated_Source\PSoC4/Timer_Red.c **** #endif /* Timer_Red_UsingHWCaptureCounter */
+ 747:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 748:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 749:.\Generated_Source\PSoC4/Timer_Red.c **** /*******************************************************************************
+ 750:.\Generated_Source\PSoC4/Timer_Red.c **** * Function Name: Timer_Red_ClearFIFO
+ 751:.\Generated_Source\PSoC4/Timer_Red.c **** ********************************************************************************
+ 752:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 753:.\Generated_Source\PSoC4/Timer_Red.c **** * Summary:
+ 754:.\Generated_Source\PSoC4/Timer_Red.c **** *  This function clears all capture data from the capture FIFO
+ 755:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 756:.\Generated_Source\PSoC4/Timer_Red.c **** * Parameters:
+ 757:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 758:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 759:.\Generated_Source\PSoC4/Timer_Red.c **** * Return:
+ 760:.\Generated_Source\PSoC4/Timer_Red.c **** *  void
+ 761:.\Generated_Source\PSoC4/Timer_Red.c **** *
+ 762:.\Generated_Source\PSoC4/Timer_Red.c **** *******************************************************************************/
+ 763:.\Generated_Source\PSoC4/Timer_Red.c **** void Timer_Red_ClearFIFO(void) 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 20
+
+
+ 764:.\Generated_Source\PSoC4/Timer_Red.c **** {
+ 321              		.loc 1 764 0
+ 322              		.cfi_startproc
+ 323 0000 08B5     		push	{r3, lr}
+ 324              		.cfi_def_cfa_offset 8
+ 325              		.cfi_offset 3, -8
+ 326              		.cfi_offset 14, -4
+ 765:.\Generated_Source\PSoC4/Timer_Red.c ****     while(0u != (Timer_Red_ReadStatusRegister() & Timer_Red_STATUS_FIFONEMP))
+ 327              		.loc 1 765 0
+ 328 0002 01E0     		b	.L38
+ 329              	.L39:
+ 766:.\Generated_Source\PSoC4/Timer_Red.c ****     {
+ 767:.\Generated_Source\PSoC4/Timer_Red.c ****         (void)Timer_Red_ReadCapture();
+ 330              		.loc 1 767 0
+ 331 0004 FFF7FEFF 		bl	Timer_Red_ReadCapture
+ 332              	.LVL4:
+ 333              	.L38:
+ 765:.\Generated_Source\PSoC4/Timer_Red.c ****     while(0u != (Timer_Red_ReadStatusRegister() & Timer_Red_STATUS_FIFONEMP))
+ 334              		.loc 1 765 0
+ 335 0008 FFF7FEFF 		bl	Timer_Red_ReadStatusRegister
+ 336              	.LVL5:
+ 337 000c 0307     		lsl	r3, r0, #28
+ 338 000e F9D4     		bmi	.L39
+ 768:.\Generated_Source\PSoC4/Timer_Red.c ****     }
+ 769:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 339              		.loc 1 769 0
+ 340              		@ sp needed
+ 341 0010 08BD     		pop	{r3, pc}
+ 342              		.cfi_endproc
+ 343              	.LFE14:
+ 344              		.size	Timer_Red_ClearFIFO, .-Timer_Red_ClearFIFO
+ 345 0012 C046     		.section	.text.Timer_Red_Init,"ax",%progbits
+ 346              		.align	2
+ 347              		.global	Timer_Red_Init
+ 348              		.code	16
+ 349              		.thumb_func
+ 350              		.type	Timer_Red_Init, %function
+ 351              	Timer_Red_Init:
+ 352              	.LFB0:
+  44:.\Generated_Source\PSoC4/Timer_Red.c ****     #if(!Timer_Red_UsingFixedFunction)
+ 353              		.loc 1 44 0
+ 354              		.cfi_startproc
+ 355 0000 10B5     		push	{r4, lr}
+ 356              		.cfi_def_cfa_offset 8
+ 357              		.cfi_offset 4, -8
+ 358              		.cfi_offset 14, -4
+ 118:.\Generated_Source\PSoC4/Timer_Red.c ****     Timer_Red_WriteCounter(Timer_Red_INIT_PERIOD);
+ 359              		.loc 1 118 0
+ 360 0002 0B4C     		ldr	r4, .L41
+ 361 0004 201C     		mov	r0, r4
+ 362 0006 FFF7FEFF 		bl	Timer_Red_WritePeriod
+ 363              	.LVL6:
+ 119:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 364              		.loc 1 119 0
+ 365 000a 201C     		mov	r0, r4
+ 366 000c FFF7FEFF 		bl	Timer_Red_WriteCounter
+ 367              	.LVL7:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 21
+
+
+ 142:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 368              		.loc 1 142 0
+ 369 0010 FFF7FEFF 		bl	CyEnterCriticalSection
+ 370              	.LVL8:
+ 145:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 371              		.loc 1 145 0
+ 372 0014 074A     		ldr	r2, .L41+4
+ 373 0016 1178     		ldrb	r1, [r2]
+ 374 0018 1023     		mov	r3, #16
+ 375 001a 0B43     		orr	r3, r1
+ 376 001c 1370     		strb	r3, [r2]
+ 148:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 377              		.loc 1 148 0
+ 378 001e FFF7FEFF 		bl	CyExitCriticalSection
+ 379              	.LVL9:
+ 159:.\Generated_Source\PSoC4/Timer_Red.c ****     #endif /* Configure additional features of UDB implementation */
+ 380              		.loc 1 159 0
+ 381 0022 FFF7FEFF 		bl	Timer_Red_ClearFIFO
+ 382              	.LVL10:
+ 162:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 383              		.loc 1 162 0
+ 384 0026 0020     		mov	r0, #0
+ 385 0028 FFF7FEFF 		bl	Timer_Red_SetInterruptMode
+ 386              	.LVL11:
+ 163:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 387              		.loc 1 163 0
+ 388              		@ sp needed
+ 389 002c 10BD     		pop	{r4, pc}
+ 390              	.L42:
+ 391 002e C046     		.align	2
+ 392              	.L41:
+ 393 0030 BF5D0000 		.word	23999
+ 394 0034 93000F40 		.word	1074725011
+ 395              		.cfi_endproc
+ 396              	.LFE0:
+ 397              		.size	Timer_Red_Init, .-Timer_Red_Init
+ 398              		.section	.text.Timer_Red_Start,"ax",%progbits
+ 399              		.align	2
+ 400              		.global	Timer_Red_Start
+ 401              		.code	16
+ 402              		.thumb_func
+ 403              		.type	Timer_Red_Start, %function
+ 404              	Timer_Red_Start:
+ 405              	.LFB2:
+ 216:.\Generated_Source\PSoC4/Timer_Red.c ****     if(Timer_Red_initVar == 0u)
+ 406              		.loc 1 216 0
+ 407              		.cfi_startproc
+ 408 0000 08B5     		push	{r3, lr}
+ 409              		.cfi_def_cfa_offset 8
+ 410              		.cfi_offset 3, -8
+ 411              		.cfi_offset 14, -4
+ 217:.\Generated_Source\PSoC4/Timer_Red.c ****     {
+ 412              		.loc 1 217 0
+ 413 0002 064B     		ldr	r3, .L45
+ 414 0004 1B78     		ldrb	r3, [r3]
+ 415 0006 002B     		cmp	r3, #0
+ 416 0008 04D1     		bne	.L44
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 22
+
+
+ 219:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 417              		.loc 1 219 0
+ 418 000a FFF7FEFF 		bl	Timer_Red_Init
+ 419              	.LVL12:
+ 221:.\Generated_Source\PSoC4/Timer_Red.c ****     }
+ 420              		.loc 1 221 0
+ 421 000e 0122     		mov	r2, #1
+ 422 0010 024B     		ldr	r3, .L45
+ 423 0012 1A70     		strb	r2, [r3]
+ 424              	.L44:
+ 225:.\Generated_Source\PSoC4/Timer_Red.c **** }
+ 425              		.loc 1 225 0
+ 426 0014 FFF7FEFF 		bl	Timer_Red_Enable
+ 427              	.LVL13:
+ 226:.\Generated_Source\PSoC4/Timer_Red.c **** 
+ 428              		.loc 1 226 0
+ 429              		@ sp needed
+ 430 0018 08BD     		pop	{r3, pc}
+ 431              	.L46:
+ 432 001a C046     		.align	2
+ 433              	.L45:
+ 434 001c 00000000 		.word	.LANCHOR0
+ 435              		.cfi_endproc
+ 436              	.LFE2:
+ 437              		.size	Timer_Red_Start, .-Timer_Red_Start
+ 438              		.global	Timer_Red_initVar
+ 439              		.bss
+ 440              		.set	.LANCHOR0,. + 0
+ 441              		.type	Timer_Red_initVar, %object
+ 442              		.size	Timer_Red_initVar, 1
+ 443              	Timer_Red_initVar:
+ 444 0000 00       		.space	1
+ 445              		.text
+ 446              	.Letext0:
+ 447              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 448              		.file 3 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ 449              		.section	.debug_info,"",%progbits
+ 450              	.Ldebug_info0:
+ 451 0000 E3020000 		.4byte	0x2e3
+ 452 0004 0400     		.2byte	0x4
+ 453 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 454 000a 04       		.byte	0x4
+ 455 000b 01       		.uleb128 0x1
+ 456 000c EA010000 		.4byte	.LASF36
+ 457 0010 01       		.byte	0x1
+ 458 0011 75000000 		.4byte	.LASF37
+ 459 0015 37030000 		.4byte	.LASF38
+ 460 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 461 001d 00000000 		.4byte	0
+ 462 0021 00000000 		.4byte	.Ldebug_line0
+ 463 0025 02       		.uleb128 0x2
+ 464 0026 01       		.byte	0x1
+ 465 0027 06       		.byte	0x6
+ 466 0028 DE020000 		.4byte	.LASF0
+ 467 002c 02       		.uleb128 0x2
+ 468 002d 01       		.byte	0x1
+ 469 002e 08       		.byte	0x8
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 23
+
+
+ 470 002f D5000000 		.4byte	.LASF1
+ 471 0033 02       		.uleb128 0x2
+ 472 0034 02       		.byte	0x2
+ 473 0035 05       		.byte	0x5
+ 474 0036 1E010000 		.4byte	.LASF2
+ 475 003a 02       		.uleb128 0x2
+ 476 003b 02       		.byte	0x2
+ 477 003c 07       		.byte	0x7
+ 478 003d 62000000 		.4byte	.LASF3
+ 479 0041 02       		.uleb128 0x2
+ 480 0042 04       		.byte	0x4
+ 481 0043 05       		.byte	0x5
+ 482 0044 BF020000 		.4byte	.LASF4
+ 483 0048 02       		.uleb128 0x2
+ 484 0049 04       		.byte	0x4
+ 485 004a 07       		.byte	0x7
+ 486 004b E8000000 		.4byte	.LASF5
+ 487 004f 02       		.uleb128 0x2
+ 488 0050 08       		.byte	0x8
+ 489 0051 05       		.byte	0x5
+ 490 0052 CE010000 		.4byte	.LASF6
+ 491 0056 02       		.uleb128 0x2
+ 492 0057 08       		.byte	0x8
+ 493 0058 07       		.byte	0x7
+ 494 0059 BE000000 		.4byte	.LASF7
+ 495 005d 03       		.uleb128 0x3
+ 496 005e 04       		.byte	0x4
+ 497 005f 05       		.byte	0x5
+ 498 0060 696E7400 		.ascii	"int\000"
+ 499 0064 02       		.uleb128 0x2
+ 500 0065 04       		.byte	0x4
+ 501 0066 07       		.byte	0x7
+ 502 0067 8B010000 		.4byte	.LASF8
+ 503 006b 04       		.uleb128 0x4
+ 504 006c FA000000 		.4byte	.LASF9
+ 505 0070 02       		.byte	0x2
+ 506 0071 C2       		.byte	0xc2
+ 507 0072 2C000000 		.4byte	0x2c
+ 508 0076 04       		.uleb128 0x4
+ 509 0077 3E010000 		.4byte	.LASF10
+ 510 007b 02       		.byte	0x2
+ 511 007c C3       		.byte	0xc3
+ 512 007d 3A000000 		.4byte	0x3a
+ 513 0081 02       		.uleb128 0x2
+ 514 0082 04       		.byte	0x4
+ 515 0083 04       		.byte	0x4
+ 516 0084 B0000000 		.4byte	.LASF11
+ 517 0088 02       		.uleb128 0x2
+ 518 0089 08       		.byte	0x8
+ 519 008a 04       		.byte	0x4
+ 520 008b 17010000 		.4byte	.LASF12
+ 521 008f 02       		.uleb128 0x2
+ 522 0090 01       		.byte	0x1
+ 523 0091 08       		.byte	0x8
+ 524 0092 C8020000 		.4byte	.LASF13
+ 525 0096 05       		.uleb128 0x5
+ 526 0097 E3000000 		.4byte	.LASF14
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 24
+
+
+ 527 009b 02       		.byte	0x2
+ 528 009c 6C01     		.2byte	0x16c
+ 529 009e A2000000 		.4byte	0xa2
+ 530 00a2 06       		.uleb128 0x6
+ 531 00a3 6B000000 		.4byte	0x6b
+ 532 00a7 05       		.uleb128 0x5
+ 533 00a8 00000000 		.4byte	.LASF15
+ 534 00ac 02       		.byte	0x2
+ 535 00ad 6D01     		.2byte	0x16d
+ 536 00af B3000000 		.4byte	0xb3
+ 537 00b3 06       		.uleb128 0x6
+ 538 00b4 76000000 		.4byte	0x76
+ 539 00b8 02       		.uleb128 0x2
+ 540 00b9 04       		.byte	0x4
+ 541 00ba 07       		.byte	0x7
+ 542 00bb C5010000 		.4byte	.LASF16
+ 543 00bf 07       		.uleb128 0x7
+ 544 00c0 CD020000 		.4byte	.LASF17
+ 545 00c4 01       		.byte	0x1
+ 546 00c5 B4       		.byte	0xb4
+ 547 00c6 00000000 		.4byte	.LFB1
+ 548 00ca 10000000 		.4byte	.LFE1-.LFB1
+ 549 00ce 01       		.uleb128 0x1
+ 550 00cf 9C       		.byte	0x9c
+ 551 00d0 07       		.uleb128 0x7
+ 552 00d1 78020000 		.4byte	.LASF18
+ 553 00d5 01       		.byte	0x1
+ 554 00d6 F7       		.byte	0xf7
+ 555 00d7 00000000 		.4byte	.LFB3
+ 556 00db 10000000 		.4byte	.LFE3-.LFB3
+ 557 00df 01       		.uleb128 0x1
+ 558 00e0 9C       		.byte	0x9c
+ 559 00e1 08       		.uleb128 0x8
+ 560 00e2 A4020000 		.4byte	.LASF22
+ 561 00e6 01       		.byte	0x1
+ 562 00e7 1701     		.2byte	0x117
+ 563 00e9 00000000 		.4byte	.LFB4
+ 564 00ed 0C000000 		.4byte	.LFE4-.LFB4
+ 565 00f1 01       		.uleb128 0x1
+ 566 00f2 9C       		.byte	0x9c
+ 567 00f3 06010000 		.4byte	0x106
+ 568 00f7 09       		.uleb128 0x9
+ 569 00f8 DC010000 		.4byte	.LASF24
+ 570 00fc 01       		.byte	0x1
+ 571 00fd 1701     		.2byte	0x117
+ 572 00ff 6B000000 		.4byte	0x6b
+ 573 0103 01       		.uleb128 0x1
+ 574 0104 50       		.byte	0x50
+ 575 0105 00       		.byte	0
+ 576 0106 0A       		.uleb128 0xa
+ 577 0107 5A010000 		.4byte	.LASF19
+ 578 010b 01       		.byte	0x1
+ 579 010c 2E01     		.2byte	0x12e
+ 580 010e 00000000 		.4byte	.LFB5
+ 581 0112 0C000000 		.4byte	.LFE5-.LFB5
+ 582 0116 01       		.uleb128 0x1
+ 583 0117 9C       		.byte	0x9c
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 25
+
+
+ 584 0118 0B       		.uleb128 0xb
+ 585 0119 87020000 		.4byte	.LASF20
+ 586 011d 01       		.byte	0x1
+ 587 011e 4D01     		.2byte	0x14d
+ 588 0120 6B000000 		.4byte	0x6b
+ 589 0124 00000000 		.4byte	.LFB6
+ 590 0128 0C000000 		.4byte	.LFE6-.LFB6
+ 591 012c 01       		.uleb128 0x1
+ 592 012d 9C       		.byte	0x9c
+ 593 012e 0B       		.uleb128 0xb
+ 594 012f EA020000 		.4byte	.LASF21
+ 595 0133 01       		.byte	0x1
+ 596 0134 6401     		.2byte	0x164
+ 597 0136 6B000000 		.4byte	0x6b
+ 598 013a 00000000 		.4byte	.LFB7
+ 599 013e 0C000000 		.4byte	.LFE7-.LFB7
+ 600 0142 01       		.uleb128 0x1
+ 601 0143 9C       		.byte	0x9c
+ 602 0144 08       		.uleb128 0x8
+ 603 0145 08030000 		.4byte	.LASF23
+ 604 0149 01       		.byte	0x1
+ 605 014a 7B01     		.2byte	0x17b
+ 606 014c 00000000 		.4byte	.LFB8
+ 607 0150 0C000000 		.4byte	.LFE8-.LFB8
+ 608 0154 01       		.uleb128 0x1
+ 609 0155 9C       		.byte	0x9c
+ 610 0156 69010000 		.4byte	0x169
+ 611 015a 09       		.uleb128 0x9
+ 612 015b 00010000 		.4byte	.LASF25
+ 613 015f 01       		.byte	0x1
+ 614 0160 7B01     		.2byte	0x17b
+ 615 0162 6B000000 		.4byte	0x6b
+ 616 0166 01       		.uleb128 0x1
+ 617 0167 50       		.byte	0x50
+ 618 0168 00       		.byte	0
+ 619 0169 0B       		.uleb128 0xb
+ 620 016a 45010000 		.4byte	.LASF26
+ 621 016e 01       		.byte	0x1
+ 622 016f 9501     		.2byte	0x195
+ 623 0171 76000000 		.4byte	0x76
+ 624 0175 00000000 		.4byte	.LFB9
+ 625 0179 0C000000 		.4byte	.LFE9-.LFB9
+ 626 017d 01       		.uleb128 0x1
+ 627 017e 9C       		.byte	0x9c
+ 628 017f 08       		.uleb128 0x8
+ 629 0180 28010000 		.4byte	.LASF27
+ 630 0184 01       		.byte	0x1
+ 631 0185 AF01     		.2byte	0x1af
+ 632 0187 00000000 		.4byte	.LFB10
+ 633 018b 0C000000 		.4byte	.LFE10-.LFB10
+ 634 018f 01       		.uleb128 0x1
+ 635 0190 9C       		.byte	0x9c
+ 636 0191 A4010000 		.4byte	0x1a4
+ 637 0195 09       		.uleb128 0x9
+ 638 0196 5B000000 		.4byte	.LASF28
+ 639 019a 01       		.byte	0x1
+ 640 019b AF01     		.2byte	0x1af
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 26
+
+
+ 641 019d 76000000 		.4byte	0x76
+ 642 01a1 01       		.uleb128 0x1
+ 643 01a2 50       		.byte	0x50
+ 644 01a3 00       		.byte	0
+ 645 01a4 0B       		.uleb128 0xb
+ 646 01a5 06000000 		.4byte	.LASF29
+ 647 01a9 01       		.byte	0x1
+ 648 01aa C801     		.2byte	0x1c8
+ 649 01ac 76000000 		.4byte	0x76
+ 650 01b0 00000000 		.4byte	.LFB11
+ 651 01b4 0C000000 		.4byte	.LFE11-.LFB11
+ 652 01b8 01       		.uleb128 0x1
+ 653 01b9 9C       		.byte	0x9c
+ 654 01ba 08       		.uleb128 0x8
+ 655 01bb AE010000 		.4byte	.LASF30
+ 656 01bf 01       		.byte	0x1
+ 657 01c0 E001     		.2byte	0x1e0
+ 658 01c2 00000000 		.4byte	.LFB12
+ 659 01c6 0C000000 		.4byte	.LFE12-.LFB12
+ 660 01ca 01       		.uleb128 0x1
+ 661 01cb 9C       		.byte	0x9c
+ 662 01cc DF010000 		.4byte	0x1df
+ 663 01d0 09       		.uleb128 0x9
+ 664 01d1 B6000000 		.4byte	.LASF31
+ 665 01d5 01       		.byte	0x1
+ 666 01d6 E001     		.2byte	0x1e0
+ 667 01d8 76000000 		.4byte	0x76
+ 668 01dc 01       		.uleb128 0x1
+ 669 01dd 50       		.byte	0x50
+ 670 01de 00       		.byte	0
+ 671 01df 0B       		.uleb128 0xb
+ 672 01e0 9A000000 		.4byte	.LASF32
+ 673 01e4 01       		.byte	0x1
+ 674 01e5 FC01     		.2byte	0x1fc
+ 675 01e7 76000000 		.4byte	0x76
+ 676 01eb 00000000 		.4byte	.LFB13
+ 677 01ef 14000000 		.4byte	.LFE13-.LFB13
+ 678 01f3 01       		.uleb128 0x1
+ 679 01f4 9C       		.byte	0x9c
+ 680 01f5 08       		.uleb128 0x8
+ 681 01f6 1C000000 		.4byte	.LASF33
+ 682 01fa 01       		.byte	0x1
+ 683 01fb FB02     		.2byte	0x2fb
+ 684 01fd 00000000 		.4byte	.LFB14
+ 685 0201 12000000 		.4byte	.LFE14-.LFB14
+ 686 0205 01       		.uleb128 0x1
+ 687 0206 9C       		.byte	0x9c
+ 688 0207 1E020000 		.4byte	0x21e
+ 689 020b 0C       		.uleb128 0xc
+ 690 020c 08000000 		.4byte	.LVL4
+ 691 0210 A4010000 		.4byte	0x1a4
+ 692 0214 0C       		.uleb128 0xc
+ 693 0215 0C000000 		.4byte	.LVL5
+ 694 0219 18010000 		.4byte	0x118
+ 695 021d 00       		.byte	0
+ 696 021e 0D       		.uleb128 0xd
+ 697 021f 08010000 		.4byte	.LASF34
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 27
+
+
+ 698 0223 01       		.byte	0x1
+ 699 0224 2B       		.byte	0x2b
+ 700 0225 00000000 		.4byte	.LFB0
+ 701 0229 38000000 		.4byte	.LFE0-.LFB0
+ 702 022d 01       		.uleb128 0x1
+ 703 022e 9C       		.byte	0x9c
+ 704 022f 95020000 		.4byte	0x295
+ 705 0233 0E       		.uleb128 0xe
+ 706 0234 30000000 		.4byte	.LASF39
+ 707 0238 01       		.byte	0x1
+ 708 0239 2F       		.byte	0x2f
+ 709 023a 6B000000 		.4byte	0x6b
+ 710 023e 00000000 		.4byte	.LLST0
+ 711 0242 0F       		.uleb128 0xf
+ 712 0243 0A000000 		.4byte	.LVL6
+ 713 0247 7F010000 		.4byte	0x17f
+ 714 024b 56020000 		.4byte	0x256
+ 715 024f 10       		.uleb128 0x10
+ 716 0250 01       		.uleb128 0x1
+ 717 0251 50       		.byte	0x50
+ 718 0252 02       		.uleb128 0x2
+ 719 0253 74       		.byte	0x74
+ 720 0254 00       		.sleb128 0
+ 721 0255 00       		.byte	0
+ 722 0256 0F       		.uleb128 0xf
+ 723 0257 10000000 		.4byte	.LVL7
+ 724 025b BA010000 		.4byte	0x1ba
+ 725 025f 6A020000 		.4byte	0x26a
+ 726 0263 10       		.uleb128 0x10
+ 727 0264 01       		.uleb128 0x1
+ 728 0265 50       		.byte	0x50
+ 729 0266 02       		.uleb128 0x2
+ 730 0267 74       		.byte	0x74
+ 731 0268 00       		.sleb128 0
+ 732 0269 00       		.byte	0
+ 733 026a 0C       		.uleb128 0xc
+ 734 026b 14000000 		.4byte	.LVL8
+ 735 026f CE020000 		.4byte	0x2ce
+ 736 0273 0C       		.uleb128 0xc
+ 737 0274 22000000 		.4byte	.LVL9
+ 738 0278 D9020000 		.4byte	0x2d9
+ 739 027c 0C       		.uleb128 0xc
+ 740 027d 26000000 		.4byte	.LVL10
+ 741 0281 F5010000 		.4byte	0x1f5
+ 742 0285 11       		.uleb128 0x11
+ 743 0286 2C000000 		.4byte	.LVL11
+ 744 028a E1000000 		.4byte	0xe1
+ 745 028e 10       		.uleb128 0x10
+ 746 028f 01       		.uleb128 0x1
+ 747 0290 50       		.byte	0x50
+ 748 0291 01       		.uleb128 0x1
+ 749 0292 30       		.byte	0x30
+ 750 0293 00       		.byte	0
+ 751 0294 00       		.byte	0
+ 752 0295 0D       		.uleb128 0xd
+ 753 0296 27030000 		.4byte	.LASF35
+ 754 029a 01       		.byte	0x1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 28
+
+
+ 755 029b D7       		.byte	0xd7
+ 756 029c 00000000 		.4byte	.LFB2
+ 757 02a0 20000000 		.4byte	.LFE2-.LFB2
+ 758 02a4 01       		.uleb128 0x1
+ 759 02a5 9C       		.byte	0x9c
+ 760 02a6 BD020000 		.4byte	0x2bd
+ 761 02aa 0C       		.uleb128 0xc
+ 762 02ab 0E000000 		.4byte	.LVL12
+ 763 02af 1E020000 		.4byte	0x21e
+ 764 02b3 0C       		.uleb128 0xc
+ 765 02b4 18000000 		.4byte	.LVL13
+ 766 02b8 BF000000 		.4byte	0xbf
+ 767 02bc 00       		.byte	0
+ 768 02bd 12       		.uleb128 0x12
+ 769 02be 49000000 		.4byte	.LASF40
+ 770 02c2 01       		.byte	0x1
+ 771 02c3 1A       		.byte	0x1a
+ 772 02c4 6B000000 		.4byte	0x6b
+ 773 02c8 05       		.uleb128 0x5
+ 774 02c9 03       		.byte	0x3
+ 775 02ca 00000000 		.4byte	Timer_Red_initVar
+ 776 02ce 13       		.uleb128 0x13
+ 777 02cf 74010000 		.4byte	.LASF41
+ 778 02d3 03       		.byte	0x3
+ 779 02d4 5E       		.byte	0x5e
+ 780 02d5 6B000000 		.4byte	0x6b
+ 781 02d9 14       		.uleb128 0x14
+ 782 02da 98010000 		.4byte	.LASF42
+ 783 02de 03       		.byte	0x3
+ 784 02df 5F       		.byte	0x5f
+ 785 02e0 15       		.uleb128 0x15
+ 786 02e1 6B000000 		.4byte	0x6b
+ 787 02e5 00       		.byte	0
+ 788 02e6 00       		.byte	0
+ 789              		.section	.debug_abbrev,"",%progbits
+ 790              	.Ldebug_abbrev0:
+ 791 0000 01       		.uleb128 0x1
+ 792 0001 11       		.uleb128 0x11
+ 793 0002 01       		.byte	0x1
+ 794 0003 25       		.uleb128 0x25
+ 795 0004 0E       		.uleb128 0xe
+ 796 0005 13       		.uleb128 0x13
+ 797 0006 0B       		.uleb128 0xb
+ 798 0007 03       		.uleb128 0x3
+ 799 0008 0E       		.uleb128 0xe
+ 800 0009 1B       		.uleb128 0x1b
+ 801 000a 0E       		.uleb128 0xe
+ 802 000b 55       		.uleb128 0x55
+ 803 000c 17       		.uleb128 0x17
+ 804 000d 11       		.uleb128 0x11
+ 805 000e 01       		.uleb128 0x1
+ 806 000f 10       		.uleb128 0x10
+ 807 0010 17       		.uleb128 0x17
+ 808 0011 00       		.byte	0
+ 809 0012 00       		.byte	0
+ 810 0013 02       		.uleb128 0x2
+ 811 0014 24       		.uleb128 0x24
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 29
+
+
+ 812 0015 00       		.byte	0
+ 813 0016 0B       		.uleb128 0xb
+ 814 0017 0B       		.uleb128 0xb
+ 815 0018 3E       		.uleb128 0x3e
+ 816 0019 0B       		.uleb128 0xb
+ 817 001a 03       		.uleb128 0x3
+ 818 001b 0E       		.uleb128 0xe
+ 819 001c 00       		.byte	0
+ 820 001d 00       		.byte	0
+ 821 001e 03       		.uleb128 0x3
+ 822 001f 24       		.uleb128 0x24
+ 823 0020 00       		.byte	0
+ 824 0021 0B       		.uleb128 0xb
+ 825 0022 0B       		.uleb128 0xb
+ 826 0023 3E       		.uleb128 0x3e
+ 827 0024 0B       		.uleb128 0xb
+ 828 0025 03       		.uleb128 0x3
+ 829 0026 08       		.uleb128 0x8
+ 830 0027 00       		.byte	0
+ 831 0028 00       		.byte	0
+ 832 0029 04       		.uleb128 0x4
+ 833 002a 16       		.uleb128 0x16
+ 834 002b 00       		.byte	0
+ 835 002c 03       		.uleb128 0x3
+ 836 002d 0E       		.uleb128 0xe
+ 837 002e 3A       		.uleb128 0x3a
+ 838 002f 0B       		.uleb128 0xb
+ 839 0030 3B       		.uleb128 0x3b
+ 840 0031 0B       		.uleb128 0xb
+ 841 0032 49       		.uleb128 0x49
+ 842 0033 13       		.uleb128 0x13
+ 843 0034 00       		.byte	0
+ 844 0035 00       		.byte	0
+ 845 0036 05       		.uleb128 0x5
+ 846 0037 16       		.uleb128 0x16
+ 847 0038 00       		.byte	0
+ 848 0039 03       		.uleb128 0x3
+ 849 003a 0E       		.uleb128 0xe
+ 850 003b 3A       		.uleb128 0x3a
+ 851 003c 0B       		.uleb128 0xb
+ 852 003d 3B       		.uleb128 0x3b
+ 853 003e 05       		.uleb128 0x5
+ 854 003f 49       		.uleb128 0x49
+ 855 0040 13       		.uleb128 0x13
+ 856 0041 00       		.byte	0
+ 857 0042 00       		.byte	0
+ 858 0043 06       		.uleb128 0x6
+ 859 0044 35       		.uleb128 0x35
+ 860 0045 00       		.byte	0
+ 861 0046 49       		.uleb128 0x49
+ 862 0047 13       		.uleb128 0x13
+ 863 0048 00       		.byte	0
+ 864 0049 00       		.byte	0
+ 865 004a 07       		.uleb128 0x7
+ 866 004b 2E       		.uleb128 0x2e
+ 867 004c 00       		.byte	0
+ 868 004d 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 30
+
+
+ 869 004e 19       		.uleb128 0x19
+ 870 004f 03       		.uleb128 0x3
+ 871 0050 0E       		.uleb128 0xe
+ 872 0051 3A       		.uleb128 0x3a
+ 873 0052 0B       		.uleb128 0xb
+ 874 0053 3B       		.uleb128 0x3b
+ 875 0054 0B       		.uleb128 0xb
+ 876 0055 27       		.uleb128 0x27
+ 877 0056 19       		.uleb128 0x19
+ 878 0057 11       		.uleb128 0x11
+ 879 0058 01       		.uleb128 0x1
+ 880 0059 12       		.uleb128 0x12
+ 881 005a 06       		.uleb128 0x6
+ 882 005b 40       		.uleb128 0x40
+ 883 005c 18       		.uleb128 0x18
+ 884 005d 9742     		.uleb128 0x2117
+ 885 005f 19       		.uleb128 0x19
+ 886 0060 00       		.byte	0
+ 887 0061 00       		.byte	0
+ 888 0062 08       		.uleb128 0x8
+ 889 0063 2E       		.uleb128 0x2e
+ 890 0064 01       		.byte	0x1
+ 891 0065 3F       		.uleb128 0x3f
+ 892 0066 19       		.uleb128 0x19
+ 893 0067 03       		.uleb128 0x3
+ 894 0068 0E       		.uleb128 0xe
+ 895 0069 3A       		.uleb128 0x3a
+ 896 006a 0B       		.uleb128 0xb
+ 897 006b 3B       		.uleb128 0x3b
+ 898 006c 05       		.uleb128 0x5
+ 899 006d 27       		.uleb128 0x27
+ 900 006e 19       		.uleb128 0x19
+ 901 006f 11       		.uleb128 0x11
+ 902 0070 01       		.uleb128 0x1
+ 903 0071 12       		.uleb128 0x12
+ 904 0072 06       		.uleb128 0x6
+ 905 0073 40       		.uleb128 0x40
+ 906 0074 18       		.uleb128 0x18
+ 907 0075 9742     		.uleb128 0x2117
+ 908 0077 19       		.uleb128 0x19
+ 909 0078 01       		.uleb128 0x1
+ 910 0079 13       		.uleb128 0x13
+ 911 007a 00       		.byte	0
+ 912 007b 00       		.byte	0
+ 913 007c 09       		.uleb128 0x9
+ 914 007d 05       		.uleb128 0x5
+ 915 007e 00       		.byte	0
+ 916 007f 03       		.uleb128 0x3
+ 917 0080 0E       		.uleb128 0xe
+ 918 0081 3A       		.uleb128 0x3a
+ 919 0082 0B       		.uleb128 0xb
+ 920 0083 3B       		.uleb128 0x3b
+ 921 0084 05       		.uleb128 0x5
+ 922 0085 49       		.uleb128 0x49
+ 923 0086 13       		.uleb128 0x13
+ 924 0087 02       		.uleb128 0x2
+ 925 0088 18       		.uleb128 0x18
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 31
+
+
+ 926 0089 00       		.byte	0
+ 927 008a 00       		.byte	0
+ 928 008b 0A       		.uleb128 0xa
+ 929 008c 2E       		.uleb128 0x2e
+ 930 008d 00       		.byte	0
+ 931 008e 3F       		.uleb128 0x3f
+ 932 008f 19       		.uleb128 0x19
+ 933 0090 03       		.uleb128 0x3
+ 934 0091 0E       		.uleb128 0xe
+ 935 0092 3A       		.uleb128 0x3a
+ 936 0093 0B       		.uleb128 0xb
+ 937 0094 3B       		.uleb128 0x3b
+ 938 0095 05       		.uleb128 0x5
+ 939 0096 27       		.uleb128 0x27
+ 940 0097 19       		.uleb128 0x19
+ 941 0098 11       		.uleb128 0x11
+ 942 0099 01       		.uleb128 0x1
+ 943 009a 12       		.uleb128 0x12
+ 944 009b 06       		.uleb128 0x6
+ 945 009c 40       		.uleb128 0x40
+ 946 009d 18       		.uleb128 0x18
+ 947 009e 9742     		.uleb128 0x2117
+ 948 00a0 19       		.uleb128 0x19
+ 949 00a1 00       		.byte	0
+ 950 00a2 00       		.byte	0
+ 951 00a3 0B       		.uleb128 0xb
+ 952 00a4 2E       		.uleb128 0x2e
+ 953 00a5 00       		.byte	0
+ 954 00a6 3F       		.uleb128 0x3f
+ 955 00a7 19       		.uleb128 0x19
+ 956 00a8 03       		.uleb128 0x3
+ 957 00a9 0E       		.uleb128 0xe
+ 958 00aa 3A       		.uleb128 0x3a
+ 959 00ab 0B       		.uleb128 0xb
+ 960 00ac 3B       		.uleb128 0x3b
+ 961 00ad 05       		.uleb128 0x5
+ 962 00ae 27       		.uleb128 0x27
+ 963 00af 19       		.uleb128 0x19
+ 964 00b0 49       		.uleb128 0x49
+ 965 00b1 13       		.uleb128 0x13
+ 966 00b2 11       		.uleb128 0x11
+ 967 00b3 01       		.uleb128 0x1
+ 968 00b4 12       		.uleb128 0x12
+ 969 00b5 06       		.uleb128 0x6
+ 970 00b6 40       		.uleb128 0x40
+ 971 00b7 18       		.uleb128 0x18
+ 972 00b8 9742     		.uleb128 0x2117
+ 973 00ba 19       		.uleb128 0x19
+ 974 00bb 00       		.byte	0
+ 975 00bc 00       		.byte	0
+ 976 00bd 0C       		.uleb128 0xc
+ 977 00be 898201   		.uleb128 0x4109
+ 978 00c1 00       		.byte	0
+ 979 00c2 11       		.uleb128 0x11
+ 980 00c3 01       		.uleb128 0x1
+ 981 00c4 31       		.uleb128 0x31
+ 982 00c5 13       		.uleb128 0x13
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 32
+
+
+ 983 00c6 00       		.byte	0
+ 984 00c7 00       		.byte	0
+ 985 00c8 0D       		.uleb128 0xd
+ 986 00c9 2E       		.uleb128 0x2e
+ 987 00ca 01       		.byte	0x1
+ 988 00cb 3F       		.uleb128 0x3f
+ 989 00cc 19       		.uleb128 0x19
+ 990 00cd 03       		.uleb128 0x3
+ 991 00ce 0E       		.uleb128 0xe
+ 992 00cf 3A       		.uleb128 0x3a
+ 993 00d0 0B       		.uleb128 0xb
+ 994 00d1 3B       		.uleb128 0x3b
+ 995 00d2 0B       		.uleb128 0xb
+ 996 00d3 27       		.uleb128 0x27
+ 997 00d4 19       		.uleb128 0x19
+ 998 00d5 11       		.uleb128 0x11
+ 999 00d6 01       		.uleb128 0x1
+ 1000 00d7 12       		.uleb128 0x12
+ 1001 00d8 06       		.uleb128 0x6
+ 1002 00d9 40       		.uleb128 0x40
+ 1003 00da 18       		.uleb128 0x18
+ 1004 00db 9742     		.uleb128 0x2117
+ 1005 00dd 19       		.uleb128 0x19
+ 1006 00de 01       		.uleb128 0x1
+ 1007 00df 13       		.uleb128 0x13
+ 1008 00e0 00       		.byte	0
+ 1009 00e1 00       		.byte	0
+ 1010 00e2 0E       		.uleb128 0xe
+ 1011 00e3 34       		.uleb128 0x34
+ 1012 00e4 00       		.byte	0
+ 1013 00e5 03       		.uleb128 0x3
+ 1014 00e6 0E       		.uleb128 0xe
+ 1015 00e7 3A       		.uleb128 0x3a
+ 1016 00e8 0B       		.uleb128 0xb
+ 1017 00e9 3B       		.uleb128 0x3b
+ 1018 00ea 0B       		.uleb128 0xb
+ 1019 00eb 49       		.uleb128 0x49
+ 1020 00ec 13       		.uleb128 0x13
+ 1021 00ed 02       		.uleb128 0x2
+ 1022 00ee 17       		.uleb128 0x17
+ 1023 00ef 00       		.byte	0
+ 1024 00f0 00       		.byte	0
+ 1025 00f1 0F       		.uleb128 0xf
+ 1026 00f2 898201   		.uleb128 0x4109
+ 1027 00f5 01       		.byte	0x1
+ 1028 00f6 11       		.uleb128 0x11
+ 1029 00f7 01       		.uleb128 0x1
+ 1030 00f8 31       		.uleb128 0x31
+ 1031 00f9 13       		.uleb128 0x13
+ 1032 00fa 01       		.uleb128 0x1
+ 1033 00fb 13       		.uleb128 0x13
+ 1034 00fc 00       		.byte	0
+ 1035 00fd 00       		.byte	0
+ 1036 00fe 10       		.uleb128 0x10
+ 1037 00ff 8A8201   		.uleb128 0x410a
+ 1038 0102 00       		.byte	0
+ 1039 0103 02       		.uleb128 0x2
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 33
+
+
+ 1040 0104 18       		.uleb128 0x18
+ 1041 0105 9142     		.uleb128 0x2111
+ 1042 0107 18       		.uleb128 0x18
+ 1043 0108 00       		.byte	0
+ 1044 0109 00       		.byte	0
+ 1045 010a 11       		.uleb128 0x11
+ 1046 010b 898201   		.uleb128 0x4109
+ 1047 010e 01       		.byte	0x1
+ 1048 010f 11       		.uleb128 0x11
+ 1049 0110 01       		.uleb128 0x1
+ 1050 0111 31       		.uleb128 0x31
+ 1051 0112 13       		.uleb128 0x13
+ 1052 0113 00       		.byte	0
+ 1053 0114 00       		.byte	0
+ 1054 0115 12       		.uleb128 0x12
+ 1055 0116 34       		.uleb128 0x34
+ 1056 0117 00       		.byte	0
+ 1057 0118 03       		.uleb128 0x3
+ 1058 0119 0E       		.uleb128 0xe
+ 1059 011a 3A       		.uleb128 0x3a
+ 1060 011b 0B       		.uleb128 0xb
+ 1061 011c 3B       		.uleb128 0x3b
+ 1062 011d 0B       		.uleb128 0xb
+ 1063 011e 49       		.uleb128 0x49
+ 1064 011f 13       		.uleb128 0x13
+ 1065 0120 3F       		.uleb128 0x3f
+ 1066 0121 19       		.uleb128 0x19
+ 1067 0122 02       		.uleb128 0x2
+ 1068 0123 18       		.uleb128 0x18
+ 1069 0124 00       		.byte	0
+ 1070 0125 00       		.byte	0
+ 1071 0126 13       		.uleb128 0x13
+ 1072 0127 2E       		.uleb128 0x2e
+ 1073 0128 00       		.byte	0
+ 1074 0129 3F       		.uleb128 0x3f
+ 1075 012a 19       		.uleb128 0x19
+ 1076 012b 03       		.uleb128 0x3
+ 1077 012c 0E       		.uleb128 0xe
+ 1078 012d 3A       		.uleb128 0x3a
+ 1079 012e 0B       		.uleb128 0xb
+ 1080 012f 3B       		.uleb128 0x3b
+ 1081 0130 0B       		.uleb128 0xb
+ 1082 0131 27       		.uleb128 0x27
+ 1083 0132 19       		.uleb128 0x19
+ 1084 0133 49       		.uleb128 0x49
+ 1085 0134 13       		.uleb128 0x13
+ 1086 0135 3C       		.uleb128 0x3c
+ 1087 0136 19       		.uleb128 0x19
+ 1088 0137 00       		.byte	0
+ 1089 0138 00       		.byte	0
+ 1090 0139 14       		.uleb128 0x14
+ 1091 013a 2E       		.uleb128 0x2e
+ 1092 013b 01       		.byte	0x1
+ 1093 013c 3F       		.uleb128 0x3f
+ 1094 013d 19       		.uleb128 0x19
+ 1095 013e 03       		.uleb128 0x3
+ 1096 013f 0E       		.uleb128 0xe
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 34
+
+
+ 1097 0140 3A       		.uleb128 0x3a
+ 1098 0141 0B       		.uleb128 0xb
+ 1099 0142 3B       		.uleb128 0x3b
+ 1100 0143 0B       		.uleb128 0xb
+ 1101 0144 27       		.uleb128 0x27
+ 1102 0145 19       		.uleb128 0x19
+ 1103 0146 3C       		.uleb128 0x3c
+ 1104 0147 19       		.uleb128 0x19
+ 1105 0148 00       		.byte	0
+ 1106 0149 00       		.byte	0
+ 1107 014a 15       		.uleb128 0x15
+ 1108 014b 05       		.uleb128 0x5
+ 1109 014c 00       		.byte	0
+ 1110 014d 49       		.uleb128 0x49
+ 1111 014e 13       		.uleb128 0x13
+ 1112 014f 00       		.byte	0
+ 1113 0150 00       		.byte	0
+ 1114 0151 00       		.byte	0
+ 1115              		.section	.debug_loc,"",%progbits
+ 1116              	.Ldebug_loc0:
+ 1117              	.LLST0:
+ 1118 0000 14000000 		.4byte	.LVL8
+ 1119 0004 21000000 		.4byte	.LVL9-1
+ 1120 0008 0100     		.2byte	0x1
+ 1121 000a 50       		.byte	0x50
+ 1122 000b 00000000 		.4byte	0
+ 1123 000f 00000000 		.4byte	0
+ 1124              		.section	.debug_aranges,"",%progbits
+ 1125 0000 8C000000 		.4byte	0x8c
+ 1126 0004 0200     		.2byte	0x2
+ 1127 0006 00000000 		.4byte	.Ldebug_info0
+ 1128 000a 04       		.byte	0x4
+ 1129 000b 00       		.byte	0
+ 1130 000c 0000     		.2byte	0
+ 1131 000e 0000     		.2byte	0
+ 1132 0010 00000000 		.4byte	.LFB1
+ 1133 0014 10000000 		.4byte	.LFE1-.LFB1
+ 1134 0018 00000000 		.4byte	.LFB3
+ 1135 001c 10000000 		.4byte	.LFE3-.LFB3
+ 1136 0020 00000000 		.4byte	.LFB4
+ 1137 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1138 0028 00000000 		.4byte	.LFB5
+ 1139 002c 0C000000 		.4byte	.LFE5-.LFB5
+ 1140 0030 00000000 		.4byte	.LFB6
+ 1141 0034 0C000000 		.4byte	.LFE6-.LFB6
+ 1142 0038 00000000 		.4byte	.LFB7
+ 1143 003c 0C000000 		.4byte	.LFE7-.LFB7
+ 1144 0040 00000000 		.4byte	.LFB8
+ 1145 0044 0C000000 		.4byte	.LFE8-.LFB8
+ 1146 0048 00000000 		.4byte	.LFB9
+ 1147 004c 0C000000 		.4byte	.LFE9-.LFB9
+ 1148 0050 00000000 		.4byte	.LFB10
+ 1149 0054 0C000000 		.4byte	.LFE10-.LFB10
+ 1150 0058 00000000 		.4byte	.LFB11
+ 1151 005c 0C000000 		.4byte	.LFE11-.LFB11
+ 1152 0060 00000000 		.4byte	.LFB12
+ 1153 0064 0C000000 		.4byte	.LFE12-.LFB12
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 35
+
+
+ 1154 0068 00000000 		.4byte	.LFB13
+ 1155 006c 14000000 		.4byte	.LFE13-.LFB13
+ 1156 0070 00000000 		.4byte	.LFB14
+ 1157 0074 12000000 		.4byte	.LFE14-.LFB14
+ 1158 0078 00000000 		.4byte	.LFB0
+ 1159 007c 38000000 		.4byte	.LFE0-.LFB0
+ 1160 0080 00000000 		.4byte	.LFB2
+ 1161 0084 20000000 		.4byte	.LFE2-.LFB2
+ 1162 0088 00000000 		.4byte	0
+ 1163 008c 00000000 		.4byte	0
+ 1164              		.section	.debug_ranges,"",%progbits
+ 1165              	.Ldebug_ranges0:
+ 1166 0000 00000000 		.4byte	.LFB1
+ 1167 0004 10000000 		.4byte	.LFE1
+ 1168 0008 00000000 		.4byte	.LFB3
+ 1169 000c 10000000 		.4byte	.LFE3
+ 1170 0010 00000000 		.4byte	.LFB4
+ 1171 0014 0C000000 		.4byte	.LFE4
+ 1172 0018 00000000 		.4byte	.LFB5
+ 1173 001c 0C000000 		.4byte	.LFE5
+ 1174 0020 00000000 		.4byte	.LFB6
+ 1175 0024 0C000000 		.4byte	.LFE6
+ 1176 0028 00000000 		.4byte	.LFB7
+ 1177 002c 0C000000 		.4byte	.LFE7
+ 1178 0030 00000000 		.4byte	.LFB8
+ 1179 0034 0C000000 		.4byte	.LFE8
+ 1180 0038 00000000 		.4byte	.LFB9
+ 1181 003c 0C000000 		.4byte	.LFE9
+ 1182 0040 00000000 		.4byte	.LFB10
+ 1183 0044 0C000000 		.4byte	.LFE10
+ 1184 0048 00000000 		.4byte	.LFB11
+ 1185 004c 0C000000 		.4byte	.LFE11
+ 1186 0050 00000000 		.4byte	.LFB12
+ 1187 0054 0C000000 		.4byte	.LFE12
+ 1188 0058 00000000 		.4byte	.LFB13
+ 1189 005c 14000000 		.4byte	.LFE13
+ 1190 0060 00000000 		.4byte	.LFB14
+ 1191 0064 12000000 		.4byte	.LFE14
+ 1192 0068 00000000 		.4byte	.LFB0
+ 1193 006c 38000000 		.4byte	.LFE0
+ 1194 0070 00000000 		.4byte	.LFB2
+ 1195 0074 20000000 		.4byte	.LFE2
+ 1196 0078 00000000 		.4byte	0
+ 1197 007c 00000000 		.4byte	0
+ 1198              		.section	.debug_line,"",%progbits
+ 1199              	.Ldebug_line0:
+ 1200 0000 7B010000 		.section	.debug_str,"MS",%progbits,1
+ 1200      02005300 
+ 1200      00000201 
+ 1200      FB0E0D00 
+ 1200      01010101 
+ 1201              	.LASF15:
+ 1202 0000 72656731 		.ascii	"reg16\000"
+ 1202      3600
+ 1203              	.LASF29:
+ 1204 0006 54696D65 		.ascii	"Timer_Red_ReadCapture\000"
+ 1204      725F5265 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 36
+
+
+ 1204      645F5265 
+ 1204      61644361 
+ 1204      70747572 
+ 1205              	.LASF33:
+ 1206 001c 54696D65 		.ascii	"Timer_Red_ClearFIFO\000"
+ 1206      725F5265 
+ 1206      645F436C 
+ 1206      65617246 
+ 1206      49464F00 
+ 1207              	.LASF39:
+ 1208 0030 54696D65 		.ascii	"Timer_Red_interruptState\000"
+ 1208      725F5265 
+ 1208      645F696E 
+ 1208      74657272 
+ 1208      75707453 
+ 1209              	.LASF40:
+ 1210 0049 54696D65 		.ascii	"Timer_Red_initVar\000"
+ 1210      725F5265 
+ 1210      645F696E 
+ 1210      69745661 
+ 1210      7200
+ 1211              	.LASF28:
+ 1212 005b 70657269 		.ascii	"period\000"
+ 1212      6F6400
+ 1213              	.LASF3:
+ 1214 0062 73686F72 		.ascii	"short unsigned int\000"
+ 1214      7420756E 
+ 1214      7369676E 
+ 1214      65642069 
+ 1214      6E7400
+ 1215              	.LASF37:
+ 1216 0075 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer_Red.c\000"
+ 1216      6E657261 
+ 1216      7465645F 
+ 1216      536F7572 
+ 1216      63655C50 
+ 1217              	.LASF32:
+ 1218 009a 54696D65 		.ascii	"Timer_Red_ReadCounter\000"
+ 1218      725F5265 
+ 1218      645F5265 
+ 1218      6164436F 
+ 1218      756E7465 
+ 1219              	.LASF11:
+ 1220 00b0 666C6F61 		.ascii	"float\000"
+ 1220      7400
+ 1221              	.LASF31:
+ 1222 00b6 636F756E 		.ascii	"counter\000"
+ 1222      74657200 
+ 1223              	.LASF7:
+ 1224 00be 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1224      206C6F6E 
+ 1224      6720756E 
+ 1224      7369676E 
+ 1224      65642069 
+ 1225              	.LASF1:
+ 1226 00d5 756E7369 		.ascii	"unsigned char\000"
+ 1226      676E6564 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 37
+
+
+ 1226      20636861 
+ 1226      7200
+ 1227              	.LASF14:
+ 1228 00e3 72656738 		.ascii	"reg8\000"
+ 1228      00
+ 1229              	.LASF5:
+ 1230 00e8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1230      20756E73 
+ 1230      69676E65 
+ 1230      6420696E 
+ 1230      7400
+ 1231              	.LASF9:
+ 1232 00fa 75696E74 		.ascii	"uint8\000"
+ 1232      3800
+ 1233              	.LASF25:
+ 1234 0100 636F6E74 		.ascii	"control\000"
+ 1234      726F6C00 
+ 1235              	.LASF34:
+ 1236 0108 54696D65 		.ascii	"Timer_Red_Init\000"
+ 1236      725F5265 
+ 1236      645F496E 
+ 1236      697400
+ 1237              	.LASF12:
+ 1238 0117 646F7562 		.ascii	"double\000"
+ 1238      6C6500
+ 1239              	.LASF2:
+ 1240 011e 73686F72 		.ascii	"short int\000"
+ 1240      7420696E 
+ 1240      7400
+ 1241              	.LASF27:
+ 1242 0128 54696D65 		.ascii	"Timer_Red_WritePeriod\000"
+ 1242      725F5265 
+ 1242      645F5772 
+ 1242      69746550 
+ 1242      6572696F 
+ 1243              	.LASF10:
+ 1244 013e 75696E74 		.ascii	"uint16\000"
+ 1244      313600
+ 1245              	.LASF26:
+ 1246 0145 54696D65 		.ascii	"Timer_Red_ReadPeriod\000"
+ 1246      725F5265 
+ 1246      645F5265 
+ 1246      61645065 
+ 1246      72696F64 
+ 1247              	.LASF19:
+ 1248 015a 54696D65 		.ascii	"Timer_Red_SoftwareCapture\000"
+ 1248      725F5265 
+ 1248      645F536F 
+ 1248      66747761 
+ 1248      72654361 
+ 1249              	.LASF41:
+ 1250 0174 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1250      74657243 
+ 1250      72697469 
+ 1250      63616C53 
+ 1250      65637469 
+ 1251              	.LASF8:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 38
+
+
+ 1252 018b 756E7369 		.ascii	"unsigned int\000"
+ 1252      676E6564 
+ 1252      20696E74 
+ 1252      00
+ 1253              	.LASF42:
+ 1254 0198 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1254      69744372 
+ 1254      69746963 
+ 1254      616C5365 
+ 1254      6374696F 
+ 1255              	.LASF30:
+ 1256 01ae 54696D65 		.ascii	"Timer_Red_WriteCounter\000"
+ 1256      725F5265 
+ 1256      645F5772 
+ 1256      69746543 
+ 1256      6F756E74 
+ 1257              	.LASF16:
+ 1258 01c5 73697A65 		.ascii	"sizetype\000"
+ 1258      74797065 
+ 1258      00
+ 1259              	.LASF6:
+ 1260 01ce 6C6F6E67 		.ascii	"long long int\000"
+ 1260      206C6F6E 
+ 1260      6720696E 
+ 1260      7400
+ 1261              	.LASF24:
+ 1262 01dc 696E7465 		.ascii	"interruptMode\000"
+ 1262      72727570 
+ 1262      744D6F64 
+ 1262      6500
+ 1263              	.LASF36:
+ 1264 01ea 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1264      4320342E 
+ 1264      392E3320 
+ 1264      32303135 
+ 1264      30333033 
+ 1265 021d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1265      20726576 
+ 1265      6973696F 
+ 1265      6E203232 
+ 1265      31323230 
+ 1266 0250 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1266      66756E63 
+ 1266      74696F6E 
+ 1266      2D736563 
+ 1266      74696F6E 
+ 1267              	.LASF18:
+ 1268 0278 54696D65 		.ascii	"Timer_Red_Stop\000"
+ 1268      725F5265 
+ 1268      645F5374 
+ 1268      6F7000
+ 1269              	.LASF20:
+ 1270 0287 54696D65 		.ascii	"Timer_Red_ReadStatusRegister\000"
+ 1270      725F5265 
+ 1270      645F5265 
+ 1270      61645374 
+ 1270      61747573 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccsjyGok.s 			page 39
+
+
+ 1271              	.LASF22:
+ 1272 02a4 54696D65 		.ascii	"Timer_Red_SetInterruptMode\000"
+ 1272      725F5265 
+ 1272      645F5365 
+ 1272      74496E74 
+ 1272      65727275 
+ 1273              	.LASF4:
+ 1274 02bf 6C6F6E67 		.ascii	"long int\000"
+ 1274      20696E74 
+ 1274      00
+ 1275              	.LASF13:
+ 1276 02c8 63686172 		.ascii	"char\000"
+ 1276      00
+ 1277              	.LASF17:
+ 1278 02cd 54696D65 		.ascii	"Timer_Red_Enable\000"
+ 1278      725F5265 
+ 1278      645F456E 
+ 1278      61626C65 
+ 1278      00
+ 1279              	.LASF0:
+ 1280 02de 7369676E 		.ascii	"signed char\000"
+ 1280      65642063 
+ 1280      68617200 
+ 1281              	.LASF21:
+ 1282 02ea 54696D65 		.ascii	"Timer_Red_ReadControlRegister\000"
+ 1282      725F5265 
+ 1282      645F5265 
+ 1282      6164436F 
+ 1282      6E74726F 
+ 1283              	.LASF23:
+ 1284 0308 54696D65 		.ascii	"Timer_Red_WriteControlRegister\000"
+ 1284      725F5265 
+ 1284      645F5772 
+ 1284      69746543 
+ 1284      6F6E7472 
+ 1285              	.LASF35:
+ 1286 0327 54696D65 		.ascii	"Timer_Red_Start\000"
+ 1286      725F5265 
+ 1286      645F5374 
+ 1286      61727400 
+ 1287              	.LASF38:
+ 1288 0337 443A5C37 		.ascii	"D:\\744\\psoc\\Timers _2\\T_1.cydsn\000"
+ 1288      34345C70 
+ 1288      736F635C 
+ 1288      54696D65 
+ 1288      7273205F 
+ 1289              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
