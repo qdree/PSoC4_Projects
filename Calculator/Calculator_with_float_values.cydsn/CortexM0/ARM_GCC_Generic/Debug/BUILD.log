@@ -1,0 +1,3 @@
+--------------- Build Started: 12/09/2015 16:49:25 Project: Calculator_Copy_01, Configuration: ARM GCC Generic Debug ---------------
+ERROR: No location was selected for the binaries of the tool chain "ARM GCC Generic". The tool chain will not build until a location is selected. Use Tools > Options > Project Management > Generic Toolchains to set the location of the appropriate binaries
+--------------- Build Failed: 12/09/2015 16:49:25 ---------------

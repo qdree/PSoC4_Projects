@@ -1,0 +1,2614 @@
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Debounce_Timer.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Debounce_Timer_Enable,"ax",%progbits
+  18              		.align	2
+  19              		.global	Debounce_Timer_Enable
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	Debounce_Timer_Enable, %function
+  23              	Debounce_Timer_Enable:
+  24              	.LFB1:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\Debounce_Timer.c"
+   1:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/Debounce_Timer.c **** * File Name: Debounce_Timer.c
+   3:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Version 2.70
+   4:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+   5:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Description:
+   6:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The Timer component consists of a 8, 16, 24 or 32-bit timer with
+   7:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  a selectable period between 2 and 2^Width - 1.  The timer may free run
+   8:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  or be used as a capture timer as well.  The capture can be initiated
+   9:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  by a positive or negative edge signal as well as via software.
+  10:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  A trigger input can be programmed to enable the timer on rising edge
+  11:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  falling edge, either edge or continous run.
+  12:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Interrupts may be generated due to a terminal count condition
+  13:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  or a capture event.
+  14:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+  15:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Note:
+  16:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+  17:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+  18:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  19:.\Generated_Source\PSoC4/Debounce_Timer.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:.\Generated_Source\PSoC4/Debounce_Timer.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:.\Generated_Source\PSoC4/Debounce_Timer.c **** * the software package with which this file was provided.
+  22:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************/
+  23:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  24:.\Generated_Source\PSoC4/Debounce_Timer.c **** #include "Debounce_Timer.h"
+  25:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  26:.\Generated_Source\PSoC4/Debounce_Timer.c **** uint8 Debounce_Timer_initVar = 0u;
+  27:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  28:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  29:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+  30:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_Init
+  31:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+  32:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+  34:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Initialize to the schematic state
+  35:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+  36:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+  37:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+  38:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+  39:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+  40:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+  41:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+  42:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+  43:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_Init(void) 
+  44:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+  45:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if(!Debounce_Timer_UsingFixedFunction)
+  46:.\Generated_Source\PSoC4/Debounce_Timer.c ****             /* Interrupt State Backup for Critical Region*/
+  47:.\Generated_Source\PSoC4/Debounce_Timer.c ****             uint8 Debounce_Timer_interruptState;
+  48:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Interrupt state back up for Fixed Function only */
+  49:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  50:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (Debounce_Timer_UsingFixedFunction)
+  51:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Clear all bits but the enable bit (if it's already set) for Timer operation */
+  52:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL &= Debounce_Timer_CTRL_ENABLE;
+  53:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  54:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Clear the mode bits for continuous run mode */
+  55:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (CY_PSOC5A)
+  56:.\Generated_Source\PSoC4/Debounce_Timer.c ****             Debounce_Timer_CONTROL2 &= ((uint8)(~Debounce_Timer_CTRL_MODE_MASK));
+  57:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* Clear bits in CONTROL2 only in PSOC5A */
+  58:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  59:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (CY_PSOC3 || CY_PSOC5LP)
+  60:.\Generated_Source\PSoC4/Debounce_Timer.c ****             Debounce_Timer_CONTROL3 &= ((uint8)(~Debounce_Timer_CTRL_MODE_MASK));
+  61:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
+  62:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  63:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  64:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (Debounce_Timer_RunModeUsed != 0x0u)
+  65:.\Generated_Source\PSoC4/Debounce_Timer.c ****             /* Set 3rd bit of Control register to enable one shot mode */
+  66:.\Generated_Source\PSoC4/Debounce_Timer.c ****             Debounce_Timer_CONTROL |= 0x04u;
+  67:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* One Shot enabled only when RunModeUsed is not Continuous*/
+  68:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  69:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (Debounce_Timer_RunModeUsed == 2)
+  70:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #if (CY_PSOC5A)
+  71:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
+  72:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 interrupt) is enabled*/
+  73:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL2 |= 0x03u;
+  74:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL2 for PSoC5A */
+  75:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  76:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  77:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 /* Set last 2 bits of control3 register if one shot(halt on
+  78:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 interrupt) is enabled*/
+  79:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL3 |= 0x03u;
+  80:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL3 for PSoC3 or PSoC5LP */
+  81:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  82:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* Remove section if One Shot Halt on Interrupt is not enabled */
+  83:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  84:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (Debounce_Timer_UsingHWEnable != 0)
+  85:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #if (CY_PSOC5A)
+  86:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+  87:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL2 |= Debounce_Timer_CTRL_MODE_PULSEWIDTH;
+  88:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
+  89:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  91:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 /* Clear and Set ROD and COD bits of CFG2 register */
+  92:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL3 &= ((uint8)(~Debounce_Timer_CTRL_RCOD_MASK));
+  93:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL3 |= Debounce_Timer_CTRL_RCOD;
+  94:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  95:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 /* Clear and Enable the HW enable bit in CFG2 register */
+  96:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL3 &= ((uint8)(~Debounce_Timer_CTRL_ENBL_MASK));
+  97:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL3 |= Debounce_Timer_CTRL_ENBL;
+  98:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+  99:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+ 100:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 Debounce_Timer_CONTROL3 |= Debounce_Timer_CTRL_MODE_CONTINUOUS;
+ 101:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL3 for PSoC3ES3 or PSoC5A */
+ 102:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 103:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* Configure Run Mode with hardware enable */
+ 104:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 105:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 106:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_RT1 &= ((uint8)(~Debounce_Timer_RT1_MASK));
+ 107:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_RT1 |= Debounce_Timer_SYNC;
+ 108:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 109:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /*Enable DSI Sync all all inputs of the Timer*/
+ 110:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_RT1 &= ((uint8)(~Debounce_Timer_SYNCDSI_MASK));
+ 111:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_RT1 |= Debounce_Timer_SYNCDSI_EN;
+ 112:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 113:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Set the IRQ to use the status register interrupts */
+ 114:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL2 |= Debounce_Timer_CTRL2_IRQ_SEL;
+ 115:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Configuring registers of fixed function implementation */
+ 116:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 117:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Set Initial values from Configuration */
+ 118:.\Generated_Source\PSoC4/Debounce_Timer.c ****     Debounce_Timer_WritePeriod(Debounce_Timer_INIT_PERIOD);
+ 119:.\Generated_Source\PSoC4/Debounce_Timer.c ****     Debounce_Timer_WriteCounter(Debounce_Timer_INIT_PERIOD);
+ 120:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 121:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (Debounce_Timer_UsingHWCaptureCounter)/* Capture counter is enabled */
+ 122:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CAPTURE_COUNT_CTRL |= Debounce_Timer_CNTR_ENABLE;
+ 123:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_SetCaptureCount(Debounce_Timer_INIT_CAPTURE_COUNT);
+ 124:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Configure capture counter value */
+ 125:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 126:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UsingFixedFunction)
+ 127:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (Debounce_Timer_SoftwareCaptureMode)
+ 128:.\Generated_Source\PSoC4/Debounce_Timer.c ****             Debounce_Timer_SetCaptureMode(Debounce_Timer_INIT_CAPTURE_MODE);
+ 129:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* Set Capture Mode for UDB implementation if capture mode is software controlled */
+ 130:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 131:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (Debounce_Timer_SoftwareTriggerMode)
+ 132:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED)
+ 133:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 if (0u == (Debounce_Timer_CONTROL & Debounce_Timer__B_TIMER__TM_SOFTWARE))
+ 134:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 {
+ 135:.\Generated_Source\PSoC4/Debounce_Timer.c ****                     Debounce_Timer_SetTriggerMode(Debounce_Timer_INIT_TRIGGER_MODE);
+ 136:.\Generated_Source\PSoC4/Debounce_Timer.c ****                 }
+ 137:.\Generated_Source\PSoC4/Debounce_Timer.c ****             #endif /* (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) */
+ 138:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* Set trigger mode for UDB Implementation if trigger mode is software controlled */
+ 139:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 140:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critica
+ 141:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Enter Critical Region*/
+ 142:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_interruptState = CyEnterCriticalSection();
+ 143:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 144:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Use the interrupt output of the status register for IRQ output */
+ 145:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_STATUS_AUX_CTRL |= Debounce_Timer_STATUS_ACTL_INT_EN_MASK;
+ 146:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 4
+
+
+ 147:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Exit Critical Region*/
+ 148:.\Generated_Source\PSoC4/Debounce_Timer.c ****         CyExitCriticalSection(Debounce_Timer_interruptState);
+ 149:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 150:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (Debounce_Timer_EnableTriggerMode)
+ 151:.\Generated_Source\PSoC4/Debounce_Timer.c ****             Debounce_Timer_EnableTrigger();
+ 152:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
+ 153:.\Generated_Source\PSoC4/Debounce_Timer.c **** 		
+ 154:.\Generated_Source\PSoC4/Debounce_Timer.c **** 		
+ 155:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #if (Debounce_Timer_InterruptOnCaptureCount && !Debounce_Timer_UDB_CONTROL_REG_REMOVED)
+ 156:.\Generated_Source\PSoC4/Debounce_Timer.c ****             Debounce_Timer_SetInterruptCount(Debounce_Timer_INIT_INT_CAPTURE_COUNT);
+ 157:.\Generated_Source\PSoC4/Debounce_Timer.c ****         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*
+ 158:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 159:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_ClearFIFO();
+ 160:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Configure additional features of UDB implementation */
+ 161:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 162:.\Generated_Source\PSoC4/Debounce_Timer.c ****     Debounce_Timer_SetInterruptMode(Debounce_Timer_INIT_INTERRUPT_MODE);
+ 163:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 164:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 165:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 166:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 167:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_Enable
+ 168:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 169:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 170:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 171:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Enable the Timer
+ 172:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 173:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 174:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 175:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 176:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 177:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 178:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 179:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 180:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_Enable(void) 
+ 181:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+  26              		.loc 1 181 0
+  27              		.cfi_startproc
+ 182:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 183:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (Debounce_Timer_UsingFixedFunction)
+ 184:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_GLOBAL_ENABLE |= Debounce_Timer_BLOCK_EN_MASK;
+ 185:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_GLOBAL_STBY_ENABLE |= Debounce_Timer_BLOCK_STBY_EN_MASK;
+ 186:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Set Enable bit for enabling Fixed function timer*/
+ 187:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 188:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Remove assignment if control register is removed */
+ 189:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED || Debounce_Timer_UsingFixedFunction)
+ 190:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL |= Debounce_Timer_CTRL_ENABLE;
+  28              		.loc 1 190 0
+  29 0000 024A     		ldr	r2, .L2
+  30 0002 1178     		ldrb	r1, [r2]
+  31 0004 8023     		mov	r3, #128
+  32 0006 0B43     		orr	r3, r1
+  33 0008 1370     		strb	r3, [r2]
+ 191:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Remove assignment if control register is removed */
+ 192:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+  34              		.loc 1 192 0
+  35              		@ sp needed
+  36 000a 7047     		bx	lr
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 5
+
+
+  37              	.L3:
+  38              		.align	2
+  39              	.L2:
+  40 000c 71000F40 		.word	1074724977
+  41              		.cfi_endproc
+  42              	.LFE1:
+  43              		.size	Debounce_Timer_Enable, .-Debounce_Timer_Enable
+  44              		.section	.text.Debounce_Timer_Stop,"ax",%progbits
+  45              		.align	2
+  46              		.global	Debounce_Timer_Stop
+  47              		.code	16
+  48              		.thumb_func
+  49              		.type	Debounce_Timer_Stop, %function
+  50              	Debounce_Timer_Stop:
+  51              	.LFB3:
+ 193:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 194:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 195:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 196:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_Start
+ 197:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 198:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 199:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 200:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The start function initializes the timer with the default values, the
+ 201:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  enables the timerto begin counting.  It does not enable interrupts,
+ 202:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  the EnableInt command should be called if interrupt generation is required.
+ 203:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 204:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 205:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 206:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 207:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 208:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 209:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 210:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Global variables:
+ 211:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Debounce_Timer_initVar: Is modified when this function is called for the
+ 212:.\Generated_Source\PSoC4/Debounce_Timer.c **** *   first time. Is used to ensure that initialization happens only once.
+ 213:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 214:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 215:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_Start(void) 
+ 216:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 217:.\Generated_Source\PSoC4/Debounce_Timer.c ****     if(Debounce_Timer_initVar == 0u)
+ 218:.\Generated_Source\PSoC4/Debounce_Timer.c ****     {
+ 219:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_Init();
+ 220:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 221:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_initVar = 1u;   /* Clear this bit for Initialization */
+ 222:.\Generated_Source\PSoC4/Debounce_Timer.c ****     }
+ 223:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 224:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Enable the Timer */
+ 225:.\Generated_Source\PSoC4/Debounce_Timer.c ****     Debounce_Timer_Enable();
+ 226:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 227:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 228:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 229:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 230:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_Stop
+ 231:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 232:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 233:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 234:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The stop function halts the timer, but does not change any modes or disable
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 6
+
+
+ 235:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  interrupts.
+ 236:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 237:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 238:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 239:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 240:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 241:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 242:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 243:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 244:.\Generated_Source\PSoC4/Debounce_Timer.c **** *               has no effect on the operation of the timer.
+ 245:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 246:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 247:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_Stop(void) 
+ 248:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+  52              		.loc 1 248 0
+  53              		.cfi_startproc
+ 249:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Disable Timer */
+ 250:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if(!Debounce_Timer_UDB_CONTROL_REG_REMOVED || Debounce_Timer_UsingFixedFunction)
+ 251:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL &= ((uint8)(~Debounce_Timer_CTRL_ENABLE));
+  54              		.loc 1 251 0
+  55 0000 024A     		ldr	r2, .L5
+  56 0002 1178     		ldrb	r1, [r2]
+  57 0004 7F23     		mov	r3, #127
+  58 0006 0B40     		and	r3, r1
+  59 0008 1370     		strb	r3, [r2]
+ 252:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Remove assignment if control register is removed */
+ 253:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 254:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Globally disable the Fixed Function Block chosen */
+ 255:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (Debounce_Timer_UsingFixedFunction)
+ 256:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_GLOBAL_ENABLE &= ((uint8)(~Debounce_Timer_BLOCK_EN_MASK));
+ 257:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_GLOBAL_STBY_ENABLE &= ((uint8)(~Debounce_Timer_BLOCK_STBY_EN_MASK));
+ 258:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
+ 259:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+  60              		.loc 1 259 0
+  61              		@ sp needed
+  62 000a 7047     		bx	lr
+  63              	.L6:
+  64              		.align	2
+  65              	.L5:
+  66 000c 71000F40 		.word	1074724977
+  67              		.cfi_endproc
+  68              	.LFE3:
+  69              		.size	Debounce_Timer_Stop, .-Debounce_Timer_Stop
+  70              		.section	.text.Debounce_Timer_SetInterruptMode,"ax",%progbits
+  71              		.align	2
+  72              		.global	Debounce_Timer_SetInterruptMode
+  73              		.code	16
+  74              		.thumb_func
+  75              		.type	Debounce_Timer_SetInterruptMode, %function
+  76              	Debounce_Timer_SetInterruptMode:
+  77              	.LFB4:
+ 260:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 261:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 262:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 263:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_SetInterruptMode
+ 264:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 265:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 7
+
+
+ 266:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 267:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function selects which of the interrupt inputs may cause an interrupt.
+ 268:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The twosources are caputure and terminal.  One, both or neither may
+ 269:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  be selected.
+ 270:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 271:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 272:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  interruptMode:   This parameter is used to enable interrups on either/or
+ 273:.\Generated_Source\PSoC4/Debounce_Timer.c **** *                   terminal count or capture.
+ 274:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 275:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 276:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 277:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 278:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 279:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_SetInterruptMode(uint8 interruptMode) 
+ 280:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+  78              		.loc 1 280 0
+  79              		.cfi_startproc
+  80              	.LVL0:
+ 281:.\Generated_Source\PSoC4/Debounce_Timer.c ****     Debounce_Timer_STATUS_MASK = interruptMode;
+  81              		.loc 1 281 0
+  82 0000 014B     		ldr	r3, .L8
+  83 0002 1870     		strb	r0, [r3]
+ 282:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+  84              		.loc 1 282 0
+  85              		@ sp needed
+  86 0004 7047     		bx	lr
+  87              	.L9:
+  88 0006 C046     		.align	2
+  89              	.L8:
+  90 0008 82000F40 		.word	1074724994
+  91              		.cfi_endproc
+  92              	.LFE4:
+  93              		.size	Debounce_Timer_SetInterruptMode, .-Debounce_Timer_SetInterruptMode
+  94              		.section	.text.Debounce_Timer_SoftwareCapture,"ax",%progbits
+  95              		.align	2
+  96              		.global	Debounce_Timer_SoftwareCapture
+  97              		.code	16
+  98              		.thumb_func
+  99              		.type	Debounce_Timer_SoftwareCapture, %function
+ 100              	Debounce_Timer_SoftwareCapture:
+ 101              	.LFB5:
+ 283:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 284:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 285:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 286:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_SoftwareCapture
+ 287:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 288:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 289:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 290:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function forces a capture independent of the capture signal.
+ 291:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 292:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 293:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 294:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 295:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 296:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 297:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 298:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Side Effects:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 8
+
+
+ 299:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  An existing hardware capture could be overwritten.
+ 300:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 301:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 302:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_SoftwareCapture(void) 
+ 303:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 102              		.loc 1 303 0
+ 103              		.cfi_startproc
+ 304:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Generate a software capture by reading the counter register */
+ 305:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if(Debounce_Timer_UsingFixedFunction)
+ 306:.\Generated_Source\PSoC4/Debounce_Timer.c ****         (void)CY_GET_REG16(Debounce_Timer_COUNTER_LSB_PTR);
+ 307:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #else
+ 308:.\Generated_Source\PSoC4/Debounce_Timer.c ****         (void)CY_GET_REG8(Debounce_Timer_COUNTER_LSB_PTR_8BIT);
+ 104              		.loc 1 308 0
+ 105 0000 014B     		ldr	r3, .L11
+ 106 0002 1B78     		ldrb	r3, [r3]
+ 309:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif/* (Debounce_Timer_UsingFixedFunction) */
+ 310:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Capture Data is now in the FIFO */
+ 311:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 107              		.loc 1 311 0
+ 108              		@ sp needed
+ 109 0004 7047     		bx	lr
+ 110              	.L12:
+ 111 0006 C046     		.align	2
+ 112              	.L11:
+ 113 0008 00000F40 		.word	1074724864
+ 114              		.cfi_endproc
+ 115              	.LFE5:
+ 116              		.size	Debounce_Timer_SoftwareCapture, .-Debounce_Timer_SoftwareCapture
+ 117              		.section	.text.Debounce_Timer_ReadStatusRegister,"ax",%progbits
+ 118              		.align	2
+ 119              		.global	Debounce_Timer_ReadStatusRegister
+ 120              		.code	16
+ 121              		.thumb_func
+ 122              		.type	Debounce_Timer_ReadStatusRegister, %function
+ 123              	Debounce_Timer_ReadStatusRegister:
+ 124              	.LFB6:
+ 312:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 313:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 314:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 315:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_ReadStatusRegister
+ 316:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 317:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 318:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 319:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Reads the status register and returns it's state. This function should use
+ 320:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  defined types for the bit-field information as the bits in this register may
+ 321:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  be permuteable.
+ 322:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 323:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 324:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 325:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 326:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 327:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The contents of the status register
+ 328:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 329:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Side Effects:
+ 330:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Status register bits may be clear on read.
+ 331:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 332:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 9
+
+
+ 333:.\Generated_Source\PSoC4/Debounce_Timer.c **** uint8   Debounce_Timer_ReadStatusRegister(void) 
+ 334:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 125              		.loc 1 334 0
+ 126              		.cfi_startproc
+ 335:.\Generated_Source\PSoC4/Debounce_Timer.c ****     return (Debounce_Timer_STATUS);
+ 127              		.loc 1 335 0
+ 128 0000 014B     		ldr	r3, .L14
+ 129 0002 1878     		ldrb	r0, [r3]
+ 130 0004 C0B2     		uxtb	r0, r0
+ 336:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 131              		.loc 1 336 0
+ 132              		@ sp needed
+ 133 0006 7047     		bx	lr
+ 134              	.L15:
+ 135              		.align	2
+ 136              	.L14:
+ 137 0008 62000F40 		.word	1074724962
+ 138              		.cfi_endproc
+ 139              	.LFE6:
+ 140              		.size	Debounce_Timer_ReadStatusRegister, .-Debounce_Timer_ReadStatusRegister
+ 141              		.section	.text.Debounce_Timer_ReadControlRegister,"ax",%progbits
+ 142              		.align	2
+ 143              		.global	Debounce_Timer_ReadControlRegister
+ 144              		.code	16
+ 145              		.thumb_func
+ 146              		.type	Debounce_Timer_ReadControlRegister, %function
+ 147              	Debounce_Timer_ReadControlRegister:
+ 148              	.LFB7:
+ 337:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 338:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 339:.\Generated_Source\PSoC4/Debounce_Timer.c **** #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
+ 340:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 341:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 342:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 343:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_ReadControlRegister
+ 344:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 345:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 346:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 347:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Reads the control register and returns it's value.
+ 348:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 349:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 350:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 351:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 352:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 353:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The contents of the control register
+ 354:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 355:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 356:.\Generated_Source\PSoC4/Debounce_Timer.c **** uint8 Debounce_Timer_ReadControlRegister(void) 
+ 357:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 149              		.loc 1 357 0
+ 150              		.cfi_startproc
+ 358:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) 
+ 359:.\Generated_Source\PSoC4/Debounce_Timer.c ****         return ((uint8)Debounce_Timer_CONTROL);
+ 151              		.loc 1 359 0
+ 152 0000 014B     		ldr	r3, .L17
+ 153 0002 1878     		ldrb	r0, [r3]
+ 154 0004 C0B2     		uxtb	r0, r0
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 10
+
+
+ 360:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #else
+ 361:.\Generated_Source\PSoC4/Debounce_Timer.c ****         return (0);
+ 362:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) */
+ 363:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 155              		.loc 1 363 0
+ 156              		@ sp needed
+ 157 0006 7047     		bx	lr
+ 158              	.L18:
+ 159              		.align	2
+ 160              	.L17:
+ 161 0008 71000F40 		.word	1074724977
+ 162              		.cfi_endproc
+ 163              	.LFE7:
+ 164              		.size	Debounce_Timer_ReadControlRegister, .-Debounce_Timer_ReadControlRegister
+ 165              		.section	.text.Debounce_Timer_WriteControlRegister,"ax",%progbits
+ 166              		.align	2
+ 167              		.global	Debounce_Timer_WriteControlRegister
+ 168              		.code	16
+ 169              		.thumb_func
+ 170              		.type	Debounce_Timer_WriteControlRegister, %function
+ 171              	Debounce_Timer_WriteControlRegister:
+ 172              	.LFB8:
+ 364:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 365:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 366:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 367:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_WriteControlRegister
+ 368:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 369:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 370:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 371:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Sets the bit-field of the control register.
+ 372:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 373:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 374:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  control: The contents of the control register
+ 375:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 376:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 377:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 378:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 379:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_WriteControlRegister(uint8 control) 
+ 380:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 173              		.loc 1 380 0
+ 174              		.cfi_startproc
+ 175              	.LVL1:
+ 381:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) 
+ 382:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL = control;
+ 176              		.loc 1 382 0
+ 177 0000 014B     		ldr	r3, .L20
+ 178 0002 1870     		strb	r0, [r3]
+ 383:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #else
+ 384:.\Generated_Source\PSoC4/Debounce_Timer.c ****         control = 0u;
+ 385:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) */
+ 386:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 179              		.loc 1 386 0
+ 180              		@ sp needed
+ 181 0004 7047     		bx	lr
+ 182              	.L21:
+ 183 0006 C046     		.align	2
+ 184              	.L20:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 11
+
+
+ 185 0008 71000F40 		.word	1074724977
+ 186              		.cfi_endproc
+ 187              	.LFE8:
+ 188              		.size	Debounce_Timer_WriteControlRegister, .-Debounce_Timer_WriteControlRegister
+ 189              		.section	.text.Debounce_Timer_ReadPeriod,"ax",%progbits
+ 190              		.align	2
+ 191              		.global	Debounce_Timer_ReadPeriod
+ 192              		.code	16
+ 193              		.thumb_func
+ 194              		.type	Debounce_Timer_ReadPeriod, %function
+ 195              	Debounce_Timer_ReadPeriod:
+ 196              	.LFB9:
+ 387:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 388:.\Generated_Source\PSoC4/Debounce_Timer.c **** #endif /* Remove API if control register is unused */
+ 389:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 390:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 391:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 392:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_ReadPeriod
+ 393:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 394:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 395:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 396:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function returns the current value of the Period.
+ 397:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 398:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 399:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 400:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 401:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 402:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The present value of the counter.
+ 403:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 404:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 405:.\Generated_Source\PSoC4/Debounce_Timer.c **** uint32 Debounce_Timer_ReadPeriod(void) 
+ 406:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 197              		.loc 1 406 0
+ 198              		.cfi_startproc
+ 199 0000 08B5     		push	{r3, lr}
+ 200              		.cfi_def_cfa_offset 8
+ 201              		.cfi_offset 3, -8
+ 202              		.cfi_offset 14, -4
+ 407:.\Generated_Source\PSoC4/Debounce_Timer.c ****    #if(Debounce_Timer_UsingFixedFunction)
+ 408:.\Generated_Source\PSoC4/Debounce_Timer.c ****        return ((uint32)CY_GET_REG16(Debounce_Timer_PERIOD_LSB_PTR));
+ 409:.\Generated_Source\PSoC4/Debounce_Timer.c ****    #else
+ 410:.\Generated_Source\PSoC4/Debounce_Timer.c ****        return (CY_GET_REG24(Debounce_Timer_PERIOD_LSB_PTR));
+ 203              		.loc 1 410 0
+ 204 0002 0248     		ldr	r0, .L23
+ 205 0004 FFF7FEFF 		bl	CyGetReg24
+ 206              	.LVL2:
+ 411:.\Generated_Source\PSoC4/Debounce_Timer.c ****    #endif /* (Debounce_Timer_UsingFixedFunction) */
+ 412:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 207              		.loc 1 412 0
+ 208              		@ sp needed
+ 209 0008 08BD     		pop	{r3, pc}
+ 210              	.L24:
+ 211 000a C046     		.align	2
+ 212              	.L23:
+ 213 000c 20000F40 		.word	1074724896
+ 214              		.cfi_endproc
+ 215              	.LFE9:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 12
+
+
+ 216              		.size	Debounce_Timer_ReadPeriod, .-Debounce_Timer_ReadPeriod
+ 217              		.section	.text.Debounce_Timer_WritePeriod,"ax",%progbits
+ 218              		.align	2
+ 219              		.global	Debounce_Timer_WritePeriod
+ 220              		.code	16
+ 221              		.thumb_func
+ 222              		.type	Debounce_Timer_WritePeriod, %function
+ 223              	Debounce_Timer_WritePeriod:
+ 224              	.LFB10:
+ 413:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 414:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 415:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 416:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_WritePeriod
+ 417:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 418:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 419:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 420:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function is used to change the period of the counter.  The new period
+ 421:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  will be loaded the next time terminal count is detected.
+ 422:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 423:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 424:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  period: This value may be between 1 and (2^Resolution)-1.  A value of 0 will
+ 425:.\Generated_Source\PSoC4/Debounce_Timer.c **** *          result in the counter remaining at zero.
+ 426:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 427:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 428:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 429:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 430:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 431:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_WritePeriod(uint32 period) 
+ 432:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 225              		.loc 1 432 0
+ 226              		.cfi_startproc
+ 227              	.LVL3:
+ 228 0000 08B5     		push	{r3, lr}
+ 229              		.cfi_def_cfa_offset 8
+ 230              		.cfi_offset 3, -8
+ 231              		.cfi_offset 14, -4
+ 232 0002 011C     		mov	r1, r0
+ 433:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if(Debounce_Timer_UsingFixedFunction)
+ 434:.\Generated_Source\PSoC4/Debounce_Timer.c ****         uint16 period_temp = (uint16)period;
+ 435:.\Generated_Source\PSoC4/Debounce_Timer.c ****         CY_SET_REG16(Debounce_Timer_PERIOD_LSB_PTR, period_temp);
+ 436:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #else
+ 437:.\Generated_Source\PSoC4/Debounce_Timer.c ****         CY_SET_REG24(Debounce_Timer_PERIOD_LSB_PTR, period);
+ 233              		.loc 1 437 0
+ 234 0004 0148     		ldr	r0, .L26
+ 235              	.LVL4:
+ 236 0006 FFF7FEFF 		bl	CySetReg24
+ 237              	.LVL5:
+ 438:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed functi
+ 439:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 238              		.loc 1 439 0
+ 239              		@ sp needed
+ 240 000a 08BD     		pop	{r3, pc}
+ 241              	.L27:
+ 242              		.align	2
+ 243              	.L26:
+ 244 000c 20000F40 		.word	1074724896
+ 245              		.cfi_endproc
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 13
+
+
+ 246              	.LFE10:
+ 247              		.size	Debounce_Timer_WritePeriod, .-Debounce_Timer_WritePeriod
+ 248              		.section	.text.Debounce_Timer_ReadCapture,"ax",%progbits
+ 249              		.align	2
+ 250              		.global	Debounce_Timer_ReadCapture
+ 251              		.code	16
+ 252              		.thumb_func
+ 253              		.type	Debounce_Timer_ReadCapture, %function
+ 254              	Debounce_Timer_ReadCapture:
+ 255              	.LFB11:
+ 440:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 441:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 442:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 443:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_ReadCapture
+ 444:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 445:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 446:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 447:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function returns the last value captured.
+ 448:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 449:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 450:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 451:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 452:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 453:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Present Capture value.
+ 454:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 455:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 456:.\Generated_Source\PSoC4/Debounce_Timer.c **** uint32 Debounce_Timer_ReadCapture(void) 
+ 457:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 256              		.loc 1 457 0
+ 257              		.cfi_startproc
+ 258 0000 08B5     		push	{r3, lr}
+ 259              		.cfi_def_cfa_offset 8
+ 260              		.cfi_offset 3, -8
+ 261              		.cfi_offset 14, -4
+ 458:.\Generated_Source\PSoC4/Debounce_Timer.c ****    #if(Debounce_Timer_UsingFixedFunction)
+ 459:.\Generated_Source\PSoC4/Debounce_Timer.c ****        return ((uint32)CY_GET_REG16(Debounce_Timer_CAPTURE_LSB_PTR));
+ 460:.\Generated_Source\PSoC4/Debounce_Timer.c ****    #else
+ 461:.\Generated_Source\PSoC4/Debounce_Timer.c ****        return (CY_GET_REG24(Debounce_Timer_CAPTURE_LSB_PTR));
+ 262              		.loc 1 461 0
+ 263 0002 0248     		ldr	r0, .L29
+ 264 0004 FFF7FEFF 		bl	CyGetReg24
+ 265              	.LVL6:
+ 462:.\Generated_Source\PSoC4/Debounce_Timer.c ****    #endif /* (Debounce_Timer_UsingFixedFunction) */
+ 463:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 266              		.loc 1 463 0
+ 267              		@ sp needed
+ 268 0008 08BD     		pop	{r3, pc}
+ 269              	.L30:
+ 270 000a C046     		.align	2
+ 271              	.L29:
+ 272 000c 40000F40 		.word	1074724928
+ 273              		.cfi_endproc
+ 274              	.LFE11:
+ 275              		.size	Debounce_Timer_ReadCapture, .-Debounce_Timer_ReadCapture
+ 276              		.section	.text.Debounce_Timer_WriteCounter,"ax",%progbits
+ 277              		.align	2
+ 278              		.global	Debounce_Timer_WriteCounter
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 14
+
+
+ 279              		.code	16
+ 280              		.thumb_func
+ 281              		.type	Debounce_Timer_WriteCounter, %function
+ 282              	Debounce_Timer_WriteCounter:
+ 283              	.LFB12:
+ 464:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 465:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 466:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 467:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_WriteCounter
+ 468:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 469:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 470:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 471:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This funtion is used to set the counter to a specific value
+ 472:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 473:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 474:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  counter:  New counter value.
+ 475:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 476:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 477:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 478:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 479:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 480:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_WriteCounter(uint32 counter) 
+ 481:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 284              		.loc 1 481 0
+ 285              		.cfi_startproc
+ 286              	.LVL7:
+ 287 0000 08B5     		push	{r3, lr}
+ 288              		.cfi_def_cfa_offset 8
+ 289              		.cfi_offset 3, -8
+ 290              		.cfi_offset 14, -4
+ 291 0002 011C     		mov	r1, r0
+ 482:.\Generated_Source\PSoC4/Debounce_Timer.c ****    #if(Debounce_Timer_UsingFixedFunction)
+ 483:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* This functionality is removed until a FixedFunction HW update to
+ 484:.\Generated_Source\PSoC4/Debounce_Timer.c ****          * allow this register to be written
+ 485:.\Generated_Source\PSoC4/Debounce_Timer.c ****          */
+ 486:.\Generated_Source\PSoC4/Debounce_Timer.c ****         CY_SET_REG16(Debounce_Timer_COUNTER_LSB_PTR, (uint16)counter);
+ 487:.\Generated_Source\PSoC4/Debounce_Timer.c ****         
+ 488:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #else
+ 489:.\Generated_Source\PSoC4/Debounce_Timer.c ****         CY_SET_REG24(Debounce_Timer_COUNTER_LSB_PTR, counter);
+ 292              		.loc 1 489 0
+ 293 0004 0148     		ldr	r0, .L32
+ 294              	.LVL8:
+ 295 0006 FFF7FEFF 		bl	CySetReg24
+ 296              	.LVL9:
+ 490:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fix
+ 491:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 297              		.loc 1 491 0
+ 298              		@ sp needed
+ 299 000a 08BD     		pop	{r3, pc}
+ 300              	.L33:
+ 301              		.align	2
+ 302              	.L32:
+ 303 000c 00000F40 		.word	1074724864
+ 304              		.cfi_endproc
+ 305              	.LFE12:
+ 306              		.size	Debounce_Timer_WriteCounter, .-Debounce_Timer_WriteCounter
+ 307              		.section	.text.Debounce_Timer_ReadCounter,"ax",%progbits
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 15
+
+
+ 308              		.align	2
+ 309              		.global	Debounce_Timer_ReadCounter
+ 310              		.code	16
+ 311              		.thumb_func
+ 312              		.type	Debounce_Timer_ReadCounter, %function
+ 313              	Debounce_Timer_ReadCounter:
+ 314              	.LFB13:
+ 492:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 493:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 494:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 495:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_ReadCounter
+ 496:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 497:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 498:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 499:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function returns the current counter value.
+ 500:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 501:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 502:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 503:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 504:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 505:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Present compare value.
+ 506:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 507:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 508:.\Generated_Source\PSoC4/Debounce_Timer.c **** uint32 Debounce_Timer_ReadCounter(void) 
+ 509:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 315              		.loc 1 509 0
+ 316              		.cfi_startproc
+ 317 0000 08B5     		push	{r3, lr}
+ 318              		.cfi_def_cfa_offset 8
+ 319              		.cfi_offset 3, -8
+ 320              		.cfi_offset 14, -4
+ 510:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Force capture by reading Accumulator */
+ 511:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Must first do a software capture to be able to read the counter */
+ 512:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 513:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if(Debounce_Timer_UsingFixedFunction)
+ 514:.\Generated_Source\PSoC4/Debounce_Timer.c ****         (void)CY_GET_REG16(Debounce_Timer_COUNTER_LSB_PTR);
+ 515:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #else
+ 516:.\Generated_Source\PSoC4/Debounce_Timer.c ****         (void)CY_GET_REG8(Debounce_Timer_COUNTER_LSB_PTR_8BIT);
+ 321              		.loc 1 516 0
+ 322 0002 034B     		ldr	r3, .L35
+ 323 0004 1B78     		ldrb	r3, [r3]
+ 517:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif/* (Debounce_Timer_UsingFixedFunction) */
+ 518:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 519:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 520:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if(Debounce_Timer_UsingFixedFunction)
+ 521:.\Generated_Source\PSoC4/Debounce_Timer.c ****         return ((uint32)CY_GET_REG16(Debounce_Timer_CAPTURE_LSB_PTR));
+ 522:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #else
+ 523:.\Generated_Source\PSoC4/Debounce_Timer.c ****         return (CY_GET_REG24(Debounce_Timer_CAPTURE_LSB_PTR));
+ 324              		.loc 1 523 0
+ 325 0006 0348     		ldr	r0, .L35+4
+ 326 0008 FFF7FEFF 		bl	CyGetReg24
+ 327              	.LVL10:
+ 524:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* (Debounce_Timer_UsingFixedFunction) */
+ 525:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 328              		.loc 1 525 0
+ 329              		@ sp needed
+ 330 000c 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 16
+
+
+ 331              	.L36:
+ 332 000e C046     		.align	2
+ 333              	.L35:
+ 334 0010 00000F40 		.word	1074724864
+ 335 0014 40000F40 		.word	1074724928
+ 336              		.cfi_endproc
+ 337              	.LFE13:
+ 338              		.size	Debounce_Timer_ReadCounter, .-Debounce_Timer_ReadCounter
+ 339              		.section	.text.Debounce_Timer_ClearFIFO,"ax",%progbits
+ 340              		.align	2
+ 341              		.global	Debounce_Timer_ClearFIFO
+ 342              		.code	16
+ 343              		.thumb_func
+ 344              		.type	Debounce_Timer_ClearFIFO, %function
+ 345              	Debounce_Timer_ClearFIFO:
+ 346              	.LFB14:
+ 526:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 527:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 528:.\Generated_Source\PSoC4/Debounce_Timer.c **** #if(!Debounce_Timer_UsingFixedFunction) /* UDB Specific Functions */
+ 529:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 530:.\Generated_Source\PSoC4/Debounce_Timer.c ****     
+ 531:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 532:.\Generated_Source\PSoC4/Debounce_Timer.c ****  * The functions below this point are only available using the UDB
+ 533:.\Generated_Source\PSoC4/Debounce_Timer.c ****  * implementation.  If a feature is selected, then the API is enabled.
+ 534:.\Generated_Source\PSoC4/Debounce_Timer.c ****  ******************************************************************************/
+ 535:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 536:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 537:.\Generated_Source\PSoC4/Debounce_Timer.c **** #if (Debounce_Timer_SoftwareCaptureMode)
+ 538:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 539:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 540:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 541:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_SetCaptureMode
+ 542:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 543:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 544:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 545:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function sets the capture mode to either rising or falling edge.
+ 546:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 547:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 548:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  captureMode: This parameter sets the capture mode of the UDB capture feature
+ 549:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The parameter values are defined using the
+ 550:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  #define Debounce_Timer__B_TIMER__CM_NONE 0
+ 551:.\Generated_Source\PSoC4/Debounce_Timer.c **** #define Debounce_Timer__B_TIMER__CM_RISINGEDGE 1
+ 552:.\Generated_Source\PSoC4/Debounce_Timer.c **** #define Debounce_Timer__B_TIMER__CM_FALLINGEDGE 2
+ 553:.\Generated_Source\PSoC4/Debounce_Timer.c **** #define Debounce_Timer__B_TIMER__CM_EITHEREDGE 3
+ 554:.\Generated_Source\PSoC4/Debounce_Timer.c **** #define Debounce_Timer__B_TIMER__CM_SOFTWARE 4
+ 555:.\Generated_Source\PSoC4/Debounce_Timer.c ****  identifiers
+ 556:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  The following are the possible values of the parameter
+ 557:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Debounce_Timer__B_TIMER__CM_NONE        - Set Capture mode to None
+ 558:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Debounce_Timer__B_TIMER__CM_RISINGEDGE  - Rising edge of Capture input
+ 559:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Debounce_Timer__B_TIMER__CM_FALLINGEDGE - Falling edge of Capture input
+ 560:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Debounce_Timer__B_TIMER__CM_EITHEREDGE  - Either edge of Capture input
+ 561:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 562:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 563:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 564:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 565:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 566:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_SetCaptureMode(uint8 captureMode) 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 17
+
+
+ 567:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 568:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* This must only set to two bits of the control register associated */
+ 569:.\Generated_Source\PSoC4/Debounce_Timer.c ****     captureMode = ((uint8)((uint8)captureMode << Debounce_Timer_CTRL_CAP_MODE_SHIFT));
+ 570:.\Generated_Source\PSoC4/Debounce_Timer.c ****     captureMode &= (Debounce_Timer_CTRL_CAP_MODE_MASK);
+ 571:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 572:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED)
+ 573:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Clear the Current Setting */
+ 574:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL &= ((uint8)(~Debounce_Timer_CTRL_CAP_MODE_MASK));
+ 575:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 576:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Write The New Setting */
+ 577:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL |= captureMode;
+ 578:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) */
+ 579:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 580:.\Generated_Source\PSoC4/Debounce_Timer.c **** #endif /* Remove API if Capture Mode is not Software Controlled */
+ 581:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 582:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 583:.\Generated_Source\PSoC4/Debounce_Timer.c **** #if (Debounce_Timer_SoftwareTriggerMode)
+ 584:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 585:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 586:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 587:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_SetTriggerMode
+ 588:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 589:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 590:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 591:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function sets the trigger input mode
+ 592:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 593:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 594:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  triggerMode: Pass one of the pre-defined Trigger Modes (except Software)
+ 595:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #define Debounce_Timer__B_TIMER__TM_NONE 0x00u
+ 596:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #define Debounce_Timer__B_TIMER__TM_RISINGEDGE 0x04u
+ 597:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #define Debounce_Timer__B_TIMER__TM_FALLINGEDGE 0x08u
+ 598:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #define Debounce_Timer__B_TIMER__TM_EITHEREDGE 0x0Cu
+ 599:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #define Debounce_Timer__B_TIMER__TM_SOFTWARE 0x10u
+ 600:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 601:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 602:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 603:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 604:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 605:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_SetTriggerMode(uint8 triggerMode) 
+ 606:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 607:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* This must only set to two bits of the control register associated */
+ 608:.\Generated_Source\PSoC4/Debounce_Timer.c ****     triggerMode &= Debounce_Timer_CTRL_TRIG_MODE_MASK;
+ 609:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 610:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is rem
+ 611:.\Generated_Source\PSoC4/Debounce_Timer.c ****     
+ 612:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Clear the Current Setting */
+ 613:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL &= ((uint8)(~Debounce_Timer_CTRL_TRIG_MODE_MASK));
+ 614:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 615:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Write The New Setting */
+ 616:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL |= (triggerMode | Debounce_Timer__B_TIMER__TM_SOFTWARE);
+ 617:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Remove code section if control register is not used */
+ 618:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 619:.\Generated_Source\PSoC4/Debounce_Timer.c **** #endif /* Remove API if Trigger Mode is not Software Controlled */
+ 620:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 621:.\Generated_Source\PSoC4/Debounce_Timer.c **** #if (Debounce_Timer_EnableTriggerMode)
+ 622:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 623:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 18
+
+
+ 624:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 625:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_EnableTrigger
+ 626:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 627:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 628:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 629:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Sets the control bit enabling Hardware Trigger mode
+ 630:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 631:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 632:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 633:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 634:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 635:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 636:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 637:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 638:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_EnableTrigger(void) 
+ 639:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 640:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is rem
+ 641:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL |= Debounce_Timer_CTRL_TRIG_EN;
+ 642:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Remove code section if control register is not used */
+ 643:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 644:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 645:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 646:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 647:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_DisableTrigger
+ 648:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 649:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 650:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 651:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Clears the control bit enabling Hardware Trigger mode
+ 652:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 653:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 654:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 655:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 656:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 657:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 658:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 659:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 660:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_DisableTrigger(void) 
+ 661:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 662:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED )   /* Remove assignment if control register is re
+ 663:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL &= ((uint8)(~Debounce_Timer_CTRL_TRIG_EN));
+ 664:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Remove code section if control register is not used */
+ 665:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 666:.\Generated_Source\PSoC4/Debounce_Timer.c **** #endif /* Remove API is Trigger Mode is set to None */
+ 667:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 668:.\Generated_Source\PSoC4/Debounce_Timer.c **** #if(Debounce_Timer_InterruptOnCaptureCount)
+ 669:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 670:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 671:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 672:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_SetInterruptCount
+ 673:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 674:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 675:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 676:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function sets the capture count before an interrupt is triggered.
+ 677:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 678:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 679:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  interruptCount:  A value between 0 and 3 is valid.  If the value is 0, then
+ 680:.\Generated_Source\PSoC4/Debounce_Timer.c **** *                   an interrupt will occur each time a capture occurs.
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 19
+
+
+ 681:.\Generated_Source\PSoC4/Debounce_Timer.c **** *                   A value of 1 to 3 will cause the interrupt
+ 682:.\Generated_Source\PSoC4/Debounce_Timer.c **** *                   to delay by the same number of captures.
+ 683:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 684:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 685:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 686:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 687:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 688:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_SetInterruptCount(uint8 interruptCount) 
+ 689:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 690:.\Generated_Source\PSoC4/Debounce_Timer.c ****     /* This must only set to two bits of the control register associated */
+ 691:.\Generated_Source\PSoC4/Debounce_Timer.c ****     interruptCount &= Debounce_Timer_CTRL_INTCNT_MASK;
+ 692:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 693:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if (!Debounce_Timer_UDB_CONTROL_REG_REMOVED)
+ 694:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Clear the Current Setting */
+ 695:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL &= ((uint8)(~Debounce_Timer_CTRL_INTCNT_MASK));
+ 696:.\Generated_Source\PSoC4/Debounce_Timer.c ****         /* Write The New Setting */
+ 697:.\Generated_Source\PSoC4/Debounce_Timer.c ****         Debounce_Timer_CONTROL |= interruptCount;
+ 698:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) */
+ 699:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 700:.\Generated_Source\PSoC4/Debounce_Timer.c **** #endif /* Debounce_Timer_InterruptOnCaptureCount */
+ 701:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 702:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 703:.\Generated_Source\PSoC4/Debounce_Timer.c **** #if (Debounce_Timer_UsingHWCaptureCounter)
+ 704:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 705:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 706:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 707:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_SetCaptureCount
+ 708:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 709:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 710:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 711:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function sets the capture count
+ 712:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 713:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 714:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  captureCount: A value between 2 and 127 inclusive is valid.  A value of 1
+ 715:.\Generated_Source\PSoC4/Debounce_Timer.c **** *                to 127 will cause the interrupt to delay by the same number of
+ 716:.\Generated_Source\PSoC4/Debounce_Timer.c **** *                captures.
+ 717:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 718:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 719:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 720:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 721:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 722:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_SetCaptureCount(uint8 captureCount) 
+ 723:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 724:.\Generated_Source\PSoC4/Debounce_Timer.c ****     Debounce_Timer_CAP_COUNT = captureCount;
+ 725:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 726:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 727:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 728:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 729:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_ReadCaptureCount
+ 730:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 731:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 732:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 733:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function reads the capture count setting
+ 734:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 735:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 736:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 737:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 20
+
+
+ 738:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 739:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  Returns the Capture Count Setting
+ 740:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 741:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 742:.\Generated_Source\PSoC4/Debounce_Timer.c **** uint8 Debounce_Timer_ReadCaptureCount(void) 
+ 743:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 744:.\Generated_Source\PSoC4/Debounce_Timer.c ****     return ((uint8)Debounce_Timer_CAP_COUNT);
+ 745:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 746:.\Generated_Source\PSoC4/Debounce_Timer.c **** #endif /* Debounce_Timer_UsingHWCaptureCounter */
+ 747:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 748:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 749:.\Generated_Source\PSoC4/Debounce_Timer.c **** /*******************************************************************************
+ 750:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Function Name: Debounce_Timer_ClearFIFO
+ 751:.\Generated_Source\PSoC4/Debounce_Timer.c **** ********************************************************************************
+ 752:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 753:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Summary:
+ 754:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  This function clears all capture data from the capture FIFO
+ 755:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 756:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Parameters:
+ 757:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 758:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 759:.\Generated_Source\PSoC4/Debounce_Timer.c **** * Return:
+ 760:.\Generated_Source\PSoC4/Debounce_Timer.c **** *  void
+ 761:.\Generated_Source\PSoC4/Debounce_Timer.c **** *
+ 762:.\Generated_Source\PSoC4/Debounce_Timer.c **** *******************************************************************************/
+ 763:.\Generated_Source\PSoC4/Debounce_Timer.c **** void Debounce_Timer_ClearFIFO(void) 
+ 764:.\Generated_Source\PSoC4/Debounce_Timer.c **** {
+ 347              		.loc 1 764 0
+ 348              		.cfi_startproc
+ 349 0000 08B5     		push	{r3, lr}
+ 350              		.cfi_def_cfa_offset 8
+ 351              		.cfi_offset 3, -8
+ 352              		.cfi_offset 14, -4
+ 765:.\Generated_Source\PSoC4/Debounce_Timer.c ****     while(0u != (Debounce_Timer_ReadStatusRegister() & Debounce_Timer_STATUS_FIFONEMP))
+ 353              		.loc 1 765 0
+ 354 0002 01E0     		b	.L38
+ 355              	.L39:
+ 766:.\Generated_Source\PSoC4/Debounce_Timer.c ****     {
+ 767:.\Generated_Source\PSoC4/Debounce_Timer.c ****         (void)Debounce_Timer_ReadCapture();
+ 356              		.loc 1 767 0
+ 357 0004 FFF7FEFF 		bl	Debounce_Timer_ReadCapture
+ 358              	.LVL11:
+ 359              	.L38:
+ 765:.\Generated_Source\PSoC4/Debounce_Timer.c ****     while(0u != (Debounce_Timer_ReadStatusRegister() & Debounce_Timer_STATUS_FIFONEMP))
+ 360              		.loc 1 765 0
+ 361 0008 FFF7FEFF 		bl	Debounce_Timer_ReadStatusRegister
+ 362              	.LVL12:
+ 363 000c 0307     		lsl	r3, r0, #28
+ 364 000e F9D4     		bmi	.L39
+ 768:.\Generated_Source\PSoC4/Debounce_Timer.c ****     }
+ 769:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 365              		.loc 1 769 0
+ 366              		@ sp needed
+ 367 0010 08BD     		pop	{r3, pc}
+ 368              		.cfi_endproc
+ 369              	.LFE14:
+ 370              		.size	Debounce_Timer_ClearFIFO, .-Debounce_Timer_ClearFIFO
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 21
+
+
+ 371 0012 C046     		.section	.text.Debounce_Timer_Init,"ax",%progbits
+ 372              		.align	2
+ 373              		.global	Debounce_Timer_Init
+ 374              		.code	16
+ 375              		.thumb_func
+ 376              		.type	Debounce_Timer_Init, %function
+ 377              	Debounce_Timer_Init:
+ 378              	.LFB0:
+  44:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #if(!Debounce_Timer_UsingFixedFunction)
+ 379              		.loc 1 44 0
+ 380              		.cfi_startproc
+ 381 0000 10B5     		push	{r4, lr}
+ 382              		.cfi_def_cfa_offset 8
+ 383              		.cfi_offset 4, -8
+ 384              		.cfi_offset 14, -4
+ 118:.\Generated_Source\PSoC4/Debounce_Timer.c ****     Debounce_Timer_WriteCounter(Debounce_Timer_INIT_PERIOD);
+ 385              		.loc 1 118 0
+ 386 0002 0B4C     		ldr	r4, .L41
+ 387 0004 201C     		mov	r0, r4
+ 388 0006 FFF7FEFF 		bl	Debounce_Timer_WritePeriod
+ 389              	.LVL13:
+ 119:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 390              		.loc 1 119 0
+ 391 000a 201C     		mov	r0, r4
+ 392 000c FFF7FEFF 		bl	Debounce_Timer_WriteCounter
+ 393              	.LVL14:
+ 142:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 394              		.loc 1 142 0
+ 395 0010 FFF7FEFF 		bl	CyEnterCriticalSection
+ 396              	.LVL15:
+ 145:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 397              		.loc 1 145 0
+ 398 0014 074A     		ldr	r2, .L41+4
+ 399 0016 1178     		ldrb	r1, [r2]
+ 400 0018 1023     		mov	r3, #16
+ 401 001a 0B43     		orr	r3, r1
+ 402 001c 1370     		strb	r3, [r2]
+ 148:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 403              		.loc 1 148 0
+ 404 001e FFF7FEFF 		bl	CyExitCriticalSection
+ 405              	.LVL16:
+ 159:.\Generated_Source\PSoC4/Debounce_Timer.c ****     #endif /* Configure additional features of UDB implementation */
+ 406              		.loc 1 159 0
+ 407 0022 FFF7FEFF 		bl	Debounce_Timer_ClearFIFO
+ 408              	.LVL17:
+ 162:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 409              		.loc 1 162 0
+ 410 0026 0120     		mov	r0, #1
+ 411 0028 FFF7FEFF 		bl	Debounce_Timer_SetInterruptMode
+ 412              	.LVL18:
+ 163:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 413              		.loc 1 163 0
+ 414              		@ sp needed
+ 415 002c 10BD     		pop	{r4, pc}
+ 416              	.L42:
+ 417 002e C046     		.align	2
+ 418              	.L41:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 22
+
+
+ 419 0030 BFD40100 		.word	119999
+ 420 0034 92000F40 		.word	1074725010
+ 421              		.cfi_endproc
+ 422              	.LFE0:
+ 423              		.size	Debounce_Timer_Init, .-Debounce_Timer_Init
+ 424              		.section	.text.Debounce_Timer_Start,"ax",%progbits
+ 425              		.align	2
+ 426              		.global	Debounce_Timer_Start
+ 427              		.code	16
+ 428              		.thumb_func
+ 429              		.type	Debounce_Timer_Start, %function
+ 430              	Debounce_Timer_Start:
+ 431              	.LFB2:
+ 216:.\Generated_Source\PSoC4/Debounce_Timer.c ****     if(Debounce_Timer_initVar == 0u)
+ 432              		.loc 1 216 0
+ 433              		.cfi_startproc
+ 434 0000 08B5     		push	{r3, lr}
+ 435              		.cfi_def_cfa_offset 8
+ 436              		.cfi_offset 3, -8
+ 437              		.cfi_offset 14, -4
+ 217:.\Generated_Source\PSoC4/Debounce_Timer.c ****     {
+ 438              		.loc 1 217 0
+ 439 0002 064B     		ldr	r3, .L45
+ 440 0004 1B78     		ldrb	r3, [r3]
+ 441 0006 002B     		cmp	r3, #0
+ 442 0008 04D1     		bne	.L44
+ 219:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 443              		.loc 1 219 0
+ 444 000a FFF7FEFF 		bl	Debounce_Timer_Init
+ 445              	.LVL19:
+ 221:.\Generated_Source\PSoC4/Debounce_Timer.c ****     }
+ 446              		.loc 1 221 0
+ 447 000e 0122     		mov	r2, #1
+ 448 0010 024B     		ldr	r3, .L45
+ 449 0012 1A70     		strb	r2, [r3]
+ 450              	.L44:
+ 225:.\Generated_Source\PSoC4/Debounce_Timer.c **** }
+ 451              		.loc 1 225 0
+ 452 0014 FFF7FEFF 		bl	Debounce_Timer_Enable
+ 453              	.LVL20:
+ 226:.\Generated_Source\PSoC4/Debounce_Timer.c **** 
+ 454              		.loc 1 226 0
+ 455              		@ sp needed
+ 456 0018 08BD     		pop	{r3, pc}
+ 457              	.L46:
+ 458 001a C046     		.align	2
+ 459              	.L45:
+ 460 001c 00000000 		.word	.LANCHOR0
+ 461              		.cfi_endproc
+ 462              	.LFE2:
+ 463              		.size	Debounce_Timer_Start, .-Debounce_Timer_Start
+ 464              		.global	Debounce_Timer_initVar
+ 465              		.bss
+ 466              		.set	.LANCHOR0,. + 0
+ 467              		.type	Debounce_Timer_initVar, %object
+ 468              		.size	Debounce_Timer_initVar, 1
+ 469              	Debounce_Timer_initVar:
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 23
+
+
+ 470 0000 00       		.space	1
+ 471              		.text
+ 472              	.Letext0:
+ 473              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 474              		.file 3 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ 475              		.section	.debug_info,"",%progbits
+ 476              	.Ldebug_info0:
+ 477 0000 A1030000 		.4byte	0x3a1
+ 478 0004 0400     		.2byte	0x4
+ 479 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 480 000a 04       		.byte	0x4
+ 481 000b 01       		.uleb128 0x1
+ 482 000c 24030000 		.4byte	.LASF36
+ 483 0010 01       		.byte	0x1
+ 484 0011 08010000 		.4byte	.LASF37
+ 485 0015 00000000 		.4byte	.LASF38
+ 486 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 487 001d 00000000 		.4byte	0
+ 488 0021 00000000 		.4byte	.Ldebug_line0
+ 489 0025 02       		.uleb128 0x2
+ 490 0026 01       		.byte	0x1
+ 491 0027 06       		.byte	0x6
+ 492 0028 D5030000 		.4byte	.LASF0
+ 493 002c 02       		.uleb128 0x2
+ 494 002d 01       		.byte	0x1
+ 495 002e 08       		.byte	0x8
+ 496 002f 57010000 		.4byte	.LASF1
+ 497 0033 02       		.uleb128 0x2
+ 498 0034 02       		.byte	0x2
+ 499 0035 05       		.byte	0x5
+ 500 0036 BD030000 		.4byte	.LASF2
+ 501 003a 02       		.uleb128 0x2
+ 502 003b 02       		.byte	0x2
+ 503 003c 07       		.byte	0x7
+ 504 003d EA000000 		.4byte	.LASF3
+ 505 0041 02       		.uleb128 0x2
+ 506 0042 04       		.byte	0x4
+ 507 0043 05       		.byte	0x5
+ 508 0044 C7030000 		.4byte	.LASF4
+ 509 0048 02       		.uleb128 0x2
+ 510 0049 04       		.byte	0x4
+ 511 004a 07       		.byte	0x7
+ 512 004b D3010000 		.4byte	.LASF5
+ 513 004f 02       		.uleb128 0x2
+ 514 0050 08       		.byte	0x8
+ 515 0051 05       		.byte	0x5
+ 516 0052 08030000 		.4byte	.LASF6
+ 517 0056 02       		.uleb128 0x2
+ 518 0057 08       		.byte	0x8
+ 519 0058 07       		.byte	0x7
+ 520 0059 40010000 		.4byte	.LASF7
+ 521 005d 03       		.uleb128 0x3
+ 522 005e 04       		.byte	0x4
+ 523 005f 05       		.byte	0x5
+ 524 0060 696E7400 		.ascii	"int\000"
+ 525 0064 02       		.uleb128 0x2
+ 526 0065 04       		.byte	0x4
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 24
+
+
+ 527 0066 07       		.byte	0x7
+ 528 0067 96020000 		.4byte	.LASF8
+ 529 006b 04       		.uleb128 0x4
+ 530 006c E5010000 		.4byte	.LASF9
+ 531 0070 02       		.byte	0x2
+ 532 0071 C2       		.byte	0xc2
+ 533 0072 2C000000 		.4byte	0x2c
+ 534 0076 04       		.uleb128 0x4
+ 535 0077 56020000 		.4byte	.LASF10
+ 536 007b 02       		.byte	0x2
+ 537 007c C4       		.byte	0xc4
+ 538 007d 48000000 		.4byte	0x48
+ 539 0081 02       		.uleb128 0x2
+ 540 0082 04       		.byte	0x4
+ 541 0083 04       		.byte	0x4
+ 542 0084 32010000 		.4byte	.LASF11
+ 543 0088 02       		.uleb128 0x2
+ 544 0089 08       		.byte	0x8
+ 545 008a 04       		.byte	0x4
+ 546 008b 17020000 		.4byte	.LASF12
+ 547 008f 02       		.uleb128 0x2
+ 548 0090 01       		.byte	0x1
+ 549 0091 08       		.byte	0x8
+ 550 0092 D0030000 		.4byte	.LASF13
+ 551 0096 05       		.uleb128 0x5
+ 552 0097 94010000 		.4byte	.LASF14
+ 553 009b 02       		.byte	0x2
+ 554 009c 6C01     		.2byte	0x16c
+ 555 009e A2000000 		.4byte	0xa2
+ 556 00a2 06       		.uleb128 0x6
+ 557 00a3 6B000000 		.4byte	0x6b
+ 558 00a7 05       		.uleb128 0x5
+ 559 00a8 3A000000 		.4byte	.LASF15
+ 560 00ac 02       		.byte	0x2
+ 561 00ad 6E01     		.2byte	0x16e
+ 562 00af B3000000 		.4byte	0xb3
+ 563 00b3 06       		.uleb128 0x6
+ 564 00b4 76000000 		.4byte	0x76
+ 565 00b8 02       		.uleb128 0x2
+ 566 00b9 04       		.byte	0x4
+ 567 00ba 07       		.byte	0x7
+ 568 00bb FF020000 		.4byte	.LASF16
+ 569 00bf 07       		.uleb128 0x7
+ 570 00c0 75000000 		.4byte	.LASF17
+ 571 00c4 01       		.byte	0x1
+ 572 00c5 B4       		.byte	0xb4
+ 573 00c6 00000000 		.4byte	.LFB1
+ 574 00ca 10000000 		.4byte	.LFE1-.LFB1
+ 575 00ce 01       		.uleb128 0x1
+ 576 00cf 9C       		.byte	0x9c
+ 577 00d0 07       		.uleb128 0x7
+ 578 00d1 EB020000 		.4byte	.LASF18
+ 579 00d5 01       		.byte	0x1
+ 580 00d6 F7       		.byte	0xf7
+ 581 00d7 00000000 		.4byte	.LFB3
+ 582 00db 10000000 		.4byte	.LFE3-.LFB3
+ 583 00df 01       		.uleb128 0x1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 25
+
+
+ 584 00e0 9C       		.byte	0x9c
+ 585 00e1 08       		.uleb128 0x8
+ 586 00e2 99010000 		.4byte	.LASF22
+ 587 00e6 01       		.byte	0x1
+ 588 00e7 1701     		.2byte	0x117
+ 589 00e9 00000000 		.4byte	.LFB4
+ 590 00ed 0C000000 		.4byte	.LFE4-.LFB4
+ 591 00f1 01       		.uleb128 0x1
+ 592 00f2 9C       		.byte	0x9c
+ 593 00f3 06010000 		.4byte	0x106
+ 594 00f7 09       		.uleb128 0x9
+ 595 00f8 16030000 		.4byte	.LASF24
+ 596 00fc 01       		.byte	0x1
+ 597 00fd 1701     		.2byte	0x117
+ 598 00ff 6B000000 		.4byte	0x6b
+ 599 0103 01       		.uleb128 0x1
+ 600 0104 50       		.byte	0x50
+ 601 0105 00       		.byte	0
+ 602 0106 0A       		.uleb128 0xa
+ 603 0107 8B000000 		.4byte	.LASF19
+ 604 010b 01       		.byte	0x1
+ 605 010c 2E01     		.2byte	0x12e
+ 606 010e 00000000 		.4byte	.LFB5
+ 607 0112 0C000000 		.4byte	.LFE5-.LFB5
+ 608 0116 01       		.uleb128 0x1
+ 609 0117 9C       		.byte	0x9c
+ 610 0118 0B       		.uleb128 0xb
+ 611 0119 74020000 		.4byte	.LASF20
+ 612 011d 01       		.byte	0x1
+ 613 011e 4D01     		.2byte	0x14d
+ 614 0120 6B000000 		.4byte	0x6b
+ 615 0124 00000000 		.4byte	.LFB6
+ 616 0128 0C000000 		.4byte	.LFE6-.LFB6
+ 617 012c 01       		.uleb128 0x1
+ 618 012d 9C       		.byte	0x9c
+ 619 012e 0B       		.uleb128 0xb
+ 620 012f 1E020000 		.4byte	.LASF21
+ 621 0133 01       		.byte	0x1
+ 622 0134 6401     		.2byte	0x164
+ 623 0136 6B000000 		.4byte	0x6b
+ 624 013a 00000000 		.4byte	.LFB7
+ 625 013e 0C000000 		.4byte	.LFE7-.LFB7
+ 626 0142 01       		.uleb128 0x1
+ 627 0143 9C       		.byte	0x9c
+ 628 0144 08       		.uleb128 0x8
+ 629 0145 F3010000 		.4byte	.LASF23
+ 630 0149 01       		.byte	0x1
+ 631 014a 7B01     		.2byte	0x17b
+ 632 014c 00000000 		.4byte	.LFB8
+ 633 0150 0C000000 		.4byte	.LFE8-.LFB8
+ 634 0154 01       		.uleb128 0x1
+ 635 0155 9C       		.byte	0x9c
+ 636 0156 69010000 		.4byte	0x169
+ 637 015a 09       		.uleb128 0x9
+ 638 015b EB010000 		.4byte	.LASF25
+ 639 015f 01       		.byte	0x1
+ 640 0160 7B01     		.2byte	0x17b
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 26
+
+
+ 641 0162 6B000000 		.4byte	0x6b
+ 642 0166 01       		.uleb128 0x1
+ 643 0167 50       		.byte	0x50
+ 644 0168 00       		.byte	0
+ 645 0169 0C       		.uleb128 0xc
+ 646 016a B9010000 		.4byte	.LASF28
+ 647 016e 01       		.byte	0x1
+ 648 016f 9501     		.2byte	0x195
+ 649 0171 76000000 		.4byte	0x76
+ 650 0175 00000000 		.4byte	.LFB9
+ 651 0179 10000000 		.4byte	.LFE9-.LFB9
+ 652 017d 01       		.uleb128 0x1
+ 653 017e 9C       		.byte	0x9c
+ 654 017f 97010000 		.4byte	0x197
+ 655 0183 0D       		.uleb128 0xd
+ 656 0184 08000000 		.4byte	.LVL2
+ 657 0188 4E030000 		.4byte	0x34e
+ 658 018c 0E       		.uleb128 0xe
+ 659 018d 01       		.uleb128 0x1
+ 660 018e 50       		.byte	0x50
+ 661 018f 05       		.uleb128 0x5
+ 662 0190 0C       		.byte	0xc
+ 663 0191 20000F40 		.4byte	0x400f0020
+ 664 0195 00       		.byte	0
+ 665 0196 00       		.byte	0
+ 666 0197 08       		.uleb128 0x8
+ 667 0198 D0020000 		.4byte	.LASF26
+ 668 019c 01       		.byte	0x1
+ 669 019d AF01     		.2byte	0x1af
+ 670 019f 00000000 		.4byte	.LFB10
+ 671 01a3 10000000 		.4byte	.LFE10-.LFB10
+ 672 01a7 01       		.uleb128 0x1
+ 673 01a8 9C       		.byte	0x9c
+ 674 01a9 D8010000 		.4byte	0x1d8
+ 675 01ad 0F       		.uleb128 0xf
+ 676 01ae AA000000 		.4byte	.LASF27
+ 677 01b2 01       		.byte	0x1
+ 678 01b3 AF01     		.2byte	0x1af
+ 679 01b5 76000000 		.4byte	0x76
+ 680 01b9 00000000 		.4byte	.LLST0
+ 681 01bd 0D       		.uleb128 0xd
+ 682 01be 0A000000 		.4byte	.LVL5
+ 683 01c2 6F030000 		.4byte	0x36f
+ 684 01c6 0E       		.uleb128 0xe
+ 685 01c7 01       		.uleb128 0x1
+ 686 01c8 51       		.byte	0x51
+ 687 01c9 03       		.uleb128 0x3
+ 688 01ca F3       		.byte	0xf3
+ 689 01cb 01       		.uleb128 0x1
+ 690 01cc 50       		.byte	0x50
+ 691 01cd 0E       		.uleb128 0xe
+ 692 01ce 01       		.uleb128 0x1
+ 693 01cf 50       		.byte	0x50
+ 694 01d0 05       		.uleb128 0x5
+ 695 01d1 0C       		.byte	0xc
+ 696 01d2 20000F40 		.4byte	0x400f0020
+ 697 01d6 00       		.byte	0
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 27
+
+
+ 698 01d7 00       		.byte	0
+ 699 01d8 0C       		.uleb128 0xc
+ 700 01d9 CF000000 		.4byte	.LASF29
+ 701 01dd 01       		.byte	0x1
+ 702 01de C801     		.2byte	0x1c8
+ 703 01e0 76000000 		.4byte	0x76
+ 704 01e4 00000000 		.4byte	.LFB11
+ 705 01e8 10000000 		.4byte	.LFE11-.LFB11
+ 706 01ec 01       		.uleb128 0x1
+ 707 01ed 9C       		.byte	0x9c
+ 708 01ee 06020000 		.4byte	0x206
+ 709 01f2 0D       		.uleb128 0xd
+ 710 01f3 08000000 		.4byte	.LVL6
+ 711 01f7 4E030000 		.4byte	0x34e
+ 712 01fb 0E       		.uleb128 0xe
+ 713 01fc 01       		.uleb128 0x1
+ 714 01fd 50       		.byte	0x50
+ 715 01fe 05       		.uleb128 0x5
+ 716 01ff 0C       		.byte	0xc
+ 717 0200 40000F40 		.4byte	0x400f0040
+ 718 0204 00       		.byte	0
+ 719 0205 00       		.byte	0
+ 720 0206 08       		.uleb128 0x8
+ 721 0207 40000000 		.4byte	.LASF30
+ 722 020b 01       		.byte	0x1
+ 723 020c E001     		.2byte	0x1e0
+ 724 020e 00000000 		.4byte	.LFB12
+ 725 0212 10000000 		.4byte	.LFE12-.LFB12
+ 726 0216 01       		.uleb128 0x1
+ 727 0217 9C       		.byte	0x9c
+ 728 0218 47020000 		.4byte	0x247
+ 729 021c 0F       		.uleb128 0xf
+ 730 021d 38010000 		.4byte	.LASF31
+ 731 0221 01       		.byte	0x1
+ 732 0222 E001     		.2byte	0x1e0
+ 733 0224 76000000 		.4byte	0x76
+ 734 0228 2C000000 		.4byte	.LLST1
+ 735 022c 0D       		.uleb128 0xd
+ 736 022d 0A000000 		.4byte	.LVL9
+ 737 0231 6F030000 		.4byte	0x36f
+ 738 0235 0E       		.uleb128 0xe
+ 739 0236 01       		.uleb128 0x1
+ 740 0237 51       		.byte	0x51
+ 741 0238 03       		.uleb128 0x3
+ 742 0239 F3       		.byte	0xf3
+ 743 023a 01       		.uleb128 0x1
+ 744 023b 50       		.byte	0x50
+ 745 023c 0E       		.uleb128 0xe
+ 746 023d 01       		.uleb128 0x1
+ 747 023e 50       		.byte	0x50
+ 748 023f 05       		.uleb128 0x5
+ 749 0240 0C       		.byte	0xc
+ 750 0241 00000F40 		.4byte	0x400f0000
+ 751 0245 00       		.byte	0
+ 752 0246 00       		.byte	0
+ 753 0247 0C       		.uleb128 0xc
+ 754 0248 65010000 		.4byte	.LASF32
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 28
+
+
+ 755 024c 01       		.byte	0x1
+ 756 024d FC01     		.2byte	0x1fc
+ 757 024f 76000000 		.4byte	0x76
+ 758 0253 00000000 		.4byte	.LFB13
+ 759 0257 18000000 		.4byte	.LFE13-.LFB13
+ 760 025b 01       		.uleb128 0x1
+ 761 025c 9C       		.byte	0x9c
+ 762 025d 75020000 		.4byte	0x275
+ 763 0261 0D       		.uleb128 0xd
+ 764 0262 0C000000 		.4byte	.LVL10
+ 765 0266 4E030000 		.4byte	0x34e
+ 766 026a 0E       		.uleb128 0xe
+ 767 026b 01       		.uleb128 0x1
+ 768 026c 50       		.byte	0x50
+ 769 026d 05       		.uleb128 0x5
+ 770 026e 0C       		.byte	0xc
+ 771 026f 40000F40 		.4byte	0x400f0040
+ 772 0273 00       		.byte	0
+ 773 0274 00       		.byte	0
+ 774 0275 08       		.uleb128 0x8
+ 775 0276 5C000000 		.4byte	.LASF33
+ 776 027a 01       		.byte	0x1
+ 777 027b FB02     		.2byte	0x2fb
+ 778 027d 00000000 		.4byte	.LFB14
+ 779 0281 12000000 		.4byte	.LFE14-.LFB14
+ 780 0285 01       		.uleb128 0x1
+ 781 0286 9C       		.byte	0x9c
+ 782 0287 9E020000 		.4byte	0x29e
+ 783 028b 10       		.uleb128 0x10
+ 784 028c 08000000 		.4byte	.LVL11
+ 785 0290 D8010000 		.4byte	0x1d8
+ 786 0294 10       		.uleb128 0x10
+ 787 0295 0C000000 		.4byte	.LVL12
+ 788 0299 18010000 		.4byte	0x118
+ 789 029d 00       		.byte	0
+ 790 029e 11       		.uleb128 0x11
+ 791 029f 80010000 		.4byte	.LASF34
+ 792 02a3 01       		.byte	0x1
+ 793 02a4 2B       		.byte	0x2b
+ 794 02a5 00000000 		.4byte	.LFB0
+ 795 02a9 38000000 		.4byte	.LFE0-.LFB0
+ 796 02ad 01       		.uleb128 0x1
+ 797 02ae 9C       		.byte	0x9c
+ 798 02af 15030000 		.4byte	0x315
+ 799 02b3 12       		.uleb128 0x12
+ 800 02b4 B1000000 		.4byte	.LASF39
+ 801 02b8 01       		.byte	0x1
+ 802 02b9 2F       		.byte	0x2f
+ 803 02ba 6B000000 		.4byte	0x6b
+ 804 02be 58000000 		.4byte	.LLST2
+ 805 02c2 13       		.uleb128 0x13
+ 806 02c3 0A000000 		.4byte	.LVL13
+ 807 02c7 97010000 		.4byte	0x197
+ 808 02cb D6020000 		.4byte	0x2d6
+ 809 02cf 0E       		.uleb128 0xe
+ 810 02d0 01       		.uleb128 0x1
+ 811 02d1 50       		.byte	0x50
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 29
+
+
+ 812 02d2 02       		.uleb128 0x2
+ 813 02d3 74       		.byte	0x74
+ 814 02d4 00       		.sleb128 0
+ 815 02d5 00       		.byte	0
+ 816 02d6 13       		.uleb128 0x13
+ 817 02d7 10000000 		.4byte	.LVL14
+ 818 02db 06020000 		.4byte	0x206
+ 819 02df EA020000 		.4byte	0x2ea
+ 820 02e3 0E       		.uleb128 0xe
+ 821 02e4 01       		.uleb128 0x1
+ 822 02e5 50       		.byte	0x50
+ 823 02e6 02       		.uleb128 0x2
+ 824 02e7 74       		.byte	0x74
+ 825 02e8 00       		.sleb128 0
+ 826 02e9 00       		.byte	0
+ 827 02ea 10       		.uleb128 0x10
+ 828 02eb 14000000 		.4byte	.LVL15
+ 829 02ef 8C030000 		.4byte	0x38c
+ 830 02f3 10       		.uleb128 0x10
+ 831 02f4 22000000 		.4byte	.LVL16
+ 832 02f8 97030000 		.4byte	0x397
+ 833 02fc 10       		.uleb128 0x10
+ 834 02fd 26000000 		.4byte	.LVL17
+ 835 0301 75020000 		.4byte	0x275
+ 836 0305 0D       		.uleb128 0xd
+ 837 0306 2C000000 		.4byte	.LVL18
+ 838 030a E1000000 		.4byte	0xe1
+ 839 030e 0E       		.uleb128 0xe
+ 840 030f 01       		.uleb128 0x1
+ 841 0310 50       		.byte	0x50
+ 842 0311 01       		.uleb128 0x1
+ 843 0312 31       		.byte	0x31
+ 844 0313 00       		.byte	0
+ 845 0314 00       		.byte	0
+ 846 0315 11       		.uleb128 0x11
+ 847 0316 41020000 		.4byte	.LASF35
+ 848 031a 01       		.byte	0x1
+ 849 031b D7       		.byte	0xd7
+ 850 031c 00000000 		.4byte	.LFB2
+ 851 0320 20000000 		.4byte	.LFE2-.LFB2
+ 852 0324 01       		.uleb128 0x1
+ 853 0325 9C       		.byte	0x9c
+ 854 0326 3D030000 		.4byte	0x33d
+ 855 032a 10       		.uleb128 0x10
+ 856 032b 0E000000 		.4byte	.LVL19
+ 857 032f 9E020000 		.4byte	0x29e
+ 858 0333 10       		.uleb128 0x10
+ 859 0334 18000000 		.4byte	.LVL20
+ 860 0338 BF000000 		.4byte	0xbf
+ 861 033c 00       		.byte	0
+ 862 033d 14       		.uleb128 0x14
+ 863 033e B9020000 		.4byte	.LASF40
+ 864 0342 01       		.byte	0x1
+ 865 0343 1A       		.byte	0x1a
+ 866 0344 6B000000 		.4byte	0x6b
+ 867 0348 05       		.uleb128 0x5
+ 868 0349 03       		.byte	0x3
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 30
+
+
+ 869 034a 00000000 		.4byte	Debounce_Timer_initVar
+ 870 034e 15       		.uleb128 0x15
+ 871 034f FD000000 		.4byte	.LASF41
+ 872 0353 02       		.byte	0x2
+ 873 0354 0901     		.2byte	0x109
+ 874 0356 76000000 		.4byte	0x76
+ 875 035a 64030000 		.4byte	0x364
+ 876 035e 16       		.uleb128 0x16
+ 877 035f 64030000 		.4byte	0x364
+ 878 0363 00       		.byte	0
+ 879 0364 17       		.uleb128 0x17
+ 880 0365 04       		.byte	0x4
+ 881 0366 6A030000 		.4byte	0x36a
+ 882 036a 18       		.uleb128 0x18
+ 883 036b B3000000 		.4byte	0xb3
+ 884 036f 19       		.uleb128 0x19
+ 885 0370 B2030000 		.4byte	.LASF42
+ 886 0374 02       		.byte	0x2
+ 887 0375 0501     		.2byte	0x105
+ 888 0377 86030000 		.4byte	0x386
+ 889 037b 16       		.uleb128 0x16
+ 890 037c 86030000 		.4byte	0x386
+ 891 0380 16       		.uleb128 0x16
+ 892 0381 76000000 		.4byte	0x76
+ 893 0385 00       		.byte	0
+ 894 0386 17       		.uleb128 0x17
+ 895 0387 04       		.byte	0x4
+ 896 0388 B3000000 		.4byte	0xb3
+ 897 038c 1A       		.uleb128 0x1a
+ 898 038d 5D020000 		.4byte	.LASF43
+ 899 0391 03       		.byte	0x3
+ 900 0392 5E       		.byte	0x5e
+ 901 0393 6B000000 		.4byte	0x6b
+ 902 0397 1B       		.uleb128 0x1b
+ 903 0398 A3020000 		.4byte	.LASF44
+ 904 039c 03       		.byte	0x3
+ 905 039d 5F       		.byte	0x5f
+ 906 039e 16       		.uleb128 0x16
+ 907 039f 6B000000 		.4byte	0x6b
+ 908 03a3 00       		.byte	0
+ 909 03a4 00       		.byte	0
+ 910              		.section	.debug_abbrev,"",%progbits
+ 911              	.Ldebug_abbrev0:
+ 912 0000 01       		.uleb128 0x1
+ 913 0001 11       		.uleb128 0x11
+ 914 0002 01       		.byte	0x1
+ 915 0003 25       		.uleb128 0x25
+ 916 0004 0E       		.uleb128 0xe
+ 917 0005 13       		.uleb128 0x13
+ 918 0006 0B       		.uleb128 0xb
+ 919 0007 03       		.uleb128 0x3
+ 920 0008 0E       		.uleb128 0xe
+ 921 0009 1B       		.uleb128 0x1b
+ 922 000a 0E       		.uleb128 0xe
+ 923 000b 55       		.uleb128 0x55
+ 924 000c 17       		.uleb128 0x17
+ 925 000d 11       		.uleb128 0x11
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 31
+
+
+ 926 000e 01       		.uleb128 0x1
+ 927 000f 10       		.uleb128 0x10
+ 928 0010 17       		.uleb128 0x17
+ 929 0011 00       		.byte	0
+ 930 0012 00       		.byte	0
+ 931 0013 02       		.uleb128 0x2
+ 932 0014 24       		.uleb128 0x24
+ 933 0015 00       		.byte	0
+ 934 0016 0B       		.uleb128 0xb
+ 935 0017 0B       		.uleb128 0xb
+ 936 0018 3E       		.uleb128 0x3e
+ 937 0019 0B       		.uleb128 0xb
+ 938 001a 03       		.uleb128 0x3
+ 939 001b 0E       		.uleb128 0xe
+ 940 001c 00       		.byte	0
+ 941 001d 00       		.byte	0
+ 942 001e 03       		.uleb128 0x3
+ 943 001f 24       		.uleb128 0x24
+ 944 0020 00       		.byte	0
+ 945 0021 0B       		.uleb128 0xb
+ 946 0022 0B       		.uleb128 0xb
+ 947 0023 3E       		.uleb128 0x3e
+ 948 0024 0B       		.uleb128 0xb
+ 949 0025 03       		.uleb128 0x3
+ 950 0026 08       		.uleb128 0x8
+ 951 0027 00       		.byte	0
+ 952 0028 00       		.byte	0
+ 953 0029 04       		.uleb128 0x4
+ 954 002a 16       		.uleb128 0x16
+ 955 002b 00       		.byte	0
+ 956 002c 03       		.uleb128 0x3
+ 957 002d 0E       		.uleb128 0xe
+ 958 002e 3A       		.uleb128 0x3a
+ 959 002f 0B       		.uleb128 0xb
+ 960 0030 3B       		.uleb128 0x3b
+ 961 0031 0B       		.uleb128 0xb
+ 962 0032 49       		.uleb128 0x49
+ 963 0033 13       		.uleb128 0x13
+ 964 0034 00       		.byte	0
+ 965 0035 00       		.byte	0
+ 966 0036 05       		.uleb128 0x5
+ 967 0037 16       		.uleb128 0x16
+ 968 0038 00       		.byte	0
+ 969 0039 03       		.uleb128 0x3
+ 970 003a 0E       		.uleb128 0xe
+ 971 003b 3A       		.uleb128 0x3a
+ 972 003c 0B       		.uleb128 0xb
+ 973 003d 3B       		.uleb128 0x3b
+ 974 003e 05       		.uleb128 0x5
+ 975 003f 49       		.uleb128 0x49
+ 976 0040 13       		.uleb128 0x13
+ 977 0041 00       		.byte	0
+ 978 0042 00       		.byte	0
+ 979 0043 06       		.uleb128 0x6
+ 980 0044 35       		.uleb128 0x35
+ 981 0045 00       		.byte	0
+ 982 0046 49       		.uleb128 0x49
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 32
+
+
+ 983 0047 13       		.uleb128 0x13
+ 984 0048 00       		.byte	0
+ 985 0049 00       		.byte	0
+ 986 004a 07       		.uleb128 0x7
+ 987 004b 2E       		.uleb128 0x2e
+ 988 004c 00       		.byte	0
+ 989 004d 3F       		.uleb128 0x3f
+ 990 004e 19       		.uleb128 0x19
+ 991 004f 03       		.uleb128 0x3
+ 992 0050 0E       		.uleb128 0xe
+ 993 0051 3A       		.uleb128 0x3a
+ 994 0052 0B       		.uleb128 0xb
+ 995 0053 3B       		.uleb128 0x3b
+ 996 0054 0B       		.uleb128 0xb
+ 997 0055 27       		.uleb128 0x27
+ 998 0056 19       		.uleb128 0x19
+ 999 0057 11       		.uleb128 0x11
+ 1000 0058 01       		.uleb128 0x1
+ 1001 0059 12       		.uleb128 0x12
+ 1002 005a 06       		.uleb128 0x6
+ 1003 005b 40       		.uleb128 0x40
+ 1004 005c 18       		.uleb128 0x18
+ 1005 005d 9742     		.uleb128 0x2117
+ 1006 005f 19       		.uleb128 0x19
+ 1007 0060 00       		.byte	0
+ 1008 0061 00       		.byte	0
+ 1009 0062 08       		.uleb128 0x8
+ 1010 0063 2E       		.uleb128 0x2e
+ 1011 0064 01       		.byte	0x1
+ 1012 0065 3F       		.uleb128 0x3f
+ 1013 0066 19       		.uleb128 0x19
+ 1014 0067 03       		.uleb128 0x3
+ 1015 0068 0E       		.uleb128 0xe
+ 1016 0069 3A       		.uleb128 0x3a
+ 1017 006a 0B       		.uleb128 0xb
+ 1018 006b 3B       		.uleb128 0x3b
+ 1019 006c 05       		.uleb128 0x5
+ 1020 006d 27       		.uleb128 0x27
+ 1021 006e 19       		.uleb128 0x19
+ 1022 006f 11       		.uleb128 0x11
+ 1023 0070 01       		.uleb128 0x1
+ 1024 0071 12       		.uleb128 0x12
+ 1025 0072 06       		.uleb128 0x6
+ 1026 0073 40       		.uleb128 0x40
+ 1027 0074 18       		.uleb128 0x18
+ 1028 0075 9742     		.uleb128 0x2117
+ 1029 0077 19       		.uleb128 0x19
+ 1030 0078 01       		.uleb128 0x1
+ 1031 0079 13       		.uleb128 0x13
+ 1032 007a 00       		.byte	0
+ 1033 007b 00       		.byte	0
+ 1034 007c 09       		.uleb128 0x9
+ 1035 007d 05       		.uleb128 0x5
+ 1036 007e 00       		.byte	0
+ 1037 007f 03       		.uleb128 0x3
+ 1038 0080 0E       		.uleb128 0xe
+ 1039 0081 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 33
+
+
+ 1040 0082 0B       		.uleb128 0xb
+ 1041 0083 3B       		.uleb128 0x3b
+ 1042 0084 05       		.uleb128 0x5
+ 1043 0085 49       		.uleb128 0x49
+ 1044 0086 13       		.uleb128 0x13
+ 1045 0087 02       		.uleb128 0x2
+ 1046 0088 18       		.uleb128 0x18
+ 1047 0089 00       		.byte	0
+ 1048 008a 00       		.byte	0
+ 1049 008b 0A       		.uleb128 0xa
+ 1050 008c 2E       		.uleb128 0x2e
+ 1051 008d 00       		.byte	0
+ 1052 008e 3F       		.uleb128 0x3f
+ 1053 008f 19       		.uleb128 0x19
+ 1054 0090 03       		.uleb128 0x3
+ 1055 0091 0E       		.uleb128 0xe
+ 1056 0092 3A       		.uleb128 0x3a
+ 1057 0093 0B       		.uleb128 0xb
+ 1058 0094 3B       		.uleb128 0x3b
+ 1059 0095 05       		.uleb128 0x5
+ 1060 0096 27       		.uleb128 0x27
+ 1061 0097 19       		.uleb128 0x19
+ 1062 0098 11       		.uleb128 0x11
+ 1063 0099 01       		.uleb128 0x1
+ 1064 009a 12       		.uleb128 0x12
+ 1065 009b 06       		.uleb128 0x6
+ 1066 009c 40       		.uleb128 0x40
+ 1067 009d 18       		.uleb128 0x18
+ 1068 009e 9742     		.uleb128 0x2117
+ 1069 00a0 19       		.uleb128 0x19
+ 1070 00a1 00       		.byte	0
+ 1071 00a2 00       		.byte	0
+ 1072 00a3 0B       		.uleb128 0xb
+ 1073 00a4 2E       		.uleb128 0x2e
+ 1074 00a5 00       		.byte	0
+ 1075 00a6 3F       		.uleb128 0x3f
+ 1076 00a7 19       		.uleb128 0x19
+ 1077 00a8 03       		.uleb128 0x3
+ 1078 00a9 0E       		.uleb128 0xe
+ 1079 00aa 3A       		.uleb128 0x3a
+ 1080 00ab 0B       		.uleb128 0xb
+ 1081 00ac 3B       		.uleb128 0x3b
+ 1082 00ad 05       		.uleb128 0x5
+ 1083 00ae 27       		.uleb128 0x27
+ 1084 00af 19       		.uleb128 0x19
+ 1085 00b0 49       		.uleb128 0x49
+ 1086 00b1 13       		.uleb128 0x13
+ 1087 00b2 11       		.uleb128 0x11
+ 1088 00b3 01       		.uleb128 0x1
+ 1089 00b4 12       		.uleb128 0x12
+ 1090 00b5 06       		.uleb128 0x6
+ 1091 00b6 40       		.uleb128 0x40
+ 1092 00b7 18       		.uleb128 0x18
+ 1093 00b8 9742     		.uleb128 0x2117
+ 1094 00ba 19       		.uleb128 0x19
+ 1095 00bb 00       		.byte	0
+ 1096 00bc 00       		.byte	0
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 34
+
+
+ 1097 00bd 0C       		.uleb128 0xc
+ 1098 00be 2E       		.uleb128 0x2e
+ 1099 00bf 01       		.byte	0x1
+ 1100 00c0 3F       		.uleb128 0x3f
+ 1101 00c1 19       		.uleb128 0x19
+ 1102 00c2 03       		.uleb128 0x3
+ 1103 00c3 0E       		.uleb128 0xe
+ 1104 00c4 3A       		.uleb128 0x3a
+ 1105 00c5 0B       		.uleb128 0xb
+ 1106 00c6 3B       		.uleb128 0x3b
+ 1107 00c7 05       		.uleb128 0x5
+ 1108 00c8 27       		.uleb128 0x27
+ 1109 00c9 19       		.uleb128 0x19
+ 1110 00ca 49       		.uleb128 0x49
+ 1111 00cb 13       		.uleb128 0x13
+ 1112 00cc 11       		.uleb128 0x11
+ 1113 00cd 01       		.uleb128 0x1
+ 1114 00ce 12       		.uleb128 0x12
+ 1115 00cf 06       		.uleb128 0x6
+ 1116 00d0 40       		.uleb128 0x40
+ 1117 00d1 18       		.uleb128 0x18
+ 1118 00d2 9742     		.uleb128 0x2117
+ 1119 00d4 19       		.uleb128 0x19
+ 1120 00d5 01       		.uleb128 0x1
+ 1121 00d6 13       		.uleb128 0x13
+ 1122 00d7 00       		.byte	0
+ 1123 00d8 00       		.byte	0
+ 1124 00d9 0D       		.uleb128 0xd
+ 1125 00da 898201   		.uleb128 0x4109
+ 1126 00dd 01       		.byte	0x1
+ 1127 00de 11       		.uleb128 0x11
+ 1128 00df 01       		.uleb128 0x1
+ 1129 00e0 31       		.uleb128 0x31
+ 1130 00e1 13       		.uleb128 0x13
+ 1131 00e2 00       		.byte	0
+ 1132 00e3 00       		.byte	0
+ 1133 00e4 0E       		.uleb128 0xe
+ 1134 00e5 8A8201   		.uleb128 0x410a
+ 1135 00e8 00       		.byte	0
+ 1136 00e9 02       		.uleb128 0x2
+ 1137 00ea 18       		.uleb128 0x18
+ 1138 00eb 9142     		.uleb128 0x2111
+ 1139 00ed 18       		.uleb128 0x18
+ 1140 00ee 00       		.byte	0
+ 1141 00ef 00       		.byte	0
+ 1142 00f0 0F       		.uleb128 0xf
+ 1143 00f1 05       		.uleb128 0x5
+ 1144 00f2 00       		.byte	0
+ 1145 00f3 03       		.uleb128 0x3
+ 1146 00f4 0E       		.uleb128 0xe
+ 1147 00f5 3A       		.uleb128 0x3a
+ 1148 00f6 0B       		.uleb128 0xb
+ 1149 00f7 3B       		.uleb128 0x3b
+ 1150 00f8 05       		.uleb128 0x5
+ 1151 00f9 49       		.uleb128 0x49
+ 1152 00fa 13       		.uleb128 0x13
+ 1153 00fb 02       		.uleb128 0x2
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 35
+
+
+ 1154 00fc 17       		.uleb128 0x17
+ 1155 00fd 00       		.byte	0
+ 1156 00fe 00       		.byte	0
+ 1157 00ff 10       		.uleb128 0x10
+ 1158 0100 898201   		.uleb128 0x4109
+ 1159 0103 00       		.byte	0
+ 1160 0104 11       		.uleb128 0x11
+ 1161 0105 01       		.uleb128 0x1
+ 1162 0106 31       		.uleb128 0x31
+ 1163 0107 13       		.uleb128 0x13
+ 1164 0108 00       		.byte	0
+ 1165 0109 00       		.byte	0
+ 1166 010a 11       		.uleb128 0x11
+ 1167 010b 2E       		.uleb128 0x2e
+ 1168 010c 01       		.byte	0x1
+ 1169 010d 3F       		.uleb128 0x3f
+ 1170 010e 19       		.uleb128 0x19
+ 1171 010f 03       		.uleb128 0x3
+ 1172 0110 0E       		.uleb128 0xe
+ 1173 0111 3A       		.uleb128 0x3a
+ 1174 0112 0B       		.uleb128 0xb
+ 1175 0113 3B       		.uleb128 0x3b
+ 1176 0114 0B       		.uleb128 0xb
+ 1177 0115 27       		.uleb128 0x27
+ 1178 0116 19       		.uleb128 0x19
+ 1179 0117 11       		.uleb128 0x11
+ 1180 0118 01       		.uleb128 0x1
+ 1181 0119 12       		.uleb128 0x12
+ 1182 011a 06       		.uleb128 0x6
+ 1183 011b 40       		.uleb128 0x40
+ 1184 011c 18       		.uleb128 0x18
+ 1185 011d 9742     		.uleb128 0x2117
+ 1186 011f 19       		.uleb128 0x19
+ 1187 0120 01       		.uleb128 0x1
+ 1188 0121 13       		.uleb128 0x13
+ 1189 0122 00       		.byte	0
+ 1190 0123 00       		.byte	0
+ 1191 0124 12       		.uleb128 0x12
+ 1192 0125 34       		.uleb128 0x34
+ 1193 0126 00       		.byte	0
+ 1194 0127 03       		.uleb128 0x3
+ 1195 0128 0E       		.uleb128 0xe
+ 1196 0129 3A       		.uleb128 0x3a
+ 1197 012a 0B       		.uleb128 0xb
+ 1198 012b 3B       		.uleb128 0x3b
+ 1199 012c 0B       		.uleb128 0xb
+ 1200 012d 49       		.uleb128 0x49
+ 1201 012e 13       		.uleb128 0x13
+ 1202 012f 02       		.uleb128 0x2
+ 1203 0130 17       		.uleb128 0x17
+ 1204 0131 00       		.byte	0
+ 1205 0132 00       		.byte	0
+ 1206 0133 13       		.uleb128 0x13
+ 1207 0134 898201   		.uleb128 0x4109
+ 1208 0137 01       		.byte	0x1
+ 1209 0138 11       		.uleb128 0x11
+ 1210 0139 01       		.uleb128 0x1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 36
+
+
+ 1211 013a 31       		.uleb128 0x31
+ 1212 013b 13       		.uleb128 0x13
+ 1213 013c 01       		.uleb128 0x1
+ 1214 013d 13       		.uleb128 0x13
+ 1215 013e 00       		.byte	0
+ 1216 013f 00       		.byte	0
+ 1217 0140 14       		.uleb128 0x14
+ 1218 0141 34       		.uleb128 0x34
+ 1219 0142 00       		.byte	0
+ 1220 0143 03       		.uleb128 0x3
+ 1221 0144 0E       		.uleb128 0xe
+ 1222 0145 3A       		.uleb128 0x3a
+ 1223 0146 0B       		.uleb128 0xb
+ 1224 0147 3B       		.uleb128 0x3b
+ 1225 0148 0B       		.uleb128 0xb
+ 1226 0149 49       		.uleb128 0x49
+ 1227 014a 13       		.uleb128 0x13
+ 1228 014b 3F       		.uleb128 0x3f
+ 1229 014c 19       		.uleb128 0x19
+ 1230 014d 02       		.uleb128 0x2
+ 1231 014e 18       		.uleb128 0x18
+ 1232 014f 00       		.byte	0
+ 1233 0150 00       		.byte	0
+ 1234 0151 15       		.uleb128 0x15
+ 1235 0152 2E       		.uleb128 0x2e
+ 1236 0153 01       		.byte	0x1
+ 1237 0154 3F       		.uleb128 0x3f
+ 1238 0155 19       		.uleb128 0x19
+ 1239 0156 03       		.uleb128 0x3
+ 1240 0157 0E       		.uleb128 0xe
+ 1241 0158 3A       		.uleb128 0x3a
+ 1242 0159 0B       		.uleb128 0xb
+ 1243 015a 3B       		.uleb128 0x3b
+ 1244 015b 05       		.uleb128 0x5
+ 1245 015c 27       		.uleb128 0x27
+ 1246 015d 19       		.uleb128 0x19
+ 1247 015e 49       		.uleb128 0x49
+ 1248 015f 13       		.uleb128 0x13
+ 1249 0160 3C       		.uleb128 0x3c
+ 1250 0161 19       		.uleb128 0x19
+ 1251 0162 01       		.uleb128 0x1
+ 1252 0163 13       		.uleb128 0x13
+ 1253 0164 00       		.byte	0
+ 1254 0165 00       		.byte	0
+ 1255 0166 16       		.uleb128 0x16
+ 1256 0167 05       		.uleb128 0x5
+ 1257 0168 00       		.byte	0
+ 1258 0169 49       		.uleb128 0x49
+ 1259 016a 13       		.uleb128 0x13
+ 1260 016b 00       		.byte	0
+ 1261 016c 00       		.byte	0
+ 1262 016d 17       		.uleb128 0x17
+ 1263 016e 0F       		.uleb128 0xf
+ 1264 016f 00       		.byte	0
+ 1265 0170 0B       		.uleb128 0xb
+ 1266 0171 0B       		.uleb128 0xb
+ 1267 0172 49       		.uleb128 0x49
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 37
+
+
+ 1268 0173 13       		.uleb128 0x13
+ 1269 0174 00       		.byte	0
+ 1270 0175 00       		.byte	0
+ 1271 0176 18       		.uleb128 0x18
+ 1272 0177 26       		.uleb128 0x26
+ 1273 0178 00       		.byte	0
+ 1274 0179 49       		.uleb128 0x49
+ 1275 017a 13       		.uleb128 0x13
+ 1276 017b 00       		.byte	0
+ 1277 017c 00       		.byte	0
+ 1278 017d 19       		.uleb128 0x19
+ 1279 017e 2E       		.uleb128 0x2e
+ 1280 017f 01       		.byte	0x1
+ 1281 0180 3F       		.uleb128 0x3f
+ 1282 0181 19       		.uleb128 0x19
+ 1283 0182 03       		.uleb128 0x3
+ 1284 0183 0E       		.uleb128 0xe
+ 1285 0184 3A       		.uleb128 0x3a
+ 1286 0185 0B       		.uleb128 0xb
+ 1287 0186 3B       		.uleb128 0x3b
+ 1288 0187 05       		.uleb128 0x5
+ 1289 0188 27       		.uleb128 0x27
+ 1290 0189 19       		.uleb128 0x19
+ 1291 018a 3C       		.uleb128 0x3c
+ 1292 018b 19       		.uleb128 0x19
+ 1293 018c 01       		.uleb128 0x1
+ 1294 018d 13       		.uleb128 0x13
+ 1295 018e 00       		.byte	0
+ 1296 018f 00       		.byte	0
+ 1297 0190 1A       		.uleb128 0x1a
+ 1298 0191 2E       		.uleb128 0x2e
+ 1299 0192 00       		.byte	0
+ 1300 0193 3F       		.uleb128 0x3f
+ 1301 0194 19       		.uleb128 0x19
+ 1302 0195 03       		.uleb128 0x3
+ 1303 0196 0E       		.uleb128 0xe
+ 1304 0197 3A       		.uleb128 0x3a
+ 1305 0198 0B       		.uleb128 0xb
+ 1306 0199 3B       		.uleb128 0x3b
+ 1307 019a 0B       		.uleb128 0xb
+ 1308 019b 27       		.uleb128 0x27
+ 1309 019c 19       		.uleb128 0x19
+ 1310 019d 49       		.uleb128 0x49
+ 1311 019e 13       		.uleb128 0x13
+ 1312 019f 3C       		.uleb128 0x3c
+ 1313 01a0 19       		.uleb128 0x19
+ 1314 01a1 00       		.byte	0
+ 1315 01a2 00       		.byte	0
+ 1316 01a3 1B       		.uleb128 0x1b
+ 1317 01a4 2E       		.uleb128 0x2e
+ 1318 01a5 01       		.byte	0x1
+ 1319 01a6 3F       		.uleb128 0x3f
+ 1320 01a7 19       		.uleb128 0x19
+ 1321 01a8 03       		.uleb128 0x3
+ 1322 01a9 0E       		.uleb128 0xe
+ 1323 01aa 3A       		.uleb128 0x3a
+ 1324 01ab 0B       		.uleb128 0xb
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 38
+
+
+ 1325 01ac 3B       		.uleb128 0x3b
+ 1326 01ad 0B       		.uleb128 0xb
+ 1327 01ae 27       		.uleb128 0x27
+ 1328 01af 19       		.uleb128 0x19
+ 1329 01b0 3C       		.uleb128 0x3c
+ 1330 01b1 19       		.uleb128 0x19
+ 1331 01b2 00       		.byte	0
+ 1332 01b3 00       		.byte	0
+ 1333 01b4 00       		.byte	0
+ 1334              		.section	.debug_loc,"",%progbits
+ 1335              	.Ldebug_loc0:
+ 1336              	.LLST0:
+ 1337 0000 00000000 		.4byte	.LVL3
+ 1338 0004 06000000 		.4byte	.LVL4
+ 1339 0008 0100     		.2byte	0x1
+ 1340 000a 50       		.byte	0x50
+ 1341 000b 06000000 		.4byte	.LVL4
+ 1342 000f 09000000 		.4byte	.LVL5-1
+ 1343 0013 0100     		.2byte	0x1
+ 1344 0015 51       		.byte	0x51
+ 1345 0016 09000000 		.4byte	.LVL5-1
+ 1346 001a 10000000 		.4byte	.LFE10
+ 1347 001e 0400     		.2byte	0x4
+ 1348 0020 F3       		.byte	0xf3
+ 1349 0021 01       		.uleb128 0x1
+ 1350 0022 50       		.byte	0x50
+ 1351 0023 9F       		.byte	0x9f
+ 1352 0024 00000000 		.4byte	0
+ 1353 0028 00000000 		.4byte	0
+ 1354              	.LLST1:
+ 1355 002c 00000000 		.4byte	.LVL7
+ 1356 0030 06000000 		.4byte	.LVL8
+ 1357 0034 0100     		.2byte	0x1
+ 1358 0036 50       		.byte	0x50
+ 1359 0037 06000000 		.4byte	.LVL8
+ 1360 003b 09000000 		.4byte	.LVL9-1
+ 1361 003f 0100     		.2byte	0x1
+ 1362 0041 51       		.byte	0x51
+ 1363 0042 09000000 		.4byte	.LVL9-1
+ 1364 0046 10000000 		.4byte	.LFE12
+ 1365 004a 0400     		.2byte	0x4
+ 1366 004c F3       		.byte	0xf3
+ 1367 004d 01       		.uleb128 0x1
+ 1368 004e 50       		.byte	0x50
+ 1369 004f 9F       		.byte	0x9f
+ 1370 0050 00000000 		.4byte	0
+ 1371 0054 00000000 		.4byte	0
+ 1372              	.LLST2:
+ 1373 0058 14000000 		.4byte	.LVL15
+ 1374 005c 21000000 		.4byte	.LVL16-1
+ 1375 0060 0100     		.2byte	0x1
+ 1376 0062 50       		.byte	0x50
+ 1377 0063 00000000 		.4byte	0
+ 1378 0067 00000000 		.4byte	0
+ 1379              		.section	.debug_aranges,"",%progbits
+ 1380 0000 8C000000 		.4byte	0x8c
+ 1381 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 39
+
+
+ 1382 0006 00000000 		.4byte	.Ldebug_info0
+ 1383 000a 04       		.byte	0x4
+ 1384 000b 00       		.byte	0
+ 1385 000c 0000     		.2byte	0
+ 1386 000e 0000     		.2byte	0
+ 1387 0010 00000000 		.4byte	.LFB1
+ 1388 0014 10000000 		.4byte	.LFE1-.LFB1
+ 1389 0018 00000000 		.4byte	.LFB3
+ 1390 001c 10000000 		.4byte	.LFE3-.LFB3
+ 1391 0020 00000000 		.4byte	.LFB4
+ 1392 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1393 0028 00000000 		.4byte	.LFB5
+ 1394 002c 0C000000 		.4byte	.LFE5-.LFB5
+ 1395 0030 00000000 		.4byte	.LFB6
+ 1396 0034 0C000000 		.4byte	.LFE6-.LFB6
+ 1397 0038 00000000 		.4byte	.LFB7
+ 1398 003c 0C000000 		.4byte	.LFE7-.LFB7
+ 1399 0040 00000000 		.4byte	.LFB8
+ 1400 0044 0C000000 		.4byte	.LFE8-.LFB8
+ 1401 0048 00000000 		.4byte	.LFB9
+ 1402 004c 10000000 		.4byte	.LFE9-.LFB9
+ 1403 0050 00000000 		.4byte	.LFB10
+ 1404 0054 10000000 		.4byte	.LFE10-.LFB10
+ 1405 0058 00000000 		.4byte	.LFB11
+ 1406 005c 10000000 		.4byte	.LFE11-.LFB11
+ 1407 0060 00000000 		.4byte	.LFB12
+ 1408 0064 10000000 		.4byte	.LFE12-.LFB12
+ 1409 0068 00000000 		.4byte	.LFB13
+ 1410 006c 18000000 		.4byte	.LFE13-.LFB13
+ 1411 0070 00000000 		.4byte	.LFB14
+ 1412 0074 12000000 		.4byte	.LFE14-.LFB14
+ 1413 0078 00000000 		.4byte	.LFB0
+ 1414 007c 38000000 		.4byte	.LFE0-.LFB0
+ 1415 0080 00000000 		.4byte	.LFB2
+ 1416 0084 20000000 		.4byte	.LFE2-.LFB2
+ 1417 0088 00000000 		.4byte	0
+ 1418 008c 00000000 		.4byte	0
+ 1419              		.section	.debug_ranges,"",%progbits
+ 1420              	.Ldebug_ranges0:
+ 1421 0000 00000000 		.4byte	.LFB1
+ 1422 0004 10000000 		.4byte	.LFE1
+ 1423 0008 00000000 		.4byte	.LFB3
+ 1424 000c 10000000 		.4byte	.LFE3
+ 1425 0010 00000000 		.4byte	.LFB4
+ 1426 0014 0C000000 		.4byte	.LFE4
+ 1427 0018 00000000 		.4byte	.LFB5
+ 1428 001c 0C000000 		.4byte	.LFE5
+ 1429 0020 00000000 		.4byte	.LFB6
+ 1430 0024 0C000000 		.4byte	.LFE6
+ 1431 0028 00000000 		.4byte	.LFB7
+ 1432 002c 0C000000 		.4byte	.LFE7
+ 1433 0030 00000000 		.4byte	.LFB8
+ 1434 0034 0C000000 		.4byte	.LFE8
+ 1435 0038 00000000 		.4byte	.LFB9
+ 1436 003c 10000000 		.4byte	.LFE9
+ 1437 0040 00000000 		.4byte	.LFB10
+ 1438 0044 10000000 		.4byte	.LFE10
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 40
+
+
+ 1439 0048 00000000 		.4byte	.LFB11
+ 1440 004c 10000000 		.4byte	.LFE11
+ 1441 0050 00000000 		.4byte	.LFB12
+ 1442 0054 10000000 		.4byte	.LFE12
+ 1443 0058 00000000 		.4byte	.LFB13
+ 1444 005c 18000000 		.4byte	.LFE13
+ 1445 0060 00000000 		.4byte	.LFB14
+ 1446 0064 12000000 		.4byte	.LFE14
+ 1447 0068 00000000 		.4byte	.LFB0
+ 1448 006c 38000000 		.4byte	.LFE0
+ 1449 0070 00000000 		.4byte	.LFB2
+ 1450 0074 20000000 		.4byte	.LFE2
+ 1451 0078 00000000 		.4byte	0
+ 1452 007c 00000000 		.4byte	0
+ 1453              		.section	.debug_line,"",%progbits
+ 1454              	.Ldebug_line0:
+ 1455 0000 80010000 		.section	.debug_str,"MS",%progbits,1
+ 1455      02005800 
+ 1455      00000201 
+ 1455      FB0E0D00 
+ 1455      01010101 
+ 1456              	.LASF38:
+ 1457 0000 443A5C37 		.ascii	"D:\\744\\psoc\\Calculator\\Calculator_with_float_va"
+ 1457      34345C70 
+ 1457      736F635C 
+ 1457      43616C63 
+ 1457      756C6174 
+ 1458 002f 6C756573 		.ascii	"lues.cydsn\000"
+ 1458      2E637964 
+ 1458      736E00
+ 1459              	.LASF15:
+ 1460 003a 72656733 		.ascii	"reg32\000"
+ 1460      3200
+ 1461              	.LASF30:
+ 1462 0040 4465626F 		.ascii	"Debounce_Timer_WriteCounter\000"
+ 1462      756E6365 
+ 1462      5F54696D 
+ 1462      65725F57 
+ 1462      72697465 
+ 1463              	.LASF33:
+ 1464 005c 4465626F 		.ascii	"Debounce_Timer_ClearFIFO\000"
+ 1464      756E6365 
+ 1464      5F54696D 
+ 1464      65725F43 
+ 1464      6C656172 
+ 1465              	.LASF17:
+ 1466 0075 4465626F 		.ascii	"Debounce_Timer_Enable\000"
+ 1466      756E6365 
+ 1466      5F54696D 
+ 1466      65725F45 
+ 1466      6E61626C 
+ 1467              	.LASF19:
+ 1468 008b 4465626F 		.ascii	"Debounce_Timer_SoftwareCapture\000"
+ 1468      756E6365 
+ 1468      5F54696D 
+ 1468      65725F53 
+ 1468      6F667477 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 41
+
+
+ 1469              	.LASF27:
+ 1470 00aa 70657269 		.ascii	"period\000"
+ 1470      6F6400
+ 1471              	.LASF39:
+ 1472 00b1 4465626F 		.ascii	"Debounce_Timer_interruptState\000"
+ 1472      756E6365 
+ 1472      5F54696D 
+ 1472      65725F69 
+ 1472      6E746572 
+ 1473              	.LASF29:
+ 1474 00cf 4465626F 		.ascii	"Debounce_Timer_ReadCapture\000"
+ 1474      756E6365 
+ 1474      5F54696D 
+ 1474      65725F52 
+ 1474      65616443 
+ 1475              	.LASF3:
+ 1476 00ea 73686F72 		.ascii	"short unsigned int\000"
+ 1476      7420756E 
+ 1476      7369676E 
+ 1476      65642069 
+ 1476      6E7400
+ 1477              	.LASF41:
+ 1478 00fd 43794765 		.ascii	"CyGetReg24\000"
+ 1478      74526567 
+ 1478      323400
+ 1479              	.LASF37:
+ 1480 0108 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Debounce_Timer.c\000"
+ 1480      6E657261 
+ 1480      7465645F 
+ 1480      536F7572 
+ 1480      63655C50 
+ 1481              	.LASF11:
+ 1482 0132 666C6F61 		.ascii	"float\000"
+ 1482      7400
+ 1483              	.LASF31:
+ 1484 0138 636F756E 		.ascii	"counter\000"
+ 1484      74657200 
+ 1485              	.LASF7:
+ 1486 0140 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1486      206C6F6E 
+ 1486      6720756E 
+ 1486      7369676E 
+ 1486      65642069 
+ 1487              	.LASF1:
+ 1488 0157 756E7369 		.ascii	"unsigned char\000"
+ 1488      676E6564 
+ 1488      20636861 
+ 1488      7200
+ 1489              	.LASF32:
+ 1490 0165 4465626F 		.ascii	"Debounce_Timer_ReadCounter\000"
+ 1490      756E6365 
+ 1490      5F54696D 
+ 1490      65725F52 
+ 1490      65616443 
+ 1491              	.LASF34:
+ 1492 0180 4465626F 		.ascii	"Debounce_Timer_Init\000"
+ 1492      756E6365 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 42
+
+
+ 1492      5F54696D 
+ 1492      65725F49 
+ 1492      6E697400 
+ 1493              	.LASF14:
+ 1494 0194 72656738 		.ascii	"reg8\000"
+ 1494      00
+ 1495              	.LASF22:
+ 1496 0199 4465626F 		.ascii	"Debounce_Timer_SetInterruptMode\000"
+ 1496      756E6365 
+ 1496      5F54696D 
+ 1496      65725F53 
+ 1496      6574496E 
+ 1497              	.LASF28:
+ 1498 01b9 4465626F 		.ascii	"Debounce_Timer_ReadPeriod\000"
+ 1498      756E6365 
+ 1498      5F54696D 
+ 1498      65725F52 
+ 1498      65616450 
+ 1499              	.LASF5:
+ 1500 01d3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1500      20756E73 
+ 1500      69676E65 
+ 1500      6420696E 
+ 1500      7400
+ 1501              	.LASF9:
+ 1502 01e5 75696E74 		.ascii	"uint8\000"
+ 1502      3800
+ 1503              	.LASF25:
+ 1504 01eb 636F6E74 		.ascii	"control\000"
+ 1504      726F6C00 
+ 1505              	.LASF23:
+ 1506 01f3 4465626F 		.ascii	"Debounce_Timer_WriteControlRegister\000"
+ 1506      756E6365 
+ 1506      5F54696D 
+ 1506      65725F57 
+ 1506      72697465 
+ 1507              	.LASF12:
+ 1508 0217 646F7562 		.ascii	"double\000"
+ 1508      6C6500
+ 1509              	.LASF21:
+ 1510 021e 4465626F 		.ascii	"Debounce_Timer_ReadControlRegister\000"
+ 1510      756E6365 
+ 1510      5F54696D 
+ 1510      65725F52 
+ 1510      65616443 
+ 1511              	.LASF35:
+ 1512 0241 4465626F 		.ascii	"Debounce_Timer_Start\000"
+ 1512      756E6365 
+ 1512      5F54696D 
+ 1512      65725F53 
+ 1512      74617274 
+ 1513              	.LASF10:
+ 1514 0256 75696E74 		.ascii	"uint32\000"
+ 1514      333200
+ 1515              	.LASF43:
+ 1516 025d 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1516      74657243 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 43
+
+
+ 1516      72697469 
+ 1516      63616C53 
+ 1516      65637469 
+ 1517              	.LASF20:
+ 1518 0274 4465626F 		.ascii	"Debounce_Timer_ReadStatusRegister\000"
+ 1518      756E6365 
+ 1518      5F54696D 
+ 1518      65725F52 
+ 1518      65616453 
+ 1519              	.LASF8:
+ 1520 0296 756E7369 		.ascii	"unsigned int\000"
+ 1520      676E6564 
+ 1520      20696E74 
+ 1520      00
+ 1521              	.LASF44:
+ 1522 02a3 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1522      69744372 
+ 1522      69746963 
+ 1522      616C5365 
+ 1522      6374696F 
+ 1523              	.LASF40:
+ 1524 02b9 4465626F 		.ascii	"Debounce_Timer_initVar\000"
+ 1524      756E6365 
+ 1524      5F54696D 
+ 1524      65725F69 
+ 1524      6E697456 
+ 1525              	.LASF26:
+ 1526 02d0 4465626F 		.ascii	"Debounce_Timer_WritePeriod\000"
+ 1526      756E6365 
+ 1526      5F54696D 
+ 1526      65725F57 
+ 1526      72697465 
+ 1527              	.LASF18:
+ 1528 02eb 4465626F 		.ascii	"Debounce_Timer_Stop\000"
+ 1528      756E6365 
+ 1528      5F54696D 
+ 1528      65725F53 
+ 1528      746F7000 
+ 1529              	.LASF16:
+ 1530 02ff 73697A65 		.ascii	"sizetype\000"
+ 1530      74797065 
+ 1530      00
+ 1531              	.LASF6:
+ 1532 0308 6C6F6E67 		.ascii	"long long int\000"
+ 1532      206C6F6E 
+ 1532      6720696E 
+ 1532      7400
+ 1533              	.LASF24:
+ 1534 0316 696E7465 		.ascii	"interruptMode\000"
+ 1534      72727570 
+ 1534      744D6F64 
+ 1534      6500
+ 1535              	.LASF36:
+ 1536 0324 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1536      4320342E 
+ 1536      392E3320 
+ 1536      32303135 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccRtzExA.s 			page 44
+
+
+ 1536      30333033 
+ 1537 0357 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1537      20726576 
+ 1537      6973696F 
+ 1537      6E203232 
+ 1537      31323230 
+ 1538 038a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1538      66756E63 
+ 1538      74696F6E 
+ 1538      2D736563 
+ 1538      74696F6E 
+ 1539              	.LASF42:
+ 1540 03b2 43795365 		.ascii	"CySetReg24\000"
+ 1540      74526567 
+ 1540      323400
+ 1541              	.LASF2:
+ 1542 03bd 73686F72 		.ascii	"short int\000"
+ 1542      7420696E 
+ 1542      7400
+ 1543              	.LASF4:
+ 1544 03c7 6C6F6E67 		.ascii	"long int\000"
+ 1544      20696E74 
+ 1544      00
+ 1545              	.LASF13:
+ 1546 03d0 63686172 		.ascii	"char\000"
+ 1546      00
+ 1547              	.LASF0:
+ 1548 03d5 7369676E 		.ascii	"signed char\000"
+ 1548      65642063 
+ 1548      68617200 
+ 1549              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

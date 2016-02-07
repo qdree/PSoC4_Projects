@@ -1,0 +1,7 @@
+D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\Calculator_with_float_values.cyprj|072d14ad-bfa4-4603-ab13-e2143ca26eb4
+D:\744\psoc\KeypadLEDsSW\Keypad_Example.cydsn\Keypad_Example.cyprj|c7135209-63ab-44cf-b597-81777e8422b4
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7edfe955-1abf-4e2a-88c8-1b35cbc1464f
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|69773b89-949d-4340-aa27-620017ea8ea8
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|28b1e2b4-a1e9-4401-97e7-69fa548fba20
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|474b3a4e-00da-4f55-9c98-0d31488dec0a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ef87fe7f-a280-4b3c-92b7-d9359a8d97d4
