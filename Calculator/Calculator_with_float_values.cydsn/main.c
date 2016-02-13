@@ -53,98 +53,98 @@ int main()
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     LCD_Start();
-    Keyboard_Init();   
-    
-    init();
-      
+    Keyboard_Init();
+
+    init();                         //cleaning all buffers in our system from all trash.
+
     for(;;)
     {
-        
-        Key = Get_KBD_Char();		//Value recieved from Matrix      
-        switch(Key)
-        {             
+
+        Key = Get_KBD_Char();		//Value recieved from Matrix
+        switch(Key)                 //Recognition of pressed key
+        {
             case '+':
                 set_operation("+", Operator_Plus);
                 break;
-                
+
             case '-':
                 set_operation("-", Operator_Minus);
                 break;
-                
+
             case '*':
                 set_operation("*", Operator_Multiply);
                 break;
-                
+
             case '/':
                 set_operation("/", Operator_Division);
                 break;
-                
+
             case '=':
                 LCD_Position(1,0);
                 LCD_PrintString("=");
-                if (mode == Operator_Plus) 
-                    print_result(atof(value1) + atof(value2));
+                if (mode == Operator_Plus)
+                    print_result(atof(value1) + atof(value2));  //converting our char to float and printing it on screen(the same for all operators)
                 else if (mode == Operator_Minus)
                     print_result(atof(value1) - atof(value2));
                 else if (mode == Operator_Multiply)
                     print_result(atof(value1) * atof(value2));
                 else if (mode == Operator_Division)
                     print_result(atof(value1) / atof(value2));
-                else 
+                else
                 {
-                    init();
+                    init();     //clearing all buffers and screen if any operator was presed
                     LCD_Position(0,5);LCD_PrintString("error");
                 }
                 break;
-           
+
             case '.':
                 input_number('.');
-                break;   
+                break;
             case '1':
                 input_number('1');
-                break;   
+                break;
             case '2':
                 input_number('2');
-                break;     
+                break;
             case '3':
                 input_number('3');
-                break;     
+                break;
             case '4':
                 input_number('4');
-                break;     
+                break;
             case '5':
                 input_number('5');
-                break;     
+                break;
             case '6':
                 input_number('6');
                 break;
             case '7':
                 input_number('7');
-                break;     
+                break;
             case '8':
                 input_number('8');
-                break;     
+                break;
             case '9':
                 input_number('9');
-                break;     
+                break;
             case '0':
                 input_number('0');
-                break;   
-            
+                break;
+
             default:
                 memset(buffer,0,16);
                 LCD_Position(0,0);
                 LCD_PrintString("INPUT SMTH");
         }
     }
-}     
+}
 
 
 void init()
 {
-    memset(value1,0,sizeof(value1));
-    memset(value2,0,sizeof(value2));
-    memset(buffer,0, sizeof(buffer));
+    memset(value1,0,sizeof(value1));    //clearing the first value's buffer
+    memset(value2,0,sizeof(value2));    //clearing the first value's buffer
+    memset(buffer,0, sizeof(buffer));   //clearing main buffer after key was pressed
     is_first = true;
     i = 0;
     mode = Operator_None;
@@ -154,10 +154,10 @@ void init()
 
 void set_operation(const char* op, Operation m)
 {
-    if(mode != Operator_None) return;
+    if(mode != Operator_None) return;       //ensurence that operator was chosen
     LCD_PrintString(op);
     mode = m;
-    
+
     is_first = !is_first;
     i = 0;
 }
@@ -166,62 +166,18 @@ void input_number(const char num)
 {
     	LCD_PutChar(num);
         if(is_first)
-        {      
+        {
             value1[i++] = num;
         }
         else
         {
             value2[i++] = num;
         }
- 
+
 }
 
 void print_result(double result)
-{     
-    sprintf( buffer, "%.2f", result);
+{
+    sprintf( buffer, "%.2f", result);       //transformation recieved result from double to string
     LCD_PrintString(buffer);
 }
-
-
-
-
-//int char_to_int(char char_value)
-//{
-//  return ((int) char_value) - 48;
-//}
-
-//void plus_operation()
-//{   
-//    int res = atoi(value1) + atoi(value2);    
-//    itoa(res,buffer,10);
-//    
-//    LCD_PrintString(buffer);
-//}
-
-//
-//void plus_operation(char a, char b)
-//{   
-//    
-//    int res =  char_to_int(a) + char_to_int(b);
-//    itoa(res,buffer,10);
-//    LCD_PrintString(buffer);
-//}
-//void minus_operation(char a, char b)
-//{   
-//    int res =  char_to_int(a) - char_to_int(b);
-//    itoa(res,buffer,10);
-//    LCD_PrintString(buffer);
-//}
-//void mult_operation(char a, char b)
-//{   
-//    int res =  char_to_int(a) * char_to_int(b);
-//    itoa(res,buffer,10);
-//    LCD_PrintString(buffer);
-//}
-//
-//void div_operation(char a, char b)
-//{   
-//    int res =  char_to_int(a) / char_to_int(b);
-//    itoa(res,buffer,10);
-//    LCD_PrintString(buffer);
-//}
