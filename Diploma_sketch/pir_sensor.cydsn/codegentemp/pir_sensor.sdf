@@ -1,0 +1,21 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2016-03-28T19:31:40Z")
+ (DESIGN "pir_sensor")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.3 SP1")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "pir_sensor")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT pir\(0\)_PAD pir\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED\(0\)_PAD LED\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT bzz\(0\)_PAD bzz\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
