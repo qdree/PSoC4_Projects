@@ -1,0 +1,25 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2016-03-28T21:25:14Z")
+ (DESIGN "rfid")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.3 SP1")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "rfid")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.hfclk \\i2c\:SCB_IRQ\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT \\i2c\:SCB\\.interrupt \\i2c\:SCB_IRQ\\.interrupt (1.000:1.000:1.000))
+    (INTERCONNECT \\i2c\:scl\(0\)\\.fb \\i2c\:SCB\\.scl (0.000:0.000:0.000))
+    (INTERCONNECT \\i2c\:sda\(0\)\\.fb \\i2c\:SCB\\.sda (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.ff_div_3 \\i2c\:SCB\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT \\i2c\:sda\(0\)_PAD\\ \\i2c\:sda\(0\)\\.pad_in (0.000:0.000:0.000))
+    (INTERCONNECT \\i2c\:scl\(0\)_PAD\\ \\i2c\:scl\(0\)\\.pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
