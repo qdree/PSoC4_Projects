@@ -1,8 +1,8 @@
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj|282a806d-7c4f-4578-9ada-e1796303755b
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ad81a9f0-2b52-401a-9f96-3f941474473e
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|dd3cd047-dbdf-4c76-9bcf-05ae153bb00b
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|73e260bc-b75a-4b04-a66b-5c3142264cbb
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8427759a-6aa3-46ff-9e71-dfdab40dc061
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\rfid.cyprj|a1fcd74c-d5f2-42b8-b6c9-36e8ef0fdcc9
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\LCD_stage_1.cydsn\LCD_stage_1.cyprj|9d902d1f-4f3f-4d60-9c1a-096e7e3db5ab
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\Password.cyprj|87fde492-8af9-4655-b65d-d9226ad3e56e
+C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\Password.cydsn\Password.cyprj|ccc5c60b-5f81-428d-97b0-7d904cc5ba60
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d8558d6c-7519-4487-b715-b69814ad7b85
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|37f0c96e-68fb-4c7c-9f49-9c62aeadc067
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|dec3e8f5-e442-4146-a3d0-f106a055358a
+C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2f8d8e8f-0197-447b-88c2-8598eb31037d
+C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\LCD_stage_1.cydsn\LCD_stage_1.cyprj|41a8fe7a-ae16-4140-8437-f2430111830a
+C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\rfid.cydsn\rfid.cyprj|644449b3-5bd5-464e-96e7-e3621afce8c0
+C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj|db1f4aba-24db-48e8-8610-65af72505013

@@ -1,10 +1,10 @@
 # pir_sensor
-# 2016-03-28 19:31:39Z
+# 2016-04-25 19:56:35Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
 # IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 3
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
-set_io "pir(0)" iocell 2 0
+set_io "pir(0)" iocell 0 4
 set_io "LED(0)" iocell 0 2

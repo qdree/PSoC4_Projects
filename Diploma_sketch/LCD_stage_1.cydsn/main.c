@@ -12,9 +12,9 @@
 #include <project.h>
 #include <WinDows.h>
 
-int main()
+int SYSTEMTIME()
 {
-    SYSTEMTIME stime;   //structure to store system time (in usual time format)
+    stime main;   //structure to store system time (in usual time format)
     FILETIME ltime;     //structure to store local time (local time in 64 bits)
     FILETIME ftTimeStamp;
     char TimeStamp[256];//to store TimeStamp information

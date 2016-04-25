@@ -1,6 +1,6 @@
--- Project:   E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj
--- Generated: 03/28/2016 22:31:40
--- PSoC Creator  3.3 SP1
+-- Project:   C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj
+-- Generated: 04/25/2016 22:56:36
+-- PSoC Creator  3.3 CP2
 
 ENTITY pir_sensor IS
     PORT(
@@ -34,7 +34,7 @@ ARCHITECTURE __DEFAULT__ OF pir_sensor IS
     ATTRIBUTE Location OF ClockGenBlock : LABEL IS "F(CLK_GEN,0)";
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF pir(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF pir(0) : LABEL IS "P2[0]";
+    ATTRIBUTE Location OF pir(0) : LABEL IS "P0[4]";
     ATTRIBUTE lib_model OF LED(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF LED(0) : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF bzz(0) : LABEL IS "iocell3";

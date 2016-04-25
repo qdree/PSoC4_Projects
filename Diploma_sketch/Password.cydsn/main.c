@@ -17,6 +17,7 @@
 
 char pin[5];
 char* check = "1111";
+char* motion = "Motion cought";
 uint8 i = 0;
 uint8 Key;
 bool password = false;
@@ -27,6 +28,7 @@ void input_pin(const char el);
 void compare(char a[], char b[]);
 void accept(char a[], char b[]);
 void discard(char a[]);
+void alarm();
 
 int main()
 {
@@ -39,6 +41,7 @@ int main()
     
     for(;;)
     {
+        //alarm();
         Key = Get_KBD_Char();		//Value recieved from Matrix
         switch(Key)                 //Recognition of pressed key
         {              
@@ -83,7 +86,6 @@ int main()
                 memset(pin,'\0', strlen(pin));
                 LCD_PutChar(' ');
                 break;
-                
         }
     }
 }
@@ -100,7 +102,7 @@ void discard(char a[])
     memset(a,'\0',strlen(a));
     i = 0;
     LCD_ClearDisplay();
-    LCD_Position(1,0);
+    LCD_Position(0,0);
 }
 
 void accept(char a[],char b[])
@@ -130,7 +132,25 @@ void accept(char a[],char b[])
     }
     memset(a,'\0',strlen(a));
     i = 0;
-    LCD_Position(1,0);
+    LCD_Position(0,0);
 }
 
+void alarm()
+{
+    if(security_active && (PIR_4_Read()==1))
+    {
+        //LCD_Position(1,0);
+        LCD_PrintString("Motion cought");
+        LED_GREEN_Write(1);
+        LED_RED_Write(0);
+    }
+    else if(security_active && (PIR_4_Read()==0))
+    {
+        LCD_Position(1,14);
+        //memset(motion, '\0', strlen(motion));
+        LCD_PrintString("OK");
+        LED_GREEN_Write(0);
+        LED_RED_Write(1);
+    }
+}
 /* [] END OF FILE */
