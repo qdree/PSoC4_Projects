@@ -1,6 +1,6 @@
 -- Project:   Calculator_with_float_values
--- Generated: 01/26/2016 12:26:39
--- PSoC Creator  3.3 CP1
+-- Generated: 04/21/2016 15:10:30
+-- PSoC Creator  3.3 SP1
 
 ENTITY Calculator_with_float_values IS
     PORT(

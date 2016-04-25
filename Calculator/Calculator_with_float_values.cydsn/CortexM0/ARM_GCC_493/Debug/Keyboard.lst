@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
   30:.\Keyboard.c  **** CY_ISR_PROTO(Key_Debounce);
   31:.\Keyboard.c  **** 
   32:.\Keyboard.c  **** 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 2
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 2
 
 
   33:.\Keyboard.c  **** uint8 Debounced_Key = 0; // Last Debounced Key
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
   47              	.LFE33:
   48              		.size	Keyboard_Init, .-Keyboard_Init
   49              		.section	.text.Put_KBD_Char,"ax",%progbits
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 3
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 3
 
 
   50              		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
   98              	KBD_Char_Ready:
   99              	.LFB35:
   72:.\Keyboard.c  **** 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 4
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 4
 
 
   73:.\Keyboard.c  **** char8 KBD_Char_Ready(void)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  144 0010 DBB2     		uxtb	r3, r3
  145 0012 4B70     		strb	r3, [r1, #1]
  146 0014 0449     		ldr	r1, .L14+4
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 5
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 5
 
 
  147 0016 885C     		ldrb	r0, [r1, r2]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  191              	.LVL9:
  192              	.L18:
   90:.\Keyboard.c  **** 	{
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 6
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 6
 
 
  193              		.loc 1 90 0 is_stmt 1 discriminator 2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  235 0008 F020     		mov	r0, #240
  236 000a FFF7FEFF 		bl	KBD_COLPins_Write
  237              	.LVL15:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 7
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 7
 
 
  104:.\Keyboard.c  **** 	if ((Row=KBD_ROWPins_Read()) == KEYROWMASK) return 0;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  284              	.L24:
  108:.\Keyboard.c  **** 	if ((Column = KBD_COLPins_Read()) == KEYCOLMASK) return 0;
  285              		.loc 1 108 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 8
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 8
 
 
  286 004e 0020     		mov	r0, #0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  323              		.loc 1 127 0
  324 0016 A378     		ldrb	r3, [r4, #2]
  325 0018 092B     		cmp	r3, #9
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 9
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 9
 
 
  326 001a 02D9     		bls	.L26
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  365              		.loc 1 142 0
  366 004a 2CE0     		b	.L25
  367              	.L29:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 10
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 10
 
 
  143:.\Keyboard.c  **** 	}
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  402 0076 DB7B     		ldrb	r3, [r3, #15]
  403 0078 4F2B     		cmp	r3, #79
  404 007a 05D8     		bhi	.L33
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 11
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 11
 
 
  163:.\Keyboard.c  **** 		{
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  443 00a8 00000000 		.word	.LANCHOR0
  444              		.cfi_endproc
  445              	.LFE39:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 12
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 12
 
 
  446              		.size	Key_Debounce, .-Key_Debounce
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  498              		.type	Key_Pressed_Delay.5073, %object
  499              		.size	Key_Pressed_Delay.5073, 1
  500              	Key_Pressed_Delay.5073:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 13
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 13
 
 
  501 000f 00       		.space	1
@@ -740,48 +740,48 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  517 0006 00000000 		.4byte	.Ldebug_abbrev0
  518 000a 04       		.byte	0x4
  519 000b 01       		.uleb128 0x1
- 520 000c C1010000 		.4byte	.LASF40
+ 520 000c D9010000 		.4byte	.LASF40
  521 0010 01       		.byte	0x1
- 522 0011 09010000 		.4byte	.LASF41
- 523 0015 21000000 		.4byte	.LASF42
+ 522 0011 1B010000 		.4byte	.LASF41
+ 523 0015 98000000 		.4byte	.LASF42
  524 0019 00000000 		.4byte	.Ldebug_ranges0+0
  525 001d 00000000 		.4byte	0
  526 0021 00000000 		.4byte	.Ldebug_line0
  527 0025 02       		.uleb128 0x2
  528 0026 01       		.byte	0x1
  529 0027 06       		.byte	0x6
- 530 0028 E3020000 		.4byte	.LASF0
+ 530 0028 FB020000 		.4byte	.LASF0
  531 002c 02       		.uleb128 0x2
  532 002d 01       		.byte	0x1
  533 002e 08       		.byte	0x8
- 534 002f CA000000 		.4byte	.LASF1
+ 534 002f 28010000 		.4byte	.LASF1
  535 0033 02       		.uleb128 0x2
  536 0034 02       		.byte	0x2
  537 0035 05       		.byte	0x5
- 538 0036 BB020000 		.4byte	.LASF2
+ 538 0036 D3020000 		.4byte	.LASF2
  539 003a 02       		.uleb128 0x2
  540 003b 02       		.byte	0x2
  541 003c 07       		.byte	0x7
- 542 003d 6D000000 		.4byte	.LASF3
+ 542 003d 42000000 		.4byte	.LASF3
  543 0041 02       		.uleb128 0x2
  544 0042 04       		.byte	0x4
  545 0043 05       		.byte	0x5
- 546 0044 DA020000 		.4byte	.LASF4
+ 546 0044 F2020000 		.4byte	.LASF4
  547 0048 02       		.uleb128 0x2
  548 0049 04       		.byte	0x4
  549 004a 07       		.byte	0x7
- 550 004b DE000000 		.4byte	.LASF5
+ 550 004b F0000000 		.4byte	.LASF5
  551 004f 02       		.uleb128 0x2
  552 0050 08       		.byte	0x8
  553 0051 05       		.byte	0x5
- 554 0052 4F020000 		.4byte	.LASF6
+ 554 0052 67020000 		.4byte	.LASF6
  555 0056 02       		.uleb128 0x2
  556 0057 08       		.byte	0x8
  557 0058 07       		.byte	0x7
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 14
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 14
 
 
- 558 0059 86010000 		.4byte	.LASF7
+ 558 0059 9E010000 		.4byte	.LASF7
  559 005d 03       		.uleb128 0x3
  560 005e 04       		.byte	0x4
  561 005f 05       		.byte	0x5
@@ -789,31 +789,31 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  563 0064 02       		.uleb128 0x2
  564 0065 04       		.byte	0x4
  565 0066 07       		.byte	0x7
- 566 0067 59010000 		.4byte	.LASF8
+ 566 0067 80010000 		.4byte	.LASF8
  567 006b 04       		.uleb128 0x4
- 568 006c F0000000 		.4byte	.LASF11
+ 568 006c 02010000 		.4byte	.LASF11
  569 0070 02       		.byte	0x2
  570 0071 C2       		.byte	0xc2
  571 0072 2C000000 		.4byte	0x2c
  572 0076 02       		.uleb128 0x2
  573 0077 04       		.byte	0x4
  574 0078 04       		.byte	0x4
- 575 0079 BD000000 		.4byte	.LASF9
+ 575 0079 92000000 		.4byte	.LASF9
  576 007d 02       		.uleb128 0x2
  577 007e 08       		.byte	0x8
  578 007f 04       		.byte	0x4
- 579 0080 24010000 		.4byte	.LASF10
+ 579 0080 44010000 		.4byte	.LASF10
  580 0084 04       		.uleb128 0x4
- 581 0085 D8000000 		.4byte	.LASF12
+ 581 0085 EA000000 		.4byte	.LASF12
  582 0089 02       		.byte	0x2
  583 008a D3       		.byte	0xd3
  584 008b 8F000000 		.4byte	0x8f
  585 008f 02       		.uleb128 0x2
  586 0090 01       		.byte	0x1
  587 0091 08       		.byte	0x8
- 588 0092 70020000 		.4byte	.LASF13
+ 588 0092 88020000 		.4byte	.LASF13
  589 0096 05       		.uleb128 0x5
- 590 0097 9D010000 		.4byte	.LASF14
+ 590 0097 B5010000 		.4byte	.LASF14
  591 009b 02       		.byte	0x2
  592 009c 7E01     		.2byte	0x17e
  593 009e A2000000 		.4byte	0xa2
@@ -824,9 +824,9 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  598 00a9 02       		.uleb128 0x2
  599 00aa 04       		.byte	0x4
  600 00ab 07       		.byte	0x7
- 601 00ac B8010000 		.4byte	.LASF15
+ 601 00ac D0010000 		.4byte	.LASF15
  602 00b0 08       		.uleb128 0x8
- 603 00b1 AA010000 		.4byte	.LASF16
+ 603 00b1 C2010000 		.4byte	.LASF16
  604 00b5 01       		.byte	0x1
  605 00b6 3D       		.byte	0x3d
  606 00b7 00000000 		.4byte	.LFB33
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  612 00c6 08000000 		.4byte	.LVL0
  613 00ca 7B030000 		.4byte	0x37b
  614 00ce DC000000 		.4byte	0xdc
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 15
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 15
 
 
  615 00d2 0A       		.uleb128 0xa
@@ -869,7 +869,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  640 0105 00000000 		.4byte	.LLST0
  641 0109 00       		.byte	0
  642 010a 0D       		.uleb128 0xd
- 643 010b 9D000000 		.4byte	.LASF43
+ 643 010b 72000000 		.4byte	.LASF43
  644 010f 01       		.byte	0x1
  645 0110 49       		.byte	0x49
  646 0111 84000000 		.4byte	0x84
@@ -888,7 +888,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  659 0133 9C       		.byte	0x9c
  660 0134 4F010000 		.4byte	0x14f
  661 0138 0F       		.uleb128 0xf
- 662 0139 40010000 		.4byte	.LASF20
+ 662 0139 67010000 		.4byte	.LASF20
  663 013d 01       		.byte	0x1
  664 013e 50       		.byte	0x50
  665 013f 84000000 		.4byte	0x84
@@ -898,11 +898,11 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  669 0146 06000000 		.4byte	.LVL4
  670 014a 0A010000 		.4byte	0x10a
  671 014e 00       		.byte	0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 16
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 16
 
 
  672 014f 0E       		.uleb128 0xe
- 673 0150 FE020000 		.4byte	.LASF19
+ 673 0150 16030000 		.4byte	.LASF19
  674 0154 01       		.byte	0x1
  675 0155 57       		.byte	0x57
  676 0156 6B000000 		.4byte	0x6b
@@ -925,7 +925,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  693 0181 3F000000 		.4byte	.LLST2
  694 0185 00       		.byte	0
  695 0186 0E       		.uleb128 0xe
- 696 0187 80000000 		.4byte	.LASF21
+ 696 0187 55000000 		.4byte	.LASF21
  697 018b 01       		.byte	0x1
  698 018c 61       		.byte	0x61
  699 018d 6B000000 		.4byte	0x6b
@@ -941,7 +941,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  709 01a6 84000000 		.4byte	0x84
  710 01aa 69000000 		.4byte	.LLST3
  711 01ae 11       		.uleb128 0x11
- 712 01af C3000000 		.4byte	.LASF22
+ 712 01af 4B010000 		.4byte	.LASF22
  713 01b3 01       		.byte	0x1
  714 01b4 64       		.byte	0x64
  715 01b5 84000000 		.4byte	0x84
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  726 01cf 00       		.byte	0
  727 01d0 09       		.uleb128 0x9
  728 01d1 0E000000 		.4byte	.LVL15
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 17
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 17
 
 
  729 01d5 A4030000 		.4byte	0x3a4
@@ -1018,14 +1018,14 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  783 023e 03       		.uleb128 0x3
  784 023f 75       		.byte	0x75
  785 0240 00       		.sleb128 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 18
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 18
 
 
  786 0241 20       		.byte	0x20
  787 0242 00       		.byte	0
  788 0243 00       		.byte	0
  789 0244 08       		.uleb128 0x8
- 790 0245 FC000000 		.4byte	.LASF23
+ 790 0245 0E010000 		.4byte	.LASF23
  791 0249 01       		.byte	0x1
  792 024a 74       		.byte	0x74
  793 024b 00000000 		.4byte	.LFB39
@@ -1034,7 +1034,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  796 0254 9C       		.byte	0x9c
  797 0255 F1020000 		.4byte	0x2f1
  798 0259 0F       		.uleb128 0xf
- 799 025a F6000000 		.4byte	.LASF24
+ 799 025a 08010000 		.4byte	.LASF24
  800 025e 01       		.byte	0x1
  801 025f 76       		.byte	0x76
  802 0260 F1020000 		.4byte	0x2f1
@@ -1042,7 +1042,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  804 0265 03       		.byte	0x3
  805 0266 04000000 		.4byte	State.5071
  806 026a 0F       		.uleb128 0xf
- 807 026b 80020000 		.4byte	.LASF25
+ 807 026b 98020000 		.4byte	.LASF25
  808 026f 01       		.byte	0x1
  809 0270 77       		.byte	0x77
  810 0271 6B000000 		.4byte	0x6b
@@ -1050,7 +1050,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  812 0276 03       		.byte	0x3
  813 0277 02000000 		.4byte	StateIndex.5072
  814 027b 0F       		.uleb128 0xf
- 815 027c 47010000 		.4byte	.LASF26
+ 815 027c 6E010000 		.4byte	.LASF26
  816 0280 01       		.byte	0x1
  817 0281 78       		.byte	0x78
  818 0282 6B000000 		.4byte	0x6b
@@ -1058,7 +1058,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  820 0287 03       		.byte	0x3
  821 0288 0F000000 		.4byte	Key_Pressed_Delay.5073
  822 028c 0F       		.uleb128 0xf
- 823 028d 5D020000 		.4byte	.LASF27
+ 823 028d 75020000 		.4byte	.LASF27
  824 0291 01       		.byte	0x1
  825 0292 79       		.byte	0x79
  826 0293 6B000000 		.4byte	0x6b
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  840 02b2 6B000000 		.4byte	0x6b
  841 02b6 DA000000 		.4byte	.LLST6
  842 02ba 0B       		.uleb128 0xb
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 19
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 19
 
 
  843 02bb 06000000 		.4byte	.LVL30
@@ -1116,7 +1116,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  875 02ff 09       		.byte	0x9
  876 0300 00       		.byte	0
  877 0301 15       		.uleb128 0x15
- 878 0302 8B020000 		.4byte	.LASF29
+ 878 0302 A3020000 		.4byte	.LASF29
  879 0306 01       		.byte	0x1
  880 0307 21       		.byte	0x21
  881 0308 6B000000 		.4byte	0x6b
@@ -1124,7 +1124,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  883 030d 03       		.byte	0x3
  884 030e 00000000 		.4byte	Debounced_Key
  885 0312 15       		.uleb128 0x15
- 886 0313 66010000 		.4byte	.LASF30
+ 886 0313 21000000 		.4byte	.LASF30
  887 0317 01       		.byte	0x1
  888 0318 26       		.byte	0x26
  889 0319 6B000000 		.4byte	0x6b
@@ -1132,13 +1132,13 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  891 031e 03       		.byte	0x3
  892 031f 00000000 		.4byte	KBD_WriteIndex
  893 0323 15       		.uleb128 0x15
- 894 0324 16010000 		.4byte	.LASF31
+ 894 0324 36010000 		.4byte	.LASF31
  895 0328 01       		.byte	0x1
  896 0329 27       		.byte	0x27
  897 032a 6B000000 		.4byte	0x6b
  898 032e 05       		.uleb128 0x5
  899 032f 03       		.byte	0x3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 20
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 20
 
 
  900 0330 00000000 		.4byte	KBD_ReadIndex
@@ -1150,7 +1150,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  906 0342 09       		.byte	0x9
  907 0343 00       		.byte	0
  908 0344 15       		.uleb128 0x15
- 909 0345 75020000 		.4byte	.LASF32
+ 909 0345 8D020000 		.4byte	.LASF32
  910 0349 01       		.byte	0x1
  911 034a 28       		.byte	0x28
  912 034b 34030000 		.4byte	0x334
@@ -1165,7 +1165,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  921 0363 0F       		.byte	0xf
  922 0364 00       		.byte	0
  923 0365 15       		.uleb128 0x15
- 924 0366 EF020000 		.4byte	.LASF33
+ 924 0366 07030000 		.4byte	.LASF33
  925 036a 01       		.byte	0x1
  926 036b 36       		.byte	0x36
  927 036c 76030000 		.4byte	0x376
@@ -1175,7 +1175,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  931 0376 16       		.uleb128 0x16
  932 0377 55030000 		.4byte	0x355
  933 037b 17       		.uleb128 0x17
- 934 037c C5020000 		.4byte	.LASF34
+ 934 037c DD020000 		.4byte	.LASF34
  935 0380 03       		.byte	0x3
  936 0381 18       		.byte	0x18
  937 0382 8C030000 		.4byte	0x38c
@@ -1183,11 +1183,11 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  939 0387 96000000 		.4byte	0x96
  940 038b 00       		.byte	0
  941 038c 19       		.uleb128 0x19
- 942 038d 2B010000 		.4byte	.LASF44
+ 942 038d 52010000 		.4byte	.LASF44
  943 0391 06       		.byte	0x6
  944 0392 5A       		.byte	0x5a
  945 0393 17       		.uleb128 0x17
- 946 0394 5B000000 		.4byte	.LASF35
+ 946 0394 30000000 		.4byte	.LASF35
  947 0398 04       		.byte	0x4
  948 0399 1D       		.byte	0x1d
  949 039a A4030000 		.4byte	0x3a4
@@ -1195,10 +1195,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  951 039f 6B000000 		.4byte	0x6b
  952 03a3 00       		.byte	0
  953 03a4 17       		.uleb128 0x17
- 954 03a5 8B000000 		.4byte	.LASF36
+ 954 03a5 60000000 		.4byte	.LASF36
  955 03a9 05       		.byte	0x5
  956 03aa 1D       		.byte	0x1d
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 21
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 21
 
 
  957 03ab B5030000 		.4byte	0x3b5
@@ -1206,17 +1206,17 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  959 03b0 6B000000 		.4byte	0x6b
  960 03b4 00       		.byte	0
  961 03b5 1A       		.uleb128 0x1a
- 962 03b6 75010000 		.4byte	.LASF37
+ 962 03b6 8D010000 		.4byte	.LASF37
  963 03ba 04       		.byte	0x4
  964 03bb 20       		.byte	0x20
  965 03bc 6B000000 		.4byte	0x6b
  966 03c0 1A       		.uleb128 0x1a
- 967 03c1 AC000000 		.4byte	.LASF38
+ 967 03c1 81000000 		.4byte	.LASF38
  968 03c5 05       		.byte	0x5
  969 03c6 20       		.byte	0x20
  970 03c7 6B000000 		.4byte	0x6b
  971 03cb 1A       		.uleb128 0x1a
- 972 03cc 99020000 		.4byte	.LASF39
+ 972 03cc B1020000 		.4byte	.LASF39
  973 03d0 06       		.byte	0x6
  974 03d1 5E       		.byte	0x5e
  975 03d2 6B000000 		.4byte	0x6b
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1011 0020 00       		.byte	0
  1012 0021 0B       		.uleb128 0xb
  1013 0022 0B       		.uleb128 0xb
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 22
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 22
 
 
  1014 0023 3E       		.uleb128 0x3e
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1068 0059 0E       		.uleb128 0xe
  1069 005a 3A       		.uleb128 0x3a
  1070 005b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 23
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 23
 
 
  1071 005c 3B       		.uleb128 0x3b
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1125 009a 49       		.uleb128 0x49
  1126 009b 13       		.uleb128 0x13
  1127 009c 02       		.uleb128 0x2
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 24
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 24
 
 
  1128 009d 17       		.uleb128 0x17
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1182 00d5 00       		.byte	0
  1183 00d6 0F       		.uleb128 0xf
  1184 00d7 34       		.uleb128 0x34
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 25
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 25
 
 
  1185 00d8 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1239 0110 01       		.byte	0x1
  1240 0111 49       		.uleb128 0x49
  1241 0112 13       		.uleb128 0x13
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 26
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 26
 
 
  1242 0113 01       		.uleb128 0x1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1296 0149 00       		.byte	0
  1297 014a 00       		.byte	0
  1298 014b 18       		.uleb128 0x18
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 27
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 27
 
 
  1299 014c 05       		.uleb128 0x5
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1353 0016 01       		.uleb128 0x1
  1354 0017 50       		.byte	0x50
  1355 0018 9F       		.byte	0x9f
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 28
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 28
 
 
  1356 0019 00000000 		.4byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1410 00ad 0200     		.2byte	0x2
  1411 00af 30       		.byte	0x30
  1412 00b0 9F       		.byte	0x9f
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 29
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 29
 
 
  1413 00b1 28000000 		.4byte	.LVL33
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1467 0004 14000000 		.4byte	.LFE33
  1468 0008 00000000 		.4byte	.LFB34
  1469 000c 2C000000 		.4byte	.LFE34
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 30
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 30
 
 
  1470 0010 00000000 		.4byte	.LFB35
@@ -1773,229 +1773,231 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 1
  1490      4B42445F 
  1490      43686172 
  1490      00
- 1491              	.LASF42:
- 1492 0021 443A5C37 		.ascii	"D:\\744\\psoc\\Calculator\\Calculator_with_float_va"
- 1492      34345C70 
- 1492      736F635C 
- 1492      43616C63 
- 1492      756C6174 
- 1493 0050 6C756573 		.ascii	"lues.cydsn\000"
- 1493      2E637964 
- 1493      736E00
- 1494              	.LASF35:
- 1495 005b 4B42445F 		.ascii	"KBD_ROWPins_Write\000"
- 1495      524F5750 
- 1495      696E735F 
- 1495      57726974 
- 1495      6500
- 1496              	.LASF3:
- 1497 006d 73686F72 		.ascii	"short unsigned int\000"
- 1497      7420756E 
- 1497      7369676E 
- 1497      65642069 
- 1497      6E7400
- 1498              	.LASF21:
- 1499 0080 52656164 		.ascii	"ReadMatrix\000"
- 1499      4D617472 
- 1499      697800
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 31
+ 1491              	.LASF30:
+ 1492 0021 4B42445F 		.ascii	"KBD_WriteIndex\000"
+ 1492      57726974 
+ 1492      65496E64 
+ 1492      657800
+ 1493              	.LASF35:
+ 1494 0030 4B42445F 		.ascii	"KBD_ROWPins_Write\000"
+ 1494      524F5750 
+ 1494      696E735F 
+ 1494      57726974 
+ 1494      6500
+ 1495              	.LASF3:
+ 1496 0042 73686F72 		.ascii	"short unsigned int\000"
+ 1496      7420756E 
+ 1496      7369676E 
+ 1496      65642069 
+ 1496      6E7400
+ 1497              	.LASF21:
+ 1498 0055 52656164 		.ascii	"ReadMatrix\000"
+ 1498      4D617472 
+ 1498      697800
+ 1499              	.LASF36:
+ 1500 0060 4B42445F 		.ascii	"KBD_COLPins_Write\000"
+ 1500      434F4C50 
+ 1500      696E735F 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 31
 
 
- 1500              	.LASF36:
- 1501 008b 4B42445F 		.ascii	"KBD_COLPins_Write\000"
- 1501      434F4C50 
- 1501      696E735F 
- 1501      57726974 
- 1501      6500
- 1502              	.LASF43:
- 1503 009d 4B42445F 		.ascii	"KBD_Char_Ready\000"
- 1503      43686172 
- 1503      5F526561 
- 1503      647900
- 1504              	.LASF38:
- 1505 00ac 4B42445F 		.ascii	"KBD_COLPins_Read\000"
- 1505      434F4C50 
- 1505      696E735F 
- 1505      52656164 
- 1505      00
- 1506              	.LASF9:
- 1507 00bd 666C6F61 		.ascii	"float\000"
- 1507      7400
- 1508              	.LASF22:
- 1509 00c3 436F6C75 		.ascii	"Column\000"
- 1509      6D6E00
- 1510              	.LASF1:
- 1511 00ca 756E7369 		.ascii	"unsigned char\000"
- 1511      676E6564 
- 1511      20636861 
- 1511      7200
- 1512              	.LASF12:
- 1513 00d8 63686172 		.ascii	"char8\000"
- 1513      3800
- 1514              	.LASF5:
- 1515 00de 6C6F6E67 		.ascii	"long unsigned int\000"
- 1515      20756E73 
- 1515      69676E65 
- 1515      6420696E 
- 1515      7400
- 1516              	.LASF11:
- 1517 00f0 75696E74 		.ascii	"uint8\000"
- 1517      3800
- 1518              	.LASF24:
- 1519 00f6 53746174 		.ascii	"State\000"
- 1519      6500
- 1520              	.LASF23:
- 1521 00fc 4B65795F 		.ascii	"Key_Debounce\000"
- 1521      4465626F 
- 1521      756E6365 
+ 1500      57726974 
+ 1500      6500
+ 1501              	.LASF43:
+ 1502 0072 4B42445F 		.ascii	"KBD_Char_Ready\000"
+ 1502      43686172 
+ 1502      5F526561 
+ 1502      647900
+ 1503              	.LASF38:
+ 1504 0081 4B42445F 		.ascii	"KBD_COLPins_Read\000"
+ 1504      434F4C50 
+ 1504      696E735F 
+ 1504      52656164 
+ 1504      00
+ 1505              	.LASF9:
+ 1506 0092 666C6F61 		.ascii	"float\000"
+ 1506      7400
+ 1507              	.LASF42:
+ 1508 0098 453A5C37 		.ascii	"E:\\744\\Education\\Git\\PSoC4_Projects\\Calculator"
+ 1508      34345C45 
+ 1508      64756361 
+ 1508      74696F6E 
+ 1508      5C476974 
+ 1509 00c6 5C43616C 		.ascii	"\\Calculator_with_float_values.cydsn\000"
+ 1509      63756C61 
+ 1509      746F725F 
+ 1509      77697468 
+ 1509      5F666C6F 
+ 1510              	.LASF12:
+ 1511 00ea 63686172 		.ascii	"char8\000"
+ 1511      3800
+ 1512              	.LASF5:
+ 1513 00f0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1513      20756E73 
+ 1513      69676E65 
+ 1513      6420696E 
+ 1513      7400
+ 1514              	.LASF11:
+ 1515 0102 75696E74 		.ascii	"uint8\000"
+ 1515      3800
+ 1516              	.LASF24:
+ 1517 0108 53746174 		.ascii	"State\000"
+ 1517      6500
+ 1518              	.LASF23:
+ 1519 010e 4B65795F 		.ascii	"Key_Debounce\000"
+ 1519      4465626F 
+ 1519      756E6365 
+ 1519      00
+ 1520              	.LASF41:
+ 1521 011b 2E5C4B65 		.ascii	".\\Keyboard.c\000"
+ 1521      79626F61 
+ 1521      72642E63 
  1521      00
- 1522              	.LASF41:
- 1523 0109 2E5C4B65 		.ascii	".\\Keyboard.c\000"
- 1523      79626F61 
- 1523      72642E63 
- 1523      00
+ 1522              	.LASF1:
+ 1523 0128 756E7369 		.ascii	"unsigned char\000"
+ 1523      676E6564 
+ 1523      20636861 
+ 1523      7200
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 32
+
+
  1524              	.LASF31:
- 1525 0116 4B42445F 		.ascii	"KBD_ReadIndex\000"
+ 1525 0136 4B42445F 		.ascii	"KBD_ReadIndex\000"
  1525      52656164 
  1525      496E6465 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 32
-
-
  1525      7800
  1526              	.LASF10:
- 1527 0124 646F7562 		.ascii	"double\000"
+ 1527 0144 646F7562 		.ascii	"double\000"
  1527      6C6500
- 1528              	.LASF44:
- 1529 012b 4465626F 		.ascii	"Debounce_Timer_Start\000"
- 1529      756E6365 
- 1529      5F54696D 
- 1529      65725F53 
- 1529      74617274 
- 1530              	.LASF20:
- 1531 0140 52657375 		.ascii	"Result\000"
- 1531      6C7400
- 1532              	.LASF26:
- 1533 0147 4B65795F 		.ascii	"Key_Pressed_Delay\000"
- 1533      50726573 
- 1533      7365645F 
- 1533      44656C61 
- 1533      7900
- 1534              	.LASF8:
- 1535 0159 756E7369 		.ascii	"unsigned int\000"
- 1535      676E6564 
- 1535      20696E74 
- 1535      00
- 1536              	.LASF30:
- 1537 0166 4B42445F 		.ascii	"KBD_WriteIndex\000"
- 1537      57726974 
- 1537      65496E64 
- 1537      657800
+ 1528              	.LASF22:
+ 1529 014b 436F6C75 		.ascii	"Column\000"
+ 1529      6D6E00
+ 1530              	.LASF44:
+ 1531 0152 4465626F 		.ascii	"Debounce_Timer_Start\000"
+ 1531      756E6365 
+ 1531      5F54696D 
+ 1531      65725F53 
+ 1531      74617274 
+ 1532              	.LASF20:
+ 1533 0167 52657375 		.ascii	"Result\000"
+ 1533      6C7400
+ 1534              	.LASF26:
+ 1535 016e 4B65795F 		.ascii	"Key_Pressed_Delay\000"
+ 1535      50726573 
+ 1535      7365645F 
+ 1535      44656C61 
+ 1535      7900
+ 1536              	.LASF8:
+ 1537 0180 756E7369 		.ascii	"unsigned int\000"
+ 1537      676E6564 
+ 1537      20696E74 
+ 1537      00
  1538              	.LASF37:
- 1539 0175 4B42445F 		.ascii	"KBD_ROWPins_Read\000"
+ 1539 018d 4B42445F 		.ascii	"KBD_ROWPins_Read\000"
  1539      524F5750 
  1539      696E735F 
  1539      52656164 
  1539      00
  1540              	.LASF7:
- 1541 0186 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1541 019e 6C6F6E67 		.ascii	"long long unsigned int\000"
  1541      206C6F6E 
  1541      6720756E 
  1541      7369676E 
  1541      65642069 
  1542              	.LASF14:
- 1543 019d 63796973 		.ascii	"cyisraddress\000"
+ 1543 01b5 63796973 		.ascii	"cyisraddress\000"
  1543      72616464 
  1543      72657373 
  1543      00
  1544              	.LASF16:
- 1545 01aa 4B657962 		.ascii	"Keyboard_Init\000"
+ 1545 01c2 4B657962 		.ascii	"Keyboard_Init\000"
  1545      6F617264 
  1545      5F496E69 
  1545      7400
  1546              	.LASF15:
- 1547 01b8 73697A65 		.ascii	"sizetype\000"
+ 1547 01d0 73697A65 		.ascii	"sizetype\000"
  1547      74797065 
  1547      00
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 33
+
+
  1548              	.LASF40:
- 1549 01c1 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 33
-
-
+ 1549 01d9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  1549      4320342E 
  1549      392E3320 
  1549      32303135 
  1549      30333033 
- 1550 01f4 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1550 020c 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
  1550      20726576 
  1550      6973696F 
  1550      6E203232 
  1550      31323230 
- 1551 0227 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1551 023f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1551      66756E63 
  1551      74696F6E 
  1551      2D736563 
  1551      74696F6E 
  1552              	.LASF6:
- 1553 024f 6C6F6E67 		.ascii	"long long int\000"
+ 1553 0267 6C6F6E67 		.ascii	"long long int\000"
  1553      206C6F6E 
  1553      6720696E 
  1553      7400
  1554              	.LASF27:
- 1555 025d 4B65795F 		.ascii	"Key_Generate_Delay\000"
+ 1555 0275 4B65795F 		.ascii	"Key_Generate_Delay\000"
  1555      47656E65 
  1555      72617465 
  1555      5F44656C 
  1555      617900
  1556              	.LASF13:
- 1557 0270 63686172 		.ascii	"char\000"
+ 1557 0288 63686172 		.ascii	"char\000"
  1557      00
  1558              	.LASF32:
- 1559 0275 4B42445F 		.ascii	"KBD_Buffer\000"
+ 1559 028d 4B42445F 		.ascii	"KBD_Buffer\000"
  1559      42756666 
  1559      657200
  1560              	.LASF25:
- 1561 0280 53746174 		.ascii	"StateIndex\000"
+ 1561 0298 53746174 		.ascii	"StateIndex\000"
  1561      65496E64 
  1561      657800
  1562              	.LASF29:
- 1563 028b 4465626F 		.ascii	"Debounced_Key\000"
+ 1563 02a3 4465626F 		.ascii	"Debounced_Key\000"
  1563      756E6365 
  1563      645F4B65 
  1563      7900
  1564              	.LASF39:
- 1565 0299 4465626F 		.ascii	"Debounce_Timer_ReadStatusRegister\000"
+ 1565 02b1 4465626F 		.ascii	"Debounce_Timer_ReadStatusRegister\000"
  1565      756E6365 
  1565      5F54696D 
  1565      65725F52 
  1565      65616453 
  1566              	.LASF2:
- 1567 02bb 73686F72 		.ascii	"short int\000"
+ 1567 02d3 73686F72 		.ascii	"short int\000"
  1567      7420696E 
  1567      7400
  1568              	.LASF34:
- 1569 02c5 4465626F 		.ascii	"Debounce_Int_StartEx\000"
+ 1569 02dd 4465626F 		.ascii	"Debounce_Int_StartEx\000"
  1569      756E6365 
  1569      5F496E74 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccDMfjSe.s 			page 34
+
+
  1569      5F537461 
  1569      72744578 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccwItKN1.s 			page 34
-
-
  1570              	.LASF4:
- 1571 02da 6C6F6E67 		.ascii	"long int\000"
+ 1571 02f2 6C6F6E67 		.ascii	"long int\000"
  1571      20696E74 
  1571      00
  1572              	.LASF0:
- 1573 02e3 7369676E 		.ascii	"signed char\000"
+ 1573 02fb 7369676E 		.ascii	"signed char\000"
  1573      65642063 
  1573      68617200 
  1574              	.LASF33:
- 1575 02ef 5472616E 		.ascii	"TranslateTable\000"
+ 1575 0307 5472616E 		.ascii	"TranslateTable\000"
  1575      736C6174 
  1575      65546162 
  1575      6C6500
  1576              	.LASF19:
- 1577 02fe 4C6F7765 		.ascii	"LowestBitPosition\000"
+ 1577 0316 4C6F7765 		.ascii	"LowestBitPosition\000"
  1577      73744269 
  1577      74506F73 
  1577      6974696F 

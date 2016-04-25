@@ -283,6 +283,7 @@
 <v>.\Generated_Source\PSoC4\Clear_Screen.c</v>
 <v>.\Generated_Source\PSoC4\Clear_Screen.h</v>
 <v>.\Generated_Source\PSoC4\Clear_Screen_aliases.h</v>
+<v>.\Generated_Source\PSoC4\cycodeshareexport.ld</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -292,7 +293,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130982776024367022" />
+<deps_time v="131057142326105280" />
 <top_block v="TopDesign" />
 <last_generation v="6" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
@@ -625,14 +626,15 @@
 <name_val_pair name=".\Generated_Source\PSoC4\Clear_Screen.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 <name_val_pair name="D:\744\psoc\test_project\Calculator_with_float_values.cydsn\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.hex" v="-mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -u _printf_float" />
 <name_val_pair name="D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.hex" v="-mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -u _printf_float" />
+<name_val_pair name="E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.hex" v="-mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -u _printf_float" />
 </name>
 </genericCmdLineData>
-<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\744\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\Calculator_with_float_values.cyprj -d CY8C4245AXI-483 -s D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
+<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\744\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\Calculator_with_float_values.cyprj -d CY8C4245AXI-483 -s E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
 </CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="130982776064419313" />
+<deps_time v="131057142380658400" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">

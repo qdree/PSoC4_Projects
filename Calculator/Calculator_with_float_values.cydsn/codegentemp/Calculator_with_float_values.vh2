@@ -2,7 +2,7 @@
 --	Conversion of Calculator_with_float_values.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jan 26 12:26:38 2016
+--	Thu Apr 21 15:10:29 2016
 --
 
 USE cypress.cypress.all;

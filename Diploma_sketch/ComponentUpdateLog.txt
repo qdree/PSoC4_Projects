@@ -1,0 +1,7 @@
+Last Modified Date & Time: 04/21/2016 14:52:21
+
+Password: TopDesign.cysch
+	KBD_ROWPins [v2.20] to [v2.20]
+	KBD_COLPins [v2.20] to [v2.20]
+
+

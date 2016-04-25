@@ -15,9 +15,8 @@ int main()
 {
 //    uint8 c;
     CyGlobalIntEnable; /* Enable global interrupts. */
-    i2c_Start();
+    UART_Start();
     
-//    c = i2c_I2CSlaveStatus();
     
     for(;;)
     {

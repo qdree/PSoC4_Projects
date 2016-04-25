@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
   30:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *
   31:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** * Parameters:
   32:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *  void
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 2
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
   56              		.section	.text.Debounce_Timer_RestoreConfig,"ax",%progbits
   57              		.align	2
   58              		.global	Debounce_Timer_RestoreConfig
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 3
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 3
 
 
   59              		.code	16
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
   81 0012 FFF7FEFF 		bl	Debounce_Timer_WriteControlRegister
   82              	.LVL3:
   89:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         #endif /* Restore the enable state of the Timer component */
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 4
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 4
 
 
   90:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****     #endif /* Restore non retention registers in the UDB implementation only */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  110 0004 1B78     		ldrb	r3, [r3]
  111 0006 5BB2     		sxtb	r3, r3
  112 0008 002B     		cmp	r3, #0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 5
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 5
 
 
  113 000a 03DA     		bge	.L8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  134:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** ********************************************************************************
  135:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *
  136:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** * Summary:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 6
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 6
 
 
  137:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *  Restores and enables the user configuration
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  181              		.type	Debounce_Timer_backup, %object
  182              		.size	Debounce_Timer_backup, 12
  183              	Debounce_Timer_backup:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 7
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 7
 
 
  184 0000 00000000 		.space	12
@@ -375,37 +375,37 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  193 0006 00000000 		.4byte	.Ldebug_abbrev0
  194 000a 04       		.byte	0x4
  195 000b 01       		.uleb128 0x1
- 196 000c 1C020000 		.4byte	.LASF31
+ 196 000c 34020000 		.4byte	.LASF31
  197 0010 01       		.byte	0x1
  198 0011 3B000000 		.4byte	.LASF32
- 199 0015 68000000 		.4byte	.LASF33
+ 199 0015 D5000000 		.4byte	.LASF33
  200 0019 00000000 		.4byte	.Ldebug_ranges0+0
  201 001d 00000000 		.4byte	0
  202 0021 00000000 		.4byte	.Ldebug_line0
  203 0025 02       		.uleb128 0x2
  204 0026 01       		.byte	0x1
  205 0027 06       		.byte	0x6
- 206 0028 DA020000 		.4byte	.LASF0
+ 206 0028 F2020000 		.4byte	.LASF0
  207 002c 02       		.uleb128 0x2
  208 002d 01       		.byte	0x1
  209 002e 08       		.byte	0x8
- 210 002f 0F010000 		.4byte	.LASF1
+ 210 002f 83010000 		.4byte	.LASF1
  211 0033 02       		.uleb128 0x2
  212 0034 02       		.byte	0x2
  213 0035 05       		.byte	0x5
- 214 0036 AA020000 		.4byte	.LASF2
+ 214 0036 C2020000 		.4byte	.LASF2
  215 003a 02       		.uleb128 0x2
  216 003b 02       		.byte	0x2
  217 003c 07       		.byte	0x7
- 218 003d A2000000 		.4byte	.LASF3
+ 218 003d 68000000 		.4byte	.LASF3
  219 0041 02       		.uleb128 0x2
  220 0042 04       		.byte	0x4
  221 0043 05       		.byte	0x5
- 222 0044 B4020000 		.4byte	.LASF4
+ 222 0044 CC020000 		.4byte	.LASF4
  223 0048 02       		.uleb128 0x2
  224 0049 04       		.byte	0x4
  225 004a 07       		.byte	0x7
- 226 004b 3D010000 		.4byte	.LASF5
+ 226 004b 47010000 		.4byte	.LASF5
  227 004f 02       		.uleb128 0x2
  228 0050 08       		.byte	0x8
  229 0051 05       		.byte	0x5
@@ -413,42 +413,42 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  231 0056 02       		.uleb128 0x2
  232 0057 08       		.byte	0x8
  233 0058 07       		.byte	0x7
- 234 0059 CD010000 		.4byte	.LASF7
+ 234 0059 E5010000 		.4byte	.LASF7
  235 005d 03       		.uleb128 0x3
  236 005e 04       		.byte	0x4
  237 005f 05       		.byte	0x5
  238 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 8
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 8
 
 
  239 0064 02       		.uleb128 0x2
  240 0065 04       		.byte	0x4
  241 0066 07       		.byte	0x7
- 242 0067 C0010000 		.4byte	.LASF8
+ 242 0067 D8010000 		.4byte	.LASF8
  243 006b 04       		.uleb128 0x4
- 244 006c 4F010000 		.4byte	.LASF9
+ 244 006c 59010000 		.4byte	.LASF9
  245 0070 02       		.byte	0x2
  246 0071 C2       		.byte	0xc2
  247 0072 2C000000 		.4byte	0x2c
  248 0076 04       		.uleb128 0x4
- 249 0077 B9010000 		.4byte	.LASF10
+ 249 0077 D1010000 		.4byte	.LASF10
  250 007b 02       		.byte	0x2
  251 007c C4       		.byte	0xc4
  252 007d 48000000 		.4byte	0x48
  253 0081 02       		.uleb128 0x2
  254 0082 04       		.byte	0x4
  255 0083 04       		.byte	0x4
- 256 0084 F4000000 		.4byte	.LASF11
+ 256 0084 BA000000 		.4byte	.LASF11
  257 0088 02       		.uleb128 0x2
  258 0089 08       		.byte	0x8
  259 008a 04       		.byte	0x4
- 260 008b 79010000 		.4byte	.LASF12
+ 260 008b 91010000 		.4byte	.LASF12
  261 008f 02       		.uleb128 0x2
  262 0090 01       		.byte	0x1
  263 0091 08       		.byte	0x8
- 264 0092 17020000 		.4byte	.LASF13
+ 264 0092 2F020000 		.4byte	.LASF13
  265 0096 05       		.uleb128 0x5
- 266 0097 38010000 		.4byte	.LASF14
+ 266 0097 42010000 		.4byte	.LASF14
  267 009b 02       		.byte	0x2
  268 009c 6C01     		.2byte	0x16c
  269 009e A2000000 		.4byte	0xa2
@@ -457,7 +457,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  272 00a7 02       		.uleb128 0x2
  273 00a8 04       		.byte	0x4
  274 00a9 07       		.byte	0x7
- 275 00aa F8010000 		.4byte	.LASF15
+ 275 00aa 10020000 		.4byte	.LASF15
  276 00ae 07       		.uleb128 0x7
  277 00af 0C       		.byte	0xc
  278 00b0 03       		.byte	0x3
@@ -470,34 +470,34 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  285 00bd 6B000000 		.4byte	0x6b
  286 00c1 00       		.byte	0
  287 00c2 08       		.uleb128 0x8
- 288 00c3 CF000000 		.4byte	.LASF17
+ 288 00c3 95000000 		.4byte	.LASF17
  289 00c7 03       		.byte	0x3
  290 00c8 48       		.byte	0x48
  291 00c9 76000000 		.4byte	0x76
  292 00cd 04       		.byte	0x4
  293 00ce 08       		.uleb128 0x8
- 294 00cf FC020000 		.4byte	.LASF18
+ 294 00cf 14030000 		.4byte	.LASF18
  295 00d3 03       		.byte	0x3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 9
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 9
 
 
  296 00d4 49       		.byte	0x49
  297 00d5 6B000000 		.4byte	0x6b
  298 00d9 08       		.byte	0x8
  299 00da 08       		.uleb128 0x8
- 300 00db 0F030000 		.4byte	.LASF19
+ 300 00db 27030000 		.4byte	.LASF19
  301 00df 03       		.byte	0x3
  302 00e0 4F       		.byte	0x4f
  303 00e1 6B000000 		.4byte	0x6b
  304 00e5 09       		.byte	0x9
  305 00e6 00       		.byte	0
  306 00e7 04       		.uleb128 0x4
- 307 00e8 D8000000 		.4byte	.LASF20
+ 307 00e8 9E000000 		.4byte	.LASF20
  308 00ec 03       		.byte	0x3
  309 00ed 53       		.byte	0x53
  310 00ee AE000000 		.4byte	0xae
  311 00f2 09       		.uleb128 0x9
- 312 00f3 B5000000 		.4byte	.LASF21
+ 312 00f3 7B000000 		.4byte	.LASF21
  313 00f7 01       		.byte	0x1
  314 00f8 2B       		.byte	0x2b
  315 00f9 00000000 		.4byte	.LFB0
@@ -513,7 +513,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  325 0115 AE010000 		.4byte	0x1ae
  326 0119 00       		.byte	0
  327 011a 09       		.uleb128 0x9
- 328 011b BD020000 		.4byte	.LASF22
+ 328 011b D5020000 		.4byte	.LASF22
  329 011f 01       		.byte	0x1
  330 0120 4D       		.byte	0x4d
  331 0121 00000000 		.4byte	.LFB1
@@ -529,7 +529,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  341 013d CA010000 		.4byte	0x1ca
  342 0141 00       		.byte	0
  343 0142 09       		.uleb128 0x9
- 344 0143 FA000000 		.4byte	.LASF23
+ 344 0143 C0000000 		.4byte	.LASF23
  345 0147 01       		.byte	0x1
  346 0148 70       		.byte	0x70
  347 0149 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  350 0152 9C       		.byte	0x9c
  351 0153 6A010000 		.4byte	0x16a
  352 0157 0A       		.uleb128 0xa
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 10
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 10
 
 
  353 0158 1E000000 		.4byte	.LVL4
@@ -548,7 +548,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  357 0165 F2000000 		.4byte	0xf2
  358 0169 00       		.byte	0
  359 016a 09       		.uleb128 0x9
- 360 016b E6020000 		.4byte	.LASF24
+ 360 016b FE020000 		.4byte	.LASF24
  361 016f 01       		.byte	0x1
  362 0170 96       		.byte	0x96
  363 0171 00000000 		.4byte	.LFB3
@@ -564,7 +564,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  373 018d E2010000 		.4byte	0x1e2
  374 0191 00       		.byte	0
  375 0192 0B       		.uleb128 0xb
- 376 0193 01020000 		.4byte	.LASF34
+ 376 0193 19020000 		.4byte	.LASF34
  377 0197 01       		.byte	0x1
  378 0198 15       		.byte	0x15
  379 0199 E7000000 		.4byte	0xe7
@@ -572,12 +572,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  381 019e 03       		.byte	0x3
  382 019f 00000000 		.4byte	Debounce_Timer_backup
  383 01a3 0C       		.uleb128 0xc
- 384 01a4 1D010000 		.4byte	.LASF25
+ 384 01a4 27010000 		.4byte	.LASF25
  385 01a8 03       		.byte	0x3
  386 01a9 69       		.byte	0x69
  387 01aa 76000000 		.4byte	0x76
  388 01ae 0C       		.uleb128 0xc
- 389 01af 96010000 		.4byte	.LASF26
+ 389 01af AE010000 		.4byte	.LASF26
  390 01b3 03       		.byte	0x3
  391 01b4 63       		.byte	0x63
  392 01b5 6B000000 		.4byte	0x6b
@@ -590,7 +590,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  399 01c5 76000000 		.4byte	0x76
  400 01c9 00       		.byte	0
  401 01ca 0D       		.uleb128 0xd
- 402 01cb 55010000 		.4byte	.LASF28
+ 402 01cb 5F010000 		.4byte	.LASF28
  403 01cf 03       		.byte	0x3
  404 01d0 64       		.byte	0x64
  405 01d1 DB010000 		.4byte	0x1db
@@ -598,14 +598,14 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  407 01d6 6B000000 		.4byte	0x6b
  408 01da 00       		.byte	0
  409 01db 0F       		.uleb128 0xf
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 11
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 11
 
 
- 410 01dc E4010000 		.4byte	.LASF29
+ 410 01dc FC010000 		.4byte	.LASF29
  411 01e0 03       		.byte	0x3
  412 01e1 5B       		.byte	0x5b
  413 01e2 0F       		.uleb128 0xf
- 414 01e3 80010000 		.4byte	.LASF30
+ 414 01e3 98010000 		.4byte	.LASF30
  415 01e7 03       		.byte	0x3
  416 01e8 8B       		.byte	0x8b
  417 01e9 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  464 002c 03       		.uleb128 0x3
  465 002d 0E       		.uleb128 0xe
  466 002e 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 12
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 12
 
 
  467 002f 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  521 0065 00       		.byte	0
  522 0066 09       		.uleb128 0x9
  523 0067 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 13
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 13
 
 
  524 0068 01       		.byte	0x1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  578 00a1 3A       		.uleb128 0x3a
  579 00a2 0B       		.uleb128 0xb
  580 00a3 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 14
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 14
 
 
  581 00a4 0B       		.uleb128 0xb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  635 0000 34000000 		.4byte	0x34
  636 0004 0200     		.2byte	0x2
  637 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 15
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 15
 
 
  638 000a 04       		.byte	0x4
@@ -897,182 +897,187 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 1
  674      7465645F 
  674      536F7572 
  674      63655C50 
- 675              	.LASF33:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 16
+ 675              	.LASF3:
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 16
 
 
- 676 0068 443A5C37 		.ascii	"D:\\744\\psoc\\Calculator\\Calculator_with_float_va"
- 676      34345C70 
- 676      736F635C 
- 676      43616C63 
- 676      756C6174 
- 677 0097 6C756573 		.ascii	"lues.cydsn\000"
- 677      2E637964 
- 677      736E00
- 678              	.LASF3:
- 679 00a2 73686F72 		.ascii	"short unsigned int\000"
- 679      7420756E 
- 679      7369676E 
- 679      65642069 
- 679      6E7400
- 680              	.LASF21:
- 681 00b5 4465626F 		.ascii	"Debounce_Timer_SaveConfig\000"
- 681      756E6365 
- 681      5F54696D 
- 681      65725F53 
- 681      61766543 
- 682              	.LASF17:
- 683 00cf 54696D65 		.ascii	"TimerUdb\000"
- 683      72556462 
- 683      00
- 684              	.LASF20:
- 685 00d8 4465626F 		.ascii	"Debounce_Timer_backupStruct\000"
- 685      756E6365 
- 685      5F54696D 
- 685      65725F62 
- 685      61636B75 
- 686              	.LASF11:
- 687 00f4 666C6F61 		.ascii	"float\000"
- 687      7400
- 688              	.LASF23:
- 689 00fa 4465626F 		.ascii	"Debounce_Timer_Sleep\000"
- 689      756E6365 
- 689      5F54696D 
- 689      65725F53 
- 689      6C656570 
- 690              	.LASF1:
- 691 010f 756E7369 		.ascii	"unsigned char\000"
- 691      676E6564 
- 691      20636861 
- 691      7200
- 692              	.LASF25:
- 693 011d 4465626F 		.ascii	"Debounce_Timer_ReadCounter\000"
- 693      756E6365 
- 693      5F54696D 
- 693      65725F52 
- 693      65616443 
- 694              	.LASF14:
- 695 0138 72656738 		.ascii	"reg8\000"
- 695      00
- 696              	.LASF5:
- 697 013d 6C6F6E67 		.ascii	"long unsigned int\000"
- 697      20756E73 
- 697      69676E65 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 17
+ 676 0068 73686F72 		.ascii	"short unsigned int\000"
+ 676      7420756E 
+ 676      7369676E 
+ 676      65642069 
+ 676      6E7400
+ 677              	.LASF21:
+ 678 007b 4465626F 		.ascii	"Debounce_Timer_SaveConfig\000"
+ 678      756E6365 
+ 678      5F54696D 
+ 678      65725F53 
+ 678      61766543 
+ 679              	.LASF17:
+ 680 0095 54696D65 		.ascii	"TimerUdb\000"
+ 680      72556462 
+ 680      00
+ 681              	.LASF20:
+ 682 009e 4465626F 		.ascii	"Debounce_Timer_backupStruct\000"
+ 682      756E6365 
+ 682      5F54696D 
+ 682      65725F62 
+ 682      61636B75 
+ 683              	.LASF11:
+ 684 00ba 666C6F61 		.ascii	"float\000"
+ 684      7400
+ 685              	.LASF23:
+ 686 00c0 4465626F 		.ascii	"Debounce_Timer_Sleep\000"
+ 686      756E6365 
+ 686      5F54696D 
+ 686      65725F53 
+ 686      6C656570 
+ 687              	.LASF33:
+ 688 00d5 453A5C37 		.ascii	"E:\\744\\Education\\Git\\PSoC4_Projects\\Calculator"
+ 688      34345C45 
+ 688      64756361 
+ 688      74696F6E 
+ 688      5C476974 
+ 689 0103 5C43616C 		.ascii	"\\Calculator_with_float_values.cydsn\000"
+ 689      63756C61 
+ 689      746F725F 
+ 689      77697468 
+ 689      5F666C6F 
+ 690              	.LASF25:
+ 691 0127 4465626F 		.ascii	"Debounce_Timer_ReadCounter\000"
+ 691      756E6365 
+ 691      5F54696D 
+ 691      65725F52 
+ 691      65616443 
+ 692              	.LASF14:
+ 693 0142 72656738 		.ascii	"reg8\000"
+ 693      00
+ 694              	.LASF5:
+ 695 0147 6C6F6E67 		.ascii	"long unsigned int\000"
+ 695      20756E73 
+ 695      69676E65 
+ 695      6420696E 
+ 695      7400
+ 696              	.LASF9:
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 17
 
 
- 697      6420696E 
- 697      7400
- 698              	.LASF9:
- 699 014f 75696E74 		.ascii	"uint8\000"
- 699      3800
- 700              	.LASF28:
- 701 0155 4465626F 		.ascii	"Debounce_Timer_WriteControlRegister\000"
- 701      756E6365 
- 701      5F54696D 
- 701      65725F57 
- 701      72697465 
+ 697 0159 75696E74 		.ascii	"uint8\000"
+ 697      3800
+ 698              	.LASF28:
+ 699 015f 4465626F 		.ascii	"Debounce_Timer_WriteControlRegister\000"
+ 699      756E6365 
+ 699      5F54696D 
+ 699      65725F57 
+ 699      72697465 
+ 700              	.LASF1:
+ 701 0183 756E7369 		.ascii	"unsigned char\000"
+ 701      676E6564 
+ 701      20636861 
+ 701      7200
  702              	.LASF12:
- 703 0179 646F7562 		.ascii	"double\000"
+ 703 0191 646F7562 		.ascii	"double\000"
  703      6C6500
  704              	.LASF30:
- 705 0180 4465626F 		.ascii	"Debounce_Timer_Enable\000"
+ 705 0198 4465626F 		.ascii	"Debounce_Timer_Enable\000"
  705      756E6365 
  705      5F54696D 
  705      65725F45 
  705      6E61626C 
  706              	.LASF26:
- 707 0196 4465626F 		.ascii	"Debounce_Timer_ReadControlRegister\000"
+ 707 01ae 4465626F 		.ascii	"Debounce_Timer_ReadControlRegister\000"
  707      756E6365 
  707      5F54696D 
  707      65725F52 
  707      65616443 
  708              	.LASF10:
- 709 01b9 75696E74 		.ascii	"uint32\000"
+ 709 01d1 75696E74 		.ascii	"uint32\000"
  709      333200
  710              	.LASF8:
- 711 01c0 756E7369 		.ascii	"unsigned int\000"
+ 711 01d8 756E7369 		.ascii	"unsigned int\000"
  711      676E6564 
  711      20696E74 
  711      00
  712              	.LASF7:
- 713 01cd 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 713 01e5 6C6F6E67 		.ascii	"long long unsigned int\000"
  713      206C6F6E 
  713      6720756E 
  713      7369676E 
  713      65642069 
  714              	.LASF29:
- 715 01e4 4465626F 		.ascii	"Debounce_Timer_Stop\000"
+ 715 01fc 4465626F 		.ascii	"Debounce_Timer_Stop\000"
  715      756E6365 
  715      5F54696D 
  715      65725F53 
  715      746F7000 
  716              	.LASF15:
- 717 01f8 73697A65 		.ascii	"sizetype\000"
+ 717 0210 73697A65 		.ascii	"sizetype\000"
  717      74797065 
  717      00
  718              	.LASF34:
- 719 0201 4465626F 		.ascii	"Debounce_Timer_backup\000"
+ 719 0219 4465626F 		.ascii	"Debounce_Timer_backup\000"
  719      756E6365 
  719      5F54696D 
  719      65725F62 
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 18
+
+
  719      61636B75 
  720              	.LASF13:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccl7cMlM.s 			page 18
-
-
- 721 0217 63686172 		.ascii	"char\000"
+ 721 022f 63686172 		.ascii	"char\000"
  721      00
  722              	.LASF31:
- 723 021c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 723 0234 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  723      4320342E 
  723      392E3320 
  723      32303135 
  723      30333033 
- 724 024f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 724 0267 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
  724      20726576 
  724      6973696F 
  724      6E203232 
  724      31323230 
- 725 0282 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 725 029a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  725      66756E63 
  725      74696F6E 
  725      2D736563 
  725      74696F6E 
  726              	.LASF2:
- 727 02aa 73686F72 		.ascii	"short int\000"
+ 727 02c2 73686F72 		.ascii	"short int\000"
  727      7420696E 
  727      7400
  728              	.LASF4:
- 729 02b4 6C6F6E67 		.ascii	"long int\000"
+ 729 02cc 6C6F6E67 		.ascii	"long int\000"
  729      20696E74 
  729      00
  730              	.LASF22:
- 731 02bd 4465626F 		.ascii	"Debounce_Timer_RestoreConfig\000"
+ 731 02d5 4465626F 		.ascii	"Debounce_Timer_RestoreConfig\000"
  731      756E6365 
  731      5F54696D 
  731      65725F52 
  731      6573746F 
  732              	.LASF0:
- 733 02da 7369676E 		.ascii	"signed char\000"
+ 733 02f2 7369676E 		.ascii	"signed char\000"
  733      65642063 
  733      68617200 
  734              	.LASF24:
- 735 02e6 4465626F 		.ascii	"Debounce_Timer_Wakeup\000"
+ 735 02fe 4465626F 		.ascii	"Debounce_Timer_Wakeup\000"
  735      756E6365 
  735      5F54696D 
  735      65725F57 
  735      616B6575 
  736              	.LASF18:
- 737 02fc 496E7465 		.ascii	"InterruptMaskValue\000"
+ 737 0314 496E7465 		.ascii	"InterruptMaskValue\000"
  737      72727570 
  737      744D6173 
  737      6B56616C 
  737      756500
  738              	.LASF19:
- 739 030f 54696D65 		.ascii	"TimerControlRegister\000"
+ 739 0327 54696D65 		.ascii	"TimerControlRegister\000"
  739      72436F6E 
  739      74726F6C 
  739      52656769 
  739      73746572 
  740              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ARM GAS  C:\Users\744\AppData\Local\Temp\cc8qFjKE.s 			page 19
+
+

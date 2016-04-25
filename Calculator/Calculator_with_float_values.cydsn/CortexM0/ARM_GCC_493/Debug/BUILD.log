@@ -1,5 +1,5 @@
---------------- Build Started: 01/26/2016 12:26:34 Project: Calculator_with_float_values, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
-cydsfit.exe -.appdatapath "C:\Users\744\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\Calculator_with_float_values.cyprj -d CY8C4245AXI-483 -s D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+--------------- Build Started: 04/21/2016 15:10:25 Project: Calculator_with_float_values, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\744\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\Calculator_with_float_values.cyprj -d CY8C4245AXI-483 -s E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 HDL Generation ...
 Synthesis ...
@@ -37,8 +37,8 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\P
 arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.a .\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_493\Debug\CyFlash.o .\CortexM0\ARM_GCC_493\Debug\CyLib.o .\CortexM0\ARM_GCC_493\Debug\cyPm.o .\CortexM0\ARM_GCC_493\Debug\cyutils.o .\CortexM0\ARM_GCC_493\Debug\CyLFClk.o .\CortexM0\ARM_GCC_493\Debug\LCD.o .\CortexM0\ARM_GCC_493\Debug\LCD_PM.o .\CortexM0\ARM_GCC_493\Debug\LCD_LCDPort.o .\CortexM0\ARM_GCC_493\Debug\KBD_ROWPins.o .\CortexM0\ARM_GCC_493\Debug\Debounce_Timer.o .\CortexM0\ARM_GCC_493\Debug\Debounce_Timer_PM.o .\CortexM0\ARM_GCC_493\Debug\Debounce_Int.o .\CortexM0\ARM_GCC_493\Debug\KBD_COLPins.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.elf .\CortexM0\ARM_GCC_493\Debug\main.o .\CortexM0\ARM_GCC_493\Debug\Keyboard.o .\CortexM0\ARM_GCC_493\Debug\cymetadata.o .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o .\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_493\Debug/Calculator_with_float_values.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -u _printf_float -Wl,--end-group
-cyelftool.exe -C D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.elf --flash_row_size 128 --flash_size 32768
-cyelftool.exe -S D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.elf
+cyelftool.exe -C E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.elf --flash_row_size 128 --flash_size 32768
+cyelftool.exe -S E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\CortexM0\ARM_GCC_493\Debug\Calculator_with_float_values.elf
 Flash used: 27264 of 32768 bytes (83,2%).
 SRAM used: 2100 of 4096 bytes (51,3%). Stack: 1024 bytes. Heap: 512 bytes.
---------------- Build Succeeded: 01/26/2016 12:26:46 ---------------
+--------------- Build Succeeded: 04/21/2016 15:10:38 ---------------

@@ -1,6 +1,6 @@
--- Project:   D:\744\psoc\Calculator\Calculator_with_float_values.cydsn\Calculator_with_float_values.cyprj
--- Generated: 01/26/2016 12:26:40
--- PSoC Creator  3.3 CP1
+-- Project:   E:\744\Education\Git\PSoC4_Projects\Calculator\Calculator_with_float_values.cydsn\Calculator_with_float_values.cyprj
+-- Generated: 04/21/2016 15:10:31
+-- PSoC Creator  3.3 SP1
 
 ENTITY Calculator_with_float_values IS
     PORT(

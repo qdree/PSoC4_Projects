@@ -13,9 +13,143 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Diploma_sketch\rfid\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Diploma_sketch\Password\Source Files\Keyboard.c">
 <ExpandedNodeIds>
 <v>Diploma_sketch</v>
+<v>Diploma_sketch\LCD_stage_1\TopDesign</v>
+<v>Diploma_sketch\LCD_stage_1\LCD_stage_1.cydwr</v>
+<v>Diploma_sketch\LCD_stage_1\Header Files</v>
+<v>Diploma_sketch\LCD_stage_1\Header Files\cyapicallbacks.h</v>
+<v>Diploma_sketch\LCD_stage_1\Source Files</v>
+<v>Diploma_sketch\LCD_stage_1\Source Files\main.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD\LCD.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD\LCD.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD\LCD_PM.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD_LCDPort</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort_PM.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cyfitter.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\cymetadata.c</v>
+<v>Diploma_sketch\LCD_stage_1\Generated_Source\PSoC4\project.h</v>
+<v>Diploma_sketch\Password</v>
+<v>Diploma_sketch\Password\TopDesign</v>
+<v>Diploma_sketch\Password\Password.cydwr</v>
+<v>Diploma_sketch\Password\Header Files</v>
+<v>Diploma_sketch\Password\Header Files\cyapicallbacks.h</v>
+<v>Diploma_sketch\Password\Header Files\Keyboard.h</v>
+<v>Diploma_sketch\Password\Source Files</v>
+<v>Diploma_sketch\Password\Source Files\Keyboard.c</v>
+<v>Diploma_sketch\Password\Source Files\main.c</v>
+<v>Diploma_sketch\Password\Generated_Source</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Int</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Int\Debounce_Int.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Int\Debounce_Int.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer_PM.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins_aliases.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins_PM.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_ROWPins</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins_aliases.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins_PM.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD\LCD.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD\LCD.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD\LCD_PM.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD_LCDPort</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\LCD_LCDPort\LCD_LCDPort_PM.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cyfitter.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cymetadata.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\project.h</v>
 <v>Diploma_sketch\pir_sensor\TopDesign</v>
 <v>Diploma_sketch\pir_sensor\pir_sensor.cydwr</v>
 <v>Diploma_sketch\pir_sensor\Header Files</v>
@@ -79,7 +213,6 @@
 <v>Diploma_sketch\pir_sensor\Generated_Source\PSoC4\cyfitterrv.inc</v>
 <v>Diploma_sketch\pir_sensor\Generated_Source\PSoC4\cymetadata.c</v>
 <v>Diploma_sketch\pir_sensor\Generated_Source\PSoC4\project.h</v>
-<v>Diploma_sketch\rfid</v>
 <v>Diploma_sketch\rfid\TopDesign</v>
 <v>Diploma_sketch\rfid\rfid.cydwr</v>
 <v>Diploma_sketch\rfid\Header Files</v>
@@ -112,36 +245,28 @@
 <v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_lfclk</v>
 <v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
 <v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_BOOT.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_BOOT.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_BOOT.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_INT.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_PVT.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_SLAVE.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_PINS.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_PM.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_PVT.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_SCB_IRQ</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_SCB_IRQ\i2c_SCB_IRQ.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_SCB_IRQ\i2c_SCB_IRQ.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_SCBCLK</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_SCBCLK\i2c_SCBCLK.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_SCBCLK\i2c_SCBCLK.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_scl</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_scl\i2c_scl.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_scl\i2c_scl.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_scl\i2c_scl_aliases.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_scl\i2c_scl_PM.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_sda</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_sda\i2c_sda.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_sda\i2c_sda.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_sda\i2c_sda_aliases.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_sda\i2c_sda_PM.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_BOOT.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_BOOT.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_PINS.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_PM.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_PVT.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_SPI_UART.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_SPI_UART.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_SPI_UART_INT.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_SPI_UART_PVT.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_UART.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART\UART_UART_BOOT.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_rx</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_rx\UART_rx.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_rx\UART_rx.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_rx\UART_rx_aliases.h</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_rx\UART_rx_PM.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_SCBCLK</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_SCBCLK\UART_SCBCLK.c</v>
+<v>Diploma_sketch\rfid\Generated_Source\PSoC4\UART_SCBCLK\UART_SCBCLK.h</v>
 <v>Diploma_sketch\rfid\Generated_Source\PSoC4\cycodeshareexport.ld</v>
 <v>Diploma_sketch\rfid\Generated_Source\PSoC4\cycodeshareimport.ld</v>
 <v>Diploma_sketch\rfid\Generated_Source\PSoC4\cycodeshareimport.scat</v>
@@ -161,60 +286,66 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Diploma_sketch</v>
-<v>Diploma_sketch\pir_sensor</v>
-<v>Diploma_sketch\rfid</v>
-<v>Diploma_sketch\rfid\TopDesign</v>
-<v>Diploma_sketch\rfid\rfid.cydwr</v>
-<v>Diploma_sketch\rfid\Header Files</v>
-<v>Diploma_sketch\rfid\Header Files\cyapicallbacks.h</v>
-<v>Diploma_sketch\rfid\Source Files</v>
-<v>Diploma_sketch\rfid\Source Files\main.c</v>
-<v>Diploma_sketch\rfid\Generated_Source</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\cypins.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_lfclk</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_BOOT.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_BOOT.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_BOOT.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_INT.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_PVT.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_I2C_SLAVE.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_PINS.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_PM.c</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c\i2c_PVT.h</v>
-<v>Diploma_sketch\rfid\Generated_Source\PSoC4\i2c_SCB_IRQ</v>
+<v>Diploma_sketch\LCD_stage_1</v>
+<v>Diploma_sketch\Password</v>
+<v>Diploma_sketch\Password\TopDesign</v>
+<v>Diploma_sketch\Password\Password.cydwr</v>
+<v>Diploma_sketch\Password\Header Files</v>
+<v>Diploma_sketch\Password\Header Files\cyapicallbacks.h</v>
+<v>Diploma_sketch\Password\Header Files\Keyboard.h</v>
+<v>Diploma_sketch\Password\Source Files</v>
+<v>Diploma_sketch\Password\Source Files\Keyboard.c</v>
+<v>Diploma_sketch\Password\Source Files\main.c</v>
+<v>Diploma_sketch\Password\Generated_Source</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Int</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Int\Debounce_Int.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Int\Debounce_Int.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer_PM.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins_aliases.h</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_COLPins\KBD_COLPins_PM.c</v>
+<v>Diploma_sketch\Password\Generated_Source\PSoC4\KBD_ROWPins</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Diploma_sketch</v>
+<v>Diploma_sketch\LCD_stage_1</v>
+<v>Diploma_sketch\LCD_stage_1\TopDesign</v>
+<v>Diploma_sketch\LCD_stage_1\TopDesign\TopDesign.cysch</v>
+<v>Diploma_sketch\Password</v>
+<v>Diploma_sketch\Password\TopDesign</v>
+<v>Diploma_sketch\Password\TopDesign\TopDesign.cysch</v>
 <v>Diploma_sketch\pir_sensor</v>
 <v>Diploma_sketch\pir_sensor\TopDesign</v>
 <v>Diploma_sketch\pir_sensor\TopDesign\TopDesign.cysch</v>
@@ -224,6 +355,12 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Diploma_sketch</v>
+<v>Diploma_sketch\LCD_stage_1</v>
+<v>Diploma_sketch\LCD_stage_1\TopDesign</v>
+<v>Diploma_sketch\LCD_stage_1\TopDesign\TopDesign.cysch</v>
+<v>Diploma_sketch\Password</v>
+<v>Diploma_sketch\Password\TopDesign</v>
+<v>Diploma_sketch\Password\TopDesign\TopDesign.cysch</v>
 <v>Diploma_sketch\pir_sensor</v>
 <v>Diploma_sketch\pir_sensor\TopDesign</v>
 <v>Diploma_sketch\pir_sensor\TopDesign\TopDesign.cysch</v>
@@ -235,6 +372,64 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Diploma_sketch</v>
+<v>Diploma_sketch\LCD_stage_1</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort_PM.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\LCD_stage_1.elf</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\LCD_stage_1.hex</v>
+<v>Diploma_sketch\LCD_stage_1\CortexM0\ARM_GCC_493\Debug\LCD_stage_1.map</v>
+<v>Diploma_sketch\LCD_stage_1\LCD_stage_1.gpdsc</v>
+<v>Diploma_sketch\LCD_stage_1\LCD_stage_1.rpt</v>
+<v>Diploma_sketch\LCD_stage_1\LCD_stage_1_timing.html</v>
+<v>Diploma_sketch\Password</v>
+<v>Diploma_sketch\Password\CortexM0</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Int.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Timer.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Timer_PM.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_COLPins.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_COLPins_PM.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_ROWPins.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_ROWPins_PM.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\Keyboard.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort_PM.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Password.elf</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Password.hex</v>
+<v>Diploma_sketch\Password\CortexM0\ARM_GCC_493\Debug\Password.map</v>
+<v>Diploma_sketch\Password\Password.gpdsc</v>
+<v>Diploma_sketch\Password\Password.rpt</v>
+<v>Diploma_sketch\Password\Password_timing.html</v>
 <v>Diploma_sketch\pir_sensor</v>
 <v>Diploma_sketch\pir_sensor\CortexM0</v>
 <v>Diploma_sketch\pir_sensor\CortexM0\ARM_GCC_493</v>
@@ -276,20 +471,17 @@
 <v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
 <v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
 <v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_BOOT.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_I2C.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_I2C_BOOT.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_I2C_INT.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_I2C_SLAVE.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_PM.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_SCB_IRQ.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_SCBCLK.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_scl.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_scl_PM.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_sda.lst</v>
-<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\i2c_sda_PM.lst</v>
 <v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_PM.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_rx.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_UART.lst</v>
+<v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_UART_BOOT.lst</v>
 <v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\rfid.elf</v>
 <v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\rfid.hex</v>
 <v>Diploma_sketch\rfid\CortexM0\ARM_GCC_493\Debug\rfid.map</v>
@@ -299,10 +491,10 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Diploma_sketch</v>
-<v>Diploma_sketch\pir_sensor</v>
-<v>Diploma_sketch\pir_sensor\pir_sensor.rpt</v>
-<v>Diploma_sketch\pir_sensor\pir_sensor_timing.html</v>
-<v>Diploma_sketch\rfid</v>
+<v>Diploma_sketch\LCD_stage_1</v>
+<v>Diploma_sketch\LCD_stage_1\LCD_stage_1.rpt</v>
+<v>Diploma_sketch\LCD_stage_1\LCD_stage_1_timing.html</v>
+<v>Diploma_sketch\Password</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -313,6 +505,26 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Diploma_sketch</v>
+<v>Diploma_sketch\LCD_stage_1</v>
+<v>Diploma_sketch\LCD_stage_1\PSoC 4 Architecture TRM</v>
+<v>Diploma_sketch\LCD_stage_1\PSoC 4200 Family Datasheet</v>
+<v>Diploma_sketch\LCD_stage_1\System Reference Guides</v>
+<v>Diploma_sketch\LCD_stage_1\System Reference Guides\cy_boot_v5_30</v>
+<v>Diploma_sketch\LCD_stage_1\System Reference Guides\cy_lfclk_v1_0</v>
+<v>Diploma_sketch\LCD_stage_1\CharLCD_v2_20.pdf</v>
+<v>Diploma_sketch\Password</v>
+<v>Diploma_sketch\Password\PSoC 4 Architecture TRM</v>
+<v>Diploma_sketch\Password\PSoC 4200 Family Datasheet</v>
+<v>Diploma_sketch\Password\System Reference Guides</v>
+<v>Diploma_sketch\Password\System Reference Guides\cy_boot_v5_30</v>
+<v>Diploma_sketch\Password\System Reference Guides\cy_lfclk_v1_0</v>
+<v>Diploma_sketch\Password\CharLCD_v2_20.pdf</v>
+<v>Diploma_sketch\Password\cy_clock_v2_20.pdf</v>
+<v>Diploma_sketch\Password\cy_isr_v1_70.pdf</v>
+<v>Diploma_sketch\Password\cy_pins_v2_20</v>
+<v>Diploma_sketch\Password\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Diploma_sketch\Password\Timer_v2_70.pdf</v>
+<v>Diploma_sketch\Password\ZeroTerminal.pdf</v>
 <v>Diploma_sketch\pir_sensor</v>
 <v>Diploma_sketch\pir_sensor\PSoC 4 Architecture TRM</v>
 <v>Diploma_sketch\pir_sensor\PSoC 4200 Family Datasheet</v>
@@ -331,6 +543,26 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Diploma_sketch</v>
+<v>Diploma_sketch\LCD_stage_1</v>
+<v>Diploma_sketch\LCD_stage_1\PSoC 4 Architecture TRM</v>
+<v>Diploma_sketch\LCD_stage_1\PSoC 4200 Family Datasheet</v>
+<v>Diploma_sketch\LCD_stage_1\System Reference Guides</v>
+<v>Diploma_sketch\LCD_stage_1\System Reference Guides\cy_boot_v5_30</v>
+<v>Diploma_sketch\LCD_stage_1\System Reference Guides\cy_lfclk_v1_0</v>
+<v>Diploma_sketch\LCD_stage_1\CharLCD_v2_20.pdf</v>
+<v>Diploma_sketch\Password</v>
+<v>Diploma_sketch\Password\PSoC 4 Architecture TRM</v>
+<v>Diploma_sketch\Password\PSoC 4200 Family Datasheet</v>
+<v>Diploma_sketch\Password\System Reference Guides</v>
+<v>Diploma_sketch\Password\System Reference Guides\cy_boot_v5_30</v>
+<v>Diploma_sketch\Password\System Reference Guides\cy_lfclk_v1_0</v>
+<v>Diploma_sketch\Password\CharLCD_v2_20.pdf</v>
+<v>Diploma_sketch\Password\cy_clock_v2_20.pdf</v>
+<v>Diploma_sketch\Password\cy_isr_v1_70.pdf</v>
+<v>Diploma_sketch\Password\cy_pins_v2_20</v>
+<v>Diploma_sketch\Password\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Diploma_sketch\Password\Timer_v2_70.pdf</v>
+<v>Diploma_sketch\Password\ZeroTerminal.pdf</v>
 <v>Diploma_sketch\pir_sensor</v>
 <v>Diploma_sketch\pir_sensor\PSoC 4 Architecture TRM</v>
 <v>Diploma_sketch\pir_sensor\PSoC 4200 Family Datasheet</v>
@@ -360,9 +592,9 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\rfid.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\rfid.cydsn\rfid.cydwr" />
-<name v=".\rfid.cydsn\main.c" />
+<name v=".\LCD_stage_1.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\LCD_stage_1.cydsn\main.c" />
+<name v=".\LCD_stage_1.cydsn\LCD_stage_1.cydwr" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

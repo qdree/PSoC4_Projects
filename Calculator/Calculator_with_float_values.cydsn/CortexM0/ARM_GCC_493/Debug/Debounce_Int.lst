@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
   30:.\Generated_Source\PSoC4/Debounce_Int.c **** 
   31:.\Generated_Source\PSoC4/Debounce_Int.c **** /* `#END` */
   32:.\Generated_Source\PSoC4/Debounce_Int.c **** 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 2
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Debounce_Int.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
   87:.\Generated_Source\PSoC4/Debounce_Int.c **** *   {
   88:.\Generated_Source\PSoC4/Debounce_Int.c **** *   }
   89:.\Generated_Source\PSoC4/Debounce_Int.c **** *   Function prototype example:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 3
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/Debounce_Int.c **** *   CY_ISR_PROTO(MyISR);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  144:.\Generated_Source\PSoC4/Debounce_Int.c **** *   The default Interrupt Service Routine for Debounce_Int.
  145:.\Generated_Source\PSoC4/Debounce_Int.c **** *
  146:.\Generated_Source\PSoC4/Debounce_Int.c **** *   Add custom code between the START and END comments to keep the next version
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 4
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 4
 
 
  147:.\Generated_Source\PSoC4/Debounce_Int.c **** *   of this file from over-writing your code.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  185:.\Generated_Source\PSoC4/Debounce_Int.c **** *   CY_ISR(MyISR)
  186:.\Generated_Source\PSoC4/Debounce_Int.c **** *   {
  187:.\Generated_Source\PSoC4/Debounce_Int.c **** *   }
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 5
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 5
 
 
  188:.\Generated_Source\PSoC4/Debounce_Int.c **** *
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  218:.\Generated_Source\PSoC4/Debounce_Int.c **** *******************************************************************************/
  219:.\Generated_Source\PSoC4/Debounce_Int.c **** cyisraddress Debounce_Int_GetVector(void)
  220:.\Generated_Source\PSoC4/Debounce_Int.c **** {
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 6
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 6
 
 
   66              		.loc 1 220 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
   90              		.cfi_startproc
   91              	.LVL1:
   92 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 7
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 7
 
 
   93              		.cfi_def_cfa_offset 8
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  265:.\Generated_Source\PSoC4/Debounce_Int.c **** * Summary:
  266:.\Generated_Source\PSoC4/Debounce_Int.c **** *   Gets the Priority of the Interrupt.
  267:.\Generated_Source\PSoC4/Debounce_Int.c **** *
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 8
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 8
 
 
  268:.\Generated_Source\PSoC4/Debounce_Int.c **** * Parameters:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  293:.\Generated_Source\PSoC4/Debounce_Int.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
  294:.\Generated_Source\PSoC4/Debounce_Int.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
  295:.\Generated_Source\PSoC4/Debounce_Int.c **** *   function, which sets the vector and the priority, has been called.
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 9
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 9
 
 
  296:.\Generated_Source\PSoC4/Debounce_Int.c **** *
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  326:.\Generated_Source\PSoC4/Debounce_Int.c **** {
  185              		.loc 1 326 0
  186              		.cfi_startproc
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 10
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 10
 
 
  327:.\Generated_Source\PSoC4/Debounce_Int.c ****     /* Get the state of the general interrupt. */
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  217              		@ sp needed
  218 0006 7047     		bx	lr
  219              	.L22:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 11
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 11
 
 
  220              		.align	2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  268              		.thumb_func
  269              		.type	Debounce_Int_StartEx, %function
  270              	Debounce_Int_StartEx:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 12
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 12
 
 
  271              	.LFB1:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  317              	.LVL18:
  135:.\Generated_Source\PSoC4/Debounce_Int.c **** }
  318              		.loc 1 135 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 13
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 13
 
 
  319 0006 0248     		ldr	r0, .L28
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  346              		.loc 1 376 0
  347              		@ sp needed
  348 0006 7047     		bx	lr
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 14
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 14
 
 
  349              	.L32:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  378              	.LFE12:
  379              		.size	Debounce_Int_ClearPending, .-Debounce_Int_ClearPending
  380              		.text
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 15
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 15
 
 
  381              	.Letext0:
@@ -851,45 +851,45 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  388 0006 00000000 		.4byte	.Ldebug_abbrev0
  389 000a 04       		.byte	0x4
  390 000b 01       		.uleb128 0x1
- 391 000c FF010000 		.4byte	.LASF33
+ 391 000c 17020000 		.4byte	.LASF33
  392 0010 01       		.byte	0x1
- 393 0011 1B010000 		.4byte	.LASF34
- 394 0015 13000000 		.4byte	.LASF35
+ 393 0011 33010000 		.4byte	.LASF34
+ 394 0015 70000000 		.4byte	.LASF35
  395 0019 00000000 		.4byte	.Ldebug_ranges0+0
  396 001d 00000000 		.4byte	0
  397 0021 00000000 		.4byte	.Ldebug_line0
  398 0025 02       		.uleb128 0x2
  399 0026 01       		.byte	0x1
  400 0027 06       		.byte	0x6
- 401 0028 06030000 		.4byte	.LASF0
+ 401 0028 1E030000 		.4byte	.LASF0
  402 002c 02       		.uleb128 0x2
  403 002d 01       		.byte	0x1
  404 002e 08       		.byte	0x8
- 405 002f 94000000 		.4byte	.LASF1
+ 405 002f 25010000 		.4byte	.LASF1
  406 0033 02       		.uleb128 0x2
  407 0034 02       		.byte	0x2
  408 0035 05       		.byte	0x5
- 409 0036 8D020000 		.4byte	.LASF2
+ 409 0036 A5020000 		.4byte	.LASF2
  410 003a 02       		.uleb128 0x2
  411 003b 02       		.byte	0x2
  412 003c 07       		.byte	0x7
- 413 003d 12030000 		.4byte	.LASF3
+ 413 003d 2A030000 		.4byte	.LASF3
  414 0041 02       		.uleb128 0x2
  415 0042 04       		.byte	0x4
  416 0043 05       		.byte	0x5
- 417 0044 D2020000 		.4byte	.LASF4
+ 417 0044 EA020000 		.4byte	.LASF4
  418 0048 02       		.uleb128 0x2
  419 0049 04       		.byte	0x4
  420 004a 07       		.byte	0x7
- 421 004b CA000000 		.4byte	.LASF5
+ 421 004b EA000000 		.4byte	.LASF5
  422 004f 02       		.uleb128 0x2
  423 0050 08       		.byte	0x8
  424 0051 05       		.byte	0x5
- 425 0052 EC010000 		.4byte	.LASF6
+ 425 0052 04020000 		.4byte	.LASF6
  426 0056 02       		.uleb128 0x2
  427 0057 08       		.byte	0x8
  428 0058 07       		.byte	0x7
- 429 0059 7D000000 		.4byte	.LASF7
+ 429 0059 43000000 		.4byte	.LASF7
  430 005d 03       		.uleb128 0x3
  431 005e 04       		.byte	0x4
  432 005f 05       		.byte	0x5
@@ -897,32 +897,32 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  434 0064 02       		.uleb128 0x2
  435 0065 04       		.byte	0x4
  436 0066 07       		.byte	0x7
- 437 0067 7B010000 		.4byte	.LASF8
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 16
+ 437 0067 93010000 		.4byte	.LASF8
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 16
 
 
  438 006b 04       		.uleb128 0x4
- 439 006c F6000000 		.4byte	.LASF9
+ 439 006c 16010000 		.4byte	.LASF9
  440 0070 02       		.byte	0x2
  441 0071 C2       		.byte	0xc2
  442 0072 2C000000 		.4byte	0x2c
  443 0076 04       		.uleb128 0x4
- 444 0077 61010000 		.4byte	.LASF10
+ 444 0077 79010000 		.4byte	.LASF10
  445 007b 02       		.byte	0x2
  446 007c C4       		.byte	0xc4
  447 007d 48000000 		.4byte	0x48
  448 0081 02       		.uleb128 0x2
  449 0082 04       		.byte	0x4
  450 0083 04       		.byte	0x4
- 451 0084 77000000 		.4byte	.LASF11
+ 451 0084 3D000000 		.4byte	.LASF11
  452 0088 02       		.uleb128 0x2
  453 0089 08       		.byte	0x8
  454 008a 04       		.byte	0x4
- 455 008b 43010000 		.4byte	.LASF12
+ 455 008b 5B010000 		.4byte	.LASF12
  456 008f 02       		.uleb128 0x2
  457 0090 01       		.byte	0x1
  458 0091 08       		.byte	0x8
- 459 0092 FA010000 		.4byte	.LASF13
+ 459 0092 12020000 		.4byte	.LASF13
  460 0096 05       		.uleb128 0x5
  461 0097 00000000 		.4byte	.LASF14
  462 009b 02       		.byte	0x2
@@ -931,7 +931,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  465 00a2 06       		.uleb128 0x6
  466 00a3 76000000 		.4byte	0x76
  467 00a7 05       		.uleb128 0x5
- 468 00a8 D6010000 		.4byte	.LASF15
+ 468 00a8 EE010000 		.4byte	.LASF15
  469 00ac 02       		.byte	0x2
  470 00ad 7E01     		.2byte	0x17e
  471 00af B3000000 		.4byte	0xb3
@@ -942,9 +942,9 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  476 00ba 02       		.uleb128 0x2
  477 00bb 04       		.byte	0x4
  478 00bc 07       		.byte	0x7
- 479 00bd E3010000 		.4byte	.LASF16
+ 479 00bd FB010000 		.4byte	.LASF16
  480 00c1 09       		.uleb128 0x9
- 481 00c2 EF020000 		.4byte	.LASF23
+ 481 00c2 07030000 		.4byte	.LASF23
  482 00c6 01       		.byte	0x1
  483 00c7 9F       		.byte	0x9f
  484 00c8 00000000 		.4byte	.LFB3
@@ -952,19 +952,19 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  486 00d0 01       		.uleb128 0x1
  487 00d1 9C       		.byte	0x9c
  488 00d2 0A       		.uleb128 0xa
- 489 00d3 4A010000 		.4byte	.LASF17
+ 489 00d3 62010000 		.4byte	.LASF17
  490 00d7 01       		.byte	0x1
  491 00d8 C7       		.byte	0xc7
  492 00d9 00000000 		.4byte	.LFB4
  493 00dd 0C000000 		.4byte	.LFE4-.LFB4
  494 00e1 01       		.uleb128 0x1
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 17
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 17
 
 
  495 00e2 9C       		.byte	0x9c
  496 00e3 F5000000 		.4byte	0xf5
  497 00e7 0B       		.uleb128 0xb
- 498 00e8 88010000 		.4byte	.LASF19
+ 498 00e8 A0010000 		.4byte	.LASF19
  499 00ec 01       		.byte	0x1
  500 00ed C7       		.byte	0xc7
  501 00ee A7000000 		.4byte	0xa7
@@ -972,7 +972,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  503 00f3 50       		.byte	0x50
  504 00f4 00       		.byte	0
  505 00f5 0C       		.uleb128 0xc
- 506 00f6 BB020000 		.4byte	.LASF25
+ 506 00f6 D3020000 		.4byte	.LASF25
  507 00fa 01       		.byte	0x1
  508 00fb DB       		.byte	0xdb
  509 00fc A7000000 		.4byte	0xa7
@@ -981,7 +981,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  512 0108 01       		.uleb128 0x1
  513 0109 9C       		.byte	0x9c
  514 010a 0A       		.uleb128 0xa
- 515 010b A6010000 		.4byte	.LASF18
+ 515 010b BE010000 		.4byte	.LASF18
  516 010f 01       		.byte	0x1
  517 0110 F9       		.byte	0xf9
  518 0111 00000000 		.4byte	.LFB6
@@ -990,19 +990,19 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  521 011a 9C       		.byte	0x9c
  522 011b 5C010000 		.4byte	0x15c
  523 011f 0D       		.uleb128 0xd
- 524 0120 FC000000 		.4byte	.LASF20
+ 524 0120 1C010000 		.4byte	.LASF20
  525 0124 01       		.byte	0x1
  526 0125 F9       		.byte	0xf9
  527 0126 6B000000 		.4byte	0x6b
  528 012a 00000000 		.4byte	.LLST0
  529 012e 0E       		.uleb128 0xe
- 530 012f BB000000 		.4byte	.LASF21
+ 530 012f DB000000 		.4byte	.LASF21
  531 0133 01       		.byte	0x1
  532 0134 FB       		.byte	0xfb
  533 0135 6B000000 		.4byte	0x6b
  534 0139 21000000 		.4byte	.LLST1
  535 013d 0F       		.uleb128 0xf
- 536 013e AC020000 		.4byte	.LASF22
+ 536 013e C4020000 		.4byte	.LASF22
  537 0142 01       		.byte	0x1
  538 0143 FC       		.byte	0xfc
  539 0144 76000000 		.4byte	0x76
@@ -1015,10 +1015,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  546 0157 F0020000 		.4byte	0x2f0
  547 015b 00       		.byte	0
  548 015c 11       		.uleb128 0x11
- 549 015d A2000000 		.4byte	.LASF36
+ 549 015d C2000000 		.4byte	.LASF36
  550 0161 01       		.byte	0x1
  551 0162 1501     		.2byte	0x115
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 18
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 18
 
 
  552 0164 6B000000 		.4byte	0x6b
@@ -1028,20 +1028,20 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  556 0171 9C       		.byte	0x9c
  557 0172 94010000 		.4byte	0x194
  558 0176 12       		.uleb128 0x12
- 559 0177 FC000000 		.4byte	.LASF20
+ 559 0177 1C010000 		.4byte	.LASF20
  560 017b 01       		.byte	0x1
  561 017c 1701     		.2byte	0x117
  562 017e 76000000 		.4byte	0x76
  563 0182 34000000 		.4byte	.LLST2
  564 0186 13       		.uleb128 0x13
- 565 0187 AC020000 		.4byte	.LASF22
+ 565 0187 C4020000 		.4byte	.LASF22
  566 018b 01       		.byte	0x1
  567 018c 1801     		.2byte	0x118
  568 018e 76000000 		.4byte	0x76
  569 0192 06       		.byte	0x6
  570 0193 00       		.byte	0
  571 0194 14       		.uleb128 0x14
- 572 0195 DB020000 		.4byte	.LASF24
+ 572 0195 F3020000 		.4byte	.LASF24
  573 0199 01       		.byte	0x1
  574 019a 3001     		.2byte	0x130
  575 019c 00000000 		.4byte	.LFB8
@@ -1049,7 +1049,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  577 01a4 01       		.uleb128 0x1
  578 01a5 9C       		.byte	0x9c
  579 01a6 15       		.uleb128 0x15
- 580 01a7 05010000 		.4byte	.LASF26
+ 580 01a7 5A000000 		.4byte	.LASF26
  581 01ab 01       		.byte	0x1
  582 01ac 4501     		.2byte	0x145
  583 01ae 6B000000 		.4byte	0x6b
@@ -1058,7 +1058,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  586 01ba 01       		.uleb128 0x1
  587 01bb 9C       		.byte	0x9c
  588 01bc 14       		.uleb128 0x14
- 589 01bd 25030000 		.4byte	.LASF27
+ 589 01bd 3D030000 		.4byte	.LASF27
  590 01c1 01       		.byte	0x1
  591 01c2 5A01     		.2byte	0x15a
  592 01c4 00000000 		.4byte	.LFB10
@@ -1066,7 +1066,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  594 01cc 01       		.uleb128 0x1
  595 01cd 9C       		.byte	0x9c
  596 01ce 0A       		.uleb128 0xa
- 597 01cf 68010000 		.4byte	.LASF28
+ 597 01cf 80010000 		.4byte	.LASF28
  598 01d3 01       		.byte	0x1
  599 01d4 38       		.byte	0x38
  600 01d5 00000000 		.4byte	.LFB0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  606 01e4 06000000 		.4byte	.LVL8
  607 01e8 BC010000 		.4byte	0x1bc
  608 01ec 16       		.uleb128 0x16
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 19
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 19
 
 
  609 01ed 0C000000 		.4byte	.LVL9
@@ -1106,7 +1106,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  631 021b 94010000 		.4byte	0x194
  632 021f 00       		.byte	0
  633 0220 0A       		.uleb128 0xa
- 634 0221 97020000 		.4byte	.LASF29
+ 634 0221 AF020000 		.4byte	.LASF29
  635 0225 01       		.byte	0x1
  636 0226 63       		.byte	0x63
  637 0227 00000000 		.4byte	.LFB1
@@ -1115,7 +1115,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  640 0230 9C       		.byte	0x9c
  641 0231 7E020000 		.4byte	0x27e
  642 0235 0D       		.uleb128 0xd
- 643 0236 88010000 		.4byte	.LASF19
+ 643 0236 A0010000 		.4byte	.LASF19
  644 023a 01       		.byte	0x1
  645 023b 63       		.byte	0x63
  646 023c A7000000 		.4byte	0xa7
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  663 0262 14000000 		.4byte	.LVL15
  664 0266 0A010000 		.4byte	0x10a
  665 026a 74020000 		.4byte	0x274
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 20
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 20
 
 
  666 026e 17       		.uleb128 0x17
@@ -1152,7 +1152,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  674 0279 94010000 		.4byte	0x194
  675 027d 00       		.byte	0
  676 027e 0A       		.uleb128 0xa
- 677 027f 65000000 		.4byte	.LASF30
+ 677 027f 2B000000 		.4byte	.LASF30
  678 0283 01       		.byte	0x1
  679 0284 81       		.byte	0x81
  680 0285 00000000 		.4byte	.LFB2
@@ -1168,7 +1168,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  690 02a1 D2000000 		.4byte	0xd2
  691 02a5 00       		.byte	0
  692 02a6 14       		.uleb128 0x14
- 693 02a7 4D000000 		.4byte	.LASF31
+ 693 02a7 13000000 		.4byte	.LASF31
  694 02ab 01       		.byte	0x1
  695 02ac 7501     		.2byte	0x175
  696 02ae 00000000 		.4byte	.LFB11
@@ -1176,7 +1176,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  698 02b6 01       		.uleb128 0x1
  699 02b7 9C       		.byte	0x9c
  700 02b8 14       		.uleb128 0x14
- 701 02b9 DC000000 		.4byte	.LASF32
+ 701 02b9 FC000000 		.4byte	.LASF32
  702 02bd 01       		.byte	0x1
  703 02be 8E01     		.2byte	0x18e
  704 02c0 00000000 		.4byte	.LFB12
@@ -1196,15 +1196,15 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  718 02e0 21       		.byte	0x21
  719 02e1 CA020000 		.4byte	0x2ca
  720 02e5 1B       		.uleb128 0x1b
- 721 02e6 BF010000 		.4byte	.LASF38
+ 721 02e6 D7010000 		.4byte	.LASF38
  722 02ea 03       		.byte	0x3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 21
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 21
 
 
  723 02eb 5E       		.byte	0x5e
  724 02ec 6B000000 		.4byte	0x6b
  725 02f0 1C       		.uleb128 0x1c
- 726 02f1 90010000 		.4byte	.LASF39
+ 726 02f1 A8010000 		.4byte	.LASF39
  727 02f5 03       		.byte	0x3
  728 02f6 5F       		.byte	0x5f
  729 02f7 1D       		.uleb128 0x1d
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  777 002a 16       		.uleb128 0x16
  778 002b 00       		.byte	0
  779 002c 03       		.uleb128 0x3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 22
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 22
 
 
  780 002d 0E       		.uleb128 0xe
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  834 0063 3B       		.uleb128 0x3b
  835 0064 0B       		.uleb128 0xb
  836 0065 27       		.uleb128 0x27
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 23
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 23
 
 
  837 0066 19       		.uleb128 0x19
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  891 009e 3F       		.uleb128 0x3f
  892 009f 19       		.uleb128 0x19
  893 00a0 03       		.uleb128 0x3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 24
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 24
 
 
  894 00a1 0E       		.uleb128 0xe
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  948 00d8 3A       		.uleb128 0x3a
  949 00d9 0B       		.uleb128 0xb
  950 00da 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 25
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 25
 
 
  951 00db 0B       		.uleb128 0xb
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  1005 0114 02       		.uleb128 0x2
  1006 0115 17       		.uleb128 0x17
  1007 0116 00       		.byte	0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 26
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 26
 
 
  1008 0117 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  1062 014e 11       		.uleb128 0x11
  1063 014f 01       		.uleb128 0x1
  1064 0150 12       		.uleb128 0x12
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 27
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 27
 
 
  1065 0151 06       		.uleb128 0x6
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  1119 018d 49       		.uleb128 0x49
  1120 018e 13       		.uleb128 0x13
  1121 018f 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 28
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 28
 
 
  1122 0190 19       		.uleb128 0x19
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  1176 0008 0100     		.2byte	0x1
  1177 000a 50       		.byte	0x50
  1178 000b 07000000 		.4byte	.LVL3-1
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 29
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 29
 
 
  1179 000f 20000000 		.4byte	.LFE6
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  1233 000c 0000     		.2byte	0
  1234 000e 0000     		.2byte	0
  1235 0010 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 30
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 30
 
 
  1236 0014 02000000 		.4byte	.LFE3-.LFB3
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  1290 0064 0C000000 		.4byte	.LFE12
  1291 0068 00000000 		.4byte	0
  1292 006c 00000000 		.4byte	0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 31
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 31
 
 
  1293              		.section	.debug_line,"",%progbits
@@ -1816,218 +1816,220 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 1
  1299      6D566563 
  1299      746F7273 
  1299      00
- 1300              	.LASF35:
- 1301 0013 443A5C37 		.ascii	"D:\\744\\psoc\\Calculator\\Calculator_with_float_va"
- 1301      34345C70 
- 1301      736F635C 
- 1301      43616C63 
- 1301      756C6174 
- 1302 0042 6C756573 		.ascii	"lues.cydsn\000"
- 1302      2E637964 
- 1302      736E00
- 1303              	.LASF31:
- 1304 004d 4465626F 		.ascii	"Debounce_Int_SetPending\000"
- 1304      756E6365 
- 1304      5F496E74 
- 1304      5F536574 
- 1304      50656E64 
- 1305              	.LASF30:
- 1306 0065 4465626F 		.ascii	"Debounce_Int_Stop\000"
- 1306      756E6365 
- 1306      5F496E74 
- 1306      5F53746F 
- 1306      7000
- 1307              	.LASF11:
- 1308 0077 666C6F61 		.ascii	"float\000"
- 1308      7400
- 1309              	.LASF7:
- 1310 007d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1310      206C6F6E 
- 1310      6720756E 
- 1310      7369676E 
- 1310      65642069 
- 1311              	.LASF1:
- 1312 0094 756E7369 		.ascii	"unsigned char\000"
- 1312      676E6564 
- 1312      20636861 
- 1312      7200
+ 1300              	.LASF31:
+ 1301 0013 4465626F 		.ascii	"Debounce_Int_SetPending\000"
+ 1301      756E6365 
+ 1301      5F496E74 
+ 1301      5F536574 
+ 1301      50656E64 
+ 1302              	.LASF30:
+ 1303 002b 4465626F 		.ascii	"Debounce_Int_Stop\000"
+ 1303      756E6365 
+ 1303      5F496E74 
+ 1303      5F53746F 
+ 1303      7000
+ 1304              	.LASF11:
+ 1305 003d 666C6F61 		.ascii	"float\000"
+ 1305      7400
+ 1306              	.LASF7:
+ 1307 0043 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1307      206C6F6E 
+ 1307      6720756E 
+ 1307      7369676E 
+ 1307      65642069 
+ 1308              	.LASF26:
+ 1309 005a 4465626F 		.ascii	"Debounce_Int_GetState\000"
+ 1309      756E6365 
+ 1309      5F496E74 
+ 1309      5F476574 
+ 1309      53746174 
+ 1310              	.LASF35:
+ 1311 0070 453A5C37 		.ascii	"E:\\744\\Education\\Git\\PSoC4_Projects\\Calculator"
+ 1311      34345C45 
+ 1311      64756361 
+ 1311      74696F6E 
+ 1311      5C476974 
+ 1312 009e 5C43616C 		.ascii	"\\Calculator_with_float_values.cydsn\000"
+ 1312      63756C61 
+ 1312      746F725F 
+ 1312      77697468 
+ 1312      5F666C6F 
  1313              	.LASF36:
- 1314 00a2 4465626F 		.ascii	"Debounce_Int_GetPriority\000"
+ 1314 00c2 4465626F 		.ascii	"Debounce_Int_GetPriority\000"
  1314      756E6365 
  1314      5F496E74 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 32
+
+
  1314      5F476574 
  1314      5072696F 
  1315              	.LASF21:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 32
-
-
- 1316 00bb 696E7465 		.ascii	"interruptState\000"
+ 1316 00db 696E7465 		.ascii	"interruptState\000"
  1316      72727570 
  1316      74537461 
  1316      746500
  1317              	.LASF5:
- 1318 00ca 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1318 00ea 6C6F6E67 		.ascii	"long unsigned int\000"
  1318      20756E73 
  1318      69676E65 
  1318      6420696E 
  1318      7400
  1319              	.LASF32:
- 1320 00dc 4465626F 		.ascii	"Debounce_Int_ClearPending\000"
+ 1320 00fc 4465626F 		.ascii	"Debounce_Int_ClearPending\000"
  1320      756E6365 
  1320      5F496E74 
  1320      5F436C65 
  1320      61725065 
  1321              	.LASF9:
- 1322 00f6 75696E74 		.ascii	"uint8\000"
+ 1322 0116 75696E74 		.ascii	"uint8\000"
  1322      3800
  1323              	.LASF20:
- 1324 00fc 7072696F 		.ascii	"priority\000"
+ 1324 011c 7072696F 		.ascii	"priority\000"
  1324      72697479 
  1324      00
- 1325              	.LASF26:
- 1326 0105 4465626F 		.ascii	"Debounce_Int_GetState\000"
- 1326      756E6365 
- 1326      5F496E74 
- 1326      5F476574 
- 1326      53746174 
+ 1325              	.LASF1:
+ 1326 0125 756E7369 		.ascii	"unsigned char\000"
+ 1326      676E6564 
+ 1326      20636861 
+ 1326      7200
  1327              	.LASF34:
- 1328 011b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Debounce_Int.c\000"
+ 1328 0133 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Debounce_Int.c\000"
  1328      6E657261 
  1328      7465645F 
  1328      536F7572 
  1328      63655C50 
  1329              	.LASF12:
- 1330 0143 646F7562 		.ascii	"double\000"
+ 1330 015b 646F7562 		.ascii	"double\000"
  1330      6C6500
  1331              	.LASF17:
- 1332 014a 4465626F 		.ascii	"Debounce_Int_SetVector\000"
+ 1332 0162 4465626F 		.ascii	"Debounce_Int_SetVector\000"
  1332      756E6365 
  1332      5F496E74 
  1332      5F536574 
  1332      56656374 
  1333              	.LASF10:
- 1334 0161 75696E74 		.ascii	"uint32\000"
+ 1334 0179 75696E74 		.ascii	"uint32\000"
  1334      333200
  1335              	.LASF28:
- 1336 0168 4465626F 		.ascii	"Debounce_Int_Start\000"
+ 1336 0180 4465626F 		.ascii	"Debounce_Int_Start\000"
  1336      756E6365 
  1336      5F496E74 
  1336      5F537461 
  1336      727400
  1337              	.LASF8:
- 1338 017b 756E7369 		.ascii	"unsigned int\000"
+ 1338 0193 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 33
+
+
  1338      676E6564 
  1338      20696E74 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 33
-
-
  1338      00
  1339              	.LASF19:
- 1340 0188 61646472 		.ascii	"address\000"
+ 1340 01a0 61646472 		.ascii	"address\000"
  1340      65737300 
  1341              	.LASF39:
- 1342 0190 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1342 01a8 43794578 		.ascii	"CyExitCriticalSection\000"
  1342      69744372 
  1342      69746963 
  1342      616C5365 
  1342      6374696F 
  1343              	.LASF18:
- 1344 01a6 4465626F 		.ascii	"Debounce_Int_SetPriority\000"
+ 1344 01be 4465626F 		.ascii	"Debounce_Int_SetPriority\000"
  1344      756E6365 
  1344      5F496E74 
  1344      5F536574 
  1344      5072696F 
  1345              	.LASF38:
- 1346 01bf 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1346 01d7 4379456E 		.ascii	"CyEnterCriticalSection\000"
  1346      74657243 
  1346      72697469 
  1346      63616C53 
  1346      65637469 
  1347              	.LASF15:
- 1348 01d6 63796973 		.ascii	"cyisraddress\000"
+ 1348 01ee 63796973 		.ascii	"cyisraddress\000"
  1348      72616464 
  1348      72657373 
  1348      00
  1349              	.LASF16:
- 1350 01e3 73697A65 		.ascii	"sizetype\000"
+ 1350 01fb 73697A65 		.ascii	"sizetype\000"
  1350      74797065 
  1350      00
  1351              	.LASF6:
- 1352 01ec 6C6F6E67 		.ascii	"long long int\000"
+ 1352 0204 6C6F6E67 		.ascii	"long long int\000"
  1352      206C6F6E 
  1352      6720696E 
  1352      7400
  1353              	.LASF13:
- 1354 01fa 63686172 		.ascii	"char\000"
+ 1354 0212 63686172 		.ascii	"char\000"
  1354      00
  1355              	.LASF33:
- 1356 01ff 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1356 0217 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  1356      4320342E 
  1356      392E3320 
  1356      32303135 
  1356      30333033 
- 1357 0232 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1357 024a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
  1357      20726576 
  1357      6973696F 
  1357      6E203232 
  1357      31323230 
- 1358 0265 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1358 027d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1358      66756E63 
  1358      74696F6E 
  1358      2D736563 
  1358      74696F6E 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccWoYgXO.s 			page 34
+
+
  1359              	.LASF2:
- 1360 028d 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccBth64Y.s 			page 34
-
-
+ 1360 02a5 73686F72 		.ascii	"short int\000"
  1360      7420696E 
  1360      7400
  1361              	.LASF29:
- 1362 0297 4465626F 		.ascii	"Debounce_Int_StartEx\000"
+ 1362 02af 4465626F 		.ascii	"Debounce_Int_StartEx\000"
  1362      756E6365 
  1362      5F496E74 
  1362      5F537461 
  1362      72744578 
  1363              	.LASF22:
- 1364 02ac 7072696F 		.ascii	"priorityOffset\000"
+ 1364 02c4 7072696F 		.ascii	"priorityOffset\000"
  1364      72697479 
  1364      4F666673 
  1364      657400
  1365              	.LASF25:
- 1366 02bb 4465626F 		.ascii	"Debounce_Int_GetVector\000"
+ 1366 02d3 4465626F 		.ascii	"Debounce_Int_GetVector\000"
  1366      756E6365 
  1366      5F496E74 
  1366      5F476574 
  1366      56656374 
  1367              	.LASF4:
- 1368 02d2 6C6F6E67 		.ascii	"long int\000"
+ 1368 02ea 6C6F6E67 		.ascii	"long int\000"
  1368      20696E74 
  1368      00
  1369              	.LASF24:
- 1370 02db 4465626F 		.ascii	"Debounce_Int_Enable\000"
+ 1370 02f3 4465626F 		.ascii	"Debounce_Int_Enable\000"
  1370      756E6365 
  1370      5F496E74 
  1370      5F456E61 
  1370      626C6500 
  1371              	.LASF23:
- 1372 02ef 4465626F 		.ascii	"Debounce_Int_Interrupt\000"
+ 1372 0307 4465626F 		.ascii	"Debounce_Int_Interrupt\000"
  1372      756E6365 
  1372      5F496E74 
  1372      5F496E74 
  1372      65727275 
  1373              	.LASF0:
- 1374 0306 7369676E 		.ascii	"signed char\000"
+ 1374 031e 7369676E 		.ascii	"signed char\000"
  1374      65642063 
  1374      68617200 
  1375              	.LASF3:
- 1376 0312 73686F72 		.ascii	"short unsigned int\000"
+ 1376 032a 73686F72 		.ascii	"short unsigned int\000"
  1376      7420756E 
  1376      7369676E 
  1376      65642069 
  1376      6E7400
  1377              	.LASF27:
- 1378 0325 4465626F 		.ascii	"Debounce_Int_Disable\000"
+ 1378 033d 4465626F 		.ascii	"Debounce_Int_Disable\000"
  1378      756E6365 
  1378      5F496E74 
  1378      5F446973 

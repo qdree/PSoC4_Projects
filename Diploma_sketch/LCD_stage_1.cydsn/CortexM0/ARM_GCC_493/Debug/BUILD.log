@@ -1,0 +1,9 @@
+--------------- Build Started: 04/16/2016 12:16:14 Project: LCD_stage_1, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM0\ARM_GCC_493\Debug\main.o
+.\main.c:13:21: fatal error: WinDows.h: No such file or directory
+ #include <WinDows.h>
+                     ^
+compilation terminated.
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 04/16/2016 12:16:15 ---------------
