@@ -2,7 +2,7 @@
 --	Conversion of pir_sensor.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Apr 25 22:56:34 2016
+--	Tue Apr 26 14:31:45 2016
 --
 
 USE cypress.cypress.all;

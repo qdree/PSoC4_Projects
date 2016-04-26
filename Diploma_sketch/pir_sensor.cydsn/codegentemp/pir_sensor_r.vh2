@@ -1,6 +1,6 @@
 -- Project:   pir_sensor
--- Generated: 04/25/2016 22:56:35
--- PSoC Creator  3.3 CP2
+-- Generated: 04/26/2016 14:31:46
+-- PSoC Creator  3.3 SP1
 
 ENTITY pir_sensor IS
     PORT(

@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.248ms
+Loading plugins phase: Elapsed time ==> 0s.200ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -d CY8C4245AXI-483 -s C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -d CY8C4245AXI-483 -s E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 0s.655ms
+Elaboration phase: Elapsed time ==> 0s.276ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.048ms
+HDL generation phase: Elapsed time ==> 0s.019ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -24,24 +24,24 @@ HDL generation phase: Elapsed time ==> 0s.048ms
 
 ======================================================================
 Compiling:  pir_sensor.v
-Program  :   C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 pir_sensor.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 pir_sensor.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  pir_sensor.v
-Program  :   C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 pir_sensor.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 pir_sensor.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  pir_sensor.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 -verilog pir_sensor.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 -verilog pir_sensor.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Apr 25 22:56:33 2016
+Tue Apr 26 14:31:45 2016
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 pir_sensor.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Apr 25 22:56:33 2016
+Tue Apr 26 14:31:45 2016
 
 
 vpp:  No errors.
@@ -59,15 +59,15 @@ vpp:  No errors.
 Library 'work' => directory 'lcpsoc3'
 General_symbol_table
 General_symbol_table
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Using control file 'pir_sensor.ctl'.
 
 vlogfe:  No errors.
@@ -76,23 +76,23 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  pir_sensor.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 -verilog pir_sensor.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 -verilog pir_sensor.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Apr 25 22:56:34 2016
+Tue Apr 26 14:31:45 2016
 
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.ctl'.
-Linking 'C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.ctl'.
+Linking 'E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.v'.
 
 tovif:  No errors.
 
@@ -100,24 +100,24 @@ tovif:  No errors.
 ======================================================================
 Compiling:  pir_sensor.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 -verilog pir_sensor.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 -verilog pir_sensor.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Apr 25 22:56:34 2016
+Tue Apr 26 14:31:45 2016
 
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.ctl'.
-Linking 'C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.v'.
-Linking 'C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.ctl'.
+Linking 'E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\codegentemp\pir_sensor.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
 
 ----------------------------------------------------------
 Detecting unused logic.
@@ -156,18 +156,18 @@ Circuit simplification results:
 
 topld:  No errors.
 
-CYPRESS_DIR    : C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp
-Warp Program   : C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 pir_sensor.v -verilog
+CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp
+Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -dcpsoc3 pir_sensor.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.402ms
+Warp synthesis phase: Elapsed time ==> 0s.242ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Monday, 25 April 2016 22:56:34
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -d CY8C4245AXI-483 pir_sensor.v -verilog
+cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Tuesday, 26 April 2016 14:31:45
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj -d CY8C4245AXI-483 pir_sensor.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.016ms
+Design parsing phase: Elapsed time ==> 0s.009ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -356,20 +356,20 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.016ms
-Tech mapping phase: Elapsed time ==> 0s.048ms
+Technology Mapping: Elapsed time ==> 0s.005ms
+Tech mapping phase: Elapsed time ==> 0s.025ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.2172761s
+Elapsed time ==> 0.1161221s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.474ms
+Analog Placement phase: Elapsed time ==> 0s.243ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0014431 secs
+Route success=True, Iterations=1 Elapsed=0.0007993 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.000ms
+Analog Routing phase: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -380,26 +380,26 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.036ms
+Analog Code Generation phase: Elapsed time ==> 0s.013ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.3 sec.
+I2076: Total run-time: 0.2 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
 <CYPRESSTAG name="PLD Packing Summary">
 No PLDs were packed.
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.000ms
+PLD Packing: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.016ms
+Partitioning: Elapsed time ==> 0s.007ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
 Annealing: Elapsed time ==> 0s.000ms
@@ -608,31 +608,31 @@ Port | Pin | Fixed |      Type |       Drive Mode |   Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.000ms
-Digital Placement phase: Elapsed time ==> 0s.639ms
+Digital Placement phase: Elapsed time ==> 0s.342ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.711ms
+Digital Routing phase: Elapsed time ==> 0s.385ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.305ms
+Bitstream and API generation phase: Elapsed time ==> 0s.128ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.048ms
+Bitstream verification phase: Elapsed time ==> 0s.022ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in pir_sensor_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.253ms
+Static timing analysis phase: Elapsed time ==> 0s.119ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.000ms
+Data reporting phase: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.305ms
+Design database save phase: Elapsed time ==> 0s.112ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 2s.855ms
+cydsfit: Elapsed time ==> 1s.413ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 2s.935ms
-API generation phase: Elapsed time ==> 1s.572ms
-Dependency generation phase: Elapsed time ==> 0s.016ms
-Cleanup phase: Elapsed time ==> 0s.000ms
+Fitter phase: Elapsed time ==> 1s.440ms
+API generation phase: Elapsed time ==> 0s.849ms
+Dependency generation phase: Elapsed time ==> 0s.005ms
+Cleanup phase: Elapsed time ==> 0s.001ms

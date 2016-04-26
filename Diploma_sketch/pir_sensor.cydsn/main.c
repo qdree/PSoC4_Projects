@@ -19,11 +19,11 @@ int main()
 
     for(;;)
     {
-        if(pir_Read() == 0)
+        if(pir_Read() == 1)
         {
             LED_Write(0);
         }
-        else if(pir_Read() == 1)
+        else if(pir_Read() == 0)
         {
             LED_Write(1);
         }

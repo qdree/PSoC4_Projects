@@ -1,6 +1,6 @@
 // ======================================================================
 // Password.v generated from TopDesign.cysch
-// 04/25/2016 at 23:14
+// 04/26/2016 at 14:49
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -85,7 +85,7 @@
 `define CYDEV_CHIP_FAMILY_USED 2
 `define CYDEV_CHIP_MEMBER_USED 10
 `define CYDEV_CHIP_REVISION_USED 17
-// CharLCD_v2_20(ConversionRoutines=true, CUSTOM0=0,E,8,8,8,E,0, CUSTOM1=0,A,A,4,4,4,0, CUSTOM2=0,E,A,E,8,8,0, CUSTOM3=0,E,A,C,A,A,0, CUSTOM4=0,E,8,C,8,E,0, CUSTOM5=0,E,8,E,2,E,0, CUSTOM6=0,E,8,E,2,E,0, CUSTOM7=0,4,4,4,0,4,0, CustomCharacterSet=0, TypeReplacementString=uint32, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=CharLCD_v2_20, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=LCD, CY_INSTANCE_SHORT_NAME=LCD, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=20, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 CP2, INSTANCE_NAME=LCD, )
+// CharLCD_v2_20(ConversionRoutines=true, CUSTOM0=0,E,8,8,8,E,0, CUSTOM1=0,A,A,4,4,4,0, CUSTOM2=0,E,A,E,8,8,0, CUSTOM3=0,E,A,C,A,A,0, CUSTOM4=0,E,8,C,8,E,0, CUSTOM5=0,E,8,E,2,E,0, CUSTOM6=0,E,8,E,2,E,0, CUSTOM7=0,4,4,4,0,4,0, CustomCharacterSet=0, TypeReplacementString=uint32, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=CharLCD_v2_20, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=LCD, CY_INSTANCE_SHORT_NAME=LCD, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=20, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 SP1, INSTANCE_NAME=LCD, )
 module CharLCD_v2_20_0 ;
 
 
@@ -175,14 +175,14 @@ endmodule
 `endif
 
 `ifdef WARP
-`define CY_BLK_DIR "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70"
-`include "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v"
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v"
 `else
-`define CY_BLK_DIR "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70"
-`include "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v"
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v"
 `endif
 
-// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=false, CaptureMode=0, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG24, CySetRegReplacementString=CY_SET_REG24, DeviceFamily=PSoC4, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=true, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=1, NumberOfCaptures=1, param45=1, Period=119999, RegDefReplacementString=reg32, RegSizeReplacementString=uint32, Resolution=24, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=17, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=false, UDB24=true, UDB32=false, UDB8=false, UDBControlReg=true, UsesHWEnable=0, VerilogSectionReplacementString=sT24, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Timer_v2_70, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Debounce_Timer, CY_INSTANCE_SHORT_NAME=Debounce_Timer, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 CP2, INSTANCE_NAME=Debounce_Timer, )
+// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=false, CaptureMode=0, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG24, CySetRegReplacementString=CY_SET_REG24, DeviceFamily=PSoC4, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=true, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=1, NumberOfCaptures=1, param45=1, Period=119999, RegDefReplacementString=reg32, RegSizeReplacementString=uint32, Resolution=24, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=17, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=false, UDB24=true, UDB32=false, UDB8=false, UDBControlReg=true, UsesHWEnable=0, VerilogSectionReplacementString=sT24, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Timer_v2_70, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Debounce_Timer, CY_INSTANCE_SHORT_NAME=Debounce_Timer, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 SP1, INSTANCE_NAME=Debounce_Timer, )
 module Timer_v2_70_1 (
     clock,
     reset,
@@ -238,11 +238,11 @@ endmodule
 `endif
 
 `ifdef WARP
-`define CY_BLK_DIR "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal"
-`include "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v"
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v"
 `else
-`define CY_BLK_DIR "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal"
-`include "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v"
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v"
 `endif
 
 // top
@@ -454,156 +454,6 @@ module top ;
 
 	assign tmpOE__KBD_COLPins_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{3'b111} : {3'b111};
 
-	wire [0:0] tmpOE__PIR_1_net;
-	wire [0:0] tmpFB_0__PIR_1_net;
-	wire [0:0] tmpIO_0__PIR_1_net;
-	wire [0:0] tmpINTERRUPT_0__PIR_1_net;
-	electrical [0:0] tmpSIOVREF__PIR_1_net;
-
-	cy_psoc3_pins_v1_10
-		#(.id("8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba"),
-		  .drive_mode(3'b010),
-		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b1),
-		  .input_clk_en(0),
-		  .input_sync(1'b0),
-		  .input_sync_mode(1'b0),
-		  .intr_mode(2'b00),
-		  .invert_in_clock(0),
-		  .invert_in_clock_en(0),
-		  .invert_in_reset(0),
-		  .invert_out_clock(0),
-		  .invert_out_clock_en(0),
-		  .invert_out_reset(0),
-		  .io_voltage(""),
-		  .layout_mode("CONTIGUOUS"),
-		  .oe_conn(1'b0),
-		  .oe_reset(0),
-		  .oe_sync(1'b0),
-		  .output_clk_en(0),
-		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
-		  .output_mode(1'b0),
-		  .output_reset(0),
-		  .output_sync(1'b0),
-		  .pa_in_clock(-1),
-		  .pa_in_clock_en(-1),
-		  .pa_in_reset(-1),
-		  .pa_out_clock(-1),
-		  .pa_out_clock_en(-1),
-		  .pa_out_reset(-1),
-		  .pin_aliases(""),
-		  .pin_mode("I"),
-		  .por_state(4),
-		  .sio_group_cnt(0),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(""),
-		  .sio_info(2'b00),
-		  .sio_obuf(""),
-		  .sio_refsel(""),
-		  .sio_vtrip(""),
-		  .sio_hifreq(""),
-		  .sio_vohsel(""),
-		  .slew_rate(1'b0),
-		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b00),
-		  .width(1),
-		  .ovt_hyst_trim(1'b0),
-		  .ovt_needed(1'b0),
-		  .ovt_slew_control(2'b00),
-		  .input_buffer_sel(2'b00))
-		PIR_1
-		 (.oe(tmpOE__PIR_1_net),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__PIR_1_net[0:0]}),
-		  .io({tmpIO_0__PIR_1_net[0:0]}),
-		  .siovref(tmpSIOVREF__PIR_1_net),
-		  .interrupt({tmpINTERRUPT_0__PIR_1_net[0:0]}),
-		  .in_clock({1'b0}),
-		  .in_clock_en({1'b1}),
-		  .in_reset({1'b0}),
-		  .out_clock({1'b0}),
-		  .out_clock_en({1'b1}),
-		  .out_reset({1'b0}));
-
-	assign tmpOE__PIR_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-	wire [0:0] tmpOE__PIR_2_net;
-	wire [0:0] tmpFB_0__PIR_2_net;
-	wire [0:0] tmpIO_0__PIR_2_net;
-	wire [0:0] tmpINTERRUPT_0__PIR_2_net;
-	electrical [0:0] tmpSIOVREF__PIR_2_net;
-
-	cy_psoc3_pins_v1_10
-		#(.id("dfa3810e-7898-4e26-be75-9e75ae97eaf0"),
-		  .drive_mode(3'b010),
-		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b1),
-		  .input_clk_en(0),
-		  .input_sync(1'b0),
-		  .input_sync_mode(1'b0),
-		  .intr_mode(2'b00),
-		  .invert_in_clock(0),
-		  .invert_in_clock_en(0),
-		  .invert_in_reset(0),
-		  .invert_out_clock(0),
-		  .invert_out_clock_en(0),
-		  .invert_out_reset(0),
-		  .io_voltage(""),
-		  .layout_mode("CONTIGUOUS"),
-		  .oe_conn(1'b0),
-		  .oe_reset(0),
-		  .oe_sync(1'b0),
-		  .output_clk_en(0),
-		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
-		  .output_mode(1'b0),
-		  .output_reset(0),
-		  .output_sync(1'b0),
-		  .pa_in_clock(-1),
-		  .pa_in_clock_en(-1),
-		  .pa_in_reset(-1),
-		  .pa_out_clock(-1),
-		  .pa_out_clock_en(-1),
-		  .pa_out_reset(-1),
-		  .pin_aliases(""),
-		  .pin_mode("I"),
-		  .por_state(4),
-		  .sio_group_cnt(0),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(""),
-		  .sio_info(2'b00),
-		  .sio_obuf(""),
-		  .sio_refsel(""),
-		  .sio_vtrip(""),
-		  .sio_hifreq(""),
-		  .sio_vohsel(""),
-		  .slew_rate(1'b0),
-		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b00),
-		  .width(1),
-		  .ovt_hyst_trim(1'b0),
-		  .ovt_needed(1'b0),
-		  .ovt_slew_control(2'b00),
-		  .input_buffer_sel(2'b00))
-		PIR_2
-		 (.oe(tmpOE__PIR_2_net),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__PIR_2_net[0:0]}),
-		  .io({tmpIO_0__PIR_2_net[0:0]}),
-		  .siovref(tmpSIOVREF__PIR_2_net),
-		  .interrupt({tmpINTERRUPT_0__PIR_2_net[0:0]}),
-		  .in_clock({1'b0}),
-		  .in_clock_en({1'b1}),
-		  .in_reset({1'b0}),
-		  .out_clock({1'b0}),
-		  .out_clock_en({1'b1}),
-		  .out_reset({1'b0}));
-
-	assign tmpOE__PIR_2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
 	wire [0:0] tmpOE__noise_buzzer_net;
 	wire [0:0] tmpFB_0__noise_buzzer_net;
 	wire [0:0] tmpIO_0__noise_buzzer_net;
@@ -678,81 +528,6 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__noise_buzzer_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-	wire [0:0] tmpOE__PIR_3_net;
-	wire [0:0] tmpFB_0__PIR_3_net;
-	wire [0:0] tmpIO_0__PIR_3_net;
-	wire [0:0] tmpINTERRUPT_0__PIR_3_net;
-	electrical [0:0] tmpSIOVREF__PIR_3_net;
-
-	cy_psoc3_pins_v1_10
-		#(.id("0b84e3cd-d664-4a08-985f-cf9894617ec7"),
-		  .drive_mode(3'b010),
-		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b1),
-		  .input_clk_en(0),
-		  .input_sync(1'b0),
-		  .input_sync_mode(1'b0),
-		  .intr_mode(2'b00),
-		  .invert_in_clock(0),
-		  .invert_in_clock_en(0),
-		  .invert_in_reset(0),
-		  .invert_out_clock(0),
-		  .invert_out_clock_en(0),
-		  .invert_out_reset(0),
-		  .io_voltage(""),
-		  .layout_mode("CONTIGUOUS"),
-		  .oe_conn(1'b0),
-		  .oe_reset(0),
-		  .oe_sync(1'b0),
-		  .output_clk_en(0),
-		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
-		  .output_mode(1'b0),
-		  .output_reset(0),
-		  .output_sync(1'b0),
-		  .pa_in_clock(-1),
-		  .pa_in_clock_en(-1),
-		  .pa_in_reset(-1),
-		  .pa_out_clock(-1),
-		  .pa_out_clock_en(-1),
-		  .pa_out_reset(-1),
-		  .pin_aliases(""),
-		  .pin_mode("I"),
-		  .por_state(4),
-		  .sio_group_cnt(0),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(""),
-		  .sio_info(2'b00),
-		  .sio_obuf(""),
-		  .sio_refsel(""),
-		  .sio_vtrip(""),
-		  .sio_hifreq(""),
-		  .sio_vohsel(""),
-		  .slew_rate(1'b0),
-		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b00),
-		  .width(1),
-		  .ovt_hyst_trim(1'b0),
-		  .ovt_needed(1'b0),
-		  .ovt_slew_control(2'b00),
-		  .input_buffer_sel(2'b00))
-		PIR_3
-		 (.oe(tmpOE__PIR_3_net),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__PIR_3_net[0:0]}),
-		  .io({tmpIO_0__PIR_3_net[0:0]}),
-		  .siovref(tmpSIOVREF__PIR_3_net),
-		  .interrupt({tmpINTERRUPT_0__PIR_3_net[0:0]}),
-		  .in_clock({1'b0}),
-		  .in_clock_en({1'b1}),
-		  .in_reset({1'b0}),
-		  .out_clock({1'b0}),
-		  .out_clock_en({1'b1}),
-		  .out_reset({1'b0}));
-
-	assign tmpOE__PIR_3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 	wire [0:0] tmpOE__PIR_4_net;
 	wire [0:0] tmpFB_0__PIR_4_net;

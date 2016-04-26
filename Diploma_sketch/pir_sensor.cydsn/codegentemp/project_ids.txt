@@ -1,8 +1,8 @@
-C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\Password.cydsn\Password.cyprj|ccc5c60b-5f81-428d-97b0-7d904cc5ba60
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d8558d6c-7519-4487-b715-b69814ad7b85
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|37f0c96e-68fb-4c7c-9f49-9c62aeadc067
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|dec3e8f5-e442-4146-a3d0-f106a055358a
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2f8d8e8f-0197-447b-88c2-8598eb31037d
-C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\LCD_stage_1.cydsn\LCD_stage_1.cyprj|41a8fe7a-ae16-4140-8437-f2430111830a
-C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\rfid.cydsn\rfid.cyprj|644449b3-5bd5-464e-96e7-e3621afce8c0
-C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj|db1f4aba-24db-48e8-8610-65af72505013
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj|ffe6a5f1-7bb0-4691-86cb-c79746467137
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e9217359-e4ea-4354-9c8c-e2655f0cabdd
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ed6b60a5-c7f7-4e69-a474-afba7a1d55b1
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b871f614-b3ef-49f1-aa78-679e556a458b
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|dc8410ba-1e5f-40b0-87ef-78e075794c09
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\rfid.cyprj|78780307-25bb-4a20-879a-ebab768dd06a
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\LCD_stage_1.cydsn\LCD_stage_1.cyprj|53dcdff9-df15-4d7e-86fd-ebd122761a3d
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\Password.cyprj|4e9d3572-4019-40a3-a24d-f0ec33ce0430

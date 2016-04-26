@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cyfitter_cfg.c
 * 
-* PSoC Creator  3.3 CP2
+* PSoC Creator  3.3 SP1
 *
 * Description:
 * This file contains device initialization code.
@@ -439,8 +439,8 @@ void cyfitter_cfg(void)
 
 	/* Perform second pass device configuration. These items must be configured in specific order after the regular configuration is done. */
 	/* IOPINS0_0 Starting address: CYDEV_PRT0_BASE */
-	CY_SET_XTND_REG32((void CYFAR *)(CYDEV_PRT0_BASE), 0x000000F0u);
-	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT0_PC), 0x00492186u);
+	CY_SET_XTND_REG32((void CYFAR *)(CYDEV_PRT0_BASE), 0x00000010u);
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT0_PC), 0x00002186u);
 
 	/* IOPINS0_1 Starting address: CYDEV_PRT1_BASE */
 	CY_SET_XTND_REG32((void CYFAR *)(CYDEV_PRT1_BASE), 0x0000000Eu);

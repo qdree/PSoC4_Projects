@@ -41,7 +41,7 @@ int main()
     
     for(;;)
     {
-        //alarm();
+        alarm();
         Key = Get_KBD_Char();		//Value recieved from Matrix
         switch(Key)                 //Recognition of pressed key
         {              
@@ -102,7 +102,7 @@ void discard(char a[])
     memset(a,'\0',strlen(a));
     i = 0;
     LCD_ClearDisplay();
-    LCD_Position(0,0);
+    LCD_Position(0,4);
 }
 
 void accept(char a[],char b[])
@@ -115,6 +115,8 @@ void accept(char a[],char b[])
         if(security_active)
         {
             LCD_PrintString("Alarm disabled");
+            LED_GREEN_Write(0);
+            LED_RED_Write(1);
             security_active = false;
         }
         else if(!security_active)
@@ -132,25 +134,32 @@ void accept(char a[],char b[])
     }
     memset(a,'\0',strlen(a));
     i = 0;
-    LCD_Position(0,0);
+    LCD_Position(0,4);
 }
 
 void alarm()
 {
     if(security_active && (PIR_4_Read()==1))
     {
-        //LCD_Position(1,0);
+        LCD_ClearDisplay();
+        LCD_Position(1,0);
         LCD_PrintString("Motion cought");
         LED_GREEN_Write(1);
         LED_RED_Write(0);
     }
     else if(security_active && (PIR_4_Read()==0))
     {
+        LCD_ClearDisplay();
         LCD_Position(1,14);
-        //memset(motion, '\0', strlen(motion));
         LCD_PrintString("OK");
         LED_GREEN_Write(0);
         LED_RED_Write(1);
     }
+    else 
+    {
+        LED_GREEN_Write(0);
+        LED_RED_Write(1);
+    }
+    
 }
 /* [] END OF FILE */

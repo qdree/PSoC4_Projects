@@ -6,7 +6,7 @@
 
 #Build Date:         Oct  1 2015 13:46:59
 
-#File Generated:     Apr 25 2016 23:14:45
+#File Generated:     Apr 26 2016 14:49:49
 
 #Purpose:            
 
@@ -14,7 +14,7 @@
 
 #***************************************************************************
 
-Executing : C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\bin/sjplacer.exe --proj-name Password --netlist-vh2 Password_p.vh2 --arch-file C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p4_udb2x2a.ark --rrg-file C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc4/psoc4a/route_arch-rrg.cydata --irq-file C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc4/psoc4a/irqconn.cydata --dsi-conn-file C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc4/psoc4a/dsiconn.cydata --pins-file pins_44-TQFP.xml --lib-file Password_p.lib --sdc-file Password.sdc --io-pcf Password.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\bin/sjplacer.exe --proj-name Password --netlist-vh2 Password_p.vh2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p4_udb2x2a.ark --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc4/psoc4a/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc4/psoc4a/irqconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/psoc4/psoc4a/dsiconn.cydata --pins-file pins_44-TQFP.xml --lib-file Password_p.lib --sdc-file Password.sdc --io-pcf Password.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
@@ -23,7 +23,7 @@ Build Date : Oct  1 2015	13:44:59
 D2004: Option and Settings Summary
 =============================================================
 Netlist vh2 file          - Password_p.vh2
-Architecture file         - C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p4_udb2x2a.ark
+Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p4_udb2x2a.ark
 Package                   - 
 Defparam file             - 
 SDC file                  - Password.sdc
@@ -34,7 +34,7 @@ IO Placement file         - Password.pci
 D2050: Starting reading inputs for placer
 =============================================================
 D2065: Reading netlist file : "Password_p.vh2"
-D2065: Reading arch file : "C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p4_udb2x2a.ark"
+D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\dev/arch/p4_udb2x2a.ark"
 D2051: Reading of inputs for placer completed successfully
 
 D2053: Starting placement of the design
@@ -55,7 +55,7 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	2/32
     UDBS                        :	3/4
-    IOs                         :	21/36
+    IOs                         :	18/36
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -115,11 +115,11 @@ Final Design Statistics
     Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	21
+    Number of IOs       	:	18
 
 Device Utilization Summary
     Macrocells                  :	2/32
-    IOs                         :	21/36
+    IOs                         :	18/36
 
 
 
@@ -189,7 +189,7 @@ Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.4 (sec)
+D2088: Phase 7, elapsed time : 0.2 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	1
@@ -199,11 +199,11 @@ Final Design Statistics
     Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	21
+    Number of IOs       	:	18
 
 Device Utilization Summary
     Macrocells                  :	2/32
-    IOs                         :	21/36
+    IOs                         :	18/36
 
 
 
@@ -236,5 +236,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.7 sec.
+I2076: Total run-time: 0.4 sec.
 
