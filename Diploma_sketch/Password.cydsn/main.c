@@ -24,13 +24,14 @@ uint8 i = 0;
 uint8 Key;
 bool password = false;
 bool security_active = true;
+bool alarm = false;
 
 
 void input_pin(const char el);
 void compare(char a[], char b[]);
 void accept(char a[], char b[]);
 void discard(char a[]);
-void alarm();
+void security();
 void pass();
 
 int main()
@@ -46,9 +47,10 @@ int main()
     
     for(;;)
     {
-        //alarm();
+        //security();
         pass();
-        
+//        if(alarm) LCD_print("Motion cought");
+//        else LCD_print("OK");
     }
 }
 
@@ -149,26 +151,27 @@ void pass()
 }
 
 
-void alarm()
+void security()
 {
     if(security_active && (PIR_4_Read()==1))
     {
         clear();
-        setCursor(0,1);
-        LCD_print("Motion cought");
+        setCursor(1,0);
+        alarm = true;
         LED_GREEN_Write(1);
         LED_RED_Write(0);
     }
     else if(security_active && (PIR_4_Read()==0))
     {
         clear();
-        setCursor(14,1);
-        LCD_print("OK");
+        setCursor(5,0);
+        alarm = false;
         LED_GREEN_Write(0);
         LED_RED_Write(1);
     }
     else 
-    {
+    {   
+        alarm = false;
         LED_GREEN_Write(0);
         LED_RED_Write(1);
     }

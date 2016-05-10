@@ -6,7 +6,7 @@
 
 #Build Date:         Oct  1 2015 13:46:59
 
-#File Generated:     May 10 2016 22:20:19
+#File Generated:     May 10 2016 23:11:37
 
 #Purpose:            
 
@@ -109,96 +109,6 @@ Clock: I2C_SCBCLK(FFB)      | Frequency: N/A       | Target:   1.1 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.0 (sec)
-
-Final Design Statistics
-    Number of Combinational MCs 	:	1
-    Number of Sequential MCs    	:	1
-    Number of DPs               	:	3
-    Number of Controls          	:	1
-    Number of Status            	:	1
-    Number of SyncCells         	:	0
-    Number of count7cells       	:	0
-    Number of IOs       	:	12
-
-Device Utilization Summary
-    Macrocells                  :	2/32
-    IOs                         :	12/36
-
-
-
-######################################################################
-Placement Timing Summary
-
-The timing summary is based on estimated routing delays after
-placement. For final timing report, please carry out the timing
-analysis after routing.
-======================================================================
-
-
-######################################################################
-                     Clock Summary 
-======================================================================
-Number of clocks: 8
-Clock: CyHFCLK              | Frequency:  32.9 MHz | Target:  26.3 MHz
-Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
-Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
-Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
-Clock: I2C_SCBCLK           | Frequency: N/A       | Target:   1.1 MHz
-Clock: I2C_SCBCLK(FFB)      | Frequency: N/A       | Target:   1.1 MHz
-
-======================================================================
-                     End of Clock Summary
-######################################################################
-
-Phase 6
-
-######################################################################
-Placement Timing Summary
-
-The timing summary is based on estimated routing delays after
-placement. For final timing report, please carry out the timing
-analysis after routing.
-======================================================================
-
-######################################################################
-                     Clock Summary 
-======================================================================
-Number of clocks: 8
-Clock: CyHFCLK              | Frequency:  32.9 MHz | Target:  26.3 MHz
-Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
-Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
-Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
-Clock: I2C_SCBCLK           | Frequency: N/A       | Target:   1.1 MHz
-Clock: I2C_SCBCLK(FFB)      | Frequency: N/A       | Target:   1.1 MHz
-
-======================================================================
-                     End of Clock Summary
-######################################################################
-
-D2088: Phase 6, elapsed time : 0.0 (sec)
-
-Phase 7
-######################################################################
-                     Clock Summary 
-======================================================================
-Number of clocks: 8
-Clock: CyHFCLK              | Frequency:  32.9 MHz | Target:  28.6 MHz
-Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
-Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
-Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
-Clock: I2C_SCBCLK           | Frequency: N/A       | Target:   1.1 MHz
-Clock: I2C_SCBCLK(FFB)      | Frequency: N/A       | Target:   1.1 MHz
-
-======================================================================
-                     End of Clock Summary
-######################################################################
 D2088: Phase 7, elapsed time : 0.2 (sec)
 
 Final Design Statistics
@@ -230,7 +140,7 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 8
-Clock: CyHFCLK              | Frequency:  32.9 MHz | Target:  31.3 MHz
+Clock: CyHFCLK              | Frequency:  32.9 MHz | Target:  26.3 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
