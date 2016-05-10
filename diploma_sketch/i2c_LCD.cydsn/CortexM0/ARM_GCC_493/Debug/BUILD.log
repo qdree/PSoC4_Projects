@@ -1,0 +1,11 @@
+--------------- Build Started: 04/29/2016 16:10:48 Project: i2c_LCD, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM0\ARM_GCC_493\Debug\main.o
+In file included from Generated_Source\PSoC4/project.h:21:0,
+                 from .\main.c:12:
+Generated_Source\PSoC4/LCD.h:24:19: fatal error: I2C_1.h: No such file or directory
+ #include "I2C_1.h"
+                   ^
+compilation terminated.
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 04/29/2016 16:10:48 ---------------
