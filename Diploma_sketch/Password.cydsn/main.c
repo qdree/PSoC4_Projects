@@ -11,13 +11,15 @@
 */
 #include <project.h>
 #include <Keyboard.h>
+#include "LiquidCrystal_I2C.h"
 #include <stdbool.h>
 #include <string.h>
 
 
+
 char pin[5];
 char* check = "1111";
-char* motion = "Motion cought";
+uint32_t Addr = 0x27;
 uint8 i = 0;
 uint8 Key;
 bool password = false;
@@ -29,20 +31,77 @@ void compare(char a[], char b[]);
 void accept(char a[], char b[]);
 void discard(char a[]);
 void alarm();
+void pass();
 
 int main()
 {
     Keyboard_Init();
-    LCD_Start();
+    I2C_Start();
+    LiquidCrystal_I2C_init(Addr,16,2,0);
+    begin();
     
     CyGlobalIntEnable; /* Enable global interrupts. */
-    LCD_Position(1,0);
+    setCursor(0,1);
     
     
     for(;;)
     {
-        alarm();
-        Key = Get_KBD_Char();		//Value recieved from Matrix
+        //alarm();
+        pass();
+        
+    }
+}
+
+
+void input_pin(const char el)
+{    
+    write(el);
+    pin[i++] = el;
+}
+
+void discard(char a[])
+{
+    memset(a,'\0',strlen(a));
+    i = 0;
+    clear();
+    setCursor(0,1);
+}
+
+void accept(char a[],char b[])
+{
+    
+    if(strcmp(a, b) == 0)
+    {
+        clear();
+        setCursor(1,0);
+        if(security_active)
+        {
+            LCD_print("Alarm disabled");
+            LED_GREEN_Write(0);
+            LED_RED_Write(1);
+            security_active = false;
+        }
+        else if(!security_active)
+        {
+            LCD_print("Alarm enabled");
+            security_active = true;
+        }
+        
+    }
+    else 
+    {
+        clear();
+        setCursor(1,0);
+        LCD_print("Wrong password");
+    }
+    memset(a,'\0',strlen(a));
+    i = 0;
+    setCursor(0,1);
+}
+
+void pass()
+{
+    Key = Get_KBD_Char();		//Value recieved from Matrix
         switch(Key)                 //Recognition of pressed key
         {              
             case '*':
@@ -84,74 +143,27 @@ int main()
 
             default:
                 memset(pin,'\0', strlen(pin));
-                LCD_PutChar(' ');
+                write(' ');
                 break;
         }
-    }
 }
 
-
-void input_pin(const char el)
-{    
-    LCD_PutChar('*');
-    pin[i++] = el;
-}
-
-void discard(char a[])
-{
-    memset(a,'\0',strlen(a));
-    i = 0;
-    LCD_ClearDisplay();
-    LCD_Position(0,4);
-}
-
-void accept(char a[],char b[])
-{
-    
-    if(strcmp(a, b) == 0)
-    {
-        LCD_ClearDisplay();
-        LCD_Position(0,1);
-        if(security_active)
-        {
-            LCD_PrintString("Alarm disabled");
-            LED_GREEN_Write(0);
-            LED_RED_Write(1);
-            security_active = false;
-        }
-        else if(!security_active)
-        {
-            LCD_PrintString("Alarm enabled");
-            security_active = true;
-        }
-        
-    }
-    else 
-    {
-        LCD_ClearDisplay();
-        LCD_Position(0,1);
-        LCD_PrintString("Wrong password");
-    }
-    memset(a,'\0',strlen(a));
-    i = 0;
-    LCD_Position(0,4);
-}
 
 void alarm()
 {
     if(security_active && (PIR_4_Read()==1))
     {
-        LCD_ClearDisplay();
-        LCD_Position(1,0);
-        LCD_PrintString("Motion cought");
+        clear();
+        setCursor(0,1);
+        LCD_print("Motion cought");
         LED_GREEN_Write(1);
         LED_RED_Write(0);
     }
     else if(security_active && (PIR_4_Read()==0))
     {
-        LCD_ClearDisplay();
-        LCD_Position(1,14);
-        LCD_PrintString("OK");
+        clear();
+        setCursor(14,1);
+        LCD_print("OK");
         LED_GREEN_Write(0);
         LED_RED_Write(1);
     }
@@ -162,4 +174,6 @@ void alarm()
     }
     
 }
+
+
 /* [] END OF FILE */

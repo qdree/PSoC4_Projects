@@ -1,8 +1,11 @@
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj|ffe6a5f1-7bb0-4691-86cb-c79746467137
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e9217359-e4ea-4354-9c8c-e2655f0cabdd
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ed6b60a5-c7f7-4e69-a474-afba7a1d55b1
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b871f614-b3ef-49f1-aa78-679e556a458b
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|dc8410ba-1e5f-40b0-87ef-78e075794c09
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\rfid.cyprj|78780307-25bb-4a20-879a-ebab768dd06a
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\LCD_stage_1.cydsn\LCD_stage_1.cyprj|53dcdff9-df15-4d7e-86fd-ebd122761a3d
-E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\Password.cyprj|4e9d3572-4019-40a3-a24d-f0ec33ce0430
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj|f586b1f9-deb3-49fe-b0c5-353419bd3227
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|23e09a3d-fc1a-4155-83e9-6a9120e23dde
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9d7145a4-6e34-445e-a9da-c867c593dc26
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|42aebb9e-9945-43f7-b4af-8fd685dc3870
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|660b019b-309e-41a9-a271-5a09151ae3db
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\rfid.cyprj|11233b7e-9edb-4100-97ec-40f82a515447
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\LCD_stage_1.cydsn\LCD_stage_1.cyprj|285e43a7-417f-4944-b0b5-f0bba7abccc8
+E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\Password.cyprj|92d94782-ccf2-4829-b2cd-670ed34cb5b7
+E:\744\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn\LCD_I2C_PSoC4P.cyprj|9916e5c3-addf-451d-8df3-b44b0332e592
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|bdec26c4-d433-4fa9-84fa-eb5f6ec7677b
+E:\744\Education\PSoC4 main workspace\I2C_LCD_Example_PSoC401\I2C_LCD_Example_PSoC401.cydsn\I2C_LCD_Example_PSoC401.cyprj|655eb9db-3ac2-44ea-b1cb-63a86faa5309

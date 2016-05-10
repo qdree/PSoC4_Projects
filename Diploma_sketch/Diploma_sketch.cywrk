@@ -11,6 +11,8 @@
 <v>.\rfid.cydsn\rfid.cyprj</v>
 <v>.\LCD_stage_1.cydsn\LCD_stage_1.cyprj</v>
 <v>.\Password.cydsn\Password.cyprj</v>
+<v>..\..\..\PSoC4 main workspace\I2C_LCD_Example_PSoC401\I2C_LCD_Example_PSoC401.cydsn\I2C_LCD_Example_PSoC401.cyprj</v>
+<v>..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn\LCD_I2C_PSoC4P.cyprj</v>
 </projects>
 <workspace_id v="6b3ec965-92c4-417f-8ae0-5768d3278f75" />
 <WriteAppVersionLastSavedWith v="3.3.0.7343" />
