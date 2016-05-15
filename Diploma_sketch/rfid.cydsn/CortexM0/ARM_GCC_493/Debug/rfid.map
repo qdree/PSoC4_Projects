@@ -2,20 +2,26 @@ Archive member included because of file (symbol)
 
 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
                               .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o (cyfitter_cfg)
+.\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (UART_Start)
+.\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (UART_SpiUartWriteTxData)
+.\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+                              .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o) (UART_UartInit)
 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
                               .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o) (CyIntEnable)
 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
                               .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o) (CySysWdtIsr)
-.\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
-                              .\CortexM0\ARM_GCC_493\Debug\main.o (i2c_Start)
-.\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
-                              .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o) (i2c_I2CInit)
-.\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-                              .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o) (i2c_slStatus)
+.\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (LED_GREEN_Write)
+.\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (LED_RED_Write)
+.\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (Timer_Start)
+.\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (isr_1_StartEx)
 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
                               .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o) (CyDelayCycles)
-.\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
-                              .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o) (i2c_I2C_ISR)
 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
                               .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o) (__aeabi_uidiv)
 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
@@ -30,22 +36,18 @@ c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.
                               c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_init_array)
 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
                               c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
+c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (strcmp)
+c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (strlen)
 
 Allocating common symbols
 Common symbol       size              file
 
-i2c_slOverFlowCount
-                    0x1               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_slWrBufIndex    0x4               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_state           0x1               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
-i2c_slRdBufSize     0x4               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_slStatus        0x1               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_slRdBufPtr      0x4               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_slRdBufIndexTmp
-                    0x4               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_slWrBufSize     0x4               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_slWrBufPtr      0x4               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-i2c_slRdBufIndex    0x4               .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
+arr                 0xe               .\CortexM0\ARM_GCC_493\Debug\main.o
+character           0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+buffer              0x1e              .\CortexM0\ARM_GCC_493\Debug\main.o
+ch                  0x4               .\CortexM0\ARM_GCC_493\Debug\main.o
 
 Discarded input sections
 
@@ -59,8 +61,8 @@ Discarded input sections
  .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.print_key
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\main.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
@@ -72,6 +74,46 @@ Discarded input sections
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .text.UART_ScbModeStop
+                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .text.UART_Stop
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .text.UART_SetRxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .text.UART_SetTxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .text.UART_I2CSlaveNackGeneration
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .text.UART_SpiUartClearRxBuffer
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .text.UART_SpiUartPutArray
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .text.UART_SpiUartGetTxBufferSize
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .text.UART_SpiUartClearTxBuffer
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .text.UART_SpiUartDisableIntRx
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .text.UART_SpiUartDisableIntTx
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .text.UART_UartStop
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .text.UART_UartSetRxAddress
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .text.UART_UartSetRxAddressMask
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .text.UART_UartGetByte
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .text.UART_UartPutCRLF
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .bss           0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .text.CySysClkImoStart
@@ -98,6 +140,8 @@ Discarded input sections
                 0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .text.CyIntGetState
                 0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .text.CyIntDisable
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .text.CyIntSetPending
                 0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .text.CyIntClearPending
@@ -108,6 +152,8 @@ Discarded input sections
                 0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .text.CyIntGetVector
                 0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .text.CyIntSetPriority
+                0x00000000       0x4c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .text.CyIntGetPriority
                 0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .text.CySoftwareReset
@@ -205,53 +251,67 @@ Discarded input sections
  .text.CySysWatchdogFeed
                 0x00000000       0x60 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
  .rodata        0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .text.i2c_ScbModeStop
-                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .text.i2c_Stop
-                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .text.i2c_SetRxFifoLevel
-                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .text.i2c_SetTxFifoLevel
-                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .text.i2c_SetCustomInterruptHandler
-                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .text.i2c_I2CStop
-                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveStatus
-                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveClearReadStatus
-                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveClearWriteStatus
-                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveSetAddress
-                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveSetAddressMask
-                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveInitReadBuf
-                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveInitWriteBuf
-                0x00000000       0x34 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveGetReadBufSize
-                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveGetWriteBufSize
-                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveClearReadBuf
-                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .text.i2c_I2CSlaveClearWriteBuf
-                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .text.LED_GREEN_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .text.LED_GREEN_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .text.LED_GREEN_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .text.LED_GREEN_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .text.LED_GREEN_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .text.LED_RED_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .text.LED_RED_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .text.LED_RED_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .text.LED_RED_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .text.LED_RED_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .text.Timer_Stop
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .text.Timer_SoftwareCapture
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .text.Timer_ReadControlRegister
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .text.Timer_WriteControlRegister
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .text.Timer_ReadPeriod
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .text.Timer_ReadCounter
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_Interrupt
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_GetVector
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_GetPriority
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_GetState
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_Start
+                0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_Stop
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_SetPending
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .text.isr_1_ClearPending
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
  .text          0x00000000      0x120 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
@@ -283,6 +343,11 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
@@ -333,7 +398,7 @@ END GROUP
                 0x00000000                CY_APPL_LOADABLE = 0x0
                 0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
                 0x00000000                CY_APP_FOR_STACK_AND_COPIER = 0x0
-                0x20000148                PROVIDE (__cy_heap_start, _end)
+                0x20000168                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20001000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x1000))
                 0x20000c00                PROVIDE (__cy_heap_end, (__cy_stack - 0x400))
@@ -346,7 +411,7 @@ END GROUP
                 0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
                 0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
 
-.text           0x00000000      0xbac
+.text           0x00000000      0xa0e
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -360,86 +425,152 @@ END GROUP
                 0x00000010                Reset
                 0x00000001                ASSERT ((. != __cy_reset), No reset code)
  *(.psocinit)
- .psocinit      0x00000018      0x128 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .psocinit      0x00000018      0x168 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
                 0x00000090                cyfitter_cfg
-                0x00000140                . = MAX (., 0x100)
+                0x00000180                . = MAX (., 0x100)
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x00000140       0x60 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .text.main     0x000001a0        0xc .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x000001a0                main
+ .text          0x00000180       0x60 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .text.MY_ISR   0x000001e0       0x3c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000001e0                MY_ISR
+ .text.check_card
+                0x0000021c       0x9c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x0000021c                check_card
+ .text.main     0x000002b8       0x1c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000002b8                main
  .text.IntDefaultHandler
-                0x000001ac        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x000001ac                IntDefaultHandler
- .text.Start_c  0x000001b0       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x000001b0                Start_c
+                0x000002d4        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x000002d4                IntDefaultHandler
+ .text.Start_c  0x000002d8       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x000002d8                Start_c
  .text.initialize_psoc
-                0x000001f8       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x000001f8                initialize_psoc
+                0x00000320       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000320                initialize_psoc
+ .text.cfg_write_bytes32
+                0x00000368       0x34 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
  .text.CYMEMZERO
-                0x00000240        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+                0x0000039c        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .text.UART_ScbModePostEnable
+                0x000003a8        0x8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .text.UART_Init
+                0x000003b0        0x8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+                0x000003b0                UART_Init
+ .text.UART_Enable
+                0x000003b8       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+                0x000003b8                UART_Enable
+ .text.UART_Start
+                0x000003d0       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+                0x000003d0                UART_Start
+ .text.UART_SpiUartReadRxData
+                0x000003f0        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+                0x000003f0                UART_SpiUartReadRxData
+ .text.UART_SpiUartGetRxBufferSize
+                0x000003fc       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+                0x000003fc                UART_SpiUartGetRxBufferSize
+ .text.UART_SpiUartWriteTxData
+                0x0000040c       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+                0x0000040c                UART_SpiUartWriteTxData
+ .text.UART_UartInit
+                0x00000428       0x90 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+                0x00000428                UART_UartInit
+ .text.UART_UartPostEnable
+                0x000004b8       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+                0x000004b8                UART_UartPostEnable
+ .text.UART_UartGetChar
+                0x000004d4       0x2c .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+                0x000004d4                UART_UartGetChar
+ .text.UART_UartPutString
+                0x00000500       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+                0x00000500                UART_UartPutString
  .text.CyIntEnable
-                0x0000024c       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x0000024c                CyIntEnable
- .text.CyIntDisable
-                0x00000260       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x00000260                CyIntDisable
- .text.CyHalt   0x00000274        0x4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x00000274                CyHalt
+                0x00000518       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x00000518                CyIntEnable
+ .text.CyHalt   0x0000052c        0x4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x0000052c                CyHalt
  .text.CyIntSetVector
-                0x00000278       0x24 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x00000278                CyIntSetVector
- .text.CyIntSetPriority
-                0x0000029c       0x4c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x0000029c                CyIntSetPriority
+                0x00000530       0x24 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x00000530                CyIntSetVector
  .text.CyDelayUs
-                0x000002e8       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x000002e8                CyDelayUs
+                0x00000554       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x00000554                CyDelayUs
  .text.CySysClkWriteImoFreq
-                0x000002fc      0x164 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x000002fc                CySysClkWriteImoFreq
+                0x00000568      0x164 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x00000568                CySysClkWriteImoFreq
  .text.CySysWdtLocked
-                0x00000460       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x000006cc       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
  .text.CySysWdtLock
-                0x00000474       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
-                0x00000474                CySysWdtLock
+                0x000006e0       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x000006e0                CySysWdtLock
  .text.CySysWdtUnlock
-                0x00000490       0x30 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
-                0x00000490                CySysWdtUnlock
+                0x000006fc       0x30 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x000006fc                CySysWdtUnlock
  .text.CySysWdtClearInterrupt
-                0x000004c0       0x4c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
-                0x000004c0                CySysWdtClearInterrupt
+                0x0000072c       0x4c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x0000072c                CySysWdtClearInterrupt
  .text.CySysWdtIsr
-                0x0000050c       0xa4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
-                0x0000050c                CySysWdtIsr
- .text.i2c_ScbEnableIntr
-                0x000005b0        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .text.i2c_Init
-                0x000005bc        0x8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
-                0x000005bc                i2c_Init
- .text.i2c_Enable
-                0x000005c4       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
-                0x000005c4                i2c_Enable
- .text.i2c_Start
-                0x000005dc       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
-                0x000005dc                i2c_Start
- .text.i2c_I2CSlaveNackGeneration
-                0x000005fc       0x3c .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
-                0x000005fc                i2c_I2CSlaveNackGeneration
- .text.i2c_I2CInit
-                0x00000638       0xd8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
-                0x00000638                i2c_I2CInit
- .text          0x00000710       0x28 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
-                0x00000710                CyDelayCycles
-                0x00000724                CyEnterCriticalSection
-                0x0000072c                CyExitCriticalSection
- .text.i2c_I2C_ISR
-                0x00000738      0x418 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
-                0x00000738                i2c_I2C_ISR
+                0x00000778       0xa4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x00000778                CySysWdtIsr
+ .text.LED_GREEN_Write
+                0x0000081c       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+                0x0000081c                LED_GREEN_Write
+ .text.LED_RED_Write
+                0x00000834       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+                0x00000834                LED_RED_Write
+ .text.Timer_Enable
+                0x0000084c       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x0000084c                Timer_Enable
+ .text.Timer_SetInterruptMode
+                0x0000085c        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x0000085c                Timer_SetInterruptMode
+ .text.Timer_ReadStatusRegister
+                0x00000868        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x00000868                Timer_ReadStatusRegister
+ .text.Timer_WritePeriod
+                0x00000874        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x00000874                Timer_WritePeriod
+ .text.Timer_ReadCapture
+                0x00000880        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x00000880                Timer_ReadCapture
+ .text.Timer_WriteCounter
+                0x0000088c        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x0000088c                Timer_WriteCounter
+ .text.Timer_ClearFIFO
+                0x00000898       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x00000898                Timer_ClearFIFO
+ .text.Timer_Init
+                0x000008ac       0x38 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x000008ac                Timer_Init
+ .text.Timer_Start
+                0x000008e4       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x000008e4                Timer_Start
+ .text.isr_1_SetVector
+                0x00000904        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+                0x00000904                isr_1_SetVector
+ .text.isr_1_SetPriority
+                0x00000910       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+                0x00000910                isr_1_SetPriority
+ .text.isr_1_Enable
+                0x00000930        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+                0x00000930                isr_1_Enable
+ .text.isr_1_Disable
+                0x0000093c        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+                0x0000093c                isr_1_Disable
+ .text.isr_1_StartEx
+                0x00000948       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+                0x00000948                isr_1_StartEx
+ *fill*         0x00000964        0x4 
+ .text          0x00000968       0x28 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
+                0x00000968                CyDelayCycles
+                0x0000097c                CyEnterCriticalSection
+                0x00000984                CyExitCriticalSection
  .text.__libc_init_array
-                0x00000b50       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
-                0x00000b50                __libc_init_array
- .text.memset   0x00000b9c       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
-                0x00000b9c                memset
+                0x00000990       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00000990                __libc_init_array
+ .text.memset   0x000009dc       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x000009dc                memset
+ .text          0x000009ec       0x14 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+                0x000009ec                strcmp
+ .text.strlen   0x00000a00        0xe c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+                0x00000a00                strlen
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -452,79 +583,82 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00000bac        0x0
+.v4_bx          0x00000a10        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00000bac        0x0
+.iplt           0x00000a10        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00000bac        0x4
+.eh_frame       0x00000a10       0x2c
  *(.eh_frame)
- .eh_frame      0x00000bac        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .eh_frame      0x00000bac        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
-                0x00000bb0                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00000a10        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .eh_frame      0x00000a10       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .eh_frame      0x00000a38        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+                0x00000a3c                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000bb0                __exidx_end = .
+                0x00000a3c                __exidx_end = .
 
-.rodata         0x00000bb0       0x70
+.rodata         0x00000a3c      0x1b4
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00000bb0        0xc .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
- .rodata        0x00000bbc       0x30 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x00000bbc                cyImoFreqMhz2Reg
-                0x00000bec                . = ALIGN (0x4)
+ .rodata.str1.4
+                0x00000a3c       0x24 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .rodata        0x00000a60      0x12c .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .rodata        0x00000b8c       0x30 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x00000b8c                cyImoFreqMhz2Reg
+                0x00000bbc                . = ALIGN (0x4)
  *(.init)
- .init          0x00000bec        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00000bec                _init
- .init          0x00000bf0        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00000bf8                . = ALIGN (0x4)
-                0x00000bf8                __preinit_array_start = .
+ .init          0x00000bbc        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00000bbc                _init
+ .init          0x00000bc0        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00000bc8                . = ALIGN (0x4)
+                0x00000bc8                __preinit_array_start = .
  *(.preinit_array)
-                0x00000bf8                __preinit_array_end = .
-                0x00000bf8                . = ALIGN (0x4)
-                0x00000bf8                __init_array_start = .
+                0x00000bc8                __preinit_array_end = .
+                0x00000bc8                . = ALIGN (0x4)
+                0x00000bc8                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00000bf8        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .init_array    0x00000bfc        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x00000c00                __init_array_end = .
-                0x00000c00                . = ALIGN (0x4)
+ .init_array    0x00000bc8        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .init_array    0x00000bcc        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000bd0                __init_array_end = .
+                0x00000bd0                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00000c00        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00000c00                _fini
- .fini          0x00000c04        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00000c0c                . = ALIGN (0x4)
-                0x00000c0c                __fini_array_start = .
+ .fini          0x00000bd0        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00000bd0                _fini
+ .fini          0x00000bd4        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00000bdc                . = ALIGN (0x4)
+                0x00000bdc                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00000c0c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .fini_array    0x00000bdc        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00000c10                __fini_array_end = .
-                0x00000c10                . = ALIGN (0x4)
+                0x00000be0                __fini_array_end = .
+                0x00000be0                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00000c10                . = ALIGN (0x4)
+                0x00000be0                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00000c10                . = ALIGN (0x4)
-                0x00000c10                __cy_regions = .
-                0x00000c10        0x4 LONG 0xc20 __cy_region_init_ram
-                0x00000c14        0x4 LONG 0x200000c8 __cy_region_start_data
-                0x00000c18        0x4 LONG 0x18 __cy_region_init_size_ram
-                0x00000c1c        0x4 LONG 0x68 __cy_region_zero_size_ram
-                0x00000c20                __cy_regions_end = .
-                0x00000c20                . = ALIGN (0x8)
-                0x00000c20                _etext = .
+                0x00000be0                . = ALIGN (0x4)
+                0x00000be0                __cy_regions = .
+                0x00000be0        0x4 LONG 0xbf0 __cy_region_init_ram
+                0x00000be4        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x00000be8        0x4 LONG 0x20 __cy_region_init_size_ram
+                0x00000bec        0x4 LONG 0x80 __cy_region_zero_size_ram
+                0x00000bf0                __cy_regions_end = .
+                0x00000bf0                . = ALIGN (0x8)
+                0x00000bf0                _etext = .
 
 .cy_checksum_exclude
-                0x00000c20        0x0
+                0x00000bf0        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x20000000       0xc0
@@ -537,7 +671,7 @@ END GROUP
  *(.noinit)
  .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
 
-.data           0x200000c8       0x18 load address 0x00000c20
+.data           0x200000c8       0x20 load address 0x00000bf0
                 0x200000c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000c8        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
@@ -546,57 +680,60 @@ END GROUP
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x200000cc       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
-                0x200000cc                cydelay32kMs
-                0x200000d0                cydelayFreqKhz
-                0x200000d4                cydelayFreqMhz
-                0x200000d8                cydelayFreqHz
- .data          0x200000dc        0x4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
-                0x200000e0                . = ALIGN (0x8)
+ .data          0x200000cc        0x4 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x200000cc                key
+ .data          0x200000d0       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x200000d0                cydelay32kMs
+                0x200000d4                cydelayFreqKhz
+                0x200000d8                cydelayFreqMhz
+                0x200000dc                cydelayFreqHz
+ .data          0x200000e0        0x4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x200000e8                . = ALIGN (0x8)
+ *fill*         0x200000e4        0x4 
  *(.ram)
-                0x200000e0                _edata = .
+                0x200000e8                _edata = .
 
-.igot.plt       0x200000e0        0x0 load address 0x00000c38
+.igot.plt       0x200000e8        0x0 load address 0x00000c10
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.bss            0x200000e0       0x68 load address 0x00000c38
-                0x200000e0                PROVIDE (__bss_start__, .)
+.bss            0x200000e8       0x80 load address 0x00000c10
+                0x200000e8                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x200000e0       0x1c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .bss           0x200000fc       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .bss           0x20000118        0x8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
-                0x20000118                i2c_initVar
-                0x2000011c                i2c_customIntrHandler
+ .bss           0x200000e8       0x1c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .bss           0x20000104        0x8 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x20000104                accepted
+                0x20000106                ms_count
+                0x20000108                ind
+ .bss           0x2000010c        0x1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+                0x2000010c                UART_initVar
+ *fill*         0x2000010d        0x3 
+ .bss           0x20000110       0x1c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .bss           0x2000012c        0x1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                0x2000012c                Timer_initVar
  *(COMMON)
- COMMON         0x20000120        0x1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
-                0x20000120                i2c_state
- *fill*         0x20000121        0x3 
- COMMON         0x20000124       0x24 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-                0x20000124                i2c_slOverFlowCount
-                0x20000128                i2c_slWrBufIndex
-                0x2000012c                i2c_slRdBufSize
-                0x20000130                i2c_slStatus
-                0x20000134                i2c_slRdBufPtr
-                0x20000138                i2c_slRdBufIndexTmp
-                0x2000013c                i2c_slWrBufSize
-                0x20000140                i2c_slWrBufPtr
-                0x20000144                i2c_slRdBufIndex
-                0x20000148                . = ALIGN (0x8)
+ *fill*         0x2000012d        0x3 
+ COMMON         0x20000130       0x34 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x20000130                arr
+                0x2000013e                character
+                0x20000140                buffer
+                0x20000160                ch
+                0x20000168                . = ALIGN (0x8)
+ *fill*         0x20000164        0x4 
  *(.ram.b)
-                0x20000148                _end = .
-                0x20000148                __end = .
-                0x20000148                PROVIDE (end, .)
-                0x20000148                PROVIDE (__bss_end__, .)
-                0x00000c20                __cy_region_init_ram = LOADADDR (.data)
-                0x00000018                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000068                __cy_region_zero_size_ram = (_end - _edata)
+                0x20000168                _end = .
+                0x20000168                __end = .
+                0x20000168                PROVIDE (end, .)
+                0x20000168                PROVIDE (__bss_end__, .)
+                0x00000bf0                __cy_region_init_ram = LOADADDR (.data)
+                0x00000020                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000080                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x20000148       0x80 load address 0x00000c38
-                0x20000148                . = _end
-                0x200001c8                . = (. + 0x80)
- *fill*         0x20000148       0x80 
-                0x200001c8                __cy_heap_limit = .
+.heap           0x20000168       0x80 load address 0x00000c10
+                0x20000168                . = _end
+                0x200001e8                . = (. + 0x80)
+ *fill*         0x20000168       0x80 
+                0x200001e8                __cy_heap_limit = .
 
 .stack          0x20000c00      0x400
                 0x20000c00                __cy_stack_limit = .
@@ -632,7 +769,7 @@ END GROUP
                 0x90600000        0x4 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
                 0x90600000                cy_meta_chipprotect
 
-.rel.dyn        0x00000c38        0x0 load address 0x90600004
+.rel.dyn        0x00000c10        0x0 load address 0x90600004
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
 .stab
@@ -653,140 +790,173 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x488
+.debug_aranges  0x00000000      0x648
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\main.o
  .debug_aranges
-                0x00000020       0x18 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                0x00000038       0x18 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
  .debug_aranges
-                0x00000038       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000050       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
  .debug_aranges
-                0x00000080       0x30 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+                0x00000098       0x38 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
  .debug_aranges
-                0x000000b0      0x178 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x000000d0       0x60 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
  .debug_aranges
-                0x00000228      0x120 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x00000130       0x60 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
  .debug_aranges
-                0x00000348       0x68 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
+                0x00000190       0x60 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
  .debug_aranges
-                0x000003b0       0x28 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
+                0x000001f0      0x178 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .debug_aranges
-                0x000003d8       0x70 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
+                0x00000368      0x120 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
  .debug_aranges
-                0x00000448       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
+                0x00000488       0x48 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
  .debug_aranges
-                0x00000468       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+                0x000004d0       0x48 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .debug_aranges
+                0x00000518       0x90 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .debug_aranges
+                0x000005a8       0x80 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .debug_aranges
+                0x00000628       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x28b9
+.debug_info     0x00000000     0x33c0
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000       0xb2 .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_info    0x000000b2       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x000001b0      0x38e .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_info    0x0000053e      0x293 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
- .debug_info    0x000007d1      0xad1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
- .debug_info    0x000012a2      0xc23 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .debug_info    0x00001ec5      0x2a9 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .debug_info    0x0000216e      0x1a5 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .debug_info    0x00002313      0x38b .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .debug_info    0x0000269e       0x8e .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
- .debug_info    0x0000272c      0x18d .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+ .debug_info    0x00000000      0x3f2 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_info    0x000003f2       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x000004f0      0x38e .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_info    0x0000087e      0x3bd .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .debug_info    0x00000c3b      0x21c .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .debug_info    0x00000e57      0x217 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .debug_info    0x0000106e      0x2ad .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .debug_info    0x0000131b      0xad1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .debug_info    0x00001dec      0xc23 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .debug_info    0x00002a0f      0x19d .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .debug_info    0x00002bac      0x19d .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .debug_info    0x00002d49      0x2e9 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .debug_info    0x00003032      0x300 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .debug_info    0x00003332       0x8e .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
 
-.debug_abbrev   0x00000000      0xcc7
+.debug_abbrev   0x00000000     0x1203
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0x60 .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_abbrev  0x00000060       0x5d .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_abbrev  0x000000bd      0x1d5 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_abbrev  0x00000292      0x18c .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
- .debug_abbrev  0x0000041e      0x20d .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
- .debug_abbrev  0x0000062b      0x226 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .debug_abbrev  0x00000851      0x15b .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .debug_abbrev  0x000009ac       0xf3 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .debug_abbrev  0x00000a9f      0x170 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .debug_abbrev  0x00000c0f       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000c23       0xa4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+ .debug_abbrev  0x00000000      0x1aa .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_abbrev  0x000001aa       0x5d .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x00000207      0x1d5 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_abbrev  0x000003dc      0x1d5 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .debug_abbrev  0x000005b1       0xed .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .debug_abbrev  0x0000069e      0x169 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .debug_abbrev  0x00000807      0x12c .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .debug_abbrev  0x00000933      0x20d .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .debug_abbrev  0x00000b40      0x226 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .debug_abbrev  0x00000d66       0xc8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .debug_abbrev  0x00000e2e       0xc8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .debug_abbrev  0x00000ef6      0x145 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .debug_abbrev  0x0000103b      0x1b4 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .debug_abbrev  0x000011ef       0x14 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
 
-.debug_line     0x00000000     0x1198
+.debug_line     0x00000000     0x16e3
  *(.debug_line)
- .debug_line    0x00000000       0x5f .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_line    0x0000005f       0x53 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x000000b2      0x248 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_line    0x000002fa      0x134 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
- .debug_line    0x0000042e      0x44b .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
- .debug_line    0x00000879      0x3fe .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .debug_line    0x00000c77      0x15c .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .debug_line    0x00000dd3       0xbe .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .debug_line    0x00000e91      0x155 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .debug_line    0x00000fe6       0x69 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
- .debug_line    0x0000104f      0x149 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+ .debug_line    0x00000000      0x205 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_line    0x00000205       0x53 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x00000258      0x248 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_line    0x000004a0      0x165 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .debug_line    0x00000605      0x140 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .debug_line    0x00000745      0x133 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .debug_line    0x00000878      0x154 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .debug_line    0x000009cc      0x44b .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .debug_line    0x00000e17      0x3fe .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .debug_line    0x00001215       0xc3 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .debug_line    0x000012d8       0xc1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .debug_line    0x00001399      0x17b .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .debug_line    0x00001514      0x166 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .debug_line    0x0000167a       0x69 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
 
-.debug_frame    0x00000000      0xb88
+.debug_frame    0x00000000      0xf54
  *(.debug_frame)
- .debug_frame   0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_frame   0x0000002c       0xb0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_frame   0x000000dc       0x68 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
- .debug_frame   0x00000144      0x3d0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
- .debug_frame   0x00000514      0x368 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .debug_frame   0x0000087c       0xf8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .debug_frame   0x00000974       0x3c .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .debug_frame   0x000009b0       0xf8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .debug_frame   0x00000aa8       0x2c .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
- .debug_frame   0x00000ad4       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00000af4       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00000b14       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x00000b3c       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00000b68       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x80 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_frame   0x00000080       0xb0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_frame   0x00000130       0x8c .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .debug_frame   0x000001bc       0xe8 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .debug_frame   0x000002a4       0xb0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .debug_frame   0x00000354       0xe0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .debug_frame   0x00000434      0x3d0 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .debug_frame   0x00000804      0x368 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .debug_frame   0x00000b6c       0x70 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .debug_frame   0x00000bdc       0x70 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .debug_frame   0x00000c4c      0x124 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .debug_frame   0x00000d70      0x110 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+ .debug_frame   0x00000e80       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000ea0       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00000ec0       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000ee8       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00000f14       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000f34       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
 
-.debug_str      0x00000000     0x1067
+.debug_str      0x00000000     0x145c
  *(.debug_str)
- .debug_str     0x00000000      0x14a .\CortexM0\ARM_GCC_493\Debug\main.o
-                                0x183 (size before relaxing)
- .debug_str     0x0000014a       0x61 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_str     0x00000000      0x247 .\CortexM0\ARM_GCC_493\Debug\main.o
+                                0x280 (size before relaxing)
+ .debug_str     0x00000247       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
                                 0x1cc (size before relaxing)
- .debug_str     0x000001ab      0x16a .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_str     0x000002a2      0x149 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
                                 0x2f3 (size before relaxing)
- .debug_str     0x00000315       0x9d .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
-                                0x249 (size before relaxing)
- .debug_str     0x000003b2      0x4b1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .debug_str     0x000003eb       0xee .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+                                0x2c4 (size before relaxing)
+ .debug_str     0x000004d9      0x105 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+                                0x28e (size before relaxing)
+ .debug_str     0x000005de      0x11f .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+                                0x2c0 (size before relaxing)
+ .debug_str     0x000006fd       0xb1 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+                                0x2dd (size before relaxing)
+ .debug_str     0x000007ae      0x49c .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
                                 0x687 (size before relaxing)
- .debug_str     0x00000863      0x476 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .debug_str     0x00000c4a      0x476 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
                                 0x651 (size before relaxing)
- .debug_str     0x00000cd9      0x118 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
-                                0x2cb (size before relaxing)
- .debug_str     0x00000df1       0x70 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
-                                0x240 (size before relaxing)
- .debug_str     0x00000e61      0x1bd .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
-                                0x3a6 (size before relaxing)
- .debug_str     0x0000101e       0x49 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
-                                0x2a4 (size before relaxing)
+ .debug_str     0x000010c0       0xb9 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+                                0x250 (size before relaxing)
+ .debug_str     0x00001179       0x89 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+                                0x242 (size before relaxing)
+ .debug_str     0x00001202      0x171 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+                                0x32d (size before relaxing)
+ .debug_str     0x00001373       0xe9 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
+                                0x2dc (size before relaxing)
 
-.debug_loc      0x00000000     0x1221
+.debug_loc      0x00000000     0x147c
  *(.debug_loc)
- .debug_loc     0x00000000      0x14f .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_loc     0x0000014f       0xa9 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
- .debug_loc     0x000001f8      0x5b5 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
- .debug_loc     0x000007ad      0x7df .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .debug_loc     0x00000f8c       0x7e .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .debug_loc     0x0000100a      0x175 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .debug_loc     0x0000117f       0xa2 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+ .debug_loc     0x00000000       0x21 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_loc     0x00000021      0x14f .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_loc     0x00000170      0x118 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .debug_loc     0x00000288       0x7e .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .debug_loc     0x00000306       0x96 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .debug_loc     0x0000039c      0x173 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .debug_loc     0x0000050f      0x5b5 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .debug_loc     0x00000ac4      0x7df .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .debug_loc     0x000012a3       0xa2 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .debug_loc     0x00001345       0xa2 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .debug_loc     0x000013e7       0x13 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .debug_loc     0x000013fa       0x82 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0x3c0
+.debug_ranges   0x00000000      0x550
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_ranges  0x00000010       0x38 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_ranges  0x00000048       0x20 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
- .debug_ranges  0x00000068      0x168 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
- .debug_ranges  0x000001d0      0x110 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .debug_ranges  0x000002e0       0x58 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .debug_ranges  0x00000338       0x18 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .debug_ranges  0x00000350       0x60 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .debug_ranges  0x000003b0       0x10 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+ .debug_ranges  0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_ranges  0x00000028       0x38 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_ranges  0x00000060       0x28 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .debug_ranges  0x00000088       0x50 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .debug_ranges  0x000000d8       0x50 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .debug_ranges  0x00000128       0x50 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
+ .debug_ranges  0x00000178      0x168 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+ .debug_ranges  0x000002e0      0x110 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+ .debug_ranges  0x000003f0       0x38 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .debug_ranges  0x00000428       0x38 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .debug_ranges  0x00000460       0x80 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .debug_ranges  0x000004e0       0x70 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\CortexM0\ARM_GCC_493\Debug\main.o
@@ -794,12 +964,15 @@ END GROUP
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -834,37 +1007,47 @@ END GROUP
  .ARM.attributes
                 0x000000f8       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(cyfitter_cfg.o)
  .ARM.attributes
-                0x00000129       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
+                0x00000129       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART.o)
  .ARM.attributes
-                0x0000015a       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
+                0x0000015a       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_SPI_UART.o)
  .ARM.attributes
-                0x0000018b       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c.o)
+                0x0000018b       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(UART_UART.o)
  .ARM.attributes
-                0x000001bc       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C.o)
+                0x000001bc       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLib.o)
  .ARM.attributes
-                0x000001ed       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_SLAVE.o)
+                0x000001ed       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyLFClk.o)
  .ARM.attributes
-                0x0000021e       0x21 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
+                0x0000021e       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_GREEN.o)
  .ARM.attributes
-                0x0000023f       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(i2c_I2C_INT.o)
+                0x0000024f       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(LED_RED.o)
  .ARM.attributes
-                0x00000270       0x1e c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+                0x00000280       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(Timer.o)
  .ARM.attributes
-                0x0000028e       0x1e c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x000002b1       0x31 .\CortexM0\ARM_GCC_493\Debug\rfid.a(isr_1.o)
  .ARM.attributes
-                0x000002ac       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                0x000002e2       0x21 .\CortexM0\ARM_GCC_493\Debug\rfid.a(CyBootAsmGnu.o)
  .ARM.attributes
-                0x000002d8       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+                0x00000303       0x1e c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x00000304       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                0x00000321       0x1e c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000330       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x0000033f       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x0000035c       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x0000036b       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
  .ARM.attributes
-                0x00000388       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+                0x00000397       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x000003b4       0x1e c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x000003c3       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000003ef       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000041b       0x1c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x00000437       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000463       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .ARM.attributes
+                0x0000048f       0x1e c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)

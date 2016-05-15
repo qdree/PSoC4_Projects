@@ -52,6 +52,24 @@
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_I2C_PVT.h" value="NONE;I2C" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_PVT.h" value="NONE;I2C" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_BOOT.h" value="NONE;I2C" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART.c" value="ARM_C_FILE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART.h" value="NONE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_SPI_UART.h" value="NONE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_SPI_UART.c" value="ARM_C_FILE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_SPI_UART_INT.c" value="ARM_C_FILE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_PM.c" value="ARM_C_FILE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_UART.c" value="ARM_C_FILE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_BOOT.c" value="ARM_C_FILE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_UART_BOOT.c" value="ARM_C_FILE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_PINS.h" value="NONE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_SPI_UART_PVT.h" value="NONE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_PVT.h" value="NONE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_BOOT.h" value="NONE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\Timer.c" value="ARM_C_FILE;Timer" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\Timer.h" value="NONE;Timer" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\Timer_PM.c" value="ARM_C_FILE;Timer" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\isr_1.c" value="ARM_C_FILE;isr_1" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\isr_1.h" value="NONE;isr_1" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_SCBCLK.c" value="ARM_C_FILE;I2C_SCBCLK" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_SCBCLK.h" value="NONE;I2C_SCBCLK" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_sda.c" value="ARM_C_FILE;I2C_sda" />
@@ -64,6 +82,12 @@
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_scl_PM.c" value="ARM_C_FILE;I2C_scl" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_SCB_IRQ.c" value="ARM_C_FILE;I2C_SCB_IRQ" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\I2C_SCB_IRQ.h" value="NONE;I2C_SCB_IRQ" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_SCBCLK.c" value="ARM_C_FILE;UART_SCBCLK" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_SCBCLK.h" value="NONE;UART_SCBCLK" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_rx.c" value="ARM_C_FILE;UART_rx" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_rx.h" value="NONE;UART_rx" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_rx_aliases.h" value="NONE;UART_rx" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\UART_rx_PM.c" value="ARM_C_FILE;UART_rx" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\cycodeshareimport.ld" value="NONE;" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\cycodeshareexport.ld" value="NONE;" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\Password.cydsn\codegentemp\cycodeshareimport.scat" value="NONE;" />

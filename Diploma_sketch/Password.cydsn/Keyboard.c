@@ -19,7 +19,7 @@
 /*																				*/
 /********************************************************************************/
 #include <device.h>
-#define TIMER_INTERVAL 5	//5 ms
+#define TIMER_INTERVAL 50	//5 ms
 #define MAX_CHECKS 10 		// Number of Samples Before Key is De-bounced
 #define REPEAT_RATE (200/TIMER_INTERVAL)	// 400 ms Key Repeat Rate
 #define INITIAL_DELAY (600/TIMER_INTERVAL - REPEAT_RATE) // 600 ms Wait-Time Before Key first Repeated

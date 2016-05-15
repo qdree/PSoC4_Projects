@@ -14,30 +14,61 @@
 #include "LiquidCrystal_I2C.h"
 #include <stdbool.h>
 #include <string.h>
+#include <stdio.h>
 
 
 
 char pin[5];
-char* check = "1111";
+const char* check = "1111";
 uint32_t Addr = 0x27;
 uint8 i = 0;
 uint8 Key;
-bool password = false;
 bool security_active = true;
-bool alarm = false;
+//bool alarm = false;
+bool accepted = false;
+
+const char *card_id =  "09008B316BD8";
+char arr[14];
+char buffer[30];
+char character;
+int ind = 0;
+uint32 ch; 
+uint32 ms_count = 0;
+
+ 
+void print_card_id(uint8 i);
+void check_card();
 
 
 void input_pin(const char el);
 void compare(char a[], char b[]);
-void accept(char a[], char b[]);
+void accept(char a[],const char b[]);
 void discard(char a[]);
 void security();
 void pass();
+
+
+CY_ISR(MY_ISR) 
+{
+    if(accepted && ++ms_count == 50000) 
+    {
+        accepted = false;
+        ms_count = 0;
+        clear();   
+        LED_GREEN_Write(1);
+        LED_RED_Write(1);
+        setCursor(0,1);
+        LCD_print("Door closed!");
+    }
+}
 
 int main()
 {
     Keyboard_Init();
     I2C_Start();
+    UART_Start();
+    Timer_Start();
+    isr_1_StartEx(MY_ISR);
     LiquidCrystal_I2C_init(Addr,16,2,0);
     begin();
     
@@ -48,9 +79,8 @@ int main()
     for(;;)
     {
         //security();
-        pass();
-//        if(alarm) LCD_print("Motion cought");
-//        else LCD_print("OK");
+        check_card();
+
     }
 }
 
@@ -61,6 +91,58 @@ void input_pin(const char el)
     pin[i++] = el;
 }
 
+void check_card()
+{
+     if (!accepted)
+        {
+            ch = UART_UartGetChar();
+            if(ch != 0)
+            {
+                switch(ch)
+                {
+                    case '\002':
+                        memset(arr, 0, strlen(arr));
+                        break;
+                    case '\003':
+                        if(strcmp(arr, card_id) == 0)
+                        {   
+                            clear();
+                            setCursor(0,0);
+                            LCD_print("Access granted!");
+                            setCursor(0,1);
+                            LCD_print("ID: ");
+                            LCD_print(arr);
+                            LED_GREEN_Write(0);
+                            LED_RED_Write(1);
+                            accepted = true;
+                        }
+                        else
+                        {
+                            clear();
+                            setCursor(0,0);
+                            LCD_print("Access denied!");
+                            setCursor(0,1);
+                            LCD_print("ID: ");
+                            LED_GREEN_Write(1);
+                            LED_RED_Write(0);
+                            accepted = false;
+                        }
+                        ind = 0;
+                        break;
+                    default:
+                        arr[ind++] = ch; 
+                        
+                }
+            }
+            else
+            {
+                LED_GREEN_Write(1);
+                LED_RED_Write(1);
+            }
+
+        }
+}
+
 void discard(char a[])
 {
     memset(a,'\0',strlen(a));
@@ -69,7 +151,7 @@ void discard(char a[])
     setCursor(0,1);
 }
 
-void accept(char a[],char b[])
+void accept(char a[],const char b[])
 {
     
     if(strcmp(a, b) == 0)
@@ -104,7 +186,7 @@ void accept(char a[],char b[])
 void pass()
 {
     Key = Get_KBD_Char();		//Value recieved from Matrix
-        switch(Key)                 //Recognition of pressed key
+        switch(Key)                 //Recognition of pressed card_id
         {              
             case '*':
                 accept(pin, check);
@@ -157,7 +239,7 @@ void security()
     {
         clear();
         setCursor(1,0);
-        alarm = true;
+        //alarm = true;
         LED_GREEN_Write(1);
         LED_RED_Write(0);
     }
@@ -165,18 +247,19 @@ void security()
     {
         clear();
         setCursor(5,0);
-        alarm = false;
+        //alarm = false;
         LED_GREEN_Write(0);
         LED_RED_Write(1);
     }
     else 
     {   
-        alarm = false;
+        //alarm = false;
         LED_GREEN_Write(0);
         LED_RED_Write(1);
     }
     
 }
+
 
 
 /* [] END OF FILE */

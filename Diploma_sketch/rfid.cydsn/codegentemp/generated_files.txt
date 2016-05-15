@@ -27,8 +27,25 @@
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_SPI_UART_PVT.h" value="NONE;UART" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_PVT.h" value="NONE;UART" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_BOOT.h" value="NONE;UART" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_GREEN.c" value="ARM_C_FILE;LED_GREEN" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_GREEN.h" value="NONE;LED_GREEN" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_GREEN_aliases.h" value="NONE;LED_GREEN" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_GREEN_PM.c" value="ARM_C_FILE;LED_GREEN" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_RED.c" value="ARM_C_FILE;LED_RED" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_RED.h" value="NONE;LED_RED" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_RED_aliases.h" value="NONE;LED_RED" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\LED_RED_PM.c" value="ARM_C_FILE;LED_RED" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\Timer.c" value="ARM_C_FILE;Timer" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\Timer.h" value="NONE;Timer" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\Timer_PM.c" value="ARM_C_FILE;Timer" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\isr_1.c" value="ARM_C_FILE;isr_1" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\isr_1.h" value="NONE;isr_1" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_SCBCLK.c" value="ARM_C_FILE;UART_SCBCLK" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_SCBCLK.h" value="NONE;UART_SCBCLK" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_tx.c" value="ARM_C_FILE;UART_tx" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_tx.h" value="NONE;UART_tx" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_tx_aliases.h" value="NONE;UART_tx" />
+  <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_tx_PM.c" value="ARM_C_FILE;UART_tx" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_rx.c" value="ARM_C_FILE;UART_rx" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_rx.h" value="NONE;UART_rx" />
   <file name="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\rfid.cydsn\codegentemp\UART_rx_aliases.h" value="NONE;UART_rx" />

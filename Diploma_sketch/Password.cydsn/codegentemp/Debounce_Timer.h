@@ -36,7 +36,7 @@ extern uint8 Debounce_Timer_initVar;
 *           Parameter Defaults
 **************************************/
 
-#define Debounce_Timer_Resolution                 24u
+#define Debounce_Timer_Resolution                 16u
 #define Debounce_Timer_UsingFixedFunction         0u
 #define Debounce_Timer_UsingHWCaptureCounter      0u
 #define Debounce_Timer_SoftwareCaptureMode        0u
@@ -69,7 +69,7 @@ typedef struct
     uint8 TimerEnableState;
     #if(!Debounce_Timer_UsingFixedFunction)
 
-        uint32 TimerUdb;
+        uint16 TimerUdb;
         uint8 InterruptMaskValue;
         #if (Debounce_Timer_UsingHWCaptureCounter)
             uint8 TimerCaptureCounter;
@@ -100,11 +100,11 @@ uint8   Debounce_Timer_ReadStatusRegister(void) ;
     void    Debounce_Timer_WriteControlRegister(uint8 control) ;
 #endif /* (!Debounce_Timer_UDB_CONTROL_REG_REMOVED) */
 
-uint32  Debounce_Timer_ReadPeriod(void) ;
-void    Debounce_Timer_WritePeriod(uint32 period) ;
-uint32  Debounce_Timer_ReadCounter(void) ;
-void    Debounce_Timer_WriteCounter(uint32 counter) ;
-uint32  Debounce_Timer_ReadCapture(void) ;
+uint16  Debounce_Timer_ReadPeriod(void) ;
+void    Debounce_Timer_WritePeriod(uint16 period) ;
+uint16  Debounce_Timer_ReadCounter(void) ;
+void    Debounce_Timer_WriteCounter(uint16 counter) ;
+uint16  Debounce_Timer_ReadCapture(void) ;
 void    Debounce_Timer_SoftwareCapture(void) ;
 
 #if(!Debounce_Timer_UsingFixedFunction) /* UDB Prototypes */
@@ -168,7 +168,7 @@ void Debounce_Timer_Wakeup(void)        ;
 *    Initialial Parameter Constants
 ***************************************/
 
-#define Debounce_Timer_INIT_PERIOD             119999u
+#define Debounce_Timer_INIT_PERIOD             11999u
 #define Debounce_Timer_INIT_CAPTURE_MODE       ((uint8)((uint8)0u << Debounce_Timer_CTRL_CAP_MODE_SHIFT))
 #define Debounce_Timer_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << Debounce_Timer_CTRL_TRIG_MODE_SHIFT))
 #if (Debounce_Timer_UsingFixedFunction)
@@ -313,54 +313,54 @@ void Debounce_Timer_Wakeup(void)        ;
     #define Debounce_Timer_CONTROL             (* (reg8 *) Debounce_Timer_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_REG )
     
     #if(Debounce_Timer_Resolution <= 8u) /* 8-bit Timer */
-        #define Debounce_Timer_CAPTURE_LSB         (* (reg8 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-        #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg8 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-        #define Debounce_Timer_PERIOD_LSB          (* (reg8 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-        #define Debounce_Timer_PERIOD_LSB_PTR        ((reg8 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-        #define Debounce_Timer_COUNTER_LSB         (* (reg8 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
-        #define Debounce_Timer_COUNTER_LSB_PTR       ((reg8 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
+        #define Debounce_Timer_CAPTURE_LSB         (* (reg8 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+        #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg8 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+        #define Debounce_Timer_PERIOD_LSB          (* (reg8 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+        #define Debounce_Timer_PERIOD_LSB_PTR        ((reg8 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+        #define Debounce_Timer_COUNTER_LSB         (* (reg8 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
+        #define Debounce_Timer_COUNTER_LSB_PTR       ((reg8 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
     #elif(Debounce_Timer_Resolution <= 16u) /* 8-bit Timer */
         #if(CY_PSOC3) /* 8-bit addres space */
-            #define Debounce_Timer_CAPTURE_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-            #define Debounce_Timer_PERIOD_LSB          (* (reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-            #define Debounce_Timer_COUNTER_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
-            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
+            #define Debounce_Timer_CAPTURE_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+            #define Debounce_Timer_PERIOD_LSB          (* (reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+            #define Debounce_Timer_COUNTER_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
+            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
         #else /* 16-bit address space */
-            #define Debounce_Timer_CAPTURE_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__16BIT_F0_REG )
-            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__16BIT_F0_REG )
-            #define Debounce_Timer_PERIOD_LSB          (* (reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__16BIT_D0_REG )
-            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__16BIT_D0_REG )
-            #define Debounce_Timer_COUNTER_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__16BIT_A0_REG )
-            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__16BIT_A0_REG )
+            #define Debounce_Timer_CAPTURE_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__16BIT_F0_REG )
+            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__16BIT_F0_REG )
+            #define Debounce_Timer_PERIOD_LSB          (* (reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__16BIT_D0_REG )
+            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__16BIT_D0_REG )
+            #define Debounce_Timer_COUNTER_LSB         (* (reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__16BIT_A0_REG )
+            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg16 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__16BIT_A0_REG )
         #endif /* CY_PSOC3 */
     #elif(Debounce_Timer_Resolution <= 24u)/* 24-bit Timer */
-        #define Debounce_Timer_CAPTURE_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-        #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-        #define Debounce_Timer_PERIOD_LSB          (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-        #define Debounce_Timer_PERIOD_LSB_PTR        ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-        #define Debounce_Timer_COUNTER_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
-        #define Debounce_Timer_COUNTER_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
+        #define Debounce_Timer_CAPTURE_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+        #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+        #define Debounce_Timer_PERIOD_LSB          (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+        #define Debounce_Timer_PERIOD_LSB_PTR        ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+        #define Debounce_Timer_COUNTER_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
+        #define Debounce_Timer_COUNTER_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
     #else /* 32-bit Timer */
         #if(CY_PSOC3 || CY_PSOC5) /* 8-bit address space */
-            #define Debounce_Timer_CAPTURE_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__F0_REG )
-            #define Debounce_Timer_PERIOD_LSB          (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__D0_REG )
-            #define Debounce_Timer_COUNTER_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
-            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
+            #define Debounce_Timer_CAPTURE_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__F0_REG )
+            #define Debounce_Timer_PERIOD_LSB          (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__D0_REG )
+            #define Debounce_Timer_COUNTER_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
+            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
         #else /* 32-bit address space */
-            #define Debounce_Timer_CAPTURE_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__32BIT_F0_REG )
-            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__32BIT_F0_REG )
-            #define Debounce_Timer_PERIOD_LSB          (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__32BIT_D0_REG )
-            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__32BIT_D0_REG )
-            #define Debounce_Timer_COUNTER_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__32BIT_A0_REG )
-            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__32BIT_A0_REG )
+            #define Debounce_Timer_CAPTURE_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__32BIT_F0_REG )
+            #define Debounce_Timer_CAPTURE_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__32BIT_F0_REG )
+            #define Debounce_Timer_PERIOD_LSB          (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__32BIT_D0_REG )
+            #define Debounce_Timer_PERIOD_LSB_PTR        ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__32BIT_D0_REG )
+            #define Debounce_Timer_COUNTER_LSB         (* (reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__32BIT_A0_REG )
+            #define Debounce_Timer_COUNTER_LSB_PTR       ((reg32 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__32BIT_A0_REG )
         #endif /* CY_PSOC3 || CY_PSOC5 */ 
     #endif
 
-    #define Debounce_Timer_COUNTER_LSB_PTR_8BIT       ((reg8 *) Debounce_Timer_TimerUDB_sT24_timerdp_u0__A0_REG )
+    #define Debounce_Timer_COUNTER_LSB_PTR_8BIT       ((reg8 *) Debounce_Timer_TimerUDB_sT16_timerdp_u0__A0_REG )
     
     #if (Debounce_Timer_UsingHWCaptureCounter)
         #define Debounce_Timer_CAP_COUNT              (*(reg8 *) Debounce_Timer_TimerUDB_sCapCount_counter__PERIOD_REG )

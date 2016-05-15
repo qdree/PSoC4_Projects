@@ -61,7 +61,7 @@
 ****************************************/
 
 #define UART_UART_SUB_MODE              (0u)
-#define UART_UART_DIRECTION             (1u)
+#define UART_UART_DIRECTION             (3u)
 #define UART_UART_DATA_BITS_NUM         (8u)
 #define UART_UART_PARITY_TYPE           (2u)
 #define UART_UART_STOP_BITS_NUM         (2u)

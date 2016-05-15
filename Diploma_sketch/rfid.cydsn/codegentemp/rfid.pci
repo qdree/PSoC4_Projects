@@ -1,9 +1,12 @@
 # rfid
-# 2016-03-30 14:28:16Z
+# 2016-05-15 19:27:56Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
 # IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 3
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "\UART:tx(0)\" iocell 0 5
 set_io "\UART:rx(0)\" iocell 0 4
+set_io "LED_GREEN(0)" iocell 0 2
+set_io "LED_RED(0)" iocell 1 6

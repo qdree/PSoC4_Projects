@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
   30:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *
   31:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** * Parameters:
   32:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *  void
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 2
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *
@@ -85,12 +85,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
   33 0002 FFF7FEFF 		bl	Debounce_Timer_ReadCounter
   34              	.LVL0:
   35 0006 044C     		ldr	r4, .L2
-  36 0008 6060     		str	r0, [r4, #4]
+  36 0008 6080     		strh	r0, [r4, #2]
   47:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         Debounce_Timer_backup.InterruptMaskValue = Debounce_Timer_STATUS_MASK;
   37              		.loc 1 47 0
   38 000a 044B     		ldr	r3, .L2+4
   39 000c 1B78     		ldrb	r3, [r3]
-  40 000e 2372     		strb	r3, [r4, #8]
+  40 000e 2371     		strb	r3, [r4, #4]
   48:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         #if (Debounce_Timer_UsingHWCaptureCounter)
   49:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****             Debounce_Timer_backup.TimerCaptureCounter = Debounce_Timer_ReadCaptureCount();
   50:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         #endif /* Back Up capture counter register  */
@@ -100,7 +100,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
   41              		.loc 1 53 0
   42 0010 FFF7FEFF 		bl	Debounce_Timer_ReadControlRegister
   43              	.LVL1:
-  44 0014 6072     		strb	r0, [r4, #9]
+  44 0014 6071     		strb	r0, [r4, #5]
   54:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         #endif /* Backup the enable state of the Timer component */
   55:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****     #endif /* Backup non retention registers in UDB implementation. All fixed function registers ar
   56:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** }
@@ -111,14 +111,14 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
   49              		.align	2
   50              	.L2:
   51 0018 00000000 		.word	.LANCHOR0
-  52 001c 82000F40 		.word	1074724994
+  52 001c 81000F40 		.word	1074724993
   53              		.cfi_endproc
   54              	.LFE0:
   55              		.size	Debounce_Timer_SaveConfig, .-Debounce_Timer_SaveConfig
   56              		.section	.text.Debounce_Timer_RestoreConfig,"ax",%progbits
   57              		.align	2
   58              		.global	Debounce_Timer_RestoreConfig
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 3
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 3
 
 
   59              		.code	16
@@ -159,12 +159,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
   81:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         Debounce_Timer_WriteCounter(Debounce_Timer_backup.TimerUdb);
   70              		.loc 1 81 0
   71 0002 054C     		ldr	r4, .L5
-  72 0004 6068     		ldr	r0, [r4, #4]
+  72 0004 6088     		ldrh	r0, [r4, #2]
   73 0006 FFF7FEFF 		bl	Debounce_Timer_WriteCounter
   74              	.LVL2:
   82:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         Debounce_Timer_STATUS_MASK =Debounce_Timer_backup.InterruptMaskValue;
   75              		.loc 1 82 0
-  76 000a 227A     		ldrb	r2, [r4, #8]
+  76 000a 2279     		ldrb	r2, [r4, #4]
   77 000c 034B     		ldr	r3, .L5+4
   78 000e 1A70     		strb	r2, [r3]
   83:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         #if (Debounce_Timer_UsingHWCaptureCounter)
@@ -174,11 +174,11 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
   87:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         #if(!Debounce_Timer_UDB_CONTROL_REG_REMOVED)
   88:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****             Debounce_Timer_WriteControlRegister(Debounce_Timer_backup.TimerControlRegister);
   79              		.loc 1 88 0
-  80 0010 607A     		ldrb	r0, [r4, #9]
+  80 0010 6079     		ldrb	r0, [r4, #5]
   81 0012 FFF7FEFF 		bl	Debounce_Timer_WriteControlRegister
   82              	.LVL3:
   89:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****         #endif /* Restore the enable state of the Timer component */
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 4
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 4
 
 
   90:.\Generated_Source\PSoC4/Debounce_Timer_PM.c ****     #endif /* Restore non retention registers in the UDB implementation only */
@@ -190,7 +190,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
   87              		.align	2
   88              	.L5:
   89 0018 00000000 		.word	.LANCHOR0
-  90 001c 82000F40 		.word	1074724994
+  90 001c 81000F40 		.word	1074724993
   91              		.cfi_endproc
   92              	.LFE1:
   93              		.size	Debounce_Timer_RestoreConfig, .-Debounce_Timer_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  110 0004 1B78     		ldrb	r3, [r3]
  111 0006 5BB2     		sxtb	r3, r3
  112 0008 002B     		cmp	r3, #0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 5
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 5
 
 
  113 000a 03DA     		bge	.L8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  134:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** ********************************************************************************
  135:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *
  136:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** * Summary:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 6
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 6
 
 
  137:.\Generated_Source\PSoC4/Debounce_Timer_PM.c **** *  Restores and enables the user configuration
@@ -356,15 +356,14 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  179              		.align	2
  180              		.set	.LANCHOR0,. + 0
  181              		.type	Debounce_Timer_backup, %object
- 182              		.size	Debounce_Timer_backup, 12
+ 182              		.size	Debounce_Timer_backup, 6
  183              	Debounce_Timer_backup:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 7
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 7
 
 
- 184 0000 00000000 		.space	12
- 184      00000000 
- 184      00000000 
- 185              		.text
+ 184 0000 00000000 		.space	6
+ 184      0000
+ 185 0006 0000     		.text
  186              	.Letext0:
  187              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
  188              		.file 3 ".\\Generated_Source\\PSoC4\\Debounce_Timer.h"
@@ -418,10 +417,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  236 005e 04       		.byte	0x4
  237 005f 05       		.byte	0x5
  238 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 8
-
-
  239 0064 02       		.uleb128 0x2
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 8
+
+
  240 0065 04       		.byte	0x4
  241 0066 07       		.byte	0x7
  242 0067 86010000 		.4byte	.LASF8
@@ -433,8 +432,8 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  248 0077 04       		.uleb128 0x4
  249 0078 7F010000 		.4byte	.LASF10
  250 007c 02       		.byte	0x2
- 251 007d 3A01     		.2byte	0x13a
- 252 007f 48000000 		.4byte	0x48
+ 251 007d 3901     		.2byte	0x139
+ 252 007f 3A000000 		.4byte	0x3a
  253 0083 02       		.uleb128 0x2
  254 0084 04       		.byte	0x4
  255 0085 04       		.byte	0x4
@@ -459,7 +458,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  274 00ab 07       		.byte	0x7
  275 00ac BE010000 		.4byte	.LASF15
  276 00b0 06       		.uleb128 0x6
- 277 00b1 0C       		.byte	0xc
+ 277 00b1 06       		.byte	0x6
  278 00b2 03       		.byte	0x3
  279 00b3 43       		.byte	0x43
  280 00b4 E9000000 		.4byte	0xe9
@@ -474,22 +473,22 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  289 00c9 03       		.byte	0x3
  290 00ca 48       		.byte	0x48
  291 00cb 77000000 		.4byte	0x77
- 292 00cf 04       		.byte	0x4
+ 292 00cf 02       		.byte	0x2
  293 00d0 07       		.uleb128 0x7
  294 00d1 04030000 		.4byte	.LASF18
  295 00d5 03       		.byte	0x3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 9
-
-
  296 00d6 49       		.byte	0x49
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 9
+
+
  297 00d7 6B000000 		.4byte	0x6b
- 298 00db 08       		.byte	0x8
+ 298 00db 04       		.byte	0x4
  299 00dc 07       		.uleb128 0x7
  300 00dd 17030000 		.4byte	.LASF19
  301 00e1 03       		.byte	0x3
  302 00e2 4F       		.byte	0x4f
  303 00e3 6B000000 		.4byte	0x6b
- 304 00e7 09       		.byte	0x9
+ 304 00e7 05       		.byte	0x5
  305 00e8 00       		.byte	0
  306 00e9 08       		.uleb128 0x8
  307 00ea 9E000000 		.4byte	.LASF20
@@ -538,10 +537,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  350 0154 9C       		.byte	0x9c
  351 0155 6C010000 		.4byte	0x16c
  352 0159 0A       		.uleb128 0xa
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 10
-
-
  353 015a 1E000000 		.4byte	.LVL4
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 10
+
+
  354 015e DD010000 		.4byte	0x1dd
  355 0162 0A       		.uleb128 0xa
  356 0163 22000000 		.4byte	.LVL5
@@ -598,10 +597,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  407 01d8 6B000000 		.4byte	0x6b
  408 01dc 00       		.byte	0
  409 01dd 0F       		.uleb128 0xf
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 11
-
-
  410 01de AA010000 		.4byte	.LASF29
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 11
+
+
  411 01e2 03       		.byte	0x3
  412 01e3 5B       		.byte	0x5b
  413 01e4 0F       		.uleb128 0xf
@@ -658,10 +657,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  464 002c 03       		.uleb128 0x3
  465 002d 0E       		.uleb128 0xe
  466 002e 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 12
-
-
  467 002f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 12
+
+
  468 0030 3B       		.uleb128 0x3b
  469 0031 05       		.uleb128 0x5
  470 0032 49       		.uleb128 0x49
@@ -718,10 +717,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  521 0065 00       		.byte	0
  522 0066 09       		.uleb128 0x9
  523 0067 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 13
-
-
  524 0068 01       		.byte	0x1
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 13
+
+
  525 0069 3F       		.uleb128 0x3f
  526 006a 19       		.uleb128 0x19
  527 006b 03       		.uleb128 0x3
@@ -778,10 +777,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  578 00a1 3A       		.uleb128 0x3a
  579 00a2 0B       		.uleb128 0xb
  580 00a3 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 14
-
-
  581 00a4 0B       		.uleb128 0xb
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 14
+
+
  582 00a5 27       		.uleb128 0x27
  583 00a6 19       		.uleb128 0x19
  584 00a7 49       		.uleb128 0x49
@@ -838,10 +837,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  635 0000 34000000 		.4byte	0x34
  636 0004 0200     		.2byte	0x2
  637 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 15
-
-
  638 000a 04       		.byte	0x4
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 15
+
+
  639 000b 00       		.byte	0
  640 000c 0000     		.2byte	0
  641 000e 0000     		.2byte	0
@@ -898,10 +897,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  674      536F7572 
  674      63655C50 
  675              	.LASF3:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 16
-
-
  676 0068 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 16
+
+
  676      7420756E 
  676      7369676E 
  676      65642069 
@@ -958,10 +957,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  698 011b 4465626F 		.ascii	"Debounce_Timer_WriteControlRegister\000"
  698      756E6365 
  698      5F54696D 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 17
-
-
  698      65725F57 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 17
+
+
  698      72697465 
  699              	.LASF12:
  700 013f 646F7562 		.ascii	"double\000"
@@ -979,8 +978,8 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  704      65725F52 
  704      65616443 
  705              	.LASF10:
- 706 017f 75696E74 		.ascii	"uint32\000"
- 706      333200
+ 706 017f 75696E74 		.ascii	"uint16\000"
+ 706      313600
  707              	.LASF8:
  708 0186 756E7369 		.ascii	"unsigned int\000"
  708      676E6564 
@@ -1018,10 +1017,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  720      32303135 
  720      30333033 
  721 0215 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 18
-
-
  721      20726576 
+ARM GAS  C:\Users\744\AppData\Local\Temp\ccx5ltYW.s 			page 18
+
+
  721      6973696F 
  721      6E203232 
  721      31323230 
@@ -1078,6 +1077,3 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 1
  739      52656769 
  739      73746572 
  740              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccWkSTWv.s 			page 19
-
-
