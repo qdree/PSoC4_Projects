@@ -31,7 +31,7 @@ const char *ref_id =  "09008B316BD8";    //key id reference string
 uint j = 0;    //index of element stored in key id array
 
 
-bool security_active = true;    //state of system
+bool security_active = false;    //state of system
 bool motion_detected = false;    //state of motion sensors(true for caught)
 bool box_closed = true;   //box with keypad is closed
 bool keys_locked = false;    //password input is forbidden
@@ -52,27 +52,37 @@ int main()
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     
-    Keyboard_Init();
-    LiquidCrystal_I2C_init(Addr,16,2,0);
-    begin();
-    Alarm_Timer_Start();
     I2C_Start();
+    Keyboard_Init();
+    CyDelay(200);
+    LiquidCrystal_I2C_init(Addr,16,2,0);
+    CyDelay(200);
+    begin();
+    CyDelay(200);
+    Alarm_Timer_Start();
+    CyDelay(200);
     UART_Start();
-    Alarm_Int_StartEx(MY_ISR);
+    CyDelay(200); 
+    //Alarm_Int_StartEx(MY_ISR);
     
-    
+    CyDelay(200);
     clear();
     setCursor(0,1);
-    
+    LCD_print("System is ready");
     LED_GREEN_Write(1);
     LED_RED_Write(1);
     Buzzer_Write(1);
-
+    CyDelay(2000);
+    clear();
+    
     for(;;)
     {
-        motion_detection();
-        if(security_active && motion_detected)
+        
+        
+        
+        if(security_active == true)
         {
+            motion_detection();
             key_id();
             if(!box_closed)
             {
@@ -85,6 +95,31 @@ int main()
                 
             }
         }
+
+         if(security_active == false)
+        {
+            password();
+            if(password_accepted == true)
+            {
+                security_active = true;
+            }
+        }
+        
+//        motion_detection();
+//        if(security_active && motion_detected)
+//        {
+//            key_id();
+//            if(!box_closed)
+//            {
+//                password();
+//                if(password_accepted == true)
+//                {
+//                    security_active = false;
+//                    //motion_detected = false;
+//                }
+//                
+//            }
+//        }
 
     }
 }
@@ -103,7 +138,6 @@ CY_ISR(MY_ISR)
         setCursor(0,1);
         LCD_print("ALARM!");
         Buzzer_Write(0);
-        //CyDelay(500);
     }
 }
 
@@ -131,6 +165,8 @@ void key_id()
                             LED_GREEN_Write(0);
                             LED_RED_Write(1);
                             box_closed = false;
+                            CyDelay(2000);
+                            clear();
                         }
                         else
                         {
@@ -187,6 +223,7 @@ void accept(char a[],const char b[])
             LCD_print("Alarm disabled");
             LED_GREEN_Write(0);
             LED_RED_Write(1);
+            Buzzer_Write(1);
             security_active = false;
             password_accepted = true;
         }
@@ -194,6 +231,9 @@ void accept(char a[],const char b[])
         {
             LCD_print("Alarm enabled");
             security_active = true;
+            LED_GREEN_Write(0);
+            LED_RED_Write(0);
+            password_accepted = true;
         }
         
     }

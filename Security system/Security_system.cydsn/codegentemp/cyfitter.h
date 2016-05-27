@@ -1131,7 +1131,7 @@
 
 /* Miscellaneous */
 #define CY_PROJECT_NAME "Security_system"
-#define CY_VERSION "PSoC Creator  3.3 SP1"
+#define CY_VERSION "PSoC Creator  3.3 CP2"
 #define CYDEV_BCLK__HFCLK__HZ 24000000U
 #define CYDEV_BCLK__HFCLK__KHZ 24000U
 #define CYDEV_BCLK__HFCLK__MHZ 24U

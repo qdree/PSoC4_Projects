@@ -1,6 +1,6 @@
 -- Project:   Security_system
--- Generated: 05/24/2016 23:10:17
--- PSoC Creator  3.3 SP1
+-- Generated: 05/25/2016 11:21:43
+-- PSoC Creator  3.3 CP2
 
 ENTITY Security_system IS
     PORT(

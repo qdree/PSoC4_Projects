@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,50 +25,50 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
   22              		.type	LiquidCrystal_I2C_init, %function
   23              	LiquidCrystal_I2C_init:
   24              	.LFB34:
-  25              		.file 1 "..\\..\\..\\..\\..\\Downloads\\LCD_I2C_PSoC5LP\\LCD_I2C_PSoC5LP\\LCD_I2C_PSoC4P.cydsn\\Li
-   1:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** #include "LiquidCrystal_I2C.h"
-   2:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-   3:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-   4:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //Portado para PSoC por Šarūnas Straigis
-   5:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //http://www.element14.com/community/people/sarunaszx/blog
-   6:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //Portado y modificado para PSoC 4 y PSoC 5LP por Brayan Bermudez y Carlos Diaz
-   7:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //http://digitalprojectsudistrital.blogspot.com.co/
-   8:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-   9:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  10:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  11:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // When the display powers up, it is configured as follows:
-  12:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //
-  13:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // 1. Display clear
-  14:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // 2. Function set: 
-  15:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    DL = 1; 8-bit interface data 
-  16:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    N = 0; 1-line display 
-  17:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    F = 0; 5x8 dot character font 
-  18:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // 3. Display on/off control: 
-  19:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    D = 0; Display off 
-  20:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    C = 0; Cursor off 
-  21:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    B = 0; Blinking off 
-  22:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // 4. Entry mode set: 
-  23:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    I/D = 1; Increment by 1
-  24:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //    S = 0; No shift 
-  25:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** //
-  26:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // Note, however, that resetting the Arduino doesn't reset the LCD, so we
-  27:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // can't assume that its in that state when a sketch starts (and the
-  28:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // LiquidCrystal constructor is called).
-  29:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  30:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _addr;
-  31:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _displayfunction;
-  32:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _displaycontrol;
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 2
+  25              		.file 1 ".\\LiquidCrystal_I2C.c"
+   1:.\LiquidCrystal_I2C.c **** #include "LiquidCrystal_I2C.h"
+   2:.\LiquidCrystal_I2C.c **** 
+   3:.\LiquidCrystal_I2C.c **** 
+   4:.\LiquidCrystal_I2C.c **** //Portado para PSoC por Šarūnas Straigis
+   5:.\LiquidCrystal_I2C.c **** //http://www.element14.com/community/people/sarunaszx/blog
+   6:.\LiquidCrystal_I2C.c **** //Portado y modificado para PSoC 4 y PSoC 5LP por Brayan Bermudez y Carlos Diaz
+   7:.\LiquidCrystal_I2C.c **** //http://digitalprojectsudistrital.blogspot.com.co/
+   8:.\LiquidCrystal_I2C.c **** 
+   9:.\LiquidCrystal_I2C.c **** 
+  10:.\LiquidCrystal_I2C.c **** 
+  11:.\LiquidCrystal_I2C.c **** // When the display powers up, it is configured as follows:
+  12:.\LiquidCrystal_I2C.c **** //
+  13:.\LiquidCrystal_I2C.c **** // 1. Display clear
+  14:.\LiquidCrystal_I2C.c **** // 2. Function set: 
+  15:.\LiquidCrystal_I2C.c **** //    DL = 1; 8-bit interface data 
+  16:.\LiquidCrystal_I2C.c **** //    N = 0; 1-line display 
+  17:.\LiquidCrystal_I2C.c **** //    F = 0; 5x8 dot character font 
+  18:.\LiquidCrystal_I2C.c **** // 3. Display on/off control: 
+  19:.\LiquidCrystal_I2C.c **** //    D = 0; Display off 
+  20:.\LiquidCrystal_I2C.c **** //    C = 0; Cursor off 
+  21:.\LiquidCrystal_I2C.c **** //    B = 0; Blinking off 
+  22:.\LiquidCrystal_I2C.c **** // 4. Entry mode set: 
+  23:.\LiquidCrystal_I2C.c **** //    I/D = 1; Increment by 1
+  24:.\LiquidCrystal_I2C.c **** //    S = 0; No shift 
+  25:.\LiquidCrystal_I2C.c **** //
+  26:.\LiquidCrystal_I2C.c **** // Note, however, that resetting the Arduino doesn't reset the LCD, so we
+  27:.\LiquidCrystal_I2C.c **** // can't assume that its in that state when a sketch starts (and the
+  28:.\LiquidCrystal_I2C.c **** // LiquidCrystal constructor is called).
+  29:.\LiquidCrystal_I2C.c **** 
+  30:.\LiquidCrystal_I2C.c **** uint8_t _addr;
+  31:.\LiquidCrystal_I2C.c **** uint8_t _displayfunction;
+  32:.\LiquidCrystal_I2C.c **** uint8_t _displaycontrol;
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 2
 
 
-  33:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _displaymode;
-  34:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _cols;
-  35:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _rows;
-  36:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _charsize;
-  37:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** uint8_t _backlightval;
-  38:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  39:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void LiquidCrystal_I2C_init(uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows, uint8_t charsize)
-  40:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** {
+  33:.\LiquidCrystal_I2C.c **** uint8_t _displaymode;
+  34:.\LiquidCrystal_I2C.c **** uint8_t _cols;
+  35:.\LiquidCrystal_I2C.c **** uint8_t _rows;
+  36:.\LiquidCrystal_I2C.c **** uint8_t _charsize;
+  37:.\LiquidCrystal_I2C.c **** uint8_t _backlightval;
+  38:.\LiquidCrystal_I2C.c **** 
+  39:.\LiquidCrystal_I2C.c **** void LiquidCrystal_I2C_init(uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows, uint8_t charsize)
+  40:.\LiquidCrystal_I2C.c **** {
   26              		.loc 1 40 0
   27              		.cfi_startproc
   28              	.LVL0:
@@ -76,34 +76,34 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
   30              		.cfi_def_cfa_offset 8
   31              		.cfi_offset 4, -8
   32              		.cfi_offset 14, -4
-  41:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_addr = lcd_addr;
+  41:.\LiquidCrystal_I2C.c **** 	_addr = lcd_addr;
   33              		.loc 1 41 0
   34 0002 064C     		ldr	r4, .L2
   35 0004 2070     		strb	r0, [r4]
-  42:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_cols = lcd_cols;
+  42:.\LiquidCrystal_I2C.c **** 	_cols = lcd_cols;
   36              		.loc 1 42 0
   37 0006 0648     		ldr	r0, .L2+4
   38              	.LVL1:
   39 0008 0170     		strb	r1, [r0]
-  43:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_rows = lcd_rows;
+  43:.\LiquidCrystal_I2C.c **** 	_rows = lcd_rows;
   40              		.loc 1 43 0
   41 000a 0649     		ldr	r1, .L2+8
   42              	.LVL2:
   43 000c 0A70     		strb	r2, [r1]
-  44:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_charsize = charsize;
+  44:.\LiquidCrystal_I2C.c **** 	_charsize = charsize;
   44              		.loc 1 44 0
   45 000e 064A     		ldr	r2, .L2+12
   46              	.LVL3:
   47 0010 1370     		strb	r3, [r2]
-  45:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_backlightval = LCD_BACKLIGHT;
+  45:.\LiquidCrystal_I2C.c **** 	_backlightval = LCD_BACKLIGHT;
   48              		.loc 1 45 0
   49 0012 0822     		mov	r2, #8
   50 0014 054B     		ldr	r3, .L2+16
   51              	.LVL4:
   52 0016 1A70     		strb	r2, [r3]
-  46:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
-  47:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
-  48:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
+  46:.\LiquidCrystal_I2C.c ****     
+  47:.\LiquidCrystal_I2C.c ****     return;
+  48:.\LiquidCrystal_I2C.c **** }
   53              		.loc 1 48 0
   54              		@ sp needed
   55 0018 10BD     		pop	{r4, pc}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
   64              		.cfi_endproc
   65              	.LFE34:
   66              		.size	LiquidCrystal_I2C_init, .-LiquidCrystal_I2C_init
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 3
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 3
 
 
   67              		.section	.text.I2C_M_write_byte,"ax",%progbits
@@ -129,329 +129,328 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
   72              		.type	I2C_M_write_byte, %function
   73              	I2C_M_write_byte:
   74              	.LFB63:
-  49:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  50:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void begin(void){
-  51:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****   
-  52:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_displayfunction = LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS;
-  53:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  54:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	if (_rows > 1) {
-  55:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_2LINE;
-  56:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
-  57:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  58:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// for some 1 line displays you can select a 10 pixel high font
-  59:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	if ((_charsize != 0) && (_rows == 1)) {
-  60:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_5x10DOTS;
-  61:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
-  62:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  63:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// SEE PAGE 45/46 FOR INITIALIZATION SPECIFICATION!
-  64:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// according to datasheet, we need at least 40ms after power rises above 2.7V
-  65:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// before sending commands. Arduino can turn on way befer 4.5V so we'll wait 50
-  66:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelay(50); 
-  67:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  68:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// Now we pull both RS and R/W low to begin commands
-  69:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(_backlightval);	// reset expanderand turn backlight off (Bit 8 =1)
-  70:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelay(1000);
-  71:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  72:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	//put the LCD into 4 bit mode
-  73:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// this is according to the hitachi HD44780 datasheet
-  74:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// figure 24, pg 46
-  75:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  76:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// we start in 8bit mode, try to set 4 bit mode
-  77:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits(0x03 << 4);
-  78:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
-  79:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  80:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// second try
-  81:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits(0x03 << 4);
-  82:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
-  83:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  84:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// third go!
-  85:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits(0x03 << 4); 
-  86:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(150);
-  87:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  88:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// finally, set to 4-bit interface
-  89:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits(0x02 << 4); 
-  90:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-  91:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// set # lines, font size, etc.
-  92:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_FUNCTIONSET | _displayfunction);  
-  93:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
-  94:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// turn the display on with no cursor or blinking default
-  95:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_displaycontrol = LCD_DISPLAYON | LCD_CURSOROFF | LCD_BLINKOFF;
-  96:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	display();
-  97:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 4
+  49:.\LiquidCrystal_I2C.c **** 
+  50:.\LiquidCrystal_I2C.c **** void begin(void){
+  51:.\LiquidCrystal_I2C.c ****   
+  52:.\LiquidCrystal_I2C.c **** 	_displayfunction = LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS;
+  53:.\LiquidCrystal_I2C.c **** 
+  54:.\LiquidCrystal_I2C.c **** 	if (_rows > 1) {
+  55:.\LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_2LINE;
+  56:.\LiquidCrystal_I2C.c **** 	}
+  57:.\LiquidCrystal_I2C.c **** 
+  58:.\LiquidCrystal_I2C.c **** 	// for some 1 line displays you can select a 10 pixel high font
+  59:.\LiquidCrystal_I2C.c **** 	if ((_charsize != 0) && (_rows == 1)) {
+  60:.\LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_5x10DOTS;
+  61:.\LiquidCrystal_I2C.c **** 	}
+  62:.\LiquidCrystal_I2C.c **** 
+  63:.\LiquidCrystal_I2C.c **** 	// SEE PAGE 45/46 FOR INITIALIZATION SPECIFICATION!
+  64:.\LiquidCrystal_I2C.c **** 	// according to datasheet, we need at least 40ms after power rises above 2.7V
+  65:.\LiquidCrystal_I2C.c **** 	// before sending commands. Arduino can turn on way befer 4.5V so we'll wait 50
+  66:.\LiquidCrystal_I2C.c **** 	CyDelay(50); 
+  67:.\LiquidCrystal_I2C.c **** 
+  68:.\LiquidCrystal_I2C.c **** 	// Now we pull both RS and R/W low to begin commands
+  69:.\LiquidCrystal_I2C.c **** 	expanderWrite(_backlightval);	// reset expanderand turn backlight off (Bit 8 =1)
+  70:.\LiquidCrystal_I2C.c **** 	CyDelay(1000);
+  71:.\LiquidCrystal_I2C.c **** 
+  72:.\LiquidCrystal_I2C.c **** 	//put the LCD into 4 bit mode
+  73:.\LiquidCrystal_I2C.c **** 	// this is according to the hitachi HD44780 datasheet
+  74:.\LiquidCrystal_I2C.c **** 	// figure 24, pg 46
+  75:.\LiquidCrystal_I2C.c **** 
+  76:.\LiquidCrystal_I2C.c **** 	// we start in 8bit mode, try to set 4 bit mode
+  77:.\LiquidCrystal_I2C.c **** 	write4bits(0x03 << 4);
+  78:.\LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
+  79:.\LiquidCrystal_I2C.c **** 
+  80:.\LiquidCrystal_I2C.c **** 	// second try
+  81:.\LiquidCrystal_I2C.c **** 	write4bits(0x03 << 4);
+  82:.\LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
+  83:.\LiquidCrystal_I2C.c **** 
+  84:.\LiquidCrystal_I2C.c **** 	// third go!
+  85:.\LiquidCrystal_I2C.c **** 	write4bits(0x03 << 4); 
+  86:.\LiquidCrystal_I2C.c **** 	CyDelayUs(150);
+  87:.\LiquidCrystal_I2C.c **** 
+  88:.\LiquidCrystal_I2C.c **** 	// finally, set to 4-bit interface
+  89:.\LiquidCrystal_I2C.c **** 	write4bits(0x02 << 4); 
+  90:.\LiquidCrystal_I2C.c **** 
+  91:.\LiquidCrystal_I2C.c **** 	// set # lines, font size, etc.
+  92:.\LiquidCrystal_I2C.c **** 	command(LCD_FUNCTIONSET | _displayfunction);  
+  93:.\LiquidCrystal_I2C.c **** 	
+  94:.\LiquidCrystal_I2C.c **** 	// turn the display on with no cursor or blinking default
+  95:.\LiquidCrystal_I2C.c **** 	_displaycontrol = LCD_DISPLAYON | LCD_CURSOROFF | LCD_BLINKOFF;
+  96:.\LiquidCrystal_I2C.c **** 	display();
+  97:.\LiquidCrystal_I2C.c **** 	
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 4
 
 
-  98:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// clear it off
-  99:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	clear();
- 100:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 101:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// Initialize to default text direction (for roman languages)
- 102:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_displaymode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
- 103:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 104:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	// set the entry mode
- 105:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
- 106:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 107:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	home();
- 108:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 109:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 110:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 111:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 112:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** /********** high level commands, for the user! */
- 113:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void clear(void){
- 114:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 115:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_CLEARDISPLAY);// clear display, set cursor position to zero
- 116:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
- 117:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 118:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 119:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 120:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 121:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void home(void){
- 122:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 123:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     command(LCD_RETURNHOME);  // set cursor position to zero
- 124:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
- 125:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 126:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 127:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 128:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 129:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void setCursor(uint8_t col, uint8_t row){
- 130:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 131:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	int row_offsets[] = { 0x00, 0x40, 0x14, 0x54 };
- 132:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	if (row > _rows) {
- 133:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		row = _rows-1;    // we count rows starting w/0
- 134:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
- 135:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_SETDDRAMADDR | (col + row_offsets[row]));
- 136:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 137:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 138:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 139:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 140:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // Turn the display on/off (quickly)
- 141:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void noDisplay(void){
- 142:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 143:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     _displaycontrol &= ~LCD_DISPLAYON;
- 144:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
- 145:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 146:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 147:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 148:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void display(void){
- 149:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 150:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_displaycontrol |= LCD_DISPLAYON;
- 151:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
- 152:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 153:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 154:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 5
+  98:.\LiquidCrystal_I2C.c **** 	// clear it off
+  99:.\LiquidCrystal_I2C.c **** 	clear();
+ 100:.\LiquidCrystal_I2C.c **** 	
+ 101:.\LiquidCrystal_I2C.c **** 	// Initialize to default text direction (for roman languages)
+ 102:.\LiquidCrystal_I2C.c **** 	_displaymode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
+ 103:.\LiquidCrystal_I2C.c **** 	
+ 104:.\LiquidCrystal_I2C.c **** 	// set the entry mode
+ 105:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 106:.\LiquidCrystal_I2C.c **** 	
+ 107:.\LiquidCrystal_I2C.c **** 	home();
+ 108:.\LiquidCrystal_I2C.c ****     
+ 109:.\LiquidCrystal_I2C.c ****     return;
+ 110:.\LiquidCrystal_I2C.c **** }
+ 111:.\LiquidCrystal_I2C.c **** 
+ 112:.\LiquidCrystal_I2C.c **** /********** high level commands, for the user! */
+ 113:.\LiquidCrystal_I2C.c **** void clear(void){
+ 114:.\LiquidCrystal_I2C.c ****     
+ 115:.\LiquidCrystal_I2C.c **** 	command(LCD_CLEARDISPLAY);// clear display, set cursor position to zero
+ 116:.\LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
+ 117:.\LiquidCrystal_I2C.c ****     
+ 118:.\LiquidCrystal_I2C.c ****     return;
+ 119:.\LiquidCrystal_I2C.c **** }
+ 120:.\LiquidCrystal_I2C.c **** 
+ 121:.\LiquidCrystal_I2C.c **** void home(void){
+ 122:.\LiquidCrystal_I2C.c **** 	
+ 123:.\LiquidCrystal_I2C.c ****     command(LCD_RETURNHOME);  // set cursor position to zero
+ 124:.\LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
+ 125:.\LiquidCrystal_I2C.c ****     
+ 126:.\LiquidCrystal_I2C.c ****     return;
+ 127:.\LiquidCrystal_I2C.c **** }
+ 128:.\LiquidCrystal_I2C.c **** 
+ 129:.\LiquidCrystal_I2C.c **** void setCursor(uint8_t col, uint8_t row){
+ 130:.\LiquidCrystal_I2C.c ****     
+ 131:.\LiquidCrystal_I2C.c **** 	int row_offsets[] = { 0x00, 0x40, 0x14, 0x54 };
+ 132:.\LiquidCrystal_I2C.c **** 	if (row > _rows) {
+ 133:.\LiquidCrystal_I2C.c **** 		row = _rows-1;    // we count rows starting w/0
+ 134:.\LiquidCrystal_I2C.c **** 	}
+ 135:.\LiquidCrystal_I2C.c **** 	command(LCD_SETDDRAMADDR | (col + row_offsets[row]));
+ 136:.\LiquidCrystal_I2C.c ****     
+ 137:.\LiquidCrystal_I2C.c ****     return;
+ 138:.\LiquidCrystal_I2C.c **** }
+ 139:.\LiquidCrystal_I2C.c **** 
+ 140:.\LiquidCrystal_I2C.c **** // Turn the display on/off (quickly)
+ 141:.\LiquidCrystal_I2C.c **** void noDisplay(void){
+ 142:.\LiquidCrystal_I2C.c **** 	
+ 143:.\LiquidCrystal_I2C.c ****     _displaycontrol &= ~LCD_DISPLAYON;
+ 144:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 145:.\LiquidCrystal_I2C.c ****     
+ 146:.\LiquidCrystal_I2C.c ****     return;
+ 147:.\LiquidCrystal_I2C.c **** }
+ 148:.\LiquidCrystal_I2C.c **** void display(void){
+ 149:.\LiquidCrystal_I2C.c ****     
+ 150:.\LiquidCrystal_I2C.c **** 	_displaycontrol |= LCD_DISPLAYON;
+ 151:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 152:.\LiquidCrystal_I2C.c ****     
+ 153:.\LiquidCrystal_I2C.c ****     return;
+ 154:.\LiquidCrystal_I2C.c **** }
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 5
 
 
- 155:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 156:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // Turns the underline cursor on/off
- 157:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void noCursor(void){
- 158:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 159:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     _displaycontrol &= ~LCD_CURSORON;
- 160:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
- 161:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 162:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 163:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 164:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void cursor(void){
- 165:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 166:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     _displaycontrol |= LCD_CURSORON;
- 167:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
- 168:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 169:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 170:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 171:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 172:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // Turn on and off the blinking cursor
- 173:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void noBlink(void){
- 174:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 175:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     _displaycontrol &= ~LCD_BLINKON;
- 176:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
- 177:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 178:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 179:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 180:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void blink(void){
- 181:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 182:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_displaycontrol |= LCD_BLINKON;
- 183:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
- 184:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 185:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 186:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 187:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 188:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // These commands scroll the display without changing the RAM
- 189:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void scrollDisplayLeft(void){
- 190:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 191:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVELEFT);
- 192:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 193:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 194:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 195:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void scrollDisplayRight(void){
- 196:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 197:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     command(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVERIGHT);
- 198:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 199:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 200:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 201:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 202:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // This is for text that flows Left to Right
- 203:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void leftToRight(void){
- 204:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 205:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_displaymode |= LCD_ENTRYLEFT;
- 206:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
- 207:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 208:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 209:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 210:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 211:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // This is for text that flows Right to Left
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 6
+ 155:.\LiquidCrystal_I2C.c **** 
+ 156:.\LiquidCrystal_I2C.c **** // Turns the underline cursor on/off
+ 157:.\LiquidCrystal_I2C.c **** void noCursor(void){
+ 158:.\LiquidCrystal_I2C.c **** 	
+ 159:.\LiquidCrystal_I2C.c ****     _displaycontrol &= ~LCD_CURSORON;
+ 160:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 161:.\LiquidCrystal_I2C.c ****     
+ 162:.\LiquidCrystal_I2C.c ****     return;
+ 163:.\LiquidCrystal_I2C.c **** }
+ 164:.\LiquidCrystal_I2C.c **** void cursor(void){
+ 165:.\LiquidCrystal_I2C.c **** 	
+ 166:.\LiquidCrystal_I2C.c ****     _displaycontrol |= LCD_CURSORON;
+ 167:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 168:.\LiquidCrystal_I2C.c ****     
+ 169:.\LiquidCrystal_I2C.c ****     return;
+ 170:.\LiquidCrystal_I2C.c **** }
+ 171:.\LiquidCrystal_I2C.c **** 
+ 172:.\LiquidCrystal_I2C.c **** // Turn on and off the blinking cursor
+ 173:.\LiquidCrystal_I2C.c **** void noBlink(void){
+ 174:.\LiquidCrystal_I2C.c **** 	
+ 175:.\LiquidCrystal_I2C.c ****     _displaycontrol &= ~LCD_BLINKON;
+ 176:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 177:.\LiquidCrystal_I2C.c ****     
+ 178:.\LiquidCrystal_I2C.c ****     return;
+ 179:.\LiquidCrystal_I2C.c **** }
+ 180:.\LiquidCrystal_I2C.c **** void blink(void){
+ 181:.\LiquidCrystal_I2C.c ****     
+ 182:.\LiquidCrystal_I2C.c **** 	_displaycontrol |= LCD_BLINKON;
+ 183:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 184:.\LiquidCrystal_I2C.c ****     
+ 185:.\LiquidCrystal_I2C.c ****     return;
+ 186:.\LiquidCrystal_I2C.c **** }
+ 187:.\LiquidCrystal_I2C.c **** 
+ 188:.\LiquidCrystal_I2C.c **** // These commands scroll the display without changing the RAM
+ 189:.\LiquidCrystal_I2C.c **** void scrollDisplayLeft(void){
+ 190:.\LiquidCrystal_I2C.c ****     
+ 191:.\LiquidCrystal_I2C.c **** 	command(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVELEFT);
+ 192:.\LiquidCrystal_I2C.c ****     
+ 193:.\LiquidCrystal_I2C.c ****     return;
+ 194:.\LiquidCrystal_I2C.c **** }
+ 195:.\LiquidCrystal_I2C.c **** void scrollDisplayRight(void){
+ 196:.\LiquidCrystal_I2C.c **** 	
+ 197:.\LiquidCrystal_I2C.c ****     command(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVERIGHT);
+ 198:.\LiquidCrystal_I2C.c ****     
+ 199:.\LiquidCrystal_I2C.c ****     return;
+ 200:.\LiquidCrystal_I2C.c **** }
+ 201:.\LiquidCrystal_I2C.c **** 
+ 202:.\LiquidCrystal_I2C.c **** // This is for text that flows Left to Right
+ 203:.\LiquidCrystal_I2C.c **** void leftToRight(void){
+ 204:.\LiquidCrystal_I2C.c ****     
+ 205:.\LiquidCrystal_I2C.c **** 	_displaymode |= LCD_ENTRYLEFT;
+ 206:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 207:.\LiquidCrystal_I2C.c ****     
+ 208:.\LiquidCrystal_I2C.c ****     return;
+ 209:.\LiquidCrystal_I2C.c **** }
+ 210:.\LiquidCrystal_I2C.c **** 
+ 211:.\LiquidCrystal_I2C.c **** // This is for text that flows Right to Left
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 6
 
 
- 212:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void rightToLeft(void){
- 213:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 214:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_displaymode &= ~LCD_ENTRYLEFT;
- 215:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
- 216:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 217:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 218:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 219:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 220:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // This will 'right justify' text from the cursor
- 221:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void autoscroll(void){
- 222:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 223:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     _displaymode |= LCD_ENTRYSHIFTINCREMENT;
- 224:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
- 225:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 226:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 227:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 228:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 229:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // This will 'left justify' text from the cursor
- 230:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void noAutoscroll(void){
- 231:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 232:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     _displaymode &= ~LCD_ENTRYSHIFTINCREMENT;
- 233:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
- 234:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 235:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 236:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 237:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 238:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // Allows us to fill the first 8 CGRAM locations
- 239:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // with custom characters
- 240:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void createChar(uint8_t location, uint8_t charmap[]){ uint32_t i = 0;
- 241:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 242:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     location &= 0x7; // we only have 8 locations 0-7
- 243:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_SETCGRAMADDR | (location << 3));
- 244:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	for (i=0; i<8; i++) {
- 245:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		write(charmap[i]);
- 246:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
- 247:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 248:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 249:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 250:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 251:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // Turn the (optional) backlight off/on
- 252:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void noBacklight(void) {
- 253:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 254:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     _backlightval=LCD_NOBACKLIGHT;
- 255:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(0);
- 256:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 257:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 258:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 259:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 260:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void backlight(void){
- 261:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 262:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	_backlightval=LCD_BACKLIGHT;
- 263:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(0);
- 264:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 265:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 266:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 267:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 268:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** /*********** mid level commands, for sending data/cmds */
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 7
+ 212:.\LiquidCrystal_I2C.c **** void rightToLeft(void){
+ 213:.\LiquidCrystal_I2C.c ****     
+ 214:.\LiquidCrystal_I2C.c **** 	_displaymode &= ~LCD_ENTRYLEFT;
+ 215:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 216:.\LiquidCrystal_I2C.c ****     
+ 217:.\LiquidCrystal_I2C.c ****     return;
+ 218:.\LiquidCrystal_I2C.c **** }
+ 219:.\LiquidCrystal_I2C.c **** 
+ 220:.\LiquidCrystal_I2C.c **** // This will 'right justify' text from the cursor
+ 221:.\LiquidCrystal_I2C.c **** void autoscroll(void){
+ 222:.\LiquidCrystal_I2C.c **** 	
+ 223:.\LiquidCrystal_I2C.c ****     _displaymode |= LCD_ENTRYSHIFTINCREMENT;
+ 224:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 225:.\LiquidCrystal_I2C.c ****     
+ 226:.\LiquidCrystal_I2C.c ****     return;
+ 227:.\LiquidCrystal_I2C.c **** }
+ 228:.\LiquidCrystal_I2C.c **** 
+ 229:.\LiquidCrystal_I2C.c **** // This will 'left justify' text from the cursor
+ 230:.\LiquidCrystal_I2C.c **** void noAutoscroll(void){
+ 231:.\LiquidCrystal_I2C.c **** 	
+ 232:.\LiquidCrystal_I2C.c ****     _displaymode &= ~LCD_ENTRYSHIFTINCREMENT;
+ 233:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 234:.\LiquidCrystal_I2C.c ****     
+ 235:.\LiquidCrystal_I2C.c ****     return;
+ 236:.\LiquidCrystal_I2C.c **** }
+ 237:.\LiquidCrystal_I2C.c **** 
+ 238:.\LiquidCrystal_I2C.c **** // Allows us to fill the first 8 CGRAM locations
+ 239:.\LiquidCrystal_I2C.c **** // with custom characters
+ 240:.\LiquidCrystal_I2C.c **** void createChar(uint8_t location, uint8_t charmap[]){ uint32_t i = 0;
+ 241:.\LiquidCrystal_I2C.c **** 	
+ 242:.\LiquidCrystal_I2C.c ****     location &= 0x7; // we only have 8 locations 0-7
+ 243:.\LiquidCrystal_I2C.c **** 	command(LCD_SETCGRAMADDR | (location << 3));
+ 244:.\LiquidCrystal_I2C.c **** 	for (i=0; i<8; i++) {
+ 245:.\LiquidCrystal_I2C.c **** 		write(charmap[i]);
+ 246:.\LiquidCrystal_I2C.c **** 	}
+ 247:.\LiquidCrystal_I2C.c ****     
+ 248:.\LiquidCrystal_I2C.c ****     return;
+ 249:.\LiquidCrystal_I2C.c **** }
+ 250:.\LiquidCrystal_I2C.c **** 
+ 251:.\LiquidCrystal_I2C.c **** // Turn the (optional) backlight off/on
+ 252:.\LiquidCrystal_I2C.c **** void noBacklight(void) {
+ 253:.\LiquidCrystal_I2C.c **** 	
+ 254:.\LiquidCrystal_I2C.c ****     _backlightval=LCD_NOBACKLIGHT;
+ 255:.\LiquidCrystal_I2C.c **** 	expanderWrite(0);
+ 256:.\LiquidCrystal_I2C.c ****     
+ 257:.\LiquidCrystal_I2C.c ****     return;
+ 258:.\LiquidCrystal_I2C.c **** }
+ 259:.\LiquidCrystal_I2C.c **** 
+ 260:.\LiquidCrystal_I2C.c **** void backlight(void){
+ 261:.\LiquidCrystal_I2C.c ****     
+ 262:.\LiquidCrystal_I2C.c **** 	_backlightval=LCD_BACKLIGHT;
+ 263:.\LiquidCrystal_I2C.c **** 	expanderWrite(0);
+ 264:.\LiquidCrystal_I2C.c ****     
+ 265:.\LiquidCrystal_I2C.c ****     return;
+ 266:.\LiquidCrystal_I2C.c **** }
+ 267:.\LiquidCrystal_I2C.c **** 
+ 268:.\LiquidCrystal_I2C.c **** /*********** mid level commands, for sending data/cmds */
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 7
 
 
- 269:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 270:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void command(uint8_t value){
- 271:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 272:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     send(value, 0);
- 273:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 274:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 275:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 276:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 277:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****  void write(uint8_t value){
- 278:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 279:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	send(value, Rs);
- 280:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 281:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 282:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 283:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 284:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 285:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** /************ low level data pushing commands **********/
- 286:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 287:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** // write either command or data
- 288:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void send(uint8_t value, uint8_t mode){
- 289:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 290:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	uint8_t highnib=value&0xf0;
- 291:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	uint8_t lownib=(value<<4)&0xf0;
- 292:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits((highnib)|mode);
- 293:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits((lownib)|mode); 
- 294:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 295:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 296:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 297:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 298:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void write4bits(uint8_t value) {
- 299:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 300:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(value);
- 301:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	pulseEnable(value);
- 302:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 303:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 304:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 305:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 306:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void expanderWrite(uint8_t _data){     
- 307:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 308:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	I2C_M_write_byte(_addr,_data | _backlightval);	   
- 309:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 310:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 311:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 312:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 313:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void pulseEnable(uint8_t _data){
- 314:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 315:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(_data | En);	// En high
- 316:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(1);		// enable pulse must be >450ns
- 317:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(_data & ~En);	// En low
- 318:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(50);		// commands need > 37us to settle
- 319:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 320:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 321:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 322:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 323:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void load_custom_character(uint8_t char_num, uint8_t *rows){
- 324:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
- 325:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     createChar(char_num, rows);
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 8
+ 269:.\LiquidCrystal_I2C.c **** 
+ 270:.\LiquidCrystal_I2C.c **** void command(uint8_t value){
+ 271:.\LiquidCrystal_I2C.c **** 	
+ 272:.\LiquidCrystal_I2C.c ****     send(value, 0);
+ 273:.\LiquidCrystal_I2C.c ****     
+ 274:.\LiquidCrystal_I2C.c ****     return;
+ 275:.\LiquidCrystal_I2C.c **** }
+ 276:.\LiquidCrystal_I2C.c **** 
+ 277:.\LiquidCrystal_I2C.c ****  void write(uint8_t value){
+ 278:.\LiquidCrystal_I2C.c ****     
+ 279:.\LiquidCrystal_I2C.c **** 	send(value, Rs);
+ 280:.\LiquidCrystal_I2C.c ****     
+ 281:.\LiquidCrystal_I2C.c ****     return;
+ 282:.\LiquidCrystal_I2C.c **** }
+ 283:.\LiquidCrystal_I2C.c **** 
+ 284:.\LiquidCrystal_I2C.c **** 
+ 285:.\LiquidCrystal_I2C.c **** /************ low level data pushing commands **********/
+ 286:.\LiquidCrystal_I2C.c **** 
+ 287:.\LiquidCrystal_I2C.c **** // write either command or data
+ 288:.\LiquidCrystal_I2C.c **** void send(uint8_t value, uint8_t mode){
+ 289:.\LiquidCrystal_I2C.c ****     
+ 290:.\LiquidCrystal_I2C.c **** 	uint8_t highnib=value&0xf0;
+ 291:.\LiquidCrystal_I2C.c **** 	uint8_t lownib=(value<<4)&0xf0;
+ 292:.\LiquidCrystal_I2C.c **** 	write4bits((highnib)|mode);
+ 293:.\LiquidCrystal_I2C.c **** 	write4bits((lownib)|mode); 
+ 294:.\LiquidCrystal_I2C.c ****     
+ 295:.\LiquidCrystal_I2C.c ****     return;
+ 296:.\LiquidCrystal_I2C.c **** }
+ 297:.\LiquidCrystal_I2C.c **** 
+ 298:.\LiquidCrystal_I2C.c **** void write4bits(uint8_t value) {
+ 299:.\LiquidCrystal_I2C.c ****     
+ 300:.\LiquidCrystal_I2C.c **** 	expanderWrite(value);
+ 301:.\LiquidCrystal_I2C.c **** 	pulseEnable(value);
+ 302:.\LiquidCrystal_I2C.c ****     
+ 303:.\LiquidCrystal_I2C.c ****     return;
+ 304:.\LiquidCrystal_I2C.c **** }
+ 305:.\LiquidCrystal_I2C.c **** 
+ 306:.\LiquidCrystal_I2C.c **** void expanderWrite(uint8_t _data){     
+ 307:.\LiquidCrystal_I2C.c ****     
+ 308:.\LiquidCrystal_I2C.c **** 	I2C_M_write_byte(_addr,_data | _backlightval);	   
+ 309:.\LiquidCrystal_I2C.c ****     
+ 310:.\LiquidCrystal_I2C.c ****     return;
+ 311:.\LiquidCrystal_I2C.c **** }
+ 312:.\LiquidCrystal_I2C.c **** 
+ 313:.\LiquidCrystal_I2C.c **** void pulseEnable(uint8_t _data){
+ 314:.\LiquidCrystal_I2C.c ****     
+ 315:.\LiquidCrystal_I2C.c **** 	expanderWrite(_data | En);	// En high
+ 316:.\LiquidCrystal_I2C.c **** 	CyDelayUs(1);		// enable pulse must be >450ns
+ 317:.\LiquidCrystal_I2C.c **** 	expanderWrite(_data & ~En);	// En low
+ 318:.\LiquidCrystal_I2C.c **** 	CyDelayUs(50);		// commands need > 37us to settle
+ 319:.\LiquidCrystal_I2C.c ****     
+ 320:.\LiquidCrystal_I2C.c ****     return;
+ 321:.\LiquidCrystal_I2C.c **** }
+ 322:.\LiquidCrystal_I2C.c **** 
+ 323:.\LiquidCrystal_I2C.c **** void load_custom_character(uint8_t char_num, uint8_t *rows){
+ 324:.\LiquidCrystal_I2C.c **** 	
+ 325:.\LiquidCrystal_I2C.c ****     createChar(char_num, rows);
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 8
 
 
- 326:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 327:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 328:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 329:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 330:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void setBacklight(uint8_t new_val){
- 331:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 332:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	if (new_val) {
- 333:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		backlight();		// turn backlight on
- 334:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	} else {
- 335:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		noBacklight();		// turn backlight off
- 336:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
- 337:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 338:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 339:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 340:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 341:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void LCD_print(char word[]){ 
- 342:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 343:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     uint32_t i = 0;
- 344:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 345:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     uint8_t size = strlen(word);
- 346:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 347:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     for (i = 0; i < size; i++){
- 348:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****         write(word[i]);
- 349:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     }
- 350:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 351:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 352:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
- 353:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 354:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 355:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void I2C_M_write_byte(uint8_t addr,uint8_t data){ 
-  75              		.loc 1 355 0
+ 326:.\LiquidCrystal_I2C.c ****     
+ 327:.\LiquidCrystal_I2C.c ****     return;
+ 328:.\LiquidCrystal_I2C.c **** }
+ 329:.\LiquidCrystal_I2C.c **** 
+ 330:.\LiquidCrystal_I2C.c **** void setBacklight(uint8_t new_val){
+ 331:.\LiquidCrystal_I2C.c ****     
+ 332:.\LiquidCrystal_I2C.c **** 	if (new_val) {
+ 333:.\LiquidCrystal_I2C.c **** 		backlight();		// turn backlight on
+ 334:.\LiquidCrystal_I2C.c **** 	} else {
+ 335:.\LiquidCrystal_I2C.c **** 		noBacklight();		// turn backlight off
+ 336:.\LiquidCrystal_I2C.c **** 	}
+ 337:.\LiquidCrystal_I2C.c ****     
+ 338:.\LiquidCrystal_I2C.c ****     return;
+ 339:.\LiquidCrystal_I2C.c **** }
+ 340:.\LiquidCrystal_I2C.c **** 
+ 341:.\LiquidCrystal_I2C.c **** void LCD_print(char word[]){ 
+ 342:.\LiquidCrystal_I2C.c ****     
+ 343:.\LiquidCrystal_I2C.c ****     uint32_t i = 0;
+ 344:.\LiquidCrystal_I2C.c ****     
+ 345:.\LiquidCrystal_I2C.c ****     uint8_t size = strlen(word);
+ 346:.\LiquidCrystal_I2C.c ****     
+ 347:.\LiquidCrystal_I2C.c ****     for (i = 0; i < size; i++){
+ 348:.\LiquidCrystal_I2C.c ****         write(word[i]);
+ 349:.\LiquidCrystal_I2C.c ****     }
+ 350:.\LiquidCrystal_I2C.c **** 
+ 351:.\LiquidCrystal_I2C.c ****     return;
+ 352:.\LiquidCrystal_I2C.c **** }
+ 353:.\LiquidCrystal_I2C.c **** 
+ 354:.\LiquidCrystal_I2C.c **** void I2C_M_write_byte(uint8_t addr,uint8_t data){ 
+  75              		.loc 1 354 0
   76              		.cfi_startproc
   77              	.LVL5:
   78 0000 10B5     		push	{r4, lr}
@@ -459,35 +458,35 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
   80              		.cfi_offset 4, -8
   81              		.cfi_offset 14, -4
   82 0002 0C1C     		mov	r4, r1
- 356:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
- 357:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** #if CY_PSOC5
- 358:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     I2C_MasterSendStart(addr, 0);
- 359:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     I2C_MasterWriteByte(data);
- 360:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     I2C_MasterSendStop();
- 361:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** #elif CY_PSOC4
- 362:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     I2C_I2CMasterSendStart(addr, 0);
-  83              		.loc 1 362 0
+ 355:.\LiquidCrystal_I2C.c **** 
+ 356:.\LiquidCrystal_I2C.c **** #if CY_PSOC5
+ 357:.\LiquidCrystal_I2C.c ****     I2C_MasterSendStart(addr, 0);
+ 358:.\LiquidCrystal_I2C.c ****     I2C_MasterWriteByte(data);
+ 359:.\LiquidCrystal_I2C.c ****     I2C_MasterSendStop();
+ 360:.\LiquidCrystal_I2C.c **** #elif CY_PSOC4
+ 361:.\LiquidCrystal_I2C.c ****     I2C_I2CMasterSendStart(addr, 0);
+  83              		.loc 1 361 0
   84 0004 0021     		mov	r1, #0
   85              	.LVL6:
   86 0006 FFF7FEFF 		bl	I2C_I2CMasterSendStart
   87              	.LVL7:
- 363:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     I2C_I2CMasterWriteByte(data);
-  88              		.loc 1 363 0
+ 362:.\LiquidCrystal_I2C.c ****     I2C_I2CMasterWriteByte(data);
+  88              		.loc 1 362 0
   89 000a 201C     		mov	r0, r4
   90 000c FFF7FEFF 		bl	I2C_I2CMasterWriteByte
   91              	.LVL8:
- 364:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     I2C_I2CMasterSendStop();
-  92              		.loc 1 364 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 9
-
-
+ 363:.\LiquidCrystal_I2C.c ****     I2C_I2CMasterSendStop();
+  92              		.loc 1 363 0
   93 0010 FFF7FEFF 		bl	I2C_I2CMasterSendStop
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 9
+
+
   94              	.LVL9:
- 365:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** #endif
- 366:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
- 367:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     return;
- 368:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** }
-  95              		.loc 1 368 0
+ 364:.\LiquidCrystal_I2C.c **** #endif
+ 365:.\LiquidCrystal_I2C.c ****     
+ 366:.\LiquidCrystal_I2C.c ****     return;
+ 367:.\LiquidCrystal_I2C.c **** }
+  95              		.loc 1 367 0
   96              		@ sp needed
   97 0014 10BD     		pop	{r4, pc}
   98              		.cfi_endproc
@@ -501,7 +500,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  106              		.type	expanderWrite, %function
  107              	expanderWrite:
  108              	.LFB58:
- 306:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 306:.\LiquidCrystal_I2C.c ****     
  109              		.loc 1 306 0
  110              		.cfi_startproc
  111              	.LVL10:
@@ -509,7 +508,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  113              		.cfi_def_cfa_offset 8
  114              		.cfi_offset 3, -8
  115              		.cfi_offset 14, -4
- 308:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 308:.\LiquidCrystal_I2C.c ****     
  116              		.loc 1 308 0
  117 0002 054B     		ldr	r3, .L6
  118 0004 1A78     		ldrb	r2, [r3]
@@ -521,7 +520,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  124              	.LVL11:
  125 0010 FFF7FEFF 		bl	I2C_M_write_byte
  126              	.LVL12:
- 311:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 311:.\LiquidCrystal_I2C.c **** 
  127              		.loc 1 311 0
  128              		@ sp needed
  129 0014 08BD     		pop	{r3, pc}
@@ -538,30 +537,30 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  140              		.global	noBacklight
  141              		.code	16
  142              		.thumb_func
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 10
-
-
  143              		.type	noBacklight, %function
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 10
+
+
  144              	noBacklight:
  145              	.LFB52:
- 252:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 252:.\LiquidCrystal_I2C.c **** 	
  146              		.loc 1 252 0
  147              		.cfi_startproc
  148 0000 08B5     		push	{r3, lr}
  149              		.cfi_def_cfa_offset 8
  150              		.cfi_offset 3, -8
  151              		.cfi_offset 14, -4
- 254:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(0);
+ 254:.\LiquidCrystal_I2C.c **** 	expanderWrite(0);
  152              		.loc 1 254 0
  153 0002 0022     		mov	r2, #0
  154 0004 024B     		ldr	r3, .L9
  155 0006 1A70     		strb	r2, [r3]
- 255:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 255:.\LiquidCrystal_I2C.c ****     
  156              		.loc 1 255 0
  157 0008 0020     		mov	r0, #0
  158 000a FFF7FEFF 		bl	expanderWrite
  159              	.LVL13:
- 258:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 258:.\LiquidCrystal_I2C.c **** 
  160              		.loc 1 258 0
  161              		@ sp needed
  162 000e 08BD     		pop	{r3, pc}
@@ -580,28 +579,28 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  175              		.type	backlight, %function
  176              	backlight:
  177              	.LFB53:
- 260:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 260:.\LiquidCrystal_I2C.c ****     
  178              		.loc 1 260 0
  179              		.cfi_startproc
  180 0000 08B5     		push	{r3, lr}
  181              		.cfi_def_cfa_offset 8
  182              		.cfi_offset 3, -8
  183              		.cfi_offset 14, -4
- 262:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(0);
+ 262:.\LiquidCrystal_I2C.c **** 	expanderWrite(0);
  184              		.loc 1 262 0
  185 0002 0822     		mov	r2, #8
  186 0004 024B     		ldr	r3, .L12
  187 0006 1A70     		strb	r2, [r3]
- 263:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 263:.\LiquidCrystal_I2C.c ****     
  188              		.loc 1 263 0
  189 0008 0020     		mov	r0, #0
  190 000a FFF7FEFF 		bl	expanderWrite
  191              	.LVL14:
- 266:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 11
-
-
+ 266:.\LiquidCrystal_I2C.c **** 
  192              		.loc 1 266 0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 11
+
+
  193              		@ sp needed
  194 000e 08BD     		pop	{r3, pc}
  195              	.L13:
@@ -619,7 +618,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  207              		.type	setBacklight, %function
  208              	setBacklight:
  209              	.LFB61:
- 330:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 330:.\LiquidCrystal_I2C.c ****     
  210              		.loc 1 330 0
  211              		.cfi_startproc
  212              	.LVL15:
@@ -627,23 +626,23 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  214              		.cfi_def_cfa_offset 8
  215              		.cfi_offset 3, -8
  216              		.cfi_offset 14, -4
- 332:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		backlight();		// turn backlight on
+ 332:.\LiquidCrystal_I2C.c **** 		backlight();		// turn backlight on
  217              		.loc 1 332 0
  218 0002 0028     		cmp	r0, #0
  219 0004 02D0     		beq	.L15
- 333:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	} else {
+ 333:.\LiquidCrystal_I2C.c **** 	} else {
  220              		.loc 1 333 0
  221 0006 FFF7FEFF 		bl	backlight
  222              	.LVL16:
  223 000a 01E0     		b	.L14
  224              	.LVL17:
  225              	.L15:
- 335:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
+ 335:.\LiquidCrystal_I2C.c **** 	}
  226              		.loc 1 335 0
  227 000c FFF7FEFF 		bl	noBacklight
  228              	.LVL18:
  229              	.L14:
- 339:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 339:.\LiquidCrystal_I2C.c **** 
  230              		.loc 1 339 0
  231              		@ sp needed
  232 0010 08BD     		pop	{r3, pc}
@@ -658,10 +657,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  241              		.type	pulseEnable, %function
  242              	pulseEnable:
  243              	.LFB59:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 12
+ 313:.\LiquidCrystal_I2C.c ****     
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 12
 
 
- 313:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
  244              		.loc 1 313 0
  245              		.cfi_startproc
  246              	.LVL19:
@@ -670,31 +669,31 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  249              		.cfi_offset 4, -8
  250              		.cfi_offset 14, -4
  251 0002 041C     		mov	r4, r0
- 315:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(1);		// enable pulse must be >450ns
+ 315:.\LiquidCrystal_I2C.c **** 	CyDelayUs(1);		// enable pulse must be >450ns
  252              		.loc 1 315 0
  253 0004 0420     		mov	r0, #4
  254              	.LVL20:
  255 0006 2043     		orr	r0, r4
  256 0008 FFF7FEFF 		bl	expanderWrite
  257              	.LVL21:
- 316:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	expanderWrite(_data & ~En);	// En low
+ 316:.\LiquidCrystal_I2C.c **** 	expanderWrite(_data & ~En);	// En low
  258              		.loc 1 316 0
  259 000c 0120     		mov	r0, #1
  260 000e FFF7FEFF 		bl	CyDelayUs
  261              	.LVL22:
- 317:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(50);		// commands need > 37us to settle
+ 317:.\LiquidCrystal_I2C.c **** 	CyDelayUs(50);		// commands need > 37us to settle
  262              		.loc 1 317 0
  263 0012 0423     		mov	r3, #4
  264 0014 201C     		mov	r0, r4
  265 0016 9843     		bic	r0, r3
  266 0018 FFF7FEFF 		bl	expanderWrite
  267              	.LVL23:
- 318:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 318:.\LiquidCrystal_I2C.c ****     
  268              		.loc 1 318 0
  269 001c 3220     		mov	r0, #50
  270 001e FFF7FEFF 		bl	CyDelayUs
  271              	.LVL24:
- 321:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 321:.\LiquidCrystal_I2C.c **** 
  272              		.loc 1 321 0
  273              		@ sp needed
  274 0022 10BD     		pop	{r4, pc}
@@ -709,7 +708,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  283              		.type	write4bits, %function
  284              	write4bits:
  285              	.LFB57:
- 298:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 298:.\LiquidCrystal_I2C.c ****     
  286              		.loc 1 298 0
  287              		.cfi_startproc
  288              	.LVL25:
@@ -718,19 +717,19 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  291              		.cfi_offset 4, -8
  292              		.cfi_offset 14, -4
  293 0002 041C     		mov	r4, r0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 13
+ 300:.\LiquidCrystal_I2C.c **** 	pulseEnable(value);
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 13
 
 
- 300:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	pulseEnable(value);
  294              		.loc 1 300 0
  295 0004 FFF7FEFF 		bl	expanderWrite
  296              	.LVL26:
- 301:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 301:.\LiquidCrystal_I2C.c ****     
  297              		.loc 1 301 0
  298 0008 201C     		mov	r0, r4
  299 000a FFF7FEFF 		bl	pulseEnable
  300              	.LVL27:
- 304:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 304:.\LiquidCrystal_I2C.c **** 
  301              		.loc 1 304 0
  302              		@ sp needed
  303 000e 10BD     		pop	{r4, pc}
@@ -745,7 +744,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  312              		.type	send, %function
  313              	send:
  314              	.LFB56:
- 288:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 288:.\LiquidCrystal_I2C.c ****     
  315              		.loc 1 288 0
  316              		.cfi_startproc
  317              	.LVL28:
@@ -756,36 +755,36 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  322              		.cfi_offset 5, -8
  323              		.cfi_offset 14, -4
  324 0002 0D1C     		mov	r5, r1
- 290:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	uint8_t lownib=(value<<4)&0xf0;
+ 290:.\LiquidCrystal_I2C.c **** 	uint8_t lownib=(value<<4)&0xf0;
  325              		.loc 1 290 0
  326 0004 0F23     		mov	r3, #15
  327 0006 021C     		mov	r2, r0
  328 0008 9A43     		bic	r2, r3
  329 000a 131C     		mov	r3, r2
  330              	.LVL29:
- 291:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits((highnib)|mode);
+ 291:.\LiquidCrystal_I2C.c **** 	write4bits((highnib)|mode);
  331              		.loc 1 291 0
  332 000c 0001     		lsl	r0, r0, #4
  333              	.LVL30:
  334 000e C4B2     		uxtb	r4, r0
  335              	.LVL31:
- 292:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	write4bits((lownib)|mode); 
+ 292:.\LiquidCrystal_I2C.c **** 	write4bits((lownib)|mode); 
  336              		.loc 1 292 0
  337 0010 0B43     		orr	r3, r1
  338              	.LVL32:
  339 0012 181C     		mov	r0, r3
  340 0014 FFF7FEFF 		bl	write4bits
  341              	.LVL33:
- 293:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 293:.\LiquidCrystal_I2C.c ****     
  342              		.loc 1 293 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 14
-
-
  343 0018 201C     		mov	r0, r4
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 14
+
+
  344 001a 2843     		orr	r0, r5
  345 001c FFF7FEFF 		bl	write4bits
  346              	.LVL34:
- 296:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 296:.\LiquidCrystal_I2C.c **** 
  347              		.loc 1 296 0
  348              		@ sp needed
  349              	.LVL35:
@@ -801,7 +800,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  359              		.type	command, %function
  360              	command:
  361              	.LFB54:
- 270:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 270:.\LiquidCrystal_I2C.c **** 	
  362              		.loc 1 270 0
  363              		.cfi_startproc
  364              	.LVL36:
@@ -809,12 +808,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  366              		.cfi_def_cfa_offset 8
  367              		.cfi_offset 3, -8
  368              		.cfi_offset 14, -4
- 272:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 272:.\LiquidCrystal_I2C.c ****     
  369              		.loc 1 272 0
  370 0002 0021     		mov	r1, #0
  371 0004 FFF7FEFF 		bl	send
  372              	.LVL37:
- 275:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 275:.\LiquidCrystal_I2C.c **** 
  373              		.loc 1 275 0
  374              		@ sp needed
  375 0008 08BD     		pop	{r3, pc}
@@ -829,27 +828,27 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  384              		.type	clear, %function
  385              	clear:
  386              	.LFB36:
- 113:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 113:.\LiquidCrystal_I2C.c ****     
  387              		.loc 1 113 0
  388              		.cfi_startproc
  389 0000 08B5     		push	{r3, lr}
  390              		.cfi_def_cfa_offset 8
  391              		.cfi_offset 3, -8
  392              		.cfi_offset 14, -4
- 115:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
+ 115:.\LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
  393              		.loc 1 115 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 15
-
-
  394 0002 0120     		mov	r0, #1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 15
+
+
  395 0004 FFF7FEFF 		bl	command
  396              	.LVL38:
- 116:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 116:.\LiquidCrystal_I2C.c ****     
  397              		.loc 1 116 0
  398 0008 0220     		mov	r0, #2
  399 000a FFF7FEFF 		bl	CyDelay
  400              	.LVL39:
- 119:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 119:.\LiquidCrystal_I2C.c **** 
  401              		.loc 1 119 0
  402              		@ sp needed
  403 000e 08BD     		pop	{r3, pc}
@@ -864,24 +863,24 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  412              		.type	home, %function
  413              	home:
  414              	.LFB37:
- 121:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 121:.\LiquidCrystal_I2C.c **** 	
  415              		.loc 1 121 0
  416              		.cfi_startproc
  417 0000 08B5     		push	{r3, lr}
  418              		.cfi_def_cfa_offset 8
  419              		.cfi_offset 3, -8
  420              		.cfi_offset 14, -4
- 123:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
+ 123:.\LiquidCrystal_I2C.c **** 	CyDelay(2);  // this command takes a long time!
  421              		.loc 1 123 0
  422 0002 0220     		mov	r0, #2
  423 0004 FFF7FEFF 		bl	command
  424              	.LVL40:
- 124:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 124:.\LiquidCrystal_I2C.c ****     
  425              		.loc 1 124 0
  426 0008 0220     		mov	r0, #2
  427 000a FFF7FEFF 		bl	CyDelay
  428              	.LVL41:
- 127:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 127:.\LiquidCrystal_I2C.c **** 
  429              		.loc 1 127 0
  430              		@ sp needed
  431 000e 08BD     		pop	{r3, pc}
@@ -896,12 +895,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  440              		.type	setCursor, %function
  441              	setCursor:
  442              	.LFB38:
- 129:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 129:.\LiquidCrystal_I2C.c ****     
  443              		.loc 1 129 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 16
-
-
  444              		.cfi_startproc
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 16
+
+
  445              	.LVL42:
  446 0000 70B5     		push	{r4, r5, r6, lr}
  447              		.cfi_def_cfa_offset 16
@@ -911,7 +910,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  451              		.cfi_offset 14, -4
  452 0002 84B0     		sub	sp, sp, #16
  453              		.cfi_def_cfa_offset 32
- 131:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	if (row > _rows) {
+ 131:.\LiquidCrystal_I2C.c **** 	if (row > _rows) {
  454              		.loc 1 131 0
  455 0004 6B46     		mov	r3, sp
  456 0006 0C4A     		ldr	r2, .L25
@@ -920,20 +919,20 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  459 000c 1C1C     		mov	r4, r3
  460 000e 1368     		ldr	r3, [r2]
  461 0010 2360     		str	r3, [r4]
- 132:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		row = _rows-1;    // we count rows starting w/0
+ 132:.\LiquidCrystal_I2C.c **** 		row = _rows-1;    // we count rows starting w/0
  462              		.loc 1 132 0
  463 0012 0A4B     		ldr	r3, .L25+4
  464 0014 1B78     		ldrb	r3, [r3]
  465 0016 9942     		cmp	r1, r3
  466 0018 01D9     		bls	.L24
- 133:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
+ 133:.\LiquidCrystal_I2C.c **** 	}
  467              		.loc 1 133 0
  468 001a 591E     		sub	r1, r3, #1
  469              	.LVL43:
  470 001c C9B2     		uxtb	r1, r1
  471              	.LVL44:
  472              	.L24:
- 135:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 135:.\LiquidCrystal_I2C.c ****     
  473              		.loc 1 135 0
  474 001e 8900     		lsl	r1, r1, #2
  475              	.LVL45:
@@ -947,7 +946,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  483 002c C0B2     		uxtb	r0, r0
  484 002e FFF7FEFF 		bl	command
  485              	.LVL47:
- 138:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 138:.\LiquidCrystal_I2C.c **** 
  486              		.loc 1 138 0
  487 0032 04B0     		add	sp, sp, #16
  488              		@ sp needed
@@ -958,10 +957,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  493 0038 00000000 		.word	.LANCHOR0
  494 003c 00000000 		.word	_rows
  495              		.cfi_endproc
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 17
-
-
  496              	.LFE38:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 17
+
+
  497              		.size	setCursor, .-setCursor
  498              		.section	.text.noDisplay,"ax",%progbits
  499              		.align	2
@@ -971,27 +970,27 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  503              		.type	noDisplay, %function
  504              	noDisplay:
  505              	.LFB39:
- 141:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 141:.\LiquidCrystal_I2C.c **** 	
  506              		.loc 1 141 0
  507              		.cfi_startproc
  508 0000 08B5     		push	{r3, lr}
  509              		.cfi_def_cfa_offset 8
  510              		.cfi_offset 3, -8
  511              		.cfi_offset 14, -4
- 143:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 143:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
  512              		.loc 1 143 0
  513 0002 054B     		ldr	r3, .L28
  514 0004 1878     		ldrb	r0, [r3]
  515 0006 0422     		mov	r2, #4
  516 0008 9043     		bic	r0, r2
  517 000a 1870     		strb	r0, [r3]
- 144:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 144:.\LiquidCrystal_I2C.c ****     
  518              		.loc 1 144 0
  519 000c 0823     		mov	r3, #8
  520 000e 1843     		orr	r0, r3
  521 0010 FFF7FEFF 		bl	command
  522              	.LVL48:
- 147:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void display(void){
+ 147:.\LiquidCrystal_I2C.c **** void display(void){
  523              		.loc 1 147 0
  524              		@ sp needed
  525 0014 08BD     		pop	{r3, pc}
@@ -1010,30 +1009,30 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  538              		.type	display, %function
  539              	display:
  540              	.LFB40:
- 148:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 148:.\LiquidCrystal_I2C.c ****     
  541              		.loc 1 148 0
  542              		.cfi_startproc
  543 0000 08B5     		push	{r3, lr}
  544              		.cfi_def_cfa_offset 8
  545              		.cfi_offset 3, -8
  546              		.cfi_offset 14, -4
- 150:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 18
-
-
+ 150:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
  547              		.loc 1 150 0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 18
+
+
  548 0002 054A     		ldr	r2, .L31
  549 0004 1078     		ldrb	r0, [r2]
  550 0006 0423     		mov	r3, #4
  551 0008 1843     		orr	r0, r3
  552 000a 1070     		strb	r0, [r2]
- 151:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 151:.\LiquidCrystal_I2C.c ****     
  553              		.loc 1 151 0
  554 000c 0433     		add	r3, r3, #4
  555 000e 1843     		orr	r0, r3
  556 0010 FFF7FEFF 		bl	command
  557              	.LVL49:
- 154:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 154:.\LiquidCrystal_I2C.c **** 
  558              		.loc 1 154 0
  559              		@ sp needed
  560 0014 08BD     		pop	{r3, pc}
@@ -1052,36 +1051,36 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  573              		.type	noCursor, %function
  574              	noCursor:
  575              	.LFB41:
- 157:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 157:.\LiquidCrystal_I2C.c **** 	
  576              		.loc 1 157 0
  577              		.cfi_startproc
  578 0000 08B5     		push	{r3, lr}
  579              		.cfi_def_cfa_offset 8
  580              		.cfi_offset 3, -8
  581              		.cfi_offset 14, -4
- 159:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 159:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
  582              		.loc 1 159 0
  583 0002 054B     		ldr	r3, .L34
  584 0004 1878     		ldrb	r0, [r3]
  585 0006 0222     		mov	r2, #2
  586 0008 9043     		bic	r0, r2
  587 000a 1870     		strb	r0, [r3]
- 160:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 160:.\LiquidCrystal_I2C.c ****     
  588              		.loc 1 160 0
  589 000c 0823     		mov	r3, #8
  590 000e 1843     		orr	r0, r3
  591 0010 FFF7FEFF 		bl	command
  592              	.LVL50:
- 163:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void cursor(void){
+ 163:.\LiquidCrystal_I2C.c **** void cursor(void){
  593              		.loc 1 163 0
  594              		@ sp needed
  595 0014 08BD     		pop	{r3, pc}
  596              	.L35:
  597 0016 C046     		.align	2
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 19
-
-
  598              	.L34:
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 19
+
+
  599 0018 00000000 		.word	_displaycontrol
  600              		.cfi_endproc
  601              	.LFE41:
@@ -1094,27 +1093,27 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  608              		.type	cursor, %function
  609              	cursor:
  610              	.LFB42:
- 164:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 164:.\LiquidCrystal_I2C.c **** 	
  611              		.loc 1 164 0
  612              		.cfi_startproc
  613 0000 08B5     		push	{r3, lr}
  614              		.cfi_def_cfa_offset 8
  615              		.cfi_offset 3, -8
  616              		.cfi_offset 14, -4
- 166:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 166:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
  617              		.loc 1 166 0
  618 0002 054A     		ldr	r2, .L37
  619 0004 1078     		ldrb	r0, [r2]
  620 0006 0223     		mov	r3, #2
  621 0008 1843     		orr	r0, r3
  622 000a 1070     		strb	r0, [r2]
- 167:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 167:.\LiquidCrystal_I2C.c ****     
  623              		.loc 1 167 0
  624 000c 0633     		add	r3, r3, #6
  625 000e 1843     		orr	r0, r3
  626 0010 FFF7FEFF 		bl	command
  627              	.LVL51:
- 170:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 170:.\LiquidCrystal_I2C.c **** 
  628              		.loc 1 170 0
  629              		@ sp needed
  630 0014 08BD     		pop	{r3, pc}
@@ -1133,30 +1132,30 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  643              		.type	noBlink, %function
  644              	noBlink:
  645              	.LFB43:
- 173:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 173:.\LiquidCrystal_I2C.c **** 	
  646              		.loc 1 173 0
  647              		.cfi_startproc
  648 0000 08B5     		push	{r3, lr}
  649              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 20
-
-
  650              		.cfi_offset 3, -8
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 20
+
+
  651              		.cfi_offset 14, -4
- 175:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 175:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
  652              		.loc 1 175 0
  653 0002 054B     		ldr	r3, .L40
  654 0004 1878     		ldrb	r0, [r3]
  655 0006 0122     		mov	r2, #1
  656 0008 9043     		bic	r0, r2
  657 000a 1870     		strb	r0, [r3]
- 176:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 176:.\LiquidCrystal_I2C.c ****     
  658              		.loc 1 176 0
  659 000c 0823     		mov	r3, #8
  660 000e 1843     		orr	r0, r3
  661 0010 FFF7FEFF 		bl	command
  662              	.LVL52:
- 179:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void blink(void){
+ 179:.\LiquidCrystal_I2C.c **** void blink(void){
  663              		.loc 1 179 0
  664              		@ sp needed
  665 0014 08BD     		pop	{r3, pc}
@@ -1175,33 +1174,33 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  678              		.type	blink, %function
  679              	blink:
  680              	.LFB44:
- 180:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 180:.\LiquidCrystal_I2C.c ****     
  681              		.loc 1 180 0
  682              		.cfi_startproc
  683 0000 08B5     		push	{r3, lr}
  684              		.cfi_def_cfa_offset 8
  685              		.cfi_offset 3, -8
  686              		.cfi_offset 14, -4
- 182:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
+ 182:.\LiquidCrystal_I2C.c **** 	command(LCD_DISPLAYCONTROL | _displaycontrol);
  687              		.loc 1 182 0
  688 0002 054A     		ldr	r2, .L43
  689 0004 1078     		ldrb	r0, [r2]
  690 0006 0123     		mov	r3, #1
  691 0008 1843     		orr	r0, r3
  692 000a 1070     		strb	r0, [r2]
- 183:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 183:.\LiquidCrystal_I2C.c ****     
  693              		.loc 1 183 0
  694 000c 0733     		add	r3, r3, #7
  695 000e 1843     		orr	r0, r3
  696 0010 FFF7FEFF 		bl	command
  697              	.LVL53:
- 186:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 186:.\LiquidCrystal_I2C.c **** 
  698              		.loc 1 186 0
  699              		@ sp needed
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 21
-
-
  700 0014 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 21
+
+
  701              	.L44:
  702 0016 C046     		.align	2
  703              	.L43:
@@ -1217,19 +1216,19 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  713              		.type	scrollDisplayLeft, %function
  714              	scrollDisplayLeft:
  715              	.LFB45:
- 189:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 189:.\LiquidCrystal_I2C.c ****     
  716              		.loc 1 189 0
  717              		.cfi_startproc
  718 0000 08B5     		push	{r3, lr}
  719              		.cfi_def_cfa_offset 8
  720              		.cfi_offset 3, -8
  721              		.cfi_offset 14, -4
- 191:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 191:.\LiquidCrystal_I2C.c ****     
  722              		.loc 1 191 0
  723 0002 1820     		mov	r0, #24
  724 0004 FFF7FEFF 		bl	command
  725              	.LVL54:
- 194:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** void scrollDisplayRight(void){
+ 194:.\LiquidCrystal_I2C.c **** void scrollDisplayRight(void){
  726              		.loc 1 194 0
  727              		@ sp needed
  728 0008 08BD     		pop	{r3, pc}
@@ -1244,24 +1243,24 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  737              		.type	scrollDisplayRight, %function
  738              	scrollDisplayRight:
  739              	.LFB46:
- 195:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 195:.\LiquidCrystal_I2C.c **** 	
  740              		.loc 1 195 0
  741              		.cfi_startproc
  742 0000 08B5     		push	{r3, lr}
  743              		.cfi_def_cfa_offset 8
  744              		.cfi_offset 3, -8
  745              		.cfi_offset 14, -4
- 197:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 197:.\LiquidCrystal_I2C.c ****     
  746              		.loc 1 197 0
  747 0002 1C20     		mov	r0, #28
  748 0004 FFF7FEFF 		bl	command
  749              	.LVL55:
- 200:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 200:.\LiquidCrystal_I2C.c **** 
  750              		.loc 1 200 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 22
-
-
  751              		@ sp needed
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 22
+
+
  752 0008 08BD     		pop	{r3, pc}
  753              		.cfi_endproc
  754              	.LFE46:
@@ -1274,27 +1273,27 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  761              		.type	leftToRight, %function
  762              	leftToRight:
  763              	.LFB47:
- 203:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 203:.\LiquidCrystal_I2C.c ****     
  764              		.loc 1 203 0
  765              		.cfi_startproc
  766 0000 08B5     		push	{r3, lr}
  767              		.cfi_def_cfa_offset 8
  768              		.cfi_offset 3, -8
  769              		.cfi_offset 14, -4
- 205:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 205:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
  770              		.loc 1 205 0
  771 0002 054A     		ldr	r2, .L48
  772 0004 1078     		ldrb	r0, [r2]
  773 0006 0223     		mov	r3, #2
  774 0008 1843     		orr	r0, r3
  775 000a 1070     		strb	r0, [r2]
- 206:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 206:.\LiquidCrystal_I2C.c ****     
  776              		.loc 1 206 0
  777 000c 0233     		add	r3, r3, #2
  778 000e 1843     		orr	r0, r3
  779 0010 FFF7FEFF 		bl	command
  780              	.LVL56:
- 209:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 209:.\LiquidCrystal_I2C.c **** 
  781              		.loc 1 209 0
  782              		@ sp needed
  783 0014 08BD     		pop	{r3, pc}
@@ -1313,30 +1312,30 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  796              		.type	rightToLeft, %function
  797              	rightToLeft:
  798              	.LFB48:
- 212:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 212:.\LiquidCrystal_I2C.c ****     
  799              		.loc 1 212 0
  800              		.cfi_startproc
  801 0000 08B5     		push	{r3, lr}
  802              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 23
-
-
  803              		.cfi_offset 3, -8
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 23
+
+
  804              		.cfi_offset 14, -4
- 214:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 214:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
  805              		.loc 1 214 0
  806 0002 054B     		ldr	r3, .L51
  807 0004 1878     		ldrb	r0, [r3]
  808 0006 0222     		mov	r2, #2
  809 0008 9043     		bic	r0, r2
  810 000a 1870     		strb	r0, [r3]
- 215:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 215:.\LiquidCrystal_I2C.c ****     
  811              		.loc 1 215 0
  812 000c 0423     		mov	r3, #4
  813 000e 1843     		orr	r0, r3
  814 0010 FFF7FEFF 		bl	command
  815              	.LVL57:
- 218:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 218:.\LiquidCrystal_I2C.c **** 
  816              		.loc 1 218 0
  817              		@ sp needed
  818 0014 08BD     		pop	{r3, pc}
@@ -1355,33 +1354,33 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  831              		.type	autoscroll, %function
  832              	autoscroll:
  833              	.LFB49:
- 221:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 221:.\LiquidCrystal_I2C.c **** 	
  834              		.loc 1 221 0
  835              		.cfi_startproc
  836 0000 08B5     		push	{r3, lr}
  837              		.cfi_def_cfa_offset 8
  838              		.cfi_offset 3, -8
  839              		.cfi_offset 14, -4
- 223:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 223:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
  840              		.loc 1 223 0
  841 0002 054A     		ldr	r2, .L54
  842 0004 1078     		ldrb	r0, [r2]
  843 0006 0123     		mov	r3, #1
  844 0008 1843     		orr	r0, r3
  845 000a 1070     		strb	r0, [r2]
- 224:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 224:.\LiquidCrystal_I2C.c ****     
  846              		.loc 1 224 0
  847 000c 0333     		add	r3, r3, #3
  848 000e 1843     		orr	r0, r3
  849 0010 FFF7FEFF 		bl	command
  850              	.LVL58:
- 227:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 227:.\LiquidCrystal_I2C.c **** 
  851              		.loc 1 227 0
  852              		@ sp needed
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 24
-
-
  853 0014 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 24
+
+
  854              	.L55:
  855 0016 C046     		.align	2
  856              	.L54:
@@ -1397,27 +1396,27 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  866              		.type	noAutoscroll, %function
  867              	noAutoscroll:
  868              	.LFB50:
- 230:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 230:.\LiquidCrystal_I2C.c **** 	
  869              		.loc 1 230 0
  870              		.cfi_startproc
  871 0000 08B5     		push	{r3, lr}
  872              		.cfi_def_cfa_offset 8
  873              		.cfi_offset 3, -8
  874              		.cfi_offset 14, -4
- 232:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
+ 232:.\LiquidCrystal_I2C.c **** 	command(LCD_ENTRYMODESET | _displaymode);
  875              		.loc 1 232 0
  876 0002 054B     		ldr	r3, .L57
  877 0004 1878     		ldrb	r0, [r3]
  878 0006 0122     		mov	r2, #1
  879 0008 9043     		bic	r0, r2
  880 000a 1870     		strb	r0, [r3]
- 233:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 233:.\LiquidCrystal_I2C.c ****     
  881              		.loc 1 233 0
  882 000c 0423     		mov	r3, #4
  883 000e 1843     		orr	r0, r3
  884 0010 FFF7FEFF 		bl	command
  885              	.LVL59:
- 236:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 236:.\LiquidCrystal_I2C.c **** 
  886              		.loc 1 236 0
  887              		@ sp needed
  888 0014 08BD     		pop	{r3, pc}
@@ -1436,23 +1435,23 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  901              		.type	write, %function
  902              	write:
  903              	.LFB55:
- 277:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 277:.\LiquidCrystal_I2C.c ****     
  904              		.loc 1 277 0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 25
-
-
  905              		.cfi_startproc
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 25
+
+
  906              	.LVL60:
  907 0000 08B5     		push	{r3, lr}
  908              		.cfi_def_cfa_offset 8
  909              		.cfi_offset 3, -8
  910              		.cfi_offset 14, -4
- 279:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 279:.\LiquidCrystal_I2C.c ****     
  911              		.loc 1 279 0
  912 0002 0121     		mov	r1, #1
  913 0004 FFF7FEFF 		bl	send
  914              	.LVL61:
- 282:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 282:.\LiquidCrystal_I2C.c **** 
  915              		.loc 1 282 0
  916              		@ sp needed
  917 0008 08BD     		pop	{r3, pc}
@@ -1467,7 +1466,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  926              		.type	createChar, %function
  927              	createChar:
  928              	.LFB51:
- 240:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 240:.\LiquidCrystal_I2C.c **** 	
  929              		.loc 1 240 0
  930              		.cfi_startproc
  931              	.LVL62:
@@ -1479,12 +1478,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  937              		.cfi_offset 14, -4
  938 0002 0D1C     		mov	r5, r1
  939              	.LVL63:
- 242:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	command(LCD_SETCGRAMADDR | (location << 3));
+ 242:.\LiquidCrystal_I2C.c **** 	command(LCD_SETCGRAMADDR | (location << 3));
  940              		.loc 1 242 0
  941 0004 0723     		mov	r3, #7
  942 0006 1840     		and	r0, r3
  943              	.LVL64:
- 243:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	for (i=0; i<8; i++) {
+ 243:.\LiquidCrystal_I2C.c **** 	for (i=0; i<8; i++) {
  944              		.loc 1 243 0
  945 0008 C000     		lsl	r0, r0, #3
  946              	.LVL65:
@@ -1492,30 +1491,30 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  948 000c 1843     		orr	r0, r3
  949 000e FFF7FEFF 		bl	command
  950              	.LVL66:
- 244:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		write(charmap[i]);
+ 244:.\LiquidCrystal_I2C.c **** 		write(charmap[i]);
  951              		.loc 1 244 0
  952 0012 0024     		mov	r4, #0
  953 0014 03E0     		b	.L61
  954              	.LVL67:
  955              	.L62:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 26
+ 245:.\LiquidCrystal_I2C.c **** 	}
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 26
 
 
- 245:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
  956              		.loc 1 245 0 discriminator 3
  957 0016 285D     		ldrb	r0, [r5, r4]
  958 0018 FFF7FEFF 		bl	write
  959              	.LVL68:
- 244:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		write(charmap[i]);
+ 244:.\LiquidCrystal_I2C.c **** 		write(charmap[i]);
  960              		.loc 1 244 0 discriminator 3
  961 001c 0134     		add	r4, r4, #1
  962              	.LVL69:
  963              	.L61:
- 244:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		write(charmap[i]);
+ 244:.\LiquidCrystal_I2C.c **** 		write(charmap[i]);
  964              		.loc 1 244 0 is_stmt 0 discriminator 1
  965 001e 072C     		cmp	r4, #7
  966 0020 F9D9     		bls	.L62
- 249:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 249:.\LiquidCrystal_I2C.c **** 
  967              		.loc 1 249 0 is_stmt 1
  968              		@ sp needed
  969              	.LVL70:
@@ -1532,7 +1531,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  980              		.type	load_custom_character, %function
  981              	load_custom_character:
  982              	.LFB60:
- 323:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 323:.\LiquidCrystal_I2C.c **** 	
  983              		.loc 1 323 0
  984              		.cfi_startproc
  985              	.LVL72:
@@ -1540,11 +1539,11 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  987              		.cfi_def_cfa_offset 8
  988              		.cfi_offset 3, -8
  989              		.cfi_offset 14, -4
- 325:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 325:.\LiquidCrystal_I2C.c ****     
  990              		.loc 1 325 0
  991 0002 FFF7FEFF 		bl	createChar
  992              	.LVL73:
- 328:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 328:.\LiquidCrystal_I2C.c **** 
  993              		.loc 1 328 0
  994              		@ sp needed
  995 0006 08BD     		pop	{r3, pc}
@@ -1558,11 +1557,11 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1003              		.thumb_func
  1004              		.type	LCD_print, %function
  1005              	LCD_print:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 27
-
-
  1006              	.LFB62:
- 341:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 27
+
+
+ 341:.\LiquidCrystal_I2C.c ****     
  1007              		.loc 1 341 0
  1008              		.cfi_startproc
  1009              	.LVL74:
@@ -1574,34 +1573,34 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1015              		.cfi_offset 14, -4
  1016 0002 061C     		mov	r6, r0
  1017              	.LVL75:
- 345:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 345:.\LiquidCrystal_I2C.c ****     
  1018              		.loc 1 345 0
  1019 0004 FFF7FEFF 		bl	strlen
  1020              	.LVL76:
  1021 0008 051C     		mov	r5, r0
  1022              	.LVL77:
- 347:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****         write(word[i]);
+ 347:.\LiquidCrystal_I2C.c ****         write(word[i]);
  1023              		.loc 1 347 0
  1024 000a 0024     		mov	r4, #0
  1025 000c 03E0     		b	.L65
  1026              	.LVL78:
  1027              	.L66:
- 348:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     }
+ 348:.\LiquidCrystal_I2C.c ****     }
  1028              		.loc 1 348 0 discriminator 3
  1029 000e 305D     		ldrb	r0, [r6, r4]
  1030 0010 FFF7FEFF 		bl	write
  1031              	.LVL79:
- 347:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****         write(word[i]);
+ 347:.\LiquidCrystal_I2C.c ****         write(word[i]);
  1032              		.loc 1 347 0 discriminator 3
  1033 0014 0134     		add	r4, r4, #1
  1034              	.LVL80:
  1035              	.L65:
- 347:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****         write(word[i]);
+ 347:.\LiquidCrystal_I2C.c ****         write(word[i]);
  1036              		.loc 1 347 0 is_stmt 0 discriminator 1
  1037 0016 EBB2     		uxtb	r3, r5
  1038 0018 A342     		cmp	r3, r4
  1039 001a F8D8     		bhi	.L66
- 352:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 352:.\LiquidCrystal_I2C.c **** 
  1040              		.loc 1 352 0 is_stmt 1
  1041              		@ sp needed
  1042              	.LVL81:
@@ -1618,45 +1617,45 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1053              		.thumb_func
  1054              		.type	begin, %function
  1055              	begin:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 28
-
-
  1056              	.LFB35:
-  50:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****   
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 28
+
+
+  50:.\LiquidCrystal_I2C.c ****   
  1057              		.loc 1 50 0
  1058              		.cfi_startproc
  1059 0000 10B5     		push	{r4, lr}
  1060              		.cfi_def_cfa_offset 8
  1061              		.cfi_offset 4, -8
  1062              		.cfi_offset 14, -4
-  52:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+  52:.\LiquidCrystal_I2C.c **** 
  1063              		.loc 1 52 0
  1064 0002 0022     		mov	r2, #0
  1065 0004 254B     		ldr	r3, .L70
  1066 0006 1A70     		strb	r2, [r3]
-  54:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_2LINE;
+  54:.\LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_2LINE;
  1067              		.loc 1 54 0
  1068 0008 254B     		ldr	r3, .L70+4
  1069 000a 1B78     		ldrb	r3, [r3]
  1070 000c 012B     		cmp	r3, #1
  1071 000e 02D9     		bls	.L68
-  55:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
+  55:.\LiquidCrystal_I2C.c **** 	}
  1072              		.loc 1 55 0
  1073 0010 0821     		mov	r1, #8
  1074 0012 224A     		ldr	r2, .L70
  1075 0014 1170     		strb	r1, [r2]
  1076              	.L68:
-  59:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_5x10DOTS;
+  59:.\LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_5x10DOTS;
  1077              		.loc 1 59 0
  1078 0016 234A     		ldr	r2, .L70+8
  1079 0018 1278     		ldrb	r2, [r2]
  1080 001a 002A     		cmp	r2, #0
  1081 001c 06D0     		beq	.L69
-  59:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_5x10DOTS;
+  59:.\LiquidCrystal_I2C.c **** 		_displayfunction |= LCD_5x10DOTS;
  1082              		.loc 1 59 0 is_stmt 0 discriminator 1
  1083 001e 012B     		cmp	r3, #1
  1084 0020 04D1     		bne	.L69
-  60:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	}
+  60:.\LiquidCrystal_I2C.c **** 	}
  1085              		.loc 1 60 0 is_stmt 1
  1086 0022 1E4A     		ldr	r2, .L70
  1087 0024 1178     		ldrb	r1, [r2]
@@ -1664,63 +1663,63 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1089 0028 0B43     		orr	r3, r1
  1090 002a 1370     		strb	r3, [r2]
  1091              	.L69:
-  66:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+  66:.\LiquidCrystal_I2C.c **** 
  1092              		.loc 1 66 0
  1093 002c 3220     		mov	r0, #50
  1094 002e FFF7FEFF 		bl	CyDelay
  1095              	.LVL84:
-  69:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelay(1000);
+  69:.\LiquidCrystal_I2C.c **** 	CyDelay(1000);
  1096              		.loc 1 69 0
  1097 0032 1D4B     		ldr	r3, .L70+12
  1098 0034 1878     		ldrb	r0, [r3]
  1099 0036 FFF7FEFF 		bl	expanderWrite
  1100              	.LVL85:
-  70:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+  70:.\LiquidCrystal_I2C.c **** 
  1101              		.loc 1 70 0
  1102 003a FA20     		mov	r0, #250
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 29
-
-
  1103 003c 8000     		lsl	r0, r0, #2
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 29
+
+
  1104 003e FFF7FEFF 		bl	CyDelay
  1105              	.LVL86:
-  77:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
+  77:.\LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
  1106              		.loc 1 77 0
  1107 0042 3020     		mov	r0, #48
  1108 0044 FFF7FEFF 		bl	write4bits
  1109              	.LVL87:
-  78:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+  78:.\LiquidCrystal_I2C.c **** 
  1110              		.loc 1 78 0
  1111 0048 184C     		ldr	r4, .L70+16
  1112 004a 201C     		mov	r0, r4
  1113 004c FFF7FEFF 		bl	CyDelayUs
  1114              	.LVL88:
-  81:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
+  81:.\LiquidCrystal_I2C.c **** 	CyDelayUs(4500); // wait min 4.1ms
  1115              		.loc 1 81 0
  1116 0050 3020     		mov	r0, #48
  1117 0052 FFF7FEFF 		bl	write4bits
  1118              	.LVL89:
-  82:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+  82:.\LiquidCrystal_I2C.c **** 
  1119              		.loc 1 82 0
  1120 0056 201C     		mov	r0, r4
  1121 0058 FFF7FEFF 		bl	CyDelayUs
  1122              	.LVL90:
-  85:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	CyDelayUs(150);
+  85:.\LiquidCrystal_I2C.c **** 	CyDelayUs(150);
  1123              		.loc 1 85 0
  1124 005c 3020     		mov	r0, #48
  1125 005e FFF7FEFF 		bl	write4bits
  1126              	.LVL91:
-  86:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+  86:.\LiquidCrystal_I2C.c **** 
  1127              		.loc 1 86 0
  1128 0062 9620     		mov	r0, #150
  1129 0064 FFF7FEFF 		bl	CyDelayUs
  1130              	.LVL92:
-  89:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+  89:.\LiquidCrystal_I2C.c **** 
  1131              		.loc 1 89 0
  1132 0068 2020     		mov	r0, #32
  1133 006a FFF7FEFF 		bl	write4bits
  1134              	.LVL93:
-  92:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+  92:.\LiquidCrystal_I2C.c **** 	
  1135              		.loc 1 92 0
  1136 006e 0B4B     		ldr	r3, .L70
  1137 0070 1878     		ldrb	r0, [r3]
@@ -1728,37 +1727,37 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1139 0074 1843     		orr	r0, r3
  1140 0076 FFF7FEFF 		bl	command
  1141              	.LVL94:
-  95:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	display();
+  95:.\LiquidCrystal_I2C.c **** 	display();
  1142              		.loc 1 95 0
  1143 007a 0422     		mov	r2, #4
  1144 007c 0C4B     		ldr	r3, .L70+20
  1145 007e 1A70     		strb	r2, [r3]
-  96:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+  96:.\LiquidCrystal_I2C.c **** 	
  1146              		.loc 1 96 0
  1147 0080 FFF7FEFF 		bl	display
  1148              	.LVL95:
-  99:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 30
-
-
+  99:.\LiquidCrystal_I2C.c **** 	
  1149              		.loc 1 99 0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 30
+
+
  1150 0084 FFF7FEFF 		bl	clear
  1151              	.LVL96:
- 102:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 102:.\LiquidCrystal_I2C.c **** 	
  1152              		.loc 1 102 0
  1153 0088 0222     		mov	r2, #2
  1154 008a 0A4B     		ldr	r3, .L70+24
  1155 008c 1A70     		strb	r2, [r3]
- 105:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 	
+ 105:.\LiquidCrystal_I2C.c **** 	
  1156              		.loc 1 105 0
  1157 008e 0620     		mov	r0, #6
  1158 0090 FFF7FEFF 		bl	command
  1159              	.LVL97:
- 107:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c ****     
+ 107:.\LiquidCrystal_I2C.c ****     
  1160              		.loc 1 107 0
  1161 0094 FFF7FEFF 		bl	home
  1162              	.LVL98:
- 110:..\..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn/LiquidCrystal_I2C.c **** 
+ 110:.\LiquidCrystal_I2C.c **** 
  1163              		.loc 1 110 0
  1164              		@ sp needed
  1165 0098 10BD     		pop	{r4, pc}
@@ -1793,16 +1792,16 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1194 000c 54000000 		.word	84
  1195              		.text
  1196              	.Letext0:
- 1197              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 1198              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 1197              		.file 2 "c:\\program files\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm
+ 1198              		.file 3 "c:\\program files\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm
  1199              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
- 1200              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 1200              		.file 5 "c:\\program files\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.3\\lib
  1201              		.file 6 "Generated_Source\\PSoC4/I2C_I2C.h"
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 31
-
-
  1202              		.file 7 "Generated_Source\\PSoC4/CyLib.h"
- 1203              		.file 8 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 31
+
+
+ 1203              		.file 8 "c:\\program files\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm
  1204              		.section	.debug_info,"",%progbits
  1205              	.Ldebug_info0:
  1206 0000 40090000 		.4byte	0x940
@@ -1810,58 +1809,58 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1208 0006 00000000 		.4byte	.Ldebug_abbrev0
  1209 000a 04       		.byte	0x4
  1210 000b 01       		.uleb128 0x1
- 1211 000c 86010000 		.4byte	.LASF82
+ 1211 000c 81010000 		.4byte	.LASF82
  1212 0010 01       		.byte	0x1
- 1213 0011 B9020000 		.4byte	.LASF83
- 1214 0015 2E010000 		.4byte	.LASF84
+ 1213 0011 AD030000 		.4byte	.LASF83
+ 1214 0015 50000000 		.4byte	.LASF84
  1215 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1216 001d 00000000 		.4byte	0
  1217 0021 00000000 		.4byte	.Ldebug_line0
  1218 0025 02       		.uleb128 0x2
  1219 0026 01       		.byte	0x1
  1220 0027 06       		.byte	0x6
- 1221 0028 70020000 		.4byte	.LASF0
+ 1221 0028 6B020000 		.4byte	.LASF0
  1222 002c 03       		.uleb128 0x3
- 1223 002d 76010000 		.4byte	.LASF5
+ 1223 002d 71010000 		.4byte	.LASF5
  1224 0031 02       		.byte	0x2
  1225 0032 1D       		.byte	0x1d
  1226 0033 37000000 		.4byte	0x37
  1227 0037 02       		.uleb128 0x2
  1228 0038 01       		.byte	0x1
  1229 0039 08       		.byte	0x8
- 1230 003a 47020000 		.4byte	.LASF1
+ 1230 003a 42020000 		.4byte	.LASF1
  1231 003e 02       		.uleb128 0x2
  1232 003f 02       		.byte	0x2
  1233 0040 05       		.byte	0x5
- 1234 0041 50000000 		.4byte	.LASF2
+ 1234 0041 8D000000 		.4byte	.LASF2
  1235 0045 02       		.uleb128 0x2
  1236 0046 02       		.byte	0x2
  1237 0047 07       		.byte	0x7
- 1238 0048 1B030000 		.4byte	.LASF3
+ 1238 0048 B4020000 		.4byte	.LASF3
  1239 004c 02       		.uleb128 0x2
  1240 004d 04       		.byte	0x4
  1241 004e 05       		.byte	0x5
- 1242 004f 0E010000 		.4byte	.LASF4
+ 1242 004f 4B010000 		.4byte	.LASF4
  1243 0053 03       		.uleb128 0x3
- 1244 0054 E0030000 		.4byte	.LASF6
+ 1244 0054 79030000 		.4byte	.LASF6
  1245 0058 02       		.byte	0x2
  1246 0059 41       		.byte	0x41
  1247 005a 5E000000 		.4byte	0x5e
  1248 005e 02       		.uleb128 0x2
  1249 005f 04       		.byte	0x4
  1250 0060 07       		.byte	0x7
- 1251 0061 B5030000 		.4byte	.LASF7
+ 1251 0061 4E030000 		.4byte	.LASF7
  1252 0065 02       		.uleb128 0x2
  1253 0066 08       		.byte	0x8
  1254 0067 05       		.byte	0x5
- 1255 0068 00010000 		.4byte	.LASF8
+ 1255 0068 3D010000 		.4byte	.LASF8
  1256 006c 02       		.uleb128 0x2
  1257 006d 08       		.byte	0x8
  1258 006e 07       		.byte	0x7
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 32
+ 1259 006f 77020000 		.4byte	.LASF9
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 32
 
 
- 1259 006f 7C020000 		.4byte	.LASF9
  1260 0073 04       		.uleb128 0x4
  1261 0074 04       		.byte	0x4
  1262 0075 05       		.byte	0x5
@@ -1869,48 +1868,48 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1264 007a 02       		.uleb128 0x2
  1265 007b 04       		.byte	0x4
  1266 007c 07       		.byte	0x7
- 1267 007d A3020000 		.4byte	.LASF10
+ 1267 007d 9E020000 		.4byte	.LASF10
  1268 0081 03       		.uleb128 0x3
- 1269 0082 BF000000 		.4byte	.LASF11
+ 1269 0082 FC000000 		.4byte	.LASF11
  1270 0086 03       		.byte	0x3
  1271 0087 15       		.byte	0x15
  1272 0088 2C000000 		.4byte	0x2c
  1273 008c 03       		.uleb128 0x3
- 1274 008d 9A020000 		.4byte	.LASF12
+ 1274 008d 95020000 		.4byte	.LASF12
  1275 0091 03       		.byte	0x3
  1276 0092 2D       		.byte	0x2d
  1277 0093 53000000 		.4byte	0x53
  1278 0097 05       		.uleb128 0x5
- 1279 0098 B8000000 		.4byte	.LASF13
+ 1279 0098 F5000000 		.4byte	.LASF13
  1280 009c 04       		.byte	0x4
  1281 009d 3901     		.2byte	0x139
  1282 009f 45000000 		.4byte	0x45
  1283 00a3 05       		.uleb128 0x5
- 1284 00a4 98030000 		.4byte	.LASF14
+ 1284 00a4 31030000 		.4byte	.LASF14
  1285 00a8 04       		.byte	0x4
  1286 00a9 3A01     		.2byte	0x13a
  1287 00ab 5E000000 		.4byte	0x5e
  1288 00af 02       		.uleb128 0x2
  1289 00b0 04       		.byte	0x4
  1290 00b1 04       		.byte	0x4
- 1291 00b2 FA000000 		.4byte	.LASF15
+ 1291 00b2 37010000 		.4byte	.LASF15
  1292 00b6 02       		.uleb128 0x2
  1293 00b7 08       		.byte	0x8
  1294 00b8 04       		.byte	0x4
- 1295 00b9 C7030000 		.4byte	.LASF16
+ 1295 00b9 60030000 		.4byte	.LASF16
  1296 00bd 02       		.uleb128 0x2
  1297 00be 01       		.byte	0x1
  1298 00bf 08       		.byte	0x8
- 1299 00c0 4F030000 		.4byte	.LASF17
+ 1299 00c0 E8020000 		.4byte	.LASF17
  1300 00c4 03       		.uleb128 0x3
- 1301 00c5 6C030000 		.4byte	.LASF18
+ 1301 00c5 05030000 		.4byte	.LASF18
  1302 00c9 05       		.byte	0x5
  1303 00ca D4       		.byte	0xd4
  1304 00cb 7A000000 		.4byte	0x7a
  1305 00cf 02       		.uleb128 0x2
  1306 00d0 04       		.byte	0x4
  1307 00d1 07       		.byte	0x7
- 1308 00d2 32040000 		.4byte	.LASF19
+ 1308 00d2 E1030000 		.4byte	.LASF19
  1309 00d6 06       		.uleb128 0x6
  1310 00d7 04       		.byte	0x4
  1311 00d8 BD000000 		.4byte	0xbd
@@ -1918,12 +1917,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1313 00dd 04       		.byte	0x4
  1314 00de E2000000 		.4byte	0xe2
  1315 00e2 07       		.uleb128 0x7
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 33
-
-
  1316 00e3 BD000000 		.4byte	0xbd
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 33
+
+
  1317 00e7 08       		.uleb128 0x8
- 1318 00e8 46040000 		.4byte	.LASF24
+ 1318 00e8 F5030000 		.4byte	.LASF24
  1319 00ec 01       		.byte	0x1
  1320 00ed 27       		.byte	0x27
  1321 00ee 00000000 		.4byte	.LFB34
@@ -1932,13 +1931,13 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1324 00f7 9C       		.byte	0x9c
  1325 00f8 39010000 		.4byte	0x139
  1326 00fc 09       		.uleb128 0x9
- 1327 00fd 1E040000 		.4byte	.LASF20
+ 1327 00fd CD030000 		.4byte	.LASF20
  1328 0101 01       		.byte	0x1
  1329 0102 27       		.byte	0x27
  1330 0103 81000000 		.4byte	0x81
  1331 0107 00000000 		.4byte	.LLST0
  1332 010b 09       		.uleb128 0x9
- 1333 010c C7000000 		.4byte	.LASF21
+ 1333 010c 04010000 		.4byte	.LASF21
  1334 0110 01       		.byte	0x1
  1335 0111 27       		.byte	0x27
  1336 0112 81000000 		.4byte	0x81
@@ -1950,38 +1949,38 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1342 0121 81000000 		.4byte	0x81
  1343 0125 44000000 		.4byte	.LLST2
  1344 0129 09       		.uleb128 0x9
- 1345 012a 6C000000 		.4byte	.LASF23
+ 1345 012a A9000000 		.4byte	.LASF23
  1346 012e 01       		.byte	0x1
  1347 012f 27       		.byte	0x27
  1348 0130 81000000 		.4byte	0x81
  1349 0134 66000000 		.4byte	.LLST3
  1350 0138 00       		.byte	0
  1351 0139 0A       		.uleb128 0xa
- 1352 013a D0000000 		.4byte	.LASF25
+ 1352 013a 0D010000 		.4byte	.LASF25
  1353 013e 01       		.byte	0x1
- 1354 013f 6301     		.2byte	0x163
+ 1354 013f 6201     		.2byte	0x162
  1355 0141 00000000 		.4byte	.LFB63
  1356 0145 16000000 		.4byte	.LFE63-.LFB63
  1357 0149 01       		.uleb128 0x1
  1358 014a 9C       		.byte	0x9c
  1359 014b A0010000 		.4byte	0x1a0
  1360 014f 0B       		.uleb128 0xb
- 1361 0150 67030000 		.4byte	.LASF26
+ 1361 0150 00030000 		.4byte	.LASF26
  1362 0154 01       		.byte	0x1
- 1363 0155 6301     		.2byte	0x163
+ 1363 0155 6201     		.2byte	0x162
  1364 0157 81000000 		.4byte	0x81
  1365 015b 88000000 		.4byte	.LLST4
  1366 015f 0B       		.uleb128 0xb
- 1367 0160 87030000 		.4byte	.LASF27
+ 1367 0160 20030000 		.4byte	.LASF27
  1368 0164 01       		.byte	0x1
- 1369 0165 6301     		.2byte	0x163
+ 1369 0165 6201     		.2byte	0x162
  1370 0167 81000000 		.4byte	0x81
  1371 016b A9000000 		.4byte	.LLST5
  1372 016f 0C       		.uleb128 0xc
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 34
-
-
  1373 0170 0A000000 		.4byte	.LVL7
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 34
+
+
  1374 0174 D6080000 		.4byte	0x8d6
  1375 0178 82010000 		.4byte	0x182
  1376 017c 0D       		.uleb128 0xd
@@ -2006,7 +2005,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1395 019b 05090000 		.4byte	0x905
  1396 019f 00       		.byte	0
  1397 01a0 0A       		.uleb128 0xa
- 1398 01a1 EC000000 		.4byte	.LASF28
+ 1398 01a1 29010000 		.4byte	.LASF28
  1399 01a5 01       		.byte	0x1
  1400 01a6 3201     		.2byte	0x132
  1401 01a8 00000000 		.4byte	.LFB58
@@ -2015,7 +2014,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1404 01b1 9C       		.byte	0x9c
  1405 01b2 D0010000 		.4byte	0x1d0
  1406 01b6 0B       		.uleb128 0xb
- 1407 01b7 70010000 		.4byte	.LASF29
+ 1407 01b7 6B010000 		.4byte	.LASF29
  1408 01bb 01       		.byte	0x1
  1409 01bc 3201     		.2byte	0x132
  1410 01be 81000000 		.4byte	0x81
@@ -2025,7 +2024,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1414 01cb 39010000 		.4byte	0x139
  1415 01cf 00       		.byte	0
  1416 01d0 08       		.uleb128 0x8
- 1417 01d1 73030000 		.4byte	.LASF30
+ 1417 01d1 0C030000 		.4byte	.LASF30
  1418 01d5 01       		.byte	0x1
  1419 01d6 FC       		.byte	0xfc
  1420 01d7 00000000 		.4byte	.LFB52
@@ -2038,16 +2037,16 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1427 01ea A0010000 		.4byte	0x1a0
  1428 01ee 0D       		.uleb128 0xd
  1429 01ef 01       		.uleb128 0x1
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 35
-
-
  1430 01f0 50       		.byte	0x50
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 35
+
+
  1431 01f1 01       		.uleb128 0x1
  1432 01f2 30       		.byte	0x30
  1433 01f3 00       		.byte	0
  1434 01f4 00       		.byte	0
  1435 01f5 0A       		.uleb128 0xa
- 1436 01f6 14040000 		.4byte	.LASF31
+ 1436 01f6 C3030000 		.4byte	.LASF31
  1437 01fa 01       		.byte	0x1
  1438 01fb 0401     		.2byte	0x104
  1439 01fd 00000000 		.4byte	.LFB53
@@ -2066,7 +2065,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1452 0219 00       		.byte	0
  1453 021a 00       		.byte	0
  1454 021b 0A       		.uleb128 0xa
- 1455 021c 38030000 		.4byte	.LASF32
+ 1455 021c D1020000 		.4byte	.LASF32
  1456 0220 01       		.byte	0x1
  1457 0221 4A01     		.2byte	0x14a
  1458 0223 00000000 		.4byte	.LFB61
@@ -2088,7 +2087,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1474 024f D0010000 		.4byte	0x1d0
  1475 0253 00       		.byte	0
  1476 0254 0A       		.uleb128 0xa
- 1477 0255 5B030000 		.4byte	.LASF34
+ 1477 0255 F4020000 		.4byte	.LASF34
  1478 0259 01       		.byte	0x1
  1479 025a 3901     		.2byte	0x139
  1480 025c 00000000 		.4byte	.LFB59
@@ -2097,11 +2096,11 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1483 0265 9C       		.byte	0x9c
  1484 0266 CB020000 		.4byte	0x2cb
  1485 026a 0B       		.uleb128 0xb
- 1486 026b 70010000 		.4byte	.LASF29
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 36
-
-
+ 1486 026b 6B010000 		.4byte	.LASF29
  1487 026f 01       		.byte	0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 36
+
+
  1488 0270 3901     		.2byte	0x139
  1489 0272 81000000 		.4byte	0x81
  1490 0276 25010000 		.4byte	.LLST8
@@ -2154,19 +2153,19 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1537 02c9 00       		.byte	0
  1538 02ca 00       		.byte	0
  1539 02cb 0A       		.uleb128 0xa
- 1540 02cc 27040000 		.4byte	.LASF35
+ 1540 02cc D6030000 		.4byte	.LASF35
  1541 02d0 01       		.byte	0x1
  1542 02d1 2A01     		.2byte	0x12a
  1543 02d3 00000000 		.4byte	.LFB57
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 37
-
-
  1544 02d7 10000000 		.4byte	.LFE57-.LFB57
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 37
+
+
  1545 02db 01       		.uleb128 0x1
  1546 02dc 9C       		.byte	0x9c
  1547 02dd 16030000 		.4byte	0x316
  1548 02e1 0B       		.uleb128 0xb
- 1549 02e2 A1000000 		.4byte	.LASF36
+ 1549 02e2 DE000000 		.4byte	.LASF36
  1550 02e6 01       		.byte	0x1
  1551 02e7 2A01     		.2byte	0x12a
  1552 02e9 81000000 		.4byte	0x81
@@ -2203,28 +2202,28 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1583 0327 9C       		.byte	0x9c
  1584 0328 89030000 		.4byte	0x389
  1585 032c 0B       		.uleb128 0xb
- 1586 032d A1000000 		.4byte	.LASF36
+ 1586 032d DE000000 		.4byte	.LASF36
  1587 0331 01       		.byte	0x1
  1588 0332 2001     		.2byte	0x120
  1589 0334 81000000 		.4byte	0x81
  1590 0338 67010000 		.4byte	.LLST10
  1591 033c 0B       		.uleb128 0xb
- 1592 033d 9C000000 		.4byte	.LASF38
+ 1592 033d D9000000 		.4byte	.LASF38
  1593 0341 01       		.byte	0x1
  1594 0342 2001     		.2byte	0x120
  1595 0344 81000000 		.4byte	0x81
  1596 0348 88010000 		.4byte	.LLST11
  1597 034c 10       		.uleb128 0x10
- 1598 034d 35020000 		.4byte	.LASF39
+ 1598 034d 30020000 		.4byte	.LASF39
  1599 0351 01       		.byte	0x1
  1600 0352 2201     		.2byte	0x122
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 38
-
-
  1601 0354 81000000 		.4byte	0x81
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 38
+
+
  1602 0358 A9010000 		.4byte	.LLST12
  1603 035c 10       		.uleb128 0x10
- 1604 035d 93020000 		.4byte	.LASF40
+ 1604 035d 8E020000 		.4byte	.LASF40
  1605 0361 01       		.byte	0x1
  1606 0362 2301     		.2byte	0x123
  1607 0364 81000000 		.4byte	0x81
@@ -2247,7 +2246,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1624 0387 00       		.byte	0
  1625 0388 00       		.byte	0
  1626 0389 0A       		.uleb128 0xa
- 1627 038a 92040000 		.4byte	.LASF41
+ 1627 038a 41040000 		.4byte	.LASF41
  1628 038e 01       		.byte	0x1
  1629 038f 0E01     		.2byte	0x10e
  1630 0391 00000000 		.4byte	.LFB54
@@ -2256,7 +2255,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1633 039a 9C       		.byte	0x9c
  1634 039b BF030000 		.4byte	0x3bf
  1635 039f 0B       		.uleb128 0xb
- 1636 03a0 A1000000 		.4byte	.LASF36
+ 1636 03a0 DE000000 		.4byte	.LASF36
  1637 03a4 01       		.byte	0x1
  1638 03a5 0E01     		.2byte	0x10e
  1639 03a7 81000000 		.4byte	0x81
@@ -2272,16 +2271,16 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1649 03bd 00       		.byte	0
  1650 03be 00       		.byte	0
  1651 03bf 08       		.uleb128 0x8
- 1652 03c0 80010000 		.4byte	.LASF42
+ 1652 03c0 7B010000 		.4byte	.LASF42
  1653 03c4 01       		.byte	0x1
  1654 03c5 71       		.byte	0x71
  1655 03c6 00000000 		.4byte	.LFB36
  1656 03ca 10000000 		.4byte	.LFE36-.LFB36
  1657 03ce 01       		.uleb128 0x1
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 39
-
-
  1658 03cf 9C       		.byte	0x9c
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 39
+
+
  1659 03d0 F7030000 		.4byte	0x3f7
  1660 03d4 0C       		.uleb128 0xc
  1661 03d5 08000000 		.4byte	.LVL38
@@ -2304,7 +2303,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1678 03f5 00       		.byte	0
  1679 03f6 00       		.byte	0
  1680 03f7 08       		.uleb128 0x8
- 1681 03f8 E1000000 		.4byte	.LASF43
+ 1681 03f8 1E010000 		.4byte	.LASF43
  1682 03fc 01       		.byte	0x1
  1683 03fd 79       		.byte	0x79
  1684 03fe 00000000 		.4byte	.LFB37
@@ -2333,15 +2332,15 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1707 042d 00       		.byte	0
  1708 042e 00       		.byte	0
  1709 042f 08       		.uleb128 0x8
- 1710 0430 D6030000 		.4byte	.LASF44
+ 1710 0430 6F030000 		.4byte	.LASF44
  1711 0434 01       		.byte	0x1
  1712 0435 81       		.byte	0x81
  1713 0436 00000000 		.4byte	.LFB38
  1714 043a 40000000 		.4byte	.LFE38-.LFB38
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 40
-
-
  1715 043e 01       		.uleb128 0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 40
+
+
  1716 043f 9C       		.byte	0x9c
  1717 0440 7A040000 		.4byte	0x47a
  1718 0444 11       		.uleb128 0x11
@@ -2357,7 +2356,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1728 045a 81000000 		.4byte	0x81
  1729 045e 1C020000 		.4byte	.LLST16
  1730 0462 12       		.uleb128 0x12
- 1731 0463 19020000 		.4byte	.LASF45
+ 1731 0463 14020000 		.4byte	.LASF45
  1732 0467 01       		.byte	0x1
  1733 0468 83       		.byte	0x83
  1734 0469 7A040000 		.4byte	0x47a
@@ -2376,7 +2375,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1747 0488 03       		.byte	0x3
  1748 0489 00       		.byte	0
  1749 048a 08       		.uleb128 0x8
- 1750 048b 45030000 		.4byte	.LASF46
+ 1750 048b DE020000 		.4byte	.LASF46
  1751 048f 01       		.byte	0x1
  1752 0490 8D       		.byte	0x8d
  1753 0491 00000000 		.4byte	.LFB39
@@ -2389,7 +2388,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1760 04a4 89030000 		.4byte	0x389
  1761 04a8 00       		.byte	0
  1762 04a9 08       		.uleb128 0x8
- 1763 04aa CE030000 		.4byte	.LASF47
+ 1763 04aa 67030000 		.4byte	.LASF47
  1764 04ae 01       		.byte	0x1
  1765 04af 94       		.byte	0x94
  1766 04b0 00000000 		.4byte	.LFB40
@@ -2398,14 +2397,14 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1769 04b9 9C       		.byte	0x9c
  1770 04ba C8040000 		.4byte	0x4c8
  1771 04be 0E       		.uleb128 0xe
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 41
-
-
  1772 04bf 14000000 		.4byte	.LVL49
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 41
+
+
  1773 04c3 89030000 		.4byte	0x389
  1774 04c7 00       		.byte	0
  1775 04c8 08       		.uleb128 0x8
- 1776 04c9 B0020000 		.4byte	.LASF48
+ 1776 04c9 AB020000 		.4byte	.LASF48
  1777 04cd 01       		.byte	0x1
  1778 04ce 9D       		.byte	0x9d
  1779 04cf 00000000 		.4byte	.LFB41
@@ -2418,7 +2417,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1786 04e2 89030000 		.4byte	0x389
  1787 04e6 00       		.byte	0
  1788 04e7 08       		.uleb128 0x8
- 1789 04e8 55020000 		.4byte	.LASF49
+ 1789 04e8 50020000 		.4byte	.LASF49
  1790 04ec 01       		.byte	0x1
  1791 04ed A4       		.byte	0xa4
  1792 04ee 00000000 		.4byte	.LFB42
@@ -2431,7 +2430,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1799 0501 89030000 		.4byte	0x389
  1800 0505 00       		.byte	0
  1801 0506 08       		.uleb128 0x8
- 1802 0507 7F030000 		.4byte	.LASF50
+ 1802 0507 18030000 		.4byte	.LASF50
  1803 050b 01       		.byte	0x1
  1804 050c AD       		.byte	0xad
  1805 050d 00000000 		.4byte	.LFB43
@@ -2457,11 +2456,11 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1825 053f 89030000 		.4byte	0x389
  1826 0543 00       		.byte	0
  1827 0544 08       		.uleb128 0x8
- 1828 0545 F9030000 		.4byte	.LASF52
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 42
-
-
+ 1828 0545 92030000 		.4byte	.LASF52
  1829 0549 01       		.byte	0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 42
+
+
  1830 054a BD       		.byte	0xbd
  1831 054b 00000000 		.4byte	.LFB45
  1832 054f 0A000000 		.4byte	.LFE45-.LFB45
@@ -2479,7 +2478,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1844 0567 00       		.byte	0
  1845 0568 00       		.byte	0
  1846 0569 08       		.uleb128 0x8
- 1847 056a 7B000000 		.4byte	.LASF53
+ 1847 056a B8000000 		.4byte	.LASF53
  1848 056e 01       		.byte	0x1
  1849 056f C3       		.byte	0xc3
  1850 0570 00000000 		.4byte	.LFB46
@@ -2498,7 +2497,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1863 058c 00       		.byte	0
  1864 058d 00       		.byte	0
  1865 058e 08       		.uleb128 0x8
- 1866 058f 5D040000 		.4byte	.LASF54
+ 1866 058f 0C040000 		.4byte	.LASF54
  1867 0593 01       		.byte	0x1
  1868 0594 CB       		.byte	0xcb
  1869 0595 00000000 		.4byte	.LFB47
@@ -2511,23 +2510,23 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1876 05a8 89030000 		.4byte	0x389
  1877 05ac 00       		.byte	0
  1878 05ad 08       		.uleb128 0x8
- 1879 05ae 8C030000 		.4byte	.LASF55
+ 1879 05ae 25030000 		.4byte	.LASF55
  1880 05b2 01       		.byte	0x1
  1881 05b3 D4       		.byte	0xd4
  1882 05b4 00000000 		.4byte	.LFB48
  1883 05b8 1C000000 		.4byte	.LFE48-.LFB48
  1884 05bc 01       		.uleb128 0x1
  1885 05bd 9C       		.byte	0x9c
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 43
-
-
  1886 05be CC050000 		.4byte	0x5cc
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 43
+
+
  1887 05c2 0E       		.uleb128 0xe
  1888 05c3 14000000 		.4byte	.LVL57
  1889 05c7 89030000 		.4byte	0x389
  1890 05cb 00       		.byte	0
  1891 05cc 08       		.uleb128 0x8
- 1892 05cd 3B040000 		.4byte	.LASF56
+ 1892 05cd EA030000 		.4byte	.LASF56
  1893 05d1 01       		.byte	0x1
  1894 05d2 DD       		.byte	0xdd
  1895 05d3 00000000 		.4byte	.LFB49
@@ -2540,7 +2539,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1902 05e6 89030000 		.4byte	0x389
  1903 05ea 00       		.byte	0
  1904 05eb 08       		.uleb128 0x8
- 1905 05ec 5F000000 		.4byte	.LASF57
+ 1905 05ec 9C000000 		.4byte	.LASF57
  1906 05f0 01       		.byte	0x1
  1907 05f1 E6       		.byte	0xe6
  1908 05f2 00000000 		.4byte	.LFB50
@@ -2562,7 +2561,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1924 061b 9C       		.byte	0x9c
  1925 061c 40060000 		.4byte	0x640
  1926 0620 0B       		.uleb128 0xb
- 1927 0621 A1000000 		.4byte	.LASF36
+ 1927 0621 DE000000 		.4byte	.LASF36
  1928 0625 01       		.byte	0x1
  1929 0626 1501     		.2byte	0x115
  1930 0628 81000000 		.4byte	0x81
@@ -2578,10 +2577,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1940 063e 00       		.byte	0
  1941 063f 00       		.byte	0
  1942 0640 08       		.uleb128 0x8
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 44
+ 1943 0641 60020000 		.4byte	.LASF59
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 44
 
 
- 1943 0641 65020000 		.4byte	.LASF59
  1944 0645 01       		.byte	0x1
  1945 0646 F0       		.byte	0xf0
  1946 0647 00000000 		.4byte	.LFB51
@@ -2590,13 +2589,13 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1949 0650 9C       		.byte	0x9c
  1950 0651 93060000 		.4byte	0x693
  1951 0655 09       		.uleb128 0x9
- 1952 0656 0B040000 		.4byte	.LASF60
+ 1952 0656 A4030000 		.4byte	.LASF60
  1953 065a 01       		.byte	0x1
  1954 065b F0       		.byte	0xf0
  1955 065c 81000000 		.4byte	0x81
  1956 0660 69020000 		.4byte	.LLST18
  1957 0664 09       		.uleb128 0x9
- 1958 0665 F1030000 		.4byte	.LASF61
+ 1958 0665 8A030000 		.4byte	.LASF61
  1959 0669 01       		.byte	0x1
  1960 066a F0       		.byte	0xf0
  1961 066b 93060000 		.4byte	0x693
@@ -2618,7 +2617,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1977 0694 04       		.byte	0x4
  1978 0695 81000000 		.4byte	0x81
  1979 0699 0A       		.uleb128 0xa
- 1980 069a 9F030000 		.4byte	.LASF62
+ 1980 069a 38030000 		.4byte	.LASF62
  1981 069e 01       		.byte	0x1
  1982 069f 4301     		.2byte	0x143
  1983 06a1 00000000 		.4byte	.LFB60
@@ -2627,21 +2626,21 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  1986 06aa 9C       		.byte	0x9c
  1987 06ab E1060000 		.4byte	0x6e1
  1988 06af 0B       		.uleb128 0xb
- 1989 06b0 5C020000 		.4byte	.LASF63
+ 1989 06b0 57020000 		.4byte	.LASF63
  1990 06b4 01       		.byte	0x1
  1991 06b5 4301     		.2byte	0x143
  1992 06b7 81000000 		.4byte	0x81
  1993 06bb D2020000 		.4byte	.LLST21
  1994 06bf 0B       		.uleb128 0xb
- 1995 06c0 5A000000 		.4byte	.LASF64
+ 1995 06c0 97000000 		.4byte	.LASF64
  1996 06c4 01       		.byte	0x1
  1997 06c5 4301     		.2byte	0x143
  1998 06c7 93060000 		.4byte	0x693
  1999 06cb F3020000 		.4byte	.LLST22
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 45
-
-
  2000 06cf 0F       		.uleb128 0xf
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 45
+
+
  2001 06d0 06000000 		.4byte	.LVL73
  2002 06d4 40060000 		.4byte	0x640
  2003 06d8 0D       		.uleb128 0xd
@@ -2654,7 +2653,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2010 06df 00       		.byte	0
  2011 06e0 00       		.byte	0
  2012 06e1 0A       		.uleb128 0xa
- 2013 06e2 2E030000 		.4byte	.LASF65
+ 2013 06e2 C7020000 		.4byte	.LASF65
  2014 06e6 01       		.byte	0x1
  2015 06e7 5501     		.2byte	0x155
  2016 06e9 00000000 		.4byte	.LFB62
@@ -2675,7 +2674,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2031 070d 8C000000 		.4byte	0x8c
  2032 0711 40030000 		.4byte	.LLST24
  2033 0715 10       		.uleb128 0x10
- 2034 0716 14020000 		.4byte	.LASF67
+ 2034 0716 0F020000 		.4byte	.LASF67
  2035 071a 01       		.byte	0x1
  2036 071b 5901     		.2byte	0x159
  2037 071d 81000000 		.4byte	0x81
@@ -2696,12 +2695,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2052 073e 0A060000 		.4byte	0x60a
  2053 0742 00       		.byte	0
  2054 0743 08       		.uleb128 0x8
- 2055 0744 75000000 		.4byte	.LASF68
+ 2055 0744 B2000000 		.4byte	.LASF68
  2056 0748 01       		.byte	0x1
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 46
-
-
  2057 0749 32       		.byte	0x32
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 46
+
+
  2058 074a 00000000 		.4byte	.LFB35
  2059 074e B8000000 		.4byte	.LFE35-.LFB35
  2060 0752 01       		.uleb128 0x1
@@ -2758,10 +2757,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2111 07b3 56000000 		.4byte	.LVL89
  2112 07b7 CB020000 		.4byte	0x2cb
  2113 07bb C6070000 		.4byte	0x7c6
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 47
-
-
  2114 07bf 0D       		.uleb128 0xd
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 47
+
+
  2115 07c0 01       		.uleb128 0x1
  2116 07c1 50       		.byte	0x50
  2117 07c2 02       		.uleb128 0x2
@@ -2818,10 +2817,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2168 081f 0E       		.uleb128 0xe
  2169 0820 84000000 		.4byte	.LVL95
  2170 0824 A9040000 		.4byte	0x4a9
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 48
-
-
  2171 0828 0E       		.uleb128 0xe
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 48
+
+
  2172 0829 88000000 		.4byte	.LVL96
  2173 082d BF030000 		.4byte	0x3bf
  2174 0831 0C       		.uleb128 0xc
@@ -2847,7 +2846,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2194 085a 03       		.byte	0x3
  2195 085b 00000000 		.4byte	_addr
  2196 085f 17       		.uleb128 0x17
- 2197 0860 A7000000 		.4byte	.LASF70
+ 2197 0860 E4000000 		.4byte	.LASF70
  2198 0864 01       		.byte	0x1
  2199 0865 1F       		.byte	0x1f
  2200 0866 81000000 		.4byte	0x81
@@ -2855,7 +2854,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2202 086b 03       		.byte	0x3
  2203 086c 00000000 		.4byte	_displayfunction
  2204 0870 17       		.uleb128 0x17
- 2205 0871 25020000 		.4byte	.LASF71
+ 2205 0871 20020000 		.4byte	.LASF71
  2206 0875 01       		.byte	0x1
  2207 0876 20       		.byte	0x20
  2208 0877 81000000 		.4byte	0x81
@@ -2871,18 +2870,18 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2218 088d 03       		.byte	0x3
  2219 088e 00000000 		.4byte	_displaymode
  2220 0892 17       		.uleb128 0x17
- 2221 0893 EB030000 		.4byte	.LASF73
+ 2221 0893 84030000 		.4byte	.LASF73
  2222 0897 01       		.byte	0x1
  2223 0898 22       		.byte	0x22
  2224 0899 81000000 		.4byte	0x81
  2225 089d 05       		.uleb128 0x5
  2226 089e 03       		.byte	0x3
  2227 089f 00000000 		.4byte	_cols
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 49
-
-
  2228 08a3 17       		.uleb128 0x17
- 2229 08a4 E6000000 		.4byte	.LASF74
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 49
+
+
+ 2229 08a4 23010000 		.4byte	.LASF74
  2230 08a8 01       		.byte	0x1
  2231 08a9 23       		.byte	0x23
  2232 08aa 81000000 		.4byte	0x81
@@ -2890,7 +2889,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2234 08af 03       		.byte	0x3
  2235 08b0 00000000 		.4byte	_rows
  2236 08b4 17       		.uleb128 0x17
- 2237 08b5 69040000 		.4byte	.LASF75
+ 2237 08b5 18040000 		.4byte	.LASF75
  2238 08b9 01       		.byte	0x1
  2239 08ba 24       		.byte	0x24
  2240 08bb 81000000 		.4byte	0x81
@@ -2898,7 +2897,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2242 08c0 03       		.byte	0x3
  2243 08c1 00000000 		.4byte	_charsize
  2244 08c5 17       		.uleb128 0x17
- 2245 08c6 8E000000 		.4byte	.LASF76
+ 2245 08c6 CB000000 		.4byte	.LASF76
  2246 08ca 01       		.byte	0x1
  2247 08cb 25       		.byte	0x25
  2248 08cc 81000000 		.4byte	0x81
@@ -2906,7 +2905,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2250 08d1 03       		.byte	0x3
  2251 08d2 00000000 		.4byte	_backlightval
  2252 08d6 18       		.uleb128 0x18
- 2253 08d7 7B040000 		.4byte	.LASF77
+ 2253 08d7 2A040000 		.4byte	.LASF77
  2254 08db 06       		.byte	0x6
  2255 08dc CC       		.byte	0xcc
  2256 08dd A3000000 		.4byte	0xa3
@@ -2917,7 +2916,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2261 08eb A3000000 		.4byte	0xa3
  2262 08ef 00       		.byte	0
  2263 08f0 18       		.uleb128 0x18
- 2264 08f1 17010000 		.4byte	.LASF78
+ 2264 08f1 54010000 		.4byte	.LASF78
  2265 08f5 06       		.byte	0x6
  2266 08f6 CF       		.byte	0xcf
  2267 08f7 A3000000 		.4byte	0xa3
@@ -2931,18 +2930,18 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2275 090b CE       		.byte	0xce
  2276 090c A3000000 		.4byte	0xa3
  2277 0910 1B       		.uleb128 0x1b
- 2278 0911 3D020000 		.4byte	.LASF79
+ 2278 0911 38020000 		.4byte	.LASF79
  2279 0915 07       		.byte	0x7
  2280 0916 5B       		.byte	0x5b
  2281 0917 21090000 		.4byte	0x921
  2282 091b 19       		.uleb128 0x19
  2283 091c 97000000 		.4byte	0x97
  2284 0920 00       		.byte	0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 50
-
-
  2285 0921 1B       		.uleb128 0x1b
- 2286 0922 73040000 		.4byte	.LASF80
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 50
+
+
+ 2286 0922 22040000 		.4byte	.LASF80
  2287 0926 07       		.byte	0x7
  2288 0927 5A       		.byte	0x5a
  2289 0928 32090000 		.4byte	0x932
@@ -2950,7 +2949,7 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2291 092d A3000000 		.4byte	0xa3
  2292 0931 00       		.byte	0
  2293 0932 1C       		.uleb128 0x1c
- 2294 0933 54030000 		.4byte	.LASF81
+ 2294 0933 ED020000 		.4byte	.LASF81
  2295 0937 08       		.byte	0x8
  2296 0938 21       		.byte	0x21
  2297 0939 C4000000 		.4byte	0xc4
@@ -2998,10 +2997,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2339 0023 3A       		.uleb128 0x3a
  2340 0024 0B       		.uleb128 0xb
  2341 0025 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 51
-
-
  2342 0026 0B       		.uleb128 0xb
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 51
+
+
  2343 0027 49       		.uleb128 0x49
  2344 0028 13       		.uleb128 0x13
  2345 0029 00       		.byte	0
@@ -3058,10 +3057,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2396 005c 3B       		.uleb128 0x3b
  2397 005d 0B       		.uleb128 0xb
  2398 005e 27       		.uleb128 0x27
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 52
-
-
  2399 005f 19       		.uleb128 0x19
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 52
+
+
  2400 0060 11       		.uleb128 0x11
  2401 0061 01       		.uleb128 0x1
  2402 0062 12       		.uleb128 0x12
@@ -3118,10 +3117,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2453 0097 05       		.uleb128 0x5
  2454 0098 00       		.byte	0
  2455 0099 03       		.uleb128 0x3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 53
-
-
  2456 009a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 53
+
+
  2457 009b 3A       		.uleb128 0x3a
  2458 009c 0B       		.uleb128 0xb
  2459 009d 3B       		.uleb128 0x3b
@@ -3178,10 +3177,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2510 00d9 3A       		.uleb128 0x3a
  2511 00da 0B       		.uleb128 0xb
  2512 00db 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 54
-
-
  2513 00dc 05       		.uleb128 0x5
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 54
+
+
  2514 00dd 49       		.uleb128 0x49
  2515 00de 13       		.uleb128 0x13
  2516 00df 02       		.uleb128 0x2
@@ -3238,10 +3237,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2567 0112 00       		.byte	0
  2568 0113 15       		.uleb128 0x15
  2569 0114 34       		.uleb128 0x34
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 55
-
-
  2570 0115 00       		.byte	0
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 55
+
+
  2571 0116 03       		.uleb128 0x3
  2572 0117 08       		.uleb128 0x8
  2573 0118 3A       		.uleb128 0x3a
@@ -3298,10 +3297,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2624 014b 3B       		.uleb128 0x3b
  2625 014c 0B       		.uleb128 0xb
  2626 014d 27       		.uleb128 0x27
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 56
-
-
  2627 014e 19       		.uleb128 0x19
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 56
+
+
  2628 014f 49       		.uleb128 0x49
  2629 0150 13       		.uleb128 0x13
  2630 0151 3C       		.uleb128 0x3c
@@ -3358,10 +3357,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2681 0184 1C       		.uleb128 0x1c
  2682 0185 2E       		.uleb128 0x2e
  2683 0186 01       		.byte	0x1
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 57
-
-
  2684 0187 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 57
+
+
  2685 0188 19       		.uleb128 0x19
  2686 0189 03       		.uleb128 0x3
  2687 018a 0E       		.uleb128 0xe
@@ -3418,10 +3417,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2738 0062 00000000 		.4byte	0
  2739              	.LLST3:
  2740 0066 00000000 		.4byte	.LVL0
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 58
-
-
  2741 006a 16000000 		.4byte	.LVL4
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 58
+
+
  2742 006e 0100     		.2byte	0x1
  2743 0070 53       		.byte	0x53
  2744 0071 16000000 		.4byte	.LVL4
@@ -3478,10 +3477,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2795 00ef 09000000 		.4byte	.LVL16-1
  2796 00f3 0100     		.2byte	0x1
  2797 00f5 50       		.byte	0x50
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 59
-
-
  2798 00f6 09000000 		.4byte	.LVL16-1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 59
+
+
  2799 00fa 0C000000 		.4byte	.LVL17
  2800 00fe 0400     		.2byte	0x4
  2801 0100 F3       		.byte	0xf3
@@ -3538,10 +3537,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2852 0176 22000000 		.4byte	.LFE56
  2853 017a 0400     		.2byte	0x4
  2854 017c F3       		.byte	0xf3
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 60
-
-
  2855 017d 01       		.uleb128 0x1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 60
+
+
  2856 017e 50       		.byte	0x50
  2857 017f 9F       		.byte	0x9f
  2858 0180 00000000 		.4byte	0
@@ -3598,10 +3597,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2909 0203 0100     		.2byte	0x1
  2910 0205 50       		.byte	0x50
  2911 0206 26000000 		.4byte	.LVL46
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 61
-
-
  2912 020a 40000000 		.4byte	.LFE38
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 61
+
+
  2913 020e 0400     		.2byte	0x4
  2914 0210 F3       		.byte	0xf3
  2915 0211 01       		.uleb128 0x1
@@ -3658,10 +3657,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  2966 028f 0100     		.2byte	0x1
  2967 0291 51       		.byte	0x51
  2968 0292 11000000 		.4byte	.LVL66-1
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 62
-
-
  2969 0296 22000000 		.4byte	.LVL71
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 62
+
+
  2970 029a 0100     		.2byte	0x1
  2971 029c 55       		.byte	0x55
  2972 029d 22000000 		.4byte	.LVL71
@@ -3718,10 +3717,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  3023 0318 07000000 		.4byte	.LVL76-1
  3024 031c 0100     		.2byte	0x1
  3025 031e 50       		.byte	0x50
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 63
-
-
  3026 031f 07000000 		.4byte	.LVL76-1
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 63
+
+
  3027 0323 1C000000 		.4byte	.LVL83
  3028 0327 0100     		.2byte	0x1
  3029 0329 56       		.byte	0x56
@@ -3778,10 +3777,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  3080 0038 00000000 		.4byte	.LFB61
  3081 003c 12000000 		.4byte	.LFE61-.LFB61
  3082 0040 00000000 		.4byte	.LFB59
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 64
-
-
  3083 0044 24000000 		.4byte	.LFE59-.LFB59
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 64
+
+
  3084 0048 00000000 		.4byte	.LFB57
  3085 004c 10000000 		.4byte	.LFE57-.LFB57
  3086 0050 00000000 		.4byte	.LFB56
@@ -3838,10 +3837,10 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  3137 000c 16000000 		.4byte	.LFE63
  3138 0010 00000000 		.4byte	.LFB58
  3139 0014 20000000 		.4byte	.LFE58
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 65
-
-
  3140 0018 00000000 		.4byte	.LFB52
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 65
+
+
  3141 001c 14000000 		.4byte	.LFE52
  3142 0020 00000000 		.4byte	.LFB53
  3143 0024 14000000 		.4byte	.LFE53
@@ -3898,12 +3897,12 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  3194 00f0 00000000 		.4byte	0
  3195 00f4 00000000 		.4byte	0
  3196              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 66
-
-
  3197              	.Ldebug_line0:
- 3198 0000 BB040000 		.section	.debug_str,"MS",%progbits,1
- 3198      02003A02 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 66
+
+
+ 3198 0000 5D040000 		.section	.debug_str,"MS",%progbits,1
+ 3198      0200DC01 
  3198      00000201 
  3198      FB0E0D00 
  3198      01010101 
@@ -3940,360 +3939,352 @@ ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 1
  3215              	.LASF69:
  3216 004a 5F616464 		.ascii	"_addr\000"
  3216      7200
- 3217              	.LASF2:
- 3218 0050 73686F72 		.ascii	"short int\000"
- 3218      7420696E 
- 3218      7400
- 3219              	.LASF64:
- 3220 005a 726F7773 		.ascii	"rows\000"
- 3220      00
- 3221              	.LASF57:
- 3222 005f 6E6F4175 		.ascii	"noAutoscroll\000"
- 3222      746F7363 
- 3222      726F6C6C 
- 3222      00
- 3223              	.LASF23:
- 3224 006c 63686172 		.ascii	"charsize\000"
- 3224      73697A65 
- 3224      00
- 3225              	.LASF68:
- 3226 0075 62656769 		.ascii	"begin\000"
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 67
+ 3217              	.LASF84:
+ 3218 0050 433A5C55 		.ascii	"C:\\Users\\IEUser\\PSoC4_Projects\\Diploma_sketch\\"
+ 3218      73657273 
+ 3218      5C494555 
+ 3218      7365725C 
+ 3218      50536F43 
+ 3219 007e 50617373 		.ascii	"Password.cydsn\000"
+ 3219      776F7264 
+ 3219      2E637964 
+ 3219      736E00
+ 3220              	.LASF2:
+ 3221 008d 73686F72 		.ascii	"short int\000"
+ 3221      7420696E 
+ 3221      7400
+ 3222              	.LASF64:
+ 3223 0097 726F7773 		.ascii	"rows\000"
+ 3223      00
+ 3224              	.LASF57:
+ 3225 009c 6E6F4175 		.ascii	"noAutoscroll\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 67
 
 
- 3226      6E00
- 3227              	.LASF53:
- 3228 007b 7363726F 		.ascii	"scrollDisplayRight\000"
- 3228      6C6C4469 
- 3228      73706C61 
- 3228      79526967 
- 3228      687400
- 3229              	.LASF76:
- 3230 008e 5F626163 		.ascii	"_backlightval\000"
- 3230      6B6C6967 
- 3230      68747661 
- 3230      6C00
- 3231              	.LASF38:
- 3232 009c 6D6F6465 		.ascii	"mode\000"
- 3232      00
- 3233              	.LASF36:
- 3234 00a1 76616C75 		.ascii	"value\000"
- 3234      6500
- 3235              	.LASF70:
- 3236 00a7 5F646973 		.ascii	"_displayfunction\000"
- 3236      706C6179 
- 3236      66756E63 
- 3236      74696F6E 
- 3236      00
- 3237              	.LASF13:
- 3238 00b8 75696E74 		.ascii	"uint16\000"
- 3238      313600
- 3239              	.LASF11:
- 3240 00bf 75696E74 		.ascii	"uint8_t\000"
- 3240      385F7400 
- 3241              	.LASF21:
- 3242 00c7 6C63645F 		.ascii	"lcd_cols\000"
- 3242      636F6C73 
- 3242      00
- 3243              	.LASF25:
- 3244 00d0 4932435F 		.ascii	"I2C_M_write_byte\000"
- 3244      4D5F7772 
- 3244      6974655F 
- 3244      62797465 
- 3244      00
- 3245              	.LASF43:
- 3246 00e1 686F6D65 		.ascii	"home\000"
- 3246      00
- 3247              	.LASF74:
- 3248 00e6 5F726F77 		.ascii	"_rows\000"
- 3248      7300
- 3249              	.LASF28:
- 3250 00ec 65787061 		.ascii	"expanderWrite\000"
- 3250      6E646572 
- 3250      57726974 
- 3250      6500
- 3251              	.LASF15:
- 3252 00fa 666C6F61 		.ascii	"float\000"
- 3252      7400
- 3253              	.LASF8:
- 3254 0100 6C6F6E67 		.ascii	"long long int\000"
- 3254      206C6F6E 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 68
+ 3225      746F7363 
+ 3225      726F6C6C 
+ 3225      00
+ 3226              	.LASF23:
+ 3227 00a9 63686172 		.ascii	"charsize\000"
+ 3227      73697A65 
+ 3227      00
+ 3228              	.LASF68:
+ 3229 00b2 62656769 		.ascii	"begin\000"
+ 3229      6E00
+ 3230              	.LASF53:
+ 3231 00b8 7363726F 		.ascii	"scrollDisplayRight\000"
+ 3231      6C6C4469 
+ 3231      73706C61 
+ 3231      79526967 
+ 3231      687400
+ 3232              	.LASF76:
+ 3233 00cb 5F626163 		.ascii	"_backlightval\000"
+ 3233      6B6C6967 
+ 3233      68747661 
+ 3233      6C00
+ 3234              	.LASF38:
+ 3235 00d9 6D6F6465 		.ascii	"mode\000"
+ 3235      00
+ 3236              	.LASF36:
+ 3237 00de 76616C75 		.ascii	"value\000"
+ 3237      6500
+ 3238              	.LASF70:
+ 3239 00e4 5F646973 		.ascii	"_displayfunction\000"
+ 3239      706C6179 
+ 3239      66756E63 
+ 3239      74696F6E 
+ 3239      00
+ 3240              	.LASF13:
+ 3241 00f5 75696E74 		.ascii	"uint16\000"
+ 3241      313600
+ 3242              	.LASF11:
+ 3243 00fc 75696E74 		.ascii	"uint8_t\000"
+ 3243      385F7400 
+ 3244              	.LASF21:
+ 3245 0104 6C63645F 		.ascii	"lcd_cols\000"
+ 3245      636F6C73 
+ 3245      00
+ 3246              	.LASF25:
+ 3247 010d 4932435F 		.ascii	"I2C_M_write_byte\000"
+ 3247      4D5F7772 
+ 3247      6974655F 
+ 3247      62797465 
+ 3247      00
+ 3248              	.LASF43:
+ 3249 011e 686F6D65 		.ascii	"home\000"
+ 3249      00
+ 3250              	.LASF74:
+ 3251 0123 5F726F77 		.ascii	"_rows\000"
+ 3251      7300
+ 3252              	.LASF28:
+ 3253 0129 65787061 		.ascii	"expanderWrite\000"
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 68
 
 
- 3254      6720696E 
- 3254      7400
- 3255              	.LASF4:
- 3256 010e 6C6F6E67 		.ascii	"long int\000"
- 3256      20696E74 
- 3256      00
- 3257              	.LASF78:
- 3258 0117 4932435F 		.ascii	"I2C_I2CMasterWriteByte\000"
- 3258      4932434D 
- 3258      61737465 
- 3258      72577269 
- 3258      74654279 
- 3259              	.LASF84:
- 3260 012e 453A5C37 		.ascii	"E:\\744\\Education\\Git\\PSoC4_Projects\\Diploma_sk"
- 3260      34345C45 
- 3260      64756361 
- 3260      74696F6E 
- 3260      5C476974 
- 3261 015c 65746368 		.ascii	"etch\\Password.cydsn\000"
- 3261      5C506173 
- 3261      73776F72 
- 3261      642E6379 
- 3261      64736E00 
+ 3253      6E646572 
+ 3253      57726974 
+ 3253      6500
+ 3254              	.LASF15:
+ 3255 0137 666C6F61 		.ascii	"float\000"
+ 3255      7400
+ 3256              	.LASF8:
+ 3257 013d 6C6F6E67 		.ascii	"long long int\000"
+ 3257      206C6F6E 
+ 3257      6720696E 
+ 3257      7400
+ 3258              	.LASF4:
+ 3259 014b 6C6F6E67 		.ascii	"long int\000"
+ 3259      20696E74 
+ 3259      00
+ 3260              	.LASF78:
+ 3261 0154 4932435F 		.ascii	"I2C_I2CMasterWriteByte\000"
+ 3261      4932434D 
+ 3261      61737465 
+ 3261      72577269 
+ 3261      74654279 
  3262              	.LASF29:
- 3263 0170 5F646174 		.ascii	"_data\000"
+ 3263 016b 5F646174 		.ascii	"_data\000"
  3263      6100
  3264              	.LASF5:
- 3265 0176 5F5F7569 		.ascii	"__uint8_t\000"
+ 3265 0171 5F5F7569 		.ascii	"__uint8_t\000"
  3265      6E74385F 
  3265      7400
  3266              	.LASF42:
- 3267 0180 636C6561 		.ascii	"clear\000"
+ 3267 017b 636C6561 		.ascii	"clear\000"
  3267      7200
  3268              	.LASF82:
- 3269 0186 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 3269 0181 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  3269      4320342E 
  3269      392E3320 
  3269      32303135 
  3269      30333033 
- 3270 01b9 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 3270 01b4 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
  3270      20726576 
  3270      6973696F 
  3270      6E203232 
  3270      31323230 
- 3271 01ec 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3271 01e7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  3271      66756E63 
  3271      74696F6E 
  3271      2D736563 
  3271      74696F6E 
  3272              	.LASF67:
- 3273 0214 73697A65 		.ascii	"size\000"
+ 3273 020f 73697A65 		.ascii	"size\000"
  3273      00
  3274              	.LASF45:
- 3275 0219 726F775F 		.ascii	"row_offsets\000"
+ 3275 0214 726F775F 		.ascii	"row_offsets\000"
  3275      6F666673 
  3275      65747300 
  3276              	.LASF71:
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 69
-
-
- 3277 0225 5F646973 		.ascii	"_displaycontrol\000"
+ 3277 0220 5F646973 		.ascii	"_displaycontrol\000"
  3277      706C6179 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 69
+
+
  3277      636F6E74 
  3277      726F6C00 
  3278              	.LASF39:
- 3279 0235 68696768 		.ascii	"highnib\000"
+ 3279 0230 68696768 		.ascii	"highnib\000"
  3279      6E696200 
  3280              	.LASF79:
- 3281 023d 43794465 		.ascii	"CyDelayUs\000"
+ 3281 0238 43794465 		.ascii	"CyDelayUs\000"
  3281      6C617955 
  3281      7300
  3282              	.LASF1:
- 3283 0247 756E7369 		.ascii	"unsigned char\000"
+ 3283 0242 756E7369 		.ascii	"unsigned char\000"
  3283      676E6564 
  3283      20636861 
  3283      7200
  3284              	.LASF49:
- 3285 0255 63757273 		.ascii	"cursor\000"
+ 3285 0250 63757273 		.ascii	"cursor\000"
  3285      6F7200
  3286              	.LASF63:
- 3287 025c 63686172 		.ascii	"char_num\000"
+ 3287 0257 63686172 		.ascii	"char_num\000"
  3287      5F6E756D 
  3287      00
  3288              	.LASF59:
- 3289 0265 63726561 		.ascii	"createChar\000"
+ 3289 0260 63726561 		.ascii	"createChar\000"
  3289      74654368 
  3289      617200
  3290              	.LASF0:
- 3291 0270 7369676E 		.ascii	"signed char\000"
+ 3291 026b 7369676E 		.ascii	"signed char\000"
  3291      65642063 
  3291      68617200 
  3292              	.LASF9:
- 3293 027c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3293 0277 6C6F6E67 		.ascii	"long long unsigned int\000"
  3293      206C6F6E 
  3293      6720756E 
  3293      7369676E 
  3293      65642069 
  3294              	.LASF40:
- 3295 0293 6C6F776E 		.ascii	"lownib\000"
+ 3295 028e 6C6F776E 		.ascii	"lownib\000"
  3295      696200
  3296              	.LASF12:
- 3297 029a 75696E74 		.ascii	"uint32_t\000"
+ 3297 0295 75696E74 		.ascii	"uint32_t\000"
  3297      33325F74 
  3297      00
  3298              	.LASF10:
- 3299 02a3 756E7369 		.ascii	"unsigned int\000"
+ 3299 029e 756E7369 		.ascii	"unsigned int\000"
  3299      676E6564 
  3299      20696E74 
  3299      00
  3300              	.LASF48:
- 3301 02b0 6E6F4375 		.ascii	"noCursor\000"
+ 3301 02ab 6E6F4375 		.ascii	"noCursor\000"
  3301      72736F72 
  3301      00
- 3302              	.LASF83:
- 3303 02b9 2E2E5C2E 		.ascii	"..\\..\\..\\..\\..\\Downloads\\LCD_I2C_PSoC5LP\\LCD"
- 3303      2E5C2E2E 
- 3303      5C2E2E5C 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 70
+ 3302              	.LASF3:
+ 3303 02b4 73686F72 		.ascii	"short unsigned int\000"
+ 3303      7420756E 
+ 3303      7369676E 
+ 3303      65642069 
+ 3303      6E7400
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 70
 
 
- 3303      2E2E5C44 
- 3303      6F776E6C 
- 3304 02e5 5F493243 		.ascii	"_I2C_PSoC5LP\\LCD_I2C_PSoC4P.cydsn\\LiquidCrystal_I"
- 3304      5F50536F 
- 3304      43354C50 
- 3304      5C4C4344 
- 3304      5F493243 
- 3305 0316 32432E63 		.ascii	"2C.c\000"
- 3305      00
- 3306              	.LASF3:
- 3307 031b 73686F72 		.ascii	"short unsigned int\000"
- 3307      7420756E 
- 3307      7369676E 
- 3307      65642069 
- 3307      6E7400
- 3308              	.LASF65:
- 3309 032e 4C43445F 		.ascii	"LCD_print\000"
- 3309      7072696E 
- 3309      7400
- 3310              	.LASF32:
- 3311 0338 73657442 		.ascii	"setBacklight\000"
- 3311      61636B6C 
- 3311      69676874 
+ 3304              	.LASF65:
+ 3305 02c7 4C43445F 		.ascii	"LCD_print\000"
+ 3305      7072696E 
+ 3305      7400
+ 3306              	.LASF32:
+ 3307 02d1 73657442 		.ascii	"setBacklight\000"
+ 3307      61636B6C 
+ 3307      69676874 
+ 3307      00
+ 3308              	.LASF46:
+ 3309 02de 6E6F4469 		.ascii	"noDisplay\000"
+ 3309      73706C61 
+ 3309      7900
+ 3310              	.LASF17:
+ 3311 02e8 63686172 		.ascii	"char\000"
  3311      00
- 3312              	.LASF46:
- 3313 0345 6E6F4469 		.ascii	"noDisplay\000"
- 3313      73706C61 
- 3313      7900
- 3314              	.LASF17:
- 3315 034f 63686172 		.ascii	"char\000"
- 3315      00
- 3316              	.LASF81:
- 3317 0354 7374726C 		.ascii	"strlen\000"
- 3317      656E00
- 3318              	.LASF34:
- 3319 035b 70756C73 		.ascii	"pulseEnable\000"
- 3319      65456E61 
- 3319      626C6500 
- 3320              	.LASF26:
- 3321 0367 61646472 		.ascii	"addr\000"
- 3321      00
- 3322              	.LASF18:
- 3323 036c 73697A65 		.ascii	"size_t\000"
- 3323      5F7400
- 3324              	.LASF30:
- 3325 0373 6E6F4261 		.ascii	"noBacklight\000"
- 3325      636B6C69 
- 3325      67687400 
- 3326              	.LASF50:
- 3327 037f 6E6F426C 		.ascii	"noBlink\000"
- 3327      696E6B00 
- 3328              	.LASF27:
- 3329 0387 64617461 		.ascii	"data\000"
- 3329      00
- 3330              	.LASF55:
- 3331 038c 72696768 		.ascii	"rightToLeft\000"
- 3331      74546F4C 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 71
+ 3312              	.LASF81:
+ 3313 02ed 7374726C 		.ascii	"strlen\000"
+ 3313      656E00
+ 3314              	.LASF34:
+ 3315 02f4 70756C73 		.ascii	"pulseEnable\000"
+ 3315      65456E61 
+ 3315      626C6500 
+ 3316              	.LASF26:
+ 3317 0300 61646472 		.ascii	"addr\000"
+ 3317      00
+ 3318              	.LASF18:
+ 3319 0305 73697A65 		.ascii	"size_t\000"
+ 3319      5F7400
+ 3320              	.LASF30:
+ 3321 030c 6E6F4261 		.ascii	"noBacklight\000"
+ 3321      636B6C69 
+ 3321      67687400 
+ 3322              	.LASF50:
+ 3323 0318 6E6F426C 		.ascii	"noBlink\000"
+ 3323      696E6B00 
+ 3324              	.LASF27:
+ 3325 0320 64617461 		.ascii	"data\000"
+ 3325      00
+ 3326              	.LASF55:
+ 3327 0325 72696768 		.ascii	"rightToLeft\000"
+ 3327      74546F4C 
+ 3327      65667400 
+ 3328              	.LASF14:
+ 3329 0331 75696E74 		.ascii	"uint32\000"
+ 3329      333200
+ 3330              	.LASF62:
+ 3331 0338 6C6F6164 		.ascii	"load_custom_character\000"
+ 3331      5F637573 
+ 3331      746F6D5F 
+ 3331      63686172 
+ 3331      61637465 
+ 3332              	.LASF7:
+ 3333 034e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3333      20756E73 
+ 3333      69676E65 
+ 3333      6420696E 
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 71
 
 
- 3331      65667400 
- 3332              	.LASF14:
- 3333 0398 75696E74 		.ascii	"uint32\000"
- 3333      333200
- 3334              	.LASF62:
- 3335 039f 6C6F6164 		.ascii	"load_custom_character\000"
- 3335      5F637573 
- 3335      746F6D5F 
- 3335      63686172 
- 3335      61637465 
- 3336              	.LASF7:
- 3337 03b5 6C6F6E67 		.ascii	"long unsigned int\000"
- 3337      20756E73 
- 3337      69676E65 
- 3337      6420696E 
- 3337      7400
- 3338              	.LASF16:
- 3339 03c7 646F7562 		.ascii	"double\000"
- 3339      6C6500
- 3340              	.LASF47:
- 3341 03ce 64697370 		.ascii	"display\000"
- 3341      6C617900 
- 3342              	.LASF44:
- 3343 03d6 73657443 		.ascii	"setCursor\000"
- 3343      7572736F 
- 3343      7200
- 3344              	.LASF6:
- 3345 03e0 5F5F7569 		.ascii	"__uint32_t\000"
- 3345      6E743332 
- 3345      5F7400
- 3346              	.LASF73:
- 3347 03eb 5F636F6C 		.ascii	"_cols\000"
- 3347      7300
- 3348              	.LASF61:
- 3349 03f1 63686172 		.ascii	"charmap\000"
- 3349      6D617000 
- 3350              	.LASF52:
- 3351 03f9 7363726F 		.ascii	"scrollDisplayLeft\000"
- 3351      6C6C4469 
- 3351      73706C61 
- 3351      794C6566 
- 3351      7400
- 3352              	.LASF60:
- 3353 040b 6C6F6361 		.ascii	"location\000"
- 3353      74696F6E 
- 3353      00
- 3354              	.LASF31:
- 3355 0414 6261636B 		.ascii	"backlight\000"
- 3355      6C696768 
- 3355      7400
- 3356              	.LASF20:
- 3357 041e 6C63645F 		.ascii	"lcd_addr\000"
- 3357      61646472 
- 3357      00
- 3358              	.LASF35:
- 3359 0427 77726974 		.ascii	"write4bits\000"
- 3359      65346269 
-ARM GAS  C:\Users\744\AppData\Local\Temp\ccpVH8mo.s 			page 72
+ 3333      7400
+ 3334              	.LASF16:
+ 3335 0360 646F7562 		.ascii	"double\000"
+ 3335      6C6500
+ 3336              	.LASF47:
+ 3337 0367 64697370 		.ascii	"display\000"
+ 3337      6C617900 
+ 3338              	.LASF44:
+ 3339 036f 73657443 		.ascii	"setCursor\000"
+ 3339      7572736F 
+ 3339      7200
+ 3340              	.LASF6:
+ 3341 0379 5F5F7569 		.ascii	"__uint32_t\000"
+ 3341      6E743332 
+ 3341      5F7400
+ 3342              	.LASF73:
+ 3343 0384 5F636F6C 		.ascii	"_cols\000"
+ 3343      7300
+ 3344              	.LASF61:
+ 3345 038a 63686172 		.ascii	"charmap\000"
+ 3345      6D617000 
+ 3346              	.LASF52:
+ 3347 0392 7363726F 		.ascii	"scrollDisplayLeft\000"
+ 3347      6C6C4469 
+ 3347      73706C61 
+ 3347      794C6566 
+ 3347      7400
+ 3348              	.LASF60:
+ 3349 03a4 6C6F6361 		.ascii	"location\000"
+ 3349      74696F6E 
+ 3349      00
+ 3350              	.LASF83:
+ 3351 03ad 2E5C4C69 		.ascii	".\\LiquidCrystal_I2C.c\000"
+ 3351      71756964 
+ 3351      43727973 
+ 3351      74616C5F 
+ 3351      4932432E 
+ 3352              	.LASF31:
+ 3353 03c3 6261636B 		.ascii	"backlight\000"
+ 3353      6C696768 
+ 3353      7400
+ 3354              	.LASF20:
+ 3355 03cd 6C63645F 		.ascii	"lcd_addr\000"
+ 3355      61646472 
+ 3355      00
+ 3356              	.LASF35:
+ 3357 03d6 77726974 		.ascii	"write4bits\000"
+ 3357      65346269 
+ 3357      747300
+ 3358              	.LASF19:
+ 3359 03e1 73697A65 		.ascii	"sizetype\000"
+ 3359      74797065 
+ 3359      00
+ 3360              	.LASF56:
+ 3361 03ea 6175746F 		.ascii	"autoscroll\000"
+ 3361      7363726F 
+ 3361      6C6C00
+ARM GAS  C:\Users\IEUser\AppData\Local\Temp\ccMKUxPf.s 			page 72
 
 
- 3359      747300
- 3360              	.LASF19:
- 3361 0432 73697A65 		.ascii	"sizetype\000"
- 3361      74797065 
- 3361      00
- 3362              	.LASF56:
- 3363 043b 6175746F 		.ascii	"autoscroll\000"
- 3363      7363726F 
- 3363      6C6C00
- 3364              	.LASF24:
- 3365 0446 4C697175 		.ascii	"LiquidCrystal_I2C_init\000"
- 3365      69644372 
- 3365      79737461 
- 3365      6C5F4932 
- 3365      435F696E 
- 3366              	.LASF54:
- 3367 045d 6C656674 		.ascii	"leftToRight\000"
- 3367      546F5269 
- 3367      67687400 
- 3368              	.LASF75:
- 3369 0469 5F636861 		.ascii	"_charsize\000"
- 3369      7273697A 
- 3369      6500
- 3370              	.LASF80:
- 3371 0473 43794465 		.ascii	"CyDelay\000"
- 3371      6C617900 
- 3372              	.LASF77:
- 3373 047b 4932435F 		.ascii	"I2C_I2CMasterSendStart\000"
- 3373      4932434D 
- 3373      61737465 
- 3373      7253656E 
- 3373      64537461 
- 3374              	.LASF41:
- 3375 0492 636F6D6D 		.ascii	"command\000"
- 3375      616E6400 
- 3376              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 3362              	.LASF24:
+ 3363 03f5 4C697175 		.ascii	"LiquidCrystal_I2C_init\000"
+ 3363      69644372 
+ 3363      79737461 
+ 3363      6C5F4932 
+ 3363      435F696E 
+ 3364              	.LASF54:
+ 3365 040c 6C656674 		.ascii	"leftToRight\000"
+ 3365      546F5269 
+ 3365      67687400 
+ 3366              	.LASF75:
+ 3367 0418 5F636861 		.ascii	"_charsize\000"
+ 3367      7273697A 
+ 3367      6500
+ 3368              	.LASF80:
+ 3369 0422 43794465 		.ascii	"CyDelay\000"
+ 3369      6C617900 
+ 3370              	.LASF77:
+ 3371 042a 4932435F 		.ascii	"I2C_I2CMasterSendStart\000"
+ 3371      4932434D 
+ 3371      61737465 
+ 3371      7253656E 
+ 3371      64537461 
+ 3372              	.LASF41:
+ 3373 0441 636F6D6D 		.ascii	"command\000"
+ 3373      616E6400 
+ 3374              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

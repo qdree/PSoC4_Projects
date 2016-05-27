@@ -123,6 +123,7 @@ void check_card()
                             LCD_print("Access denied!");
                             setCursor(0,1);
                             LCD_print("ID: ");
+                            LCD_print(arr);
                             LED_GREEN_Write(1);
                             LED_RED_Write(0);
                             accepted = false;

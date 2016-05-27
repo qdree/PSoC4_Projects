@@ -1,8 +1,8 @@
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/Password.cydsn/CortexM0/ARM_GCC_493/Debug/CyBootAsmGnu.o : E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/Password.cydsn/CortexM0/ARM_GCC_493/Debug/CyBootAsmGnu.o : C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/Password.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
 

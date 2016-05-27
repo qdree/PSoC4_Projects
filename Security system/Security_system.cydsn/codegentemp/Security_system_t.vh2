@@ -1,6 +1,6 @@
--- Project:   E:\744\Education\Git\PSoC4_Projects\Security system\Security_system.cydsn\Security_system.cyprj
--- Generated: 05/24/2016 23:10:18
--- PSoC Creator  3.3 SP1
+-- Project:   C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\Security_system.cyprj
+-- Generated: 05/25/2016 11:21:46
+-- PSoC Creator  3.3 CP2
 
 ENTITY Security_system IS
     PORT(
