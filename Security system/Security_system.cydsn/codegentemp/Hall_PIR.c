@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: PIR_4.c  
+* File Name: Hall_PIR.c  
 * Version 2.20
 *
 * Description:
@@ -13,35 +13,35 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "PIR_4.h"
+#include "Hall_PIR.h"
 
 
-#if defined(PIR_4__PC)
-    #define PIR_4_SetP4PinDriveMode(shift, mode)  \
+#if defined(Hall_PIR__PC)
+    #define Hall_PIR_SetP4PinDriveMode(shift, mode)  \
     do { \
-        PIR_4_PC =   (PIR_4_PC & \
-                                (uint32)(~(uint32)(PIR_4_DRIVE_MODE_IND_MASK << \
-                                (PIR_4_DRIVE_MODE_BITS * (shift))))) | \
+        Hall_PIR_PC =   (Hall_PIR_PC & \
+                                (uint32)(~(uint32)(Hall_PIR_DRIVE_MODE_IND_MASK << \
+                                (Hall_PIR_DRIVE_MODE_BITS * (shift))))) | \
                                 (uint32)((uint32)(mode) << \
-                                (PIR_4_DRIVE_MODE_BITS * (shift))); \
+                                (Hall_PIR_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 #else
     #if (CY_PSOC4_4200L)
-        #define PIR_4_SetP4PinDriveMode(shift, mode)  \
+        #define Hall_PIR_SetP4PinDriveMode(shift, mode)  \
         do { \
-            PIR_4_USBIO_CTRL_REG = (PIR_4_USBIO_CTRL_REG & \
-                                    (uint32)(~(uint32)(PIR_4_DRIVE_MODE_IND_MASK << \
-                                    (PIR_4_DRIVE_MODE_BITS * (shift))))) | \
+            Hall_PIR_USBIO_CTRL_REG = (Hall_PIR_USBIO_CTRL_REG & \
+                                    (uint32)(~(uint32)(Hall_PIR_DRIVE_MODE_IND_MASK << \
+                                    (Hall_PIR_DRIVE_MODE_BITS * (shift))))) | \
                                     (uint32)((uint32)(mode) << \
-                                    (PIR_4_DRIVE_MODE_BITS * (shift))); \
+                                    (Hall_PIR_DRIVE_MODE_BITS * (shift))); \
         } while (0)
     #endif
 #endif
   
 
-#if defined(PIR_4__PC) || (CY_PSOC4_4200L) 
+#if defined(Hall_PIR__PC) || (CY_PSOC4_4200L) 
     /*******************************************************************************
-    * Function Name: PIR_4_SetDriveMode
+    * Function Name: Hall_PIR_SetDriveMode
     ****************************************************************************//**
     *
     * \brief Sets the drive mode for each of the Pins component's pins.
@@ -67,17 +67,17 @@
     *  APIs (primary method) or disable interrupts around this function.
     *
     * \funcusage
-    *  \snippet PIR_4_SUT.c usage_PIR_4_SetDriveMode
+    *  \snippet Hall_PIR_SUT.c usage_Hall_PIR_SetDriveMode
     *******************************************************************************/
-    void PIR_4_SetDriveMode(uint8 mode)
+    void Hall_PIR_SetDriveMode(uint8 mode)
     {
-		PIR_4_SetP4PinDriveMode(PIR_4__0__SHIFT, mode);
+		Hall_PIR_SetP4PinDriveMode(Hall_PIR__0__SHIFT, mode);
     }
 #endif
 
 
 /*******************************************************************************
-* Function Name: PIR_4_Write
+* Function Name: Hall_PIR_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -106,18 +106,18 @@
 *  this function.
 *
 * \funcusage
-*  \snippet PIR_4_SUT.c usage_PIR_4_Write
+*  \snippet Hall_PIR_SUT.c usage_Hall_PIR_Write
 *******************************************************************************/
-void PIR_4_Write(uint8 value)
+void Hall_PIR_Write(uint8 value)
 {
-    uint8 drVal = (uint8)(PIR_4_DR & (uint8)(~PIR_4_MASK));
-    drVal = (drVal | ((uint8)(value << PIR_4_SHIFT) & PIR_4_MASK));
-    PIR_4_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(Hall_PIR_DR & (uint8)(~Hall_PIR_MASK));
+    drVal = (drVal | ((uint8)(value << Hall_PIR_SHIFT) & Hall_PIR_MASK));
+    Hall_PIR_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_4_Read
+* Function Name: Hall_PIR_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -131,16 +131,16 @@ void PIR_4_Write(uint8 value)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet PIR_4_SUT.c usage_PIR_4_Read  
+*  \snippet Hall_PIR_SUT.c usage_Hall_PIR_Read  
 *******************************************************************************/
-uint8 PIR_4_Read(void)
+uint8 Hall_PIR_Read(void)
 {
-    return (uint8)((PIR_4_PS & PIR_4_MASK) >> PIR_4_SHIFT);
+    return (uint8)((Hall_PIR_PS & Hall_PIR_MASK) >> Hall_PIR_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_4_ReadDataReg
+* Function Name: Hall_PIR_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -149,8 +149,8 @@ uint8 PIR_4_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred PIR_4_Read() API because the 
-* PIR_4_ReadDataReg() reads the data register instead of the status 
+* preferred Hall_PIR_Read() API because the 
+* Hall_PIR_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -159,16 +159,16 @@ uint8 PIR_4_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet PIR_4_SUT.c usage_PIR_4_ReadDataReg 
+*  \snippet Hall_PIR_SUT.c usage_Hall_PIR_ReadDataReg 
 *******************************************************************************/
-uint8 PIR_4_ReadDataReg(void)
+uint8 Hall_PIR_ReadDataReg(void)
 {
-    return (uint8)((PIR_4_DR & PIR_4_MASK) >> PIR_4_SHIFT);
+    return (uint8)((Hall_PIR_DR & Hall_PIR_MASK) >> Hall_PIR_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_4_SetInterruptMode
+* Function Name: Hall_PIR_SetInterruptMode
 ****************************************************************************//**
 *
 * \brief Configures the interrupt mode for each of the Pins component's
@@ -181,12 +181,12 @@ uint8 PIR_4_ReadDataReg(void)
 * \param position
 *  The pin position as listed in the Pins component. You may OR these to be 
 *  able to configure the interrupt mode of multiple pins within a Pins 
-*  component. Or you may use PIR_4_INTR_ALL to configure the
+*  component. Or you may use Hall_PIR_INTR_ALL to configure the
 *  interrupt mode of all the pins in the Pins component.       
-*  - PIR_4_0_INTR       (First pin in the list)
-*  - PIR_4_1_INTR       (Second pin in the list)
+*  - Hall_PIR_0_INTR       (First pin in the list)
+*  - Hall_PIR_1_INTR       (Second pin in the list)
 *  - ...
-*  - PIR_4_INTR_ALL     (All pins in Pins component)
+*  - Hall_PIR_INTR_ALL     (All pins in Pins component)
 *
 * \param mode
 *  Interrupt mode for the selected pins. Valid options are documented in
@@ -202,19 +202,19 @@ uint8 PIR_4_ReadDataReg(void)
 *  port.
 *
 * \funcusage
-*  \snippet PIR_4_SUT.c usage_PIR_4_SetInterruptMode
+*  \snippet Hall_PIR_SUT.c usage_Hall_PIR_SetInterruptMode
 *******************************************************************************/
-void PIR_4_SetInterruptMode(uint16 position, uint16 mode)
+void Hall_PIR_SetInterruptMode(uint16 position, uint16 mode)
 {
     uint32 intrCfg;
     
-    intrCfg =  PIR_4_INTCFG & (uint32)(~(uint32)position);
-    PIR_4_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
+    intrCfg =  Hall_PIR_INTCFG & (uint32)(~(uint32)position);
+    Hall_PIR_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_4_ClearInterrupt
+* Function Name: Hall_PIR_ClearInterrupt
 ****************************************************************************//**
 *
 * \brief Clears any active interrupts attached with the component and returns 
@@ -231,13 +231,13 @@ void PIR_4_SetInterruptMode(uint16 position, uint16 mode)
 *  those associated with the Pins component.
 *
 * \funcusage
-*  \snippet PIR_4_SUT.c usage_PIR_4_ClearInterrupt
+*  \snippet Hall_PIR_SUT.c usage_Hall_PIR_ClearInterrupt
 *******************************************************************************/
-uint8 PIR_4_ClearInterrupt(void)
+uint8 Hall_PIR_ClearInterrupt(void)
 {
-	uint8 maskedStatus = (uint8)(PIR_4_INTSTAT & PIR_4_MASK);
-	PIR_4_INTSTAT = maskedStatus;
-    return maskedStatus >> PIR_4_SHIFT;
+	uint8 maskedStatus = (uint8)(Hall_PIR_INTSTAT & Hall_PIR_MASK);
+	Hall_PIR_INTSTAT = maskedStatus;
+    return maskedStatus >> Hall_PIR_SHIFT;
 }
 
 

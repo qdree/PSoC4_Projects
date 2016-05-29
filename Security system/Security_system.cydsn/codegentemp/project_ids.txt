@@ -1,5 +1,5 @@
-C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\Security_system.cyprj|cc581444-cb79-4022-a59e-0b85967a22ee
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|27c25a20-f10f-43d8-9f91-144fce54a9c0
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e744e582-5cd3-41fe-bb00-4d9f4e6a8c46
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|523f798c-309a-40c5-b255-26954928f1a5
-C:\Program Files\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6ec1d70f-74cc-427d-916b-08b3fbe340df
+E:\744\Education\Git\PSoC4_Projects\Security system\Security_system.cydsn\Security_system.cyprj|04c7070c-47ba-4a8d-b91c-99917cf92753
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|005045e6-5d93-41d8-97ef-571bcda2a831
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|53fc59c2-fcd5-48a8-88e6-f9a3e160bb4b
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|81cde215-b49a-42bd-b29c-a3f425b3317a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a74d1c2f-761e-4ad7-ba56-25557f3e42d0

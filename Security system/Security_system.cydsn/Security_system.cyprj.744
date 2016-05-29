@@ -14,6 +14,8 @@
 <file name=".\CortexM0\ARM_GCC_493\Debug\main.o">
 <dep name=".\Generated_Source\PSoC4\Alarm_Int.h" />
 <dep name=".\Generated_Source\PSoC4\Alarm_Timer.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\Buzzer.h" />
 <dep name=".\Generated_Source\PSoC4\Buzzer_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -21,6 +23,10 @@
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\Debounce_Int.h" />
 <dep name=".\Generated_Source\PSoC4\Debounce_Timer.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\I2C.h" />
 <dep name=".\Generated_Source\PSoC4\I2C_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\I2C_I2C.h" />
@@ -37,18 +43,12 @@
 <dep name=".\Generated_Source\PSoC4\KBD_COLPins_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\KBD_ROWPins.h" />
 <dep name=".\Generated_Source\PSoC4\KBD_ROWPins_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\LED_GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\LED_GREEN_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\LED_RED.h" />
 <dep name=".\Generated_Source\PSoC4\LED_RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -76,6 +76,8 @@
 </file>
 <file name=".\Generated_Source\PSoC4\Alarm_Int.h" />
 <file name=".\Generated_Source\PSoC4\Alarm_Timer.h" />
+<file name=".\Generated_Source\PSoC4\Bedroom_PIR.h" />
+<file name=".\Generated_Source\PSoC4\Bedroom_PIR_aliases.h" />
 <file name=".\Generated_Source\PSoC4\Buzzer.h" />
 <file name=".\Generated_Source\PSoC4\Buzzer_aliases.h" />
 <file name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -83,6 +85,10 @@
 <file name=".\Generated_Source\PSoC4\CyLib.h" />
 <file name=".\Generated_Source\PSoC4\Debounce_Int.h" />
 <file name=".\Generated_Source\PSoC4\Debounce_Timer.h" />
+<file name=".\Generated_Source\PSoC4\Guestroom_PIR.h" />
+<file name=".\Generated_Source\PSoC4\Guestroom_PIR_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Hall_PIR.h" />
+<file name=".\Generated_Source\PSoC4\Hall_PIR_aliases.h" />
 <file name=".\Generated_Source\PSoC4\I2C.h" />
 <file name=".\Generated_Source\PSoC4\I2C_BOOT.h" />
 <file name=".\Generated_Source\PSoC4\I2C_I2C.h" />
@@ -99,18 +105,12 @@
 <file name=".\Generated_Source\PSoC4\KBD_COLPins_aliases.h" />
 <file name=".\Generated_Source\PSoC4\KBD_ROWPins.h" />
 <file name=".\Generated_Source\PSoC4\KBD_ROWPins_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Kitchen_PIR.h" />
+<file name=".\Generated_Source\PSoC4\Kitchen_PIR_aliases.h" />
 <file name=".\Generated_Source\PSoC4\LED_GREEN.h" />
 <file name=".\Generated_Source\PSoC4\LED_GREEN_aliases.h" />
 <file name=".\Generated_Source\PSoC4\LED_RED.h" />
 <file name=".\Generated_Source\PSoC4\LED_RED_aliases.h" />
-<file name=".\Generated_Source\PSoC4\PIR_1.h" />
-<file name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
-<file name=".\Generated_Source\PSoC4\PIR_2.h" />
-<file name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
-<file name=".\Generated_Source\PSoC4\PIR_3.h" />
-<file name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
-<file name=".\Generated_Source\PSoC4\PIR_4.h" />
-<file name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
 <file name=".\Generated_Source\PSoC4\UART.h" />
 <file name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <file name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -138,6 +138,8 @@
 <file name=".\CortexM0\ARM_GCC_493\Debug\Keyboard.o">
 <dep name=".\Generated_Source\PSoC4\Alarm_Int.h" />
 <dep name=".\Generated_Source\PSoC4\Alarm_Timer.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\Buzzer.h" />
 <dep name=".\Generated_Source\PSoC4\Buzzer_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -145,6 +147,10 @@
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\Debounce_Int.h" />
 <dep name=".\Generated_Source\PSoC4\Debounce_Timer.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\I2C.h" />
 <dep name=".\Generated_Source\PSoC4\I2C_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\I2C_I2C.h" />
@@ -161,18 +167,12 @@
 <dep name=".\Generated_Source\PSoC4\KBD_COLPins_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\KBD_ROWPins.h" />
 <dep name=".\Generated_Source\PSoC4\KBD_ROWPins_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\LED_GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\LED_GREEN_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\LED_RED.h" />
 <dep name=".\Generated_Source\PSoC4\LED_RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -202,6 +202,8 @@
 <file name=".\CortexM0\ARM_GCC_493\Debug\LiquidCrystal_I2C.o">
 <dep name=".\Generated_Source\PSoC4\Alarm_Int.h" />
 <dep name=".\Generated_Source\PSoC4\Alarm_Timer.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\Buzzer.h" />
 <dep name=".\Generated_Source\PSoC4\Buzzer_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -209,6 +211,10 @@
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\Debounce_Int.h" />
 <dep name=".\Generated_Source\PSoC4\Debounce_Timer.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\I2C.h" />
 <dep name=".\Generated_Source\PSoC4\I2C_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\I2C_I2C.h" />
@@ -225,18 +231,12 @@
 <dep name=".\Generated_Source\PSoC4\KBD_COLPins_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\KBD_ROWPins.h" />
 <dep name=".\Generated_Source\PSoC4\KBD_ROWPins_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\LED_GREEN.h" />
 <dep name=".\Generated_Source\PSoC4\LED_GREEN_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\LED_RED.h" />
 <dep name=".\Generated_Source\PSoC4\LED_RED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\UART.h" />
 <dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
@@ -294,6 +294,26 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Alarm_Timer_PM.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Bedroom_PIR.o">
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR.c" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Bedroom_PIR.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Bedroom_PIR_PM.o">
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR_PM.c" />
+<dep name=".\Generated_Source\PSoC4\Bedroom_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Bedroom_PIR_PM.c" />
 <file name=".\CortexM0\ARM_GCC_493\Debug\Buzzer.o">
 <dep name=".\Generated_Source\PSoC4\Buzzer.c" />
 <dep name=".\Generated_Source\PSoC4\Buzzer.h" />
@@ -385,6 +405,46 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Debounce_Timer_PM.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Guestroom_PIR.o">
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR.c" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Guestroom_PIR.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Guestroom_PIR_PM.o">
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR_PM.c" />
+<dep name=".\Generated_Source\PSoC4\Guestroom_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Guestroom_PIR_PM.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Hall_PIR.o">
+<dep name=".\Generated_Source\PSoC4\Hall_PIR.c" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Hall_PIR.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Hall_PIR_PM.o">
+<dep name=".\Generated_Source\PSoC4\Hall_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR_PM.c" />
+<dep name=".\Generated_Source\PSoC4\Hall_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Hall_PIR_PM.c" />
 <file name=".\CortexM0\ARM_GCC_493\Debug\I2C.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -626,6 +686,26 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\KBD_ROWPins_PM.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Kitchen_PIR.o">
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR.c" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Kitchen_PIR.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\Kitchen_PIR_PM.o">
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR.h" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR_PM.c" />
+<dep name=".\Generated_Source\PSoC4\Kitchen_PIR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Kitchen_PIR_PM.c" />
 <file name=".\CortexM0\ARM_GCC_493\Debug\LED_GREEN.o">
 <dep name=".\Generated_Source\PSoC4\LED_GREEN.c" />
 <dep name=".\Generated_Source\PSoC4\LED_GREEN.h" />
@@ -666,86 +746,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\LED_RED_PM.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_1.o">
-<dep name=".\Generated_Source\PSoC4\PIR_1.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_1.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_1.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_1_PM.o">
-<dep name=".\Generated_Source\PSoC4\PIR_1.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_1_PM.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_1_PM.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_2.o">
-<dep name=".\Generated_Source\PSoC4\PIR_2.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_2.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_2.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_2_PM.o">
-<dep name=".\Generated_Source\PSoC4\PIR_2.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_2_PM.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_2_PM.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_3.o">
-<dep name=".\Generated_Source\PSoC4\PIR_3.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_3.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_3.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_3_PM.o">
-<dep name=".\Generated_Source\PSoC4\PIR_3.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_3_PM.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_3_PM.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_4.o">
-<dep name=".\Generated_Source\PSoC4\PIR_4.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_4.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_4.c" />
-<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_4_PM.o">
-<dep name=".\Generated_Source\PSoC4\PIR_4.h" />
-<dep name=".\Generated_Source\PSoC4\PIR_4_PM.c" />
-<dep name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\PIR_4_PM.c" />
 <file name=".\CortexM0\ARM_GCC_493\Debug\UART.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -945,6 +945,94 @@
 <file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <file name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
+<file name=".\Generated_Source\PSoC4\PIR_1.h" />
+<file name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
+<file name=".\Generated_Source\PSoC4\PIR_2.h" />
+<file name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
+<file name=".\Generated_Source\PSoC4\PIR_3.h" />
+<file name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
+<file name=".\Generated_Source\PSoC4\PIR_4.h" />
+<file name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_1.o">
+<dep name=".\Generated_Source\PSoC4\PIR_1.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_1.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_1.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_1_PM.o">
+<dep name=".\Generated_Source\PSoC4\PIR_1.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_1_PM.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_1_PM.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_2.o">
+<dep name=".\Generated_Source\PSoC4\PIR_2.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_2.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_2.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_2_PM.o">
+<dep name=".\Generated_Source\PSoC4\PIR_2.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_2_PM.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_2_PM.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_3.o">
+<dep name=".\Generated_Source\PSoC4\PIR_3.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_3.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_3.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_3_PM.o">
+<dep name=".\Generated_Source\PSoC4\PIR_3.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_3_PM.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_3_PM.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_4.o">
+<dep name=".\Generated_Source\PSoC4\PIR_4.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_4.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_4.c" />
+<file name=".\CortexM0\ARM_GCC_493\Debug\PIR_4_PM.o">
+<dep name=".\Generated_Source\PSoC4\PIR_4.h" />
+<dep name=".\Generated_Source\PSoC4\PIR_4_PM.c" />
+<dep name=".\Generated_Source\PSoC4\PIR_4_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\PIR_4_PM.c" />
 <file name=".\Generated_Source\PSoC4\Timer.h" />
 <file name=".\Generated_Source\PSoC4\interrupt.h" />
 <file name=".\CortexM0\ARM_GCC_493\Debug\Timer.o">
@@ -1006,8 +1094,6 @@
 <dep name=".\CortexM0\ARM_GCC_493\Debug\Debounce_Int.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\KBD_COLPins.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\KBD_COLPins_PM.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_4.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_4_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\LED_RED.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\LED_RED_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\LED_GREEN.o" />
@@ -1028,12 +1114,6 @@
 <dep name=".\CortexM0\ARM_GCC_493\Debug\UART_UART_BOOT.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\Buzzer.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\Buzzer_PM.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_1.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_1_PM.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_2.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_2_PM.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_3.o" />
-<dep name=".\CortexM0\ARM_GCC_493\Debug\PIR_3_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\I2C_SCBCLK.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\I2C_sda.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\I2C_sda_PM.o" />
@@ -1046,6 +1126,14 @@
 <dep name=".\CortexM0\ARM_GCC_493\Debug\Alarm_Timer.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\Alarm_Timer_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\Alarm_Int.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Kitchen_PIR.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Kitchen_PIR_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Hall_PIR.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Hall_PIR_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Bedroom_PIR.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Bedroom_PIR_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Guestroom_PIR.o" />
+<dep name=".\CortexM0\ARM_GCC_493\Debug\Guestroom_PIR_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_493\Debug\Security_system.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_493\Debug\CyComponentLibrary.a" />
 </file>
@@ -1122,6 +1210,14 @@
 <name_val_pair name=".\Generated_Source\PSoC4\Alarm_Timer.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 <name_val_pair name=".\Generated_Source\PSoC4\Alarm_Timer_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 <name_val_pair name=".\Generated_Source\PSoC4\Alarm_Int.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Kitchen_PIR.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Kitchen_PIR_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Hall_PIR.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Hall_PIR_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Bedroom_PIR.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Bedroom_PIR_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Guestroom_PIR.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC4\Guestroom_PIR_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\744\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p &quot;E:\744\Education\Git\PSoC4_Projects\Security system\Security_system.cydsn\Security_system.cyprj&quot; -d CY8C4245AXI-483 -s &quot;E:\744\Education\Git\PSoC4_Projects\Security system\Security_system.cydsn\Generated_Source\PSoC4&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -1861,8 +1957,6 @@
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.c</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.h</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.pdf</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cysym</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cystate</v>
@@ -2180,6 +2274,22 @@
 <v>.\Generated_Source\PSoC4\Alarm_Timer_PM.c</v>
 <v>.\Generated_Source\PSoC4\Alarm_Int.c</v>
 <v>.\Generated_Source\PSoC4\Alarm_Int.h</v>
+<v>.\Generated_Source\PSoC4\Kitchen_PIR.c</v>
+<v>.\Generated_Source\PSoC4\Kitchen_PIR.h</v>
+<v>.\Generated_Source\PSoC4\Kitchen_PIR_aliases.h</v>
+<v>.\Generated_Source\PSoC4\Kitchen_PIR_PM.c</v>
+<v>.\Generated_Source\PSoC4\Hall_PIR.c</v>
+<v>.\Generated_Source\PSoC4\Hall_PIR.h</v>
+<v>.\Generated_Source\PSoC4\Hall_PIR_aliases.h</v>
+<v>.\Generated_Source\PSoC4\Hall_PIR_PM.c</v>
+<v>.\Generated_Source\PSoC4\Bedroom_PIR.c</v>
+<v>.\Generated_Source\PSoC4\Bedroom_PIR.h</v>
+<v>.\Generated_Source\PSoC4\Bedroom_PIR_aliases.h</v>
+<v>.\Generated_Source\PSoC4\Bedroom_PIR_PM.c</v>
+<v>.\Generated_Source\PSoC4\Guestroom_PIR.c</v>
+<v>.\Generated_Source\PSoC4\Guestroom_PIR.h</v>
+<v>.\Generated_Source\PSoC4\Guestroom_PIR_aliases.h</v>
+<v>.\Generated_Source\PSoC4\Guestroom_PIR_PM.c</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -2189,7 +2299,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="131085942195901491" />
+<deps_time v="131089951742205528" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
@@ -2273,8 +2383,13 @@
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="131085945069185833" />
+<deps_time v="131090204508081683" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
+</dataGuid>
+<dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">
+<CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469 type_name="CyDesigner.Common.Debugger.CyBreakpointList" version="1">
+<debugger_breakpoint_list />
+</CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469>
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>

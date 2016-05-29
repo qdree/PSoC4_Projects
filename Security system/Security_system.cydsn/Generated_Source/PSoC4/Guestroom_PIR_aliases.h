@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: PIR_3.h  
+* File Name: Guestroom_PIR.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_PIR_3_ALIASES_H) /* Pins PIR_3_ALIASES_H */
-#define CY_PINS_PIR_3_ALIASES_H
+#if !defined(CY_PINS_Guestroom_PIR_ALIASES_H) /* Pins Guestroom_PIR_ALIASES_H */
+#define CY_PINS_Guestroom_PIR_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -26,17 +26,17 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define PIR_3_0			(PIR_3__0__PC)
-#define PIR_3_0_PS		(PIR_3__0__PS)
-#define PIR_3_0_PC		(PIR_3__0__PC)
-#define PIR_3_0_DR		(PIR_3__0__DR)
-#define PIR_3_0_SHIFT	(PIR_3__0__SHIFT)
-#define PIR_3_0_INTR	((uint16)((uint16)0x0003u << (PIR_3__0__SHIFT*2u)))
+#define Guestroom_PIR_0			(Guestroom_PIR__0__PC)
+#define Guestroom_PIR_0_PS		(Guestroom_PIR__0__PS)
+#define Guestroom_PIR_0_PC		(Guestroom_PIR__0__PC)
+#define Guestroom_PIR_0_DR		(Guestroom_PIR__0__DR)
+#define Guestroom_PIR_0_SHIFT	(Guestroom_PIR__0__SHIFT)
+#define Guestroom_PIR_0_INTR	((uint16)((uint16)0x0003u << (Guestroom_PIR__0__SHIFT*2u)))
 
-#define PIR_3_INTR_ALL	 ((uint16)(PIR_3_0_INTR))
+#define Guestroom_PIR_INTR_ALL	 ((uint16)(Guestroom_PIR_0_INTR))
 
 
-#endif /* End Pins PIR_3_ALIASES_H */
+#endif /* End Pins Guestroom_PIR_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: PIR_3.c  
+* File Name: Guestroom_PIR.c  
 * Version 2.20
 *
 * Description:
@@ -15,13 +15,13 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "PIR_3.h"
+#include "Guestroom_PIR.h"
 
-static PIR_3_BACKUP_STRUCT  PIR_3_backup = {0u, 0u, 0u};
+static Guestroom_PIR_BACKUP_STRUCT  Guestroom_PIR_backup = {0u, 0u, 0u};
 
 
 /*******************************************************************************
-* Function Name: PIR_3_Sleep
+* Function Name: Guestroom_PIR_Sleep
 ****************************************************************************//**
 *
 * \brief Stores the pin configuration and prepares the pin for entering chip 
@@ -39,30 +39,30 @@ static PIR_3_BACKUP_STRUCT  PIR_3_backup = {0u, 0u, 0u};
 *  deep-sleep/hibernate modes.
 *
 * \funcusage
-*  \snippet PIR_3_SUT.c usage_PIR_3_Sleep_Wakeup
+*  \snippet Guestroom_PIR_SUT.c usage_Guestroom_PIR_Sleep_Wakeup
 *******************************************************************************/
-void PIR_3_Sleep(void)
+void Guestroom_PIR_Sleep(void)
 {
-    #if defined(PIR_3__PC)
-        PIR_3_backup.pcState = PIR_3_PC;
+    #if defined(Guestroom_PIR__PC)
+        Guestroom_PIR_backup.pcState = Guestroom_PIR_PC;
     #else
         #if (CY_PSOC4_4200L)
             /* Save the regulator state and put the PHY into suspend mode */
-            PIR_3_backup.usbState = PIR_3_CR1_REG;
-            PIR_3_USB_POWER_REG |= PIR_3_USBIO_ENTER_SLEEP;
-            PIR_3_CR1_REG &= PIR_3_USBIO_CR1_OFF;
+            Guestroom_PIR_backup.usbState = Guestroom_PIR_CR1_REG;
+            Guestroom_PIR_USB_POWER_REG |= Guestroom_PIR_USBIO_ENTER_SLEEP;
+            Guestroom_PIR_CR1_REG &= Guestroom_PIR_USBIO_CR1_OFF;
         #endif
     #endif
-    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(PIR_3__SIO)
-        PIR_3_backup.sioState = PIR_3_SIO_REG;
+    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(Guestroom_PIR__SIO)
+        Guestroom_PIR_backup.sioState = Guestroom_PIR_SIO_REG;
         /* SIO requires unregulated output buffer and single ended input buffer */
-        PIR_3_SIO_REG &= (uint32)(~PIR_3_SIO_LPM_MASK);
+        Guestroom_PIR_SIO_REG &= (uint32)(~Guestroom_PIR_SIO_LPM_MASK);
     #endif  
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_3_Wakeup
+* Function Name: Guestroom_PIR_Wakeup
 ****************************************************************************//**
 *
 * \brief Restores the pin configuration that was saved during Pin_Sleep().
@@ -75,22 +75,22 @@ void PIR_3_Sleep(void)
 *  None
 *  
 * \funcusage
-*  Refer to PIR_3_Sleep() for an example usage.
+*  Refer to Guestroom_PIR_Sleep() for an example usage.
 *******************************************************************************/
-void PIR_3_Wakeup(void)
+void Guestroom_PIR_Wakeup(void)
 {
-    #if defined(PIR_3__PC)
-        PIR_3_PC = PIR_3_backup.pcState;
+    #if defined(Guestroom_PIR__PC)
+        Guestroom_PIR_PC = Guestroom_PIR_backup.pcState;
     #else
         #if (CY_PSOC4_4200L)
             /* Restore the regulator state and come out of suspend mode */
-            PIR_3_USB_POWER_REG &= PIR_3_USBIO_EXIT_SLEEP_PH1;
-            PIR_3_CR1_REG = PIR_3_backup.usbState;
-            PIR_3_USB_POWER_REG &= PIR_3_USBIO_EXIT_SLEEP_PH2;
+            Guestroom_PIR_USB_POWER_REG &= Guestroom_PIR_USBIO_EXIT_SLEEP_PH1;
+            Guestroom_PIR_CR1_REG = Guestroom_PIR_backup.usbState;
+            Guestroom_PIR_USB_POWER_REG &= Guestroom_PIR_USBIO_EXIT_SLEEP_PH2;
         #endif
     #endif
-    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(PIR_3__SIO)
-        PIR_3_SIO_REG = PIR_3_backup.sioState;
+    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(Guestroom_PIR__SIO)
+        Guestroom_PIR_SIO_REG = Guestroom_PIR_backup.sioState;
     #endif
 }
 

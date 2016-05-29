@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: PIR_4.h  
+* File Name: Kitchen_PIR.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_PIR_4_ALIASES_H) /* Pins PIR_4_ALIASES_H */
-#define CY_PINS_PIR_4_ALIASES_H
+#if !defined(CY_PINS_Kitchen_PIR_ALIASES_H) /* Pins Kitchen_PIR_ALIASES_H */
+#define CY_PINS_Kitchen_PIR_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -26,17 +26,17 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define PIR_4_0			(PIR_4__0__PC)
-#define PIR_4_0_PS		(PIR_4__0__PS)
-#define PIR_4_0_PC		(PIR_4__0__PC)
-#define PIR_4_0_DR		(PIR_4__0__DR)
-#define PIR_4_0_SHIFT	(PIR_4__0__SHIFT)
-#define PIR_4_0_INTR	((uint16)((uint16)0x0003u << (PIR_4__0__SHIFT*2u)))
+#define Kitchen_PIR_0			(Kitchen_PIR__0__PC)
+#define Kitchen_PIR_0_PS		(Kitchen_PIR__0__PS)
+#define Kitchen_PIR_0_PC		(Kitchen_PIR__0__PC)
+#define Kitchen_PIR_0_DR		(Kitchen_PIR__0__DR)
+#define Kitchen_PIR_0_SHIFT	(Kitchen_PIR__0__SHIFT)
+#define Kitchen_PIR_0_INTR	((uint16)((uint16)0x0003u << (Kitchen_PIR__0__SHIFT*2u)))
 
-#define PIR_4_INTR_ALL	 ((uint16)(PIR_4_0_INTR))
+#define Kitchen_PIR_INTR_ALL	 ((uint16)(Kitchen_PIR_0_INTR))
 
 
-#endif /* End Pins PIR_4_ALIASES_H */
+#endif /* End Pins Kitchen_PIR_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: PIR_1.c  
+* File Name: Hall_PIR.c  
 * Version 2.20
 *
 * Description:
@@ -15,13 +15,13 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "PIR_1.h"
+#include "Hall_PIR.h"
 
-static PIR_1_BACKUP_STRUCT  PIR_1_backup = {0u, 0u, 0u};
+static Hall_PIR_BACKUP_STRUCT  Hall_PIR_backup = {0u, 0u, 0u};
 
 
 /*******************************************************************************
-* Function Name: PIR_1_Sleep
+* Function Name: Hall_PIR_Sleep
 ****************************************************************************//**
 *
 * \brief Stores the pin configuration and prepares the pin for entering chip 
@@ -39,30 +39,30 @@ static PIR_1_BACKUP_STRUCT  PIR_1_backup = {0u, 0u, 0u};
 *  deep-sleep/hibernate modes.
 *
 * \funcusage
-*  \snippet PIR_1_SUT.c usage_PIR_1_Sleep_Wakeup
+*  \snippet Hall_PIR_SUT.c usage_Hall_PIR_Sleep_Wakeup
 *******************************************************************************/
-void PIR_1_Sleep(void)
+void Hall_PIR_Sleep(void)
 {
-    #if defined(PIR_1__PC)
-        PIR_1_backup.pcState = PIR_1_PC;
+    #if defined(Hall_PIR__PC)
+        Hall_PIR_backup.pcState = Hall_PIR_PC;
     #else
         #if (CY_PSOC4_4200L)
             /* Save the regulator state and put the PHY into suspend mode */
-            PIR_1_backup.usbState = PIR_1_CR1_REG;
-            PIR_1_USB_POWER_REG |= PIR_1_USBIO_ENTER_SLEEP;
-            PIR_1_CR1_REG &= PIR_1_USBIO_CR1_OFF;
+            Hall_PIR_backup.usbState = Hall_PIR_CR1_REG;
+            Hall_PIR_USB_POWER_REG |= Hall_PIR_USBIO_ENTER_SLEEP;
+            Hall_PIR_CR1_REG &= Hall_PIR_USBIO_CR1_OFF;
         #endif
     #endif
-    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(PIR_1__SIO)
-        PIR_1_backup.sioState = PIR_1_SIO_REG;
+    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(Hall_PIR__SIO)
+        Hall_PIR_backup.sioState = Hall_PIR_SIO_REG;
         /* SIO requires unregulated output buffer and single ended input buffer */
-        PIR_1_SIO_REG &= (uint32)(~PIR_1_SIO_LPM_MASK);
+        Hall_PIR_SIO_REG &= (uint32)(~Hall_PIR_SIO_LPM_MASK);
     #endif  
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_1_Wakeup
+* Function Name: Hall_PIR_Wakeup
 ****************************************************************************//**
 *
 * \brief Restores the pin configuration that was saved during Pin_Sleep().
@@ -75,22 +75,22 @@ void PIR_1_Sleep(void)
 *  None
 *  
 * \funcusage
-*  Refer to PIR_1_Sleep() for an example usage.
+*  Refer to Hall_PIR_Sleep() for an example usage.
 *******************************************************************************/
-void PIR_1_Wakeup(void)
+void Hall_PIR_Wakeup(void)
 {
-    #if defined(PIR_1__PC)
-        PIR_1_PC = PIR_1_backup.pcState;
+    #if defined(Hall_PIR__PC)
+        Hall_PIR_PC = Hall_PIR_backup.pcState;
     #else
         #if (CY_PSOC4_4200L)
             /* Restore the regulator state and come out of suspend mode */
-            PIR_1_USB_POWER_REG &= PIR_1_USBIO_EXIT_SLEEP_PH1;
-            PIR_1_CR1_REG = PIR_1_backup.usbState;
-            PIR_1_USB_POWER_REG &= PIR_1_USBIO_EXIT_SLEEP_PH2;
+            Hall_PIR_USB_POWER_REG &= Hall_PIR_USBIO_EXIT_SLEEP_PH1;
+            Hall_PIR_CR1_REG = Hall_PIR_backup.usbState;
+            Hall_PIR_USB_POWER_REG &= Hall_PIR_USBIO_EXIT_SLEEP_PH2;
         #endif
     #endif
-    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(PIR_1__SIO)
-        PIR_1_SIO_REG = PIR_1_backup.sioState;
+    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(Hall_PIR__SIO)
+        Hall_PIR_SIO_REG = Hall_PIR_backup.sioState;
     #endif
 }
 

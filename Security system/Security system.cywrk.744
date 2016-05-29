@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Security system\Security_system\Source Files\Keyboard.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Security system\Security_system">
 <ExpandedNodeIds>
 <v>Security system</v>
 <v>Security system\Security_system</v>
@@ -36,6 +36,11 @@
 <v>Security system\Security_system\Generated_Source\PSoC4\Alarm_Timer\Alarm_Timer.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Alarm_Timer\Alarm_Timer.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Alarm_Timer\Alarm_Timer_PM.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR_aliases.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR_PM.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Buzzer</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Buzzer\Buzzer.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Buzzer\Buzzer.h</v>
@@ -72,6 +77,16 @@
 <v>Security system\Security_system\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Debounce_Timer\Debounce_Timer_PM.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Guestroom_PIR</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Guestroom_PIR\Guestroom_PIR.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Guestroom_PIR\Guestroom_PIR.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Guestroom_PIR\Guestroom_PIR_aliases.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Guestroom_PIR\Guestroom_PIR_PM.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Hall_PIR</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Hall_PIR\Hall_PIR.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Hall_PIR\Hall_PIR.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Hall_PIR\Hall_PIR_aliases.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Hall_PIR\Hall_PIR_PM.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\I2C</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\I2C\I2C.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\I2C\I2C.h</v>
@@ -112,6 +127,11 @@
 <v>Security system\Security_system\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins_aliases.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins_PM.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Kitchen_PIR</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Kitchen_PIR\Kitchen_PIR.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Kitchen_PIR\Kitchen_PIR.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Kitchen_PIR\Kitchen_PIR_aliases.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Kitchen_PIR\Kitchen_PIR_PM.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN\LED_GREEN.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN\LED_GREEN.h</v>
@@ -122,26 +142,6 @@
 <v>Security system\Security_system\Generated_Source\PSoC4\LED_RED\LED_RED.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\LED_RED\LED_RED_aliases.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\LED_RED\LED_RED_PM.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_1</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_1\PIR_1.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_1\PIR_1.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_1\PIR_1_aliases.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_1\PIR_1_PM.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_2</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_2\PIR_2.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_2\PIR_2.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_2\PIR_2_aliases.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_2\PIR_2_PM.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_3</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_3\PIR_3.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_3\PIR_3.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_3\PIR_3_aliases.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_3\PIR_3_PM.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_4</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_4\PIR_4.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_4\PIR_4.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_4\PIR_4_aliases.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\PIR_4\PIR_4_PM.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\UART</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\UART\UART.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\UART\UART.h</v>
@@ -203,6 +203,11 @@
 <v>Security system\Security_system\Generated_Source\PSoC4\Alarm_Timer\Alarm_Timer.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Alarm_Timer\Alarm_Timer.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Alarm_Timer\Alarm_Timer_PM.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR_aliases.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\Bedroom_PIR\Bedroom_PIR_PM.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Buzzer</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Buzzer\Buzzer.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\Buzzer\Buzzer.h</v>
@@ -227,11 +232,6 @@
 <v>Security system\Security_system\Generated_Source\PSoC4\cy_boot\cypins.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\cy_lfclk</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
-<v>Security system\Security_system\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -259,6 +259,8 @@
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Alarm_Int.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Alarm_Timer.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Alarm_Timer_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Bedroom_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Bedroom_PIR_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Buzzer.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Buzzer_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
@@ -273,6 +275,10 @@
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Int.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Timer.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Timer_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Guestroom_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Guestroom_PIR_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Hall_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Hall_PIR_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\I2C.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\I2C_BOOT.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\I2C_I2C.lst</v>
@@ -291,20 +297,14 @@
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_ROWPins.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_ROWPins_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Keyboard.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Kitchen_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Kitchen_PIR_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_GREEN.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_GREEN_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_RED.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_RED_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LiquidCrystal_I2C.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_1.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_1_PM.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_2.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_2_PM.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_3.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_3_PM.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_4.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_4_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\UART.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BOOT.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_PM.lst</v>
@@ -332,6 +332,8 @@
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Alarm_Int.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Alarm_Timer.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Alarm_Timer_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Bedroom_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Bedroom_PIR_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Buzzer.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Buzzer_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
@@ -346,6 +348,10 @@
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Int.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Timer.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Debounce_Timer_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Guestroom_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Guestroom_PIR_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Hall_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Hall_PIR_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\I2C.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\I2C_BOOT.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\I2C_I2C.lst</v>
@@ -364,15 +370,9 @@
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_ROWPins.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\KBD_ROWPins_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Keyboard.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Kitchen_PIR.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Kitchen_PIR_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_GREEN.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_GREEN_PM.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_RED.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_RED_PM.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LiquidCrystal_I2C.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_1.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_1_PM.lst</v>
-<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\PIR_2.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -395,7 +395,6 @@
 <v>Security system\Security_system\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Security system\Security_system\cy_pins_v2_20</v>
 <v>Security system\Security_system\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Security system\Security_system\Power_v1_0.pdf</v>
 <v>Security system\Security_system\SCB_P4_v3_10</v>
 <v>Security system\Security_system\SCB_P4_v3_10\SCB_P4_v3_10.pdf</v>
 <v>Security system\Security_system\Timer_v2_70</v>
@@ -417,7 +416,6 @@
 <v>Security system\Security_system\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Security system\Security_system\cy_pins_v2_20</v>
 <v>Security system\Security_system\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Security system\Security_system\Power_v1_0.pdf</v>
 <v>Security system\Security_system\SCB_P4_v3_10</v>
 <v>Security system\Security_system\SCB_P4_v3_10\SCB_P4_v3_10.pdf</v>
 <v>Security system\Security_system\Timer_v2_70</v>

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: PIR_2.c  
+* File Name: Kitchen_PIR.c  
 * Version 2.20
 *
 * Description:
@@ -13,35 +13,35 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "PIR_2.h"
+#include "Kitchen_PIR.h"
 
 
-#if defined(PIR_2__PC)
-    #define PIR_2_SetP4PinDriveMode(shift, mode)  \
+#if defined(Kitchen_PIR__PC)
+    #define Kitchen_PIR_SetP4PinDriveMode(shift, mode)  \
     do { \
-        PIR_2_PC =   (PIR_2_PC & \
-                                (uint32)(~(uint32)(PIR_2_DRIVE_MODE_IND_MASK << \
-                                (PIR_2_DRIVE_MODE_BITS * (shift))))) | \
+        Kitchen_PIR_PC =   (Kitchen_PIR_PC & \
+                                (uint32)(~(uint32)(Kitchen_PIR_DRIVE_MODE_IND_MASK << \
+                                (Kitchen_PIR_DRIVE_MODE_BITS * (shift))))) | \
                                 (uint32)((uint32)(mode) << \
-                                (PIR_2_DRIVE_MODE_BITS * (shift))); \
+                                (Kitchen_PIR_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 #else
     #if (CY_PSOC4_4200L)
-        #define PIR_2_SetP4PinDriveMode(shift, mode)  \
+        #define Kitchen_PIR_SetP4PinDriveMode(shift, mode)  \
         do { \
-            PIR_2_USBIO_CTRL_REG = (PIR_2_USBIO_CTRL_REG & \
-                                    (uint32)(~(uint32)(PIR_2_DRIVE_MODE_IND_MASK << \
-                                    (PIR_2_DRIVE_MODE_BITS * (shift))))) | \
+            Kitchen_PIR_USBIO_CTRL_REG = (Kitchen_PIR_USBIO_CTRL_REG & \
+                                    (uint32)(~(uint32)(Kitchen_PIR_DRIVE_MODE_IND_MASK << \
+                                    (Kitchen_PIR_DRIVE_MODE_BITS * (shift))))) | \
                                     (uint32)((uint32)(mode) << \
-                                    (PIR_2_DRIVE_MODE_BITS * (shift))); \
+                                    (Kitchen_PIR_DRIVE_MODE_BITS * (shift))); \
         } while (0)
     #endif
 #endif
   
 
-#if defined(PIR_2__PC) || (CY_PSOC4_4200L) 
+#if defined(Kitchen_PIR__PC) || (CY_PSOC4_4200L) 
     /*******************************************************************************
-    * Function Name: PIR_2_SetDriveMode
+    * Function Name: Kitchen_PIR_SetDriveMode
     ****************************************************************************//**
     *
     * \brief Sets the drive mode for each of the Pins component's pins.
@@ -67,17 +67,17 @@
     *  APIs (primary method) or disable interrupts around this function.
     *
     * \funcusage
-    *  \snippet PIR_2_SUT.c usage_PIR_2_SetDriveMode
+    *  \snippet Kitchen_PIR_SUT.c usage_Kitchen_PIR_SetDriveMode
     *******************************************************************************/
-    void PIR_2_SetDriveMode(uint8 mode)
+    void Kitchen_PIR_SetDriveMode(uint8 mode)
     {
-		PIR_2_SetP4PinDriveMode(PIR_2__0__SHIFT, mode);
+		Kitchen_PIR_SetP4PinDriveMode(Kitchen_PIR__0__SHIFT, mode);
     }
 #endif
 
 
 /*******************************************************************************
-* Function Name: PIR_2_Write
+* Function Name: Kitchen_PIR_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -106,18 +106,18 @@
 *  this function.
 *
 * \funcusage
-*  \snippet PIR_2_SUT.c usage_PIR_2_Write
+*  \snippet Kitchen_PIR_SUT.c usage_Kitchen_PIR_Write
 *******************************************************************************/
-void PIR_2_Write(uint8 value)
+void Kitchen_PIR_Write(uint8 value)
 {
-    uint8 drVal = (uint8)(PIR_2_DR & (uint8)(~PIR_2_MASK));
-    drVal = (drVal | ((uint8)(value << PIR_2_SHIFT) & PIR_2_MASK));
-    PIR_2_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(Kitchen_PIR_DR & (uint8)(~Kitchen_PIR_MASK));
+    drVal = (drVal | ((uint8)(value << Kitchen_PIR_SHIFT) & Kitchen_PIR_MASK));
+    Kitchen_PIR_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_2_Read
+* Function Name: Kitchen_PIR_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -131,16 +131,16 @@ void PIR_2_Write(uint8 value)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet PIR_2_SUT.c usage_PIR_2_Read  
+*  \snippet Kitchen_PIR_SUT.c usage_Kitchen_PIR_Read  
 *******************************************************************************/
-uint8 PIR_2_Read(void)
+uint8 Kitchen_PIR_Read(void)
 {
-    return (uint8)((PIR_2_PS & PIR_2_MASK) >> PIR_2_SHIFT);
+    return (uint8)((Kitchen_PIR_PS & Kitchen_PIR_MASK) >> Kitchen_PIR_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_2_ReadDataReg
+* Function Name: Kitchen_PIR_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -149,8 +149,8 @@ uint8 PIR_2_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred PIR_2_Read() API because the 
-* PIR_2_ReadDataReg() reads the data register instead of the status 
+* preferred Kitchen_PIR_Read() API because the 
+* Kitchen_PIR_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -159,16 +159,16 @@ uint8 PIR_2_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet PIR_2_SUT.c usage_PIR_2_ReadDataReg 
+*  \snippet Kitchen_PIR_SUT.c usage_Kitchen_PIR_ReadDataReg 
 *******************************************************************************/
-uint8 PIR_2_ReadDataReg(void)
+uint8 Kitchen_PIR_ReadDataReg(void)
 {
-    return (uint8)((PIR_2_DR & PIR_2_MASK) >> PIR_2_SHIFT);
+    return (uint8)((Kitchen_PIR_DR & Kitchen_PIR_MASK) >> Kitchen_PIR_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_2_SetInterruptMode
+* Function Name: Kitchen_PIR_SetInterruptMode
 ****************************************************************************//**
 *
 * \brief Configures the interrupt mode for each of the Pins component's
@@ -181,12 +181,12 @@ uint8 PIR_2_ReadDataReg(void)
 * \param position
 *  The pin position as listed in the Pins component. You may OR these to be 
 *  able to configure the interrupt mode of multiple pins within a Pins 
-*  component. Or you may use PIR_2_INTR_ALL to configure the
+*  component. Or you may use Kitchen_PIR_INTR_ALL to configure the
 *  interrupt mode of all the pins in the Pins component.       
-*  - PIR_2_0_INTR       (First pin in the list)
-*  - PIR_2_1_INTR       (Second pin in the list)
+*  - Kitchen_PIR_0_INTR       (First pin in the list)
+*  - Kitchen_PIR_1_INTR       (Second pin in the list)
 *  - ...
-*  - PIR_2_INTR_ALL     (All pins in Pins component)
+*  - Kitchen_PIR_INTR_ALL     (All pins in Pins component)
 *
 * \param mode
 *  Interrupt mode for the selected pins. Valid options are documented in
@@ -202,19 +202,19 @@ uint8 PIR_2_ReadDataReg(void)
 *  port.
 *
 * \funcusage
-*  \snippet PIR_2_SUT.c usage_PIR_2_SetInterruptMode
+*  \snippet Kitchen_PIR_SUT.c usage_Kitchen_PIR_SetInterruptMode
 *******************************************************************************/
-void PIR_2_SetInterruptMode(uint16 position, uint16 mode)
+void Kitchen_PIR_SetInterruptMode(uint16 position, uint16 mode)
 {
     uint32 intrCfg;
     
-    intrCfg =  PIR_2_INTCFG & (uint32)(~(uint32)position);
-    PIR_2_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
+    intrCfg =  Kitchen_PIR_INTCFG & (uint32)(~(uint32)position);
+    Kitchen_PIR_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
 }
 
 
 /*******************************************************************************
-* Function Name: PIR_2_ClearInterrupt
+* Function Name: Kitchen_PIR_ClearInterrupt
 ****************************************************************************//**
 *
 * \brief Clears any active interrupts attached with the component and returns 
@@ -231,13 +231,13 @@ void PIR_2_SetInterruptMode(uint16 position, uint16 mode)
 *  those associated with the Pins component.
 *
 * \funcusage
-*  \snippet PIR_2_SUT.c usage_PIR_2_ClearInterrupt
+*  \snippet Kitchen_PIR_SUT.c usage_Kitchen_PIR_ClearInterrupt
 *******************************************************************************/
-uint8 PIR_2_ClearInterrupt(void)
+uint8 Kitchen_PIR_ClearInterrupt(void)
 {
-	uint8 maskedStatus = (uint8)(PIR_2_INTSTAT & PIR_2_MASK);
-	PIR_2_INTSTAT = maskedStatus;
-    return maskedStatus >> PIR_2_SHIFT;
+	uint8 maskedStatus = (uint8)(Kitchen_PIR_INTSTAT & Kitchen_PIR_MASK);
+	Kitchen_PIR_INTSTAT = maskedStatus;
+    return maskedStatus >> Kitchen_PIR_SHIFT;
 }
 
 

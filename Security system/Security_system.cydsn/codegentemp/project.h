@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: project.h
 * 
-* PSoC Creator  3.3 CP2
+* PSoC Creator  3.3 SP1
 *
 * Description:
 * It contains references to all generated header files and should not be modified.
@@ -24,8 +24,8 @@
 #include "Debounce_Int.h"
 #include "KBD_COLPins.h"
 #include "KBD_COLPins_aliases.h"
-#include "PIR_4.h"
-#include "PIR_4_aliases.h"
+#include "Kitchen_PIR.h"
+#include "Kitchen_PIR_aliases.h"
 #include "LED_RED.h"
 #include "LED_RED_aliases.h"
 #include "LED_GREEN.h"
@@ -46,12 +46,12 @@
 #include "Alarm_Int.h"
 #include "Buzzer.h"
 #include "Buzzer_aliases.h"
-#include "PIR_1.h"
-#include "PIR_1_aliases.h"
-#include "PIR_2.h"
-#include "PIR_2_aliases.h"
-#include "PIR_3.h"
-#include "PIR_3_aliases.h"
+#include "Hall_PIR.h"
+#include "Hall_PIR_aliases.h"
+#include "Bedroom_PIR.h"
+#include "Bedroom_PIR_aliases.h"
+#include "Guestroom_PIR.h"
+#include "Guestroom_PIR_aliases.h"
 #include "I2C_SCBCLK.h"
 #include "I2C_sda.h"
 #include "I2C_sda_aliases.h"
