@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2016-05-29T11:32:51Z")
+ (DATE "2016-06-02T19:50:31Z")
  (DESIGN "Security_system")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
- (VERSION " 3.3 SP1")
+ (VERSION " 3.3 CP2")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL
@@ -111,6 +111,8 @@
     (INTERCONNECT Hall_PIR\(0\)_PAD Hall_PIR\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Bedroom_PIR\(0\)_PAD Bedroom_PIR\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Guestroom_PIR\(0\)_PAD Guestroom_PIR\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Front_door\(0\)_PAD Front_door\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Back_door\(0\)_PAD Back_door\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )

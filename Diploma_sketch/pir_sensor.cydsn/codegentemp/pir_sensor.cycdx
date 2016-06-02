@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="pir" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="bzz" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Front_door" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="pir4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="blue" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="green" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="pir1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="red" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="pir3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="pir2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

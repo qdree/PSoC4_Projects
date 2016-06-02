@@ -21,7 +21,8 @@
 uint32_t Addr = 0x27;    //i2c address of LCD
 uint8 Key;    
 uint32 ch; 
-uint32 a_count = 0;    //alarm enable count in 0.01 miliseconds
+uint32 a_count = 0;    //alarm interrupt counter in 0.01 miliseconds
+uint32 b_count = 0;    //
 
 char pass_arr[18];    //array where to collect entered password
 const char* ref_pass = "1111";    //password reference string
@@ -39,6 +40,8 @@ bool motion_inhall = false;    //motion in hall
 typedef enum MotionDetected
 {
     NotDetected,
+    FrontDoor,
+    BackDoor,
     Hall,
     BedRoom,
     GuestRoom,
@@ -47,7 +50,7 @@ typedef enum MotionDetected
 
 DetectedStatus detected_status = NotDetected;
 
-void alarm_countdown();
+
 DetectedStatus motion_detection();
 bool password();
 bool check_password(const char* a, const char* b);
@@ -55,9 +58,13 @@ bool key_id();
 
 void discard(char a[]);
 void input_char(const char el);
+void beep();
+void error();
+void confirmed();
 
 void alarm();
 void alarm_hall();
+CY_ISR(alarm_countdown);
 
 int main()
 {
@@ -72,65 +79,59 @@ int main()
     
     Alarm_Timer_Start();
     Alarm_Int_StartEx(alarm_countdown);
+//    Alarm_Timer_Sleep();
     
     LED_GREEN_Write(0);
     LED_RED_Write(0);
     Buzzer_Write(1);
+    
 
-    clear();
-    setCursor(0,1);
+    
+    setCursor(0,0);
     LCD_print("Adjustment...");   
-    
-    CyDelay(10000);
-    setCursor(0,1);
-    LCD_print("Not observing");   
-    CyDelay(2000);
-    
+    CyDelay(6000);
     clear();
     
-      
+    setCursor(0,0);
+    LCD_print("Not observing");   
+    setCursor(0,1);
+    
     for(;;)
     {
         if(security_active)
         {
             if (motion_detection())
             {
-                if (key_id())
+                if(key_id())
                 {
-                    //clear
-                   //...
-                    if (password())
+                    if(password())
                     {
                         security_active = false;
-                                              
+                        detected_status = NotDetected;
+                        
                         LED_GREEN_Write(0);
                         LED_RED_Write(1);
                         Buzzer_Write(1);
                         
                         clear();
+                        setCursor(0,0);
                         LCD_print("Not observing");
                         setCursor(0,1);
                     }
-                }
-                else
-                {
-                    // wrong key
                 }
             }
         }
         else if(password()) 
         {
             security_active = true;
-            
             is_box_opened = false;
-            motion_inhall = false;
-            
             detected_status = NotDetected;
             
             LED_GREEN_Write(0);
             LED_RED_Write(0);
-                       
+            
             clear();
+            setCursor(0,0);
             LCD_print("Observing");
             setCursor(0,1);
         }
@@ -139,6 +140,7 @@ int main()
 
 void detected(DetectedStatus status, const char *str)
 {
+    //Alarm_Timer_Wakeup();
     detected_status = status;
     
     clear();
@@ -150,50 +152,13 @@ void detected(DetectedStatus status, const char *str)
     LED_GREEN_Write(1);
     LED_RED_Write(0);
     
-    //clear();
-    
-    if (detected_status == Hall) alarm_hall();
-    else alarm();    
-}
-
-void alarm_hall()
-{
-    Buzzer_Write(0);
-    CyDelay(500);
-    Buzzer_Write(1);
-    CyDelay(3000);
-}
-
-void alarm()
-{
-    Buzzer_Write(!Buzzer_Read());
-    CyDelay(200);
-}
-
-//void alarm_countdown()
-//{
-//    if(motion_inhall && security_active && ++a_count == 1000000) 
-//    {
-//        is_box_opened = true;
-//        a_count = 0;
-//        
-//        alarm(Hall, "Hall ALARM!");
-//    }
-//}
-
-void alarm_countdown()
-{
-    if(detected_status == Hall && security_active && ++a_count == 1000000) 
-    {
-        //is_box_opened = false;
-        a_count = 0;        
-        alarm();
-    }
+//    if (detected_status != NotDetected && detected_status != Hall) 
+    //alarm();
 }
 
 bool key_id()
 {
-    if (detected_status != NotDetected && !is_box_opened)
+    if (!is_box_opened && detected_status != NotDetected)
     {
         ch = UART_UartGetChar();
         if(ch != 0)
@@ -212,11 +177,14 @@ bool key_id()
                         setCursor(0,1);
                         LCD_print("ID: ");
                         LCD_print(id_arr);
+                        confirmed();
                         
                         is_box_opened = true;
                         
-                        CyDelay(2000);
+                        CyDelay(500);
                         clear();
+                        LCD_print("Input password:");  
+                        setCursor(0,1);
                     }
                     else
                     {
@@ -237,8 +205,7 @@ bool key_id()
         else
         {
             LED_GREEN_Write(1);
-            LED_RED_Write(1);
-            Buzzer_Write(0);
+            LED_RED_Write(0);
         }
     }
     
@@ -246,18 +213,22 @@ bool key_id()
 }
 
 void input_char(const char el)
-{    
+{   
+    if(is_box_opened || !security_active) beep();
     write(el);
     pass_arr[i++] = el;
 }
 
 void discard(char a[])
 {
-    //memset(a,'\0',strlen(a));
+    if(detected_status == NotDetected) beep();
     memset(a, 0x00, strlen(a));    
     
     i = 0;
-    clear();
+    int d;
+    //clear();
+    setCursor(0,1);
+    for(d = 0; d <= 15; d++) write(' ');
     setCursor(0,1);
 }
 
@@ -266,15 +237,18 @@ bool check_password(const char* a,const char* b)
     bool result = false;
     if(strcmp(a, b) == 0)
     {
+        confirmed();
         clear();
         setCursor(0,0);
         result = true;
     }
     else 
     {
+        error();
         clear();
         setCursor(0,0);
         LCD_print("Wrong password");
+        setCursor(0,1);
     }
     
     //memset(a,'\0',strlen(a));
@@ -343,65 +317,90 @@ DetectedStatus motion_detection()
 {
     if (detected_status == NotDetected)
     {
-        if(Hall_PIR_Read()==1) detected(Hall, "Hall");
-        else if(Bedroom_PIR_Read()==1) detected(BedRoom, "Bedroom");
-//        else if(Guestroom_PIR_Read()==1) detected(GuestRoom, "GuestRoom");
-//        else if(Kitchen_PIR_Read()==1) detected(Kitchen, "Kitchen");
+        if(Front_door_Read()== 1) detected(FrontDoor, "Frontdoor opened");
+        else if(Back_door_Read()== 1) detected(BackDoor, "Backdoor opened");
+        else if(Hall_PIR_Read()== 1) detected(Hall, "Hall");
+        else if(Bedroom_PIR_Read()== 1) detected(BedRoom, "Bedroom");
+        else if(Guestroom_PIR_Read()== 1) detected(GuestRoom, "GuestRoom");
+        else if(Kitchen_PIR_Read()== 1) detected(Kitchen, "Kitchen");
+        
     }
-    
+     
     return detected_status;
 }
 
-//void motion_detection()
-//{
-//    if(security_active == true)
-//    {
-//        if(Hall_PIR_Read()==1)
+void beep()
+{
+    Buzzer_Write(0);
+    CyDelay(50);
+    Buzzer_Write(1);
+}
+
+void confirmed()
+{
+    Buzzer_Write(0);
+    CyDelay(100);
+    Buzzer_Write(1);
+    CyDelay(100);
+    Buzzer_Write(0);
+    CyDelay(100);
+    Buzzer_Write(1);
+}
+
+void error()
+{
+    Buzzer_Write(0);
+    CyDelay(50);
+    Buzzer_Write(1);
+    CyDelay(100);
+    Buzzer_Write(0);
+    CyDelay(300);
+    Buzzer_Write(1);
+}
+
+void alarm_hall()
+{
+    if(++a_count == 300000)
+    {
+        Buzzer_Write(0);
+        CyDelay(500);
+        Buzzer_Write(1);
+        a_count = 0;
+    }
+}
+
+void alarm()
+{
+    if(++a_count == 50000)
+    {
+        Buzzer_Write(0);
+        CyDelay(500);
+        Buzzer_Write(1);
+        a_count = 0;
+    }
+}
+
+CY_ISR(alarm_countdown)
+{
+    if(detected_status != NotDetected && !is_box_opened)
+    {    
+//        if(detected_status == FrontDoor)
 //        {
-//            clear();
-//            setCursor(0,0);
-//            motion_inhall = true;
-//            LCD_print("Door opened!");
-//            LED_GREEN_Write(1);
-//            LED_RED_Write(0);
-//            Buzzer_Write(0);
-//            CyDelay(500);
-//            write(a_count/100000);
-//            Buzzer_Write(1);
-//            CyDelay(3000);
+//            if(b_count == 500000)
+//            {
+//                alarm();
+//                //b_count = 0;
+//            }
+//            else
+//            {
+//                while(++b_count < 500000) alarm_hall();
+//            }
 //        }
-//        else if(Bedroom_PIR_Read()==1)
-//        {
-//            alarm("Bedroom alarm!");
-//        }
-//        else if(Guestroom_PIR_Read()==1)
-//        {
-//            alarm("Guestroom alarm!");
-//        }
-//        else if(Kitchen_PIR_Read()==1)
-//        {
-//            alarm("Kitchen alarm!");
-//        }
-//    }
-//    else if ( Hall_PIR_Read() == 1 || 
-//              Bedroom_PIR_Read() == 1 || 
-//              Guestroom_PIR_Read() == 1 || 
-//              Kitchen_PIR_Read() == 1 )
-//    {
-//        motion_detected = false;
-//        LED_GREEN_Write(0);
-//        LED_RED_Write(0);
-//        Buzzer_Write(1);
-//    }
-//    else 
-//    {   
-//        motion_detected = false;
-//        LED_GREEN_Write(1);
-//        LED_RED_Write(1);
-//        Buzzer_Write(1);
-//        clear();
-//    }
-//    
-//}
+//        else
+        {
+            alarm();
+        }
+    }
+}
 
 /* [] END OF FILE */

@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cyfitter_cfg.c
 * 
-* PSoC Creator  3.3 SP1
+* PSoC Creator  3.3 CP2
 *
 * Description:
 * This file contains device initialization code.
@@ -245,6 +245,12 @@ void cyfitter_cfg(void)
 		/* UDB_PA_0 Starting address: CYDEV_UDB_PA0_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA0_BASE), 0x00990000u);
 
+		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
+		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
+
+		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
+		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
+
 		/* UDB_PA_3 Starting address: CYDEV_UDB_PA3_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA3_BASE), 0x00990000u);
 
@@ -258,8 +264,15 @@ void cyfitter_cfg(void)
 
 	/* Perform second pass device configuration. These items must be configured in specific order after the regular configuration is done. */
 	/* IOPINS0_0 Starting address: CYDEV_PRT0_BASE */
-	CY_SET_XTND_REG32((void CYFAR *)(CYDEV_PRT0_BASE), 0x00000010u);
-	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT0_PC), 0x00002186u);
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT0_PC), 0x00000D80u);
+
+	/* IOPINS0_1 Starting address: CYDEV_PRT1_BASE */
+	CY_SET_XTND_REG32((void CYFAR *)(CYDEV_PRT1_BASE), 0x00000010u);
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT1_PC), 0x00182000u);
+
+	/* IOPINS0_2 Starting address: CYDEV_PRT2_BASE */
+	CY_SET_XTND_REG32((void CYFAR *)(CYDEV_PRT2_BASE), 0x0000003Cu);
+	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT2_PC), 0x00012480u);
 
 	/* IOPINS0_3 Starting address: CYDEV_PRT3_BASE */
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT3_PC), 0x00000D80u);

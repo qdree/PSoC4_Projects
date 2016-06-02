@@ -3,7 +3,7 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspc" version="5" xml_contents_version="3" name="Diploma_sketch" persistent="" platform="NOT_USED">
-<current_project name=".\Password.cydsn\Password.cyprj" />
+<current_project name=".\pir_sensor.cydsn\pir_sensor.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
@@ -11,12 +11,10 @@
 <v>.\rfid.cydsn\rfid.cyprj</v>
 <v>.\LCD_stage_1.cydsn\LCD_stage_1.cyprj</v>
 <v>.\Password.cydsn\Password.cyprj</v>
-<v>..\..\..\PSoC4 main workspace\I2C_LCD_Example_PSoC401\I2C_LCD_Example_PSoC401.cydsn\I2C_LCD_Example_PSoC401.cyprj</v>
-<v>..\..\..\..\Downloads\LCD_I2C_PSoC5LP\LCD_I2C_PSoC5LP\LCD_I2C_PSoC4P.cydsn\LCD_I2C_PSoC4P.cyprj</v>
 </projects>
 <workspace_id v="6b3ec965-92c4-417f-8ae0-5768d3278f75" />
 <WriteAppVersionLastSavedWith v="3.3.0.7343" />
-<WriteAppMarketingVersionLastSavedWith v="3.3 SP1" />
+<WriteAppMarketingVersionLastSavedWith v="3.3 CP2" />
 <CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjDependencyList" version="4">
 <wrkspc_dependencies />
 </CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316>

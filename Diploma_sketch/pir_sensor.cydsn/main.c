@@ -16,16 +16,46 @@ int main()
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+   
     for(;;)
     {
-        if(pir_Read() == 1)
+        if(pir1_Read() == 0)
         {
-            LED_Write(0);
+            green_Write(0);
+            red_Write(1);
+            blue_Write(1);
+            
         }
-        else if(pir_Read() == 0)
+        else if(pir2_Read() == 0) 
         {
-            LED_Write(1);
+            green_Write(1);
+            red_Write(0);
+            blue_Write(1);
+            
+        }
+        else if(pir3_Read() == 0) 
+        {
+            green_Write(1);
+            red_Write(1);
+            blue_Write(0);
+        }
+        else if(pir4_Read() == 0) 
+        {
+            green_Write(1);
+            red_Write(0);
+            blue_Write(0);
+        }
+        else if(Front_door_Read() == 1)
+        {
+            green_Write(0);
+            red_Write(0);
+            blue_Write(1);
+        }
+        else
+        {
+            green_Write(0);
+            red_Write(0);
+            blue_Write(0);
         }
     }
 }

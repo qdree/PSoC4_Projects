@@ -1,46 +1,66 @@
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/CortexM0/ARM_GCC_493/Debug/main.o : E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyFlash.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLFClk.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLib.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/LED.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/LED_aliases.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/bzz.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/bzz_aliases.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmFunc.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmInstr.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyPm.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydisabledsheets.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cypins.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cytypes.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir_aliases.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/project.h E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/main.c 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/CortexM0/ARM_GCC_493/Debug/main.o : C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/Front_door.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/Front_door_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/blue.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/blue_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmFunc.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmInstr.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/green.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/green_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir1.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir1_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir2.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir2_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir3.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir3_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir4.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir4_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/project.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/red.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/red_aliases.h C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/main.c 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyFlash.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLib.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/CyLib.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/LED.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/Front_door.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/LED_aliases.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/Front_door_aliases.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/bzz.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/blue.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/bzz_aliases.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/blue_aliases.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyPm.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyPm.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cypins.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cypins.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cytypes.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/cytypes.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/green.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir_aliases.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/green_aliases.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/project.h : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir1.h : 
 
-E:/744/Education/Git/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/main.c : 
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir1_aliases.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir2.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir2_aliases.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir3.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir3_aliases.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir4.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/pir4_aliases.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/project.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/red.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/Generated_Source/PSoC4/red_aliases.h : 
+
+C:/Users/IEUser/PSoC4_Projects/Diploma_sketch/pir_sensor.cydsn/main.c : 
 

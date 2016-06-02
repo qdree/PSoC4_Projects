@@ -1,0 +1,7 @@
+--------------- Rebuild Started: 06/02/2016 18:09:11 Project: main.c, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM0\ARM_GCC_493\Debug\main.o
+.\main.c: In function 'main':
+.\main.c:22:9: warning: implicit declaration of function 'pir1_Read' [-Wimplicit-function-declaration]
+         if(pir1_Read() == 1)
+         ^
+--------------- Rebuild Succeeded: 06/02/2016 18:09:11 ---------------

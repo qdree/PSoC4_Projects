@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="pir_sensor" Path="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" Version="5.30" Type="Normal">
+  <Project Name="pir_sensor" Path="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" Version="5.30" Type="Normal">
     <CMSIS_SVD_File>pir_sensor.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,14 +34,14 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="BUILD" Path="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
+      <Folder BuildType="BUILD" Path="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
           <File BuildType="BUILD" Toolchain="">.\cyapicallbacks.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Generated_Source\PSoC4">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cymetadata.c</File>
@@ -54,14 +54,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cydisabledsheets.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cycodeshareimport.scat</File>
@@ -88,53 +80,81 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyLFClk.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyLFClk.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\project.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\bzz.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\bzz.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\bzz_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\bzz_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\green.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\green.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\green_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\green_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir3.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir3.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir3_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir3_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\red.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\red.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\red_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\red_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\blue.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\blue.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\blue_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\blue_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir4.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir4.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir4_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\pir4_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Front_door.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Front_door.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Front_door_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Front_door_PM.c</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC3">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC5">
-        <Files Root="E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
+        <Files Root="C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn" />
       </Folder>
     </Folders>
   </Project>

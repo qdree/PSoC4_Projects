@@ -1,3 +1,3 @@
-# Component constraints for E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\TopDesign\TopDesign.cysch
-# Project: E:\744\Education\Git\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj
-# Date: Tue, 26 Apr 2016 11:31:45 GMT
+# Component constraints for C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\IEUser\PSoC4_Projects\Diploma_sketch\pir_sensor.cydsn\pir_sensor.cyprj
+# Date: Thu, 02 Jun 2016 19:33:05 GMT

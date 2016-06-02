@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2016-04-26T11:31:46Z")
+ (DATE "2016-06-02T19:33:08Z")
  (DESIGN "pir_sensor")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
- (VERSION " 3.3 SP1")
+ (VERSION " 3.3 CP2")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL
@@ -12,9 +12,14 @@
   (INSTANCE *)
   (DELAY
    (ABSOLUTE
-    (INTERCONNECT pir\(0\)_PAD pir\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT LED\(0\)_PAD LED\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT bzz\(0\)_PAD bzz\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT pir1\(0\)_PAD pir1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT green\(0\)_PAD green\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT blue\(0\)_PAD blue\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT pir2\(0\)_PAD pir2\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT pir3\(0\)_PAD pir3\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT red\(0\)_PAD red\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT pir4\(0\)_PAD pir4\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Front_door\(0\)_PAD Front_door\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )

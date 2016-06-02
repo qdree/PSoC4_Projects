@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: project.h
 * 
-* PSoC Creator  3.3 SP1
+* PSoC Creator  3.3 CP2
 *
 * Description:
 * It contains references to all generated header files and should not be modified.
@@ -18,12 +18,22 @@
 #include "cydevice_trm.h"
 #include "cyfitter.h"
 #include "cydisabledsheets.h"
-#include "pir.h"
-#include "pir_aliases.h"
-#include "LED.h"
-#include "LED_aliases.h"
-#include "bzz.h"
-#include "bzz_aliases.h"
+#include "pir1.h"
+#include "pir1_aliases.h"
+#include "green.h"
+#include "green_aliases.h"
+#include "blue.h"
+#include "blue_aliases.h"
+#include "pir2.h"
+#include "pir2_aliases.h"
+#include "pir3.h"
+#include "pir3_aliases.h"
+#include "red.h"
+#include "red_aliases.h"
+#include "pir4.h"
+#include "pir4_aliases.h"
+#include "Front_door.h"
+#include "Front_door_aliases.h"
 #include "core_cm0_psoc4.h"
 #include "core_cm0.h"
 #include "CyFlash.h"

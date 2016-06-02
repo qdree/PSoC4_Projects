@@ -1,5 +1,5 @@
 # Security_system
-# 2016-05-29 11:32:50Z
+# 2016-06-02 19:50:30Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -23,3 +23,5 @@ set_io "Buzzer(0)" iocell 2 0
 set_io "Hall_PIR(0)" iocell 2 5
 set_io "Bedroom_PIR(0)" iocell 2 4
 set_io "Guestroom_PIR(0)" iocell 2 3
+set_io "Front_door(0)" iocell 1 4
+set_io "Back_door(0)" iocell 1 5

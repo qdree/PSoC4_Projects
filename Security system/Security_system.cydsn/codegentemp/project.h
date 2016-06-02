@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: project.h
 * 
-* PSoC Creator  3.3 SP1
+* PSoC Creator  3.3 CP2
 *
 * Description:
 * It contains references to all generated header files and should not be modified.
@@ -52,6 +52,10 @@
 #include "Bedroom_PIR_aliases.h"
 #include "Guestroom_PIR.h"
 #include "Guestroom_PIR_aliases.h"
+#include "Front_door.h"
+#include "Front_door_aliases.h"
+#include "Back_door.h"
+#include "Back_door_aliases.h"
 #include "I2C_SCBCLK.h"
 #include "I2C_sda.h"
 #include "I2C_sda_aliases.h"

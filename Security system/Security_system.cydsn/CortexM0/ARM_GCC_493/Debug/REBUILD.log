@@ -1,0 +1,130 @@
+--------------- Rebuild Started: 06/01/2016 22:22:05 Project: Security_system, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\main.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Keyboard.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\LiquidCrystal_I2C.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cymetadata.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Cm0Start.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyFlash.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyLib.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cyPm.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\cyutils.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\CyLFClk.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\KBD_ROWPins.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\KBD_ROWPins_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Debounce_Timer.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Debounce_Timer_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Debounce_Int.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\KBD_COLPins.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\KBD_COLPins_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\LED_RED.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\LED_RED_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\LED_GREEN.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\LED_GREEN_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_I2C_INT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_I2C.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_I2C_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_I2C_MASTER.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_SPI_UART.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_SPI_UART_INT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_UART.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_UART_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Buzzer.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Buzzer_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_SCBCLK.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_sda.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_sda_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_scl.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_scl_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\I2C_SCB_IRQ.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_SCBCLK.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_rx.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_rx_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Alarm_Timer.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Alarm_Timer_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Alarm_Int.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Kitchen_PIR.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Kitchen_PIR_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Hall_PIR.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Hall_PIR_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Bedroom_PIR.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Bedroom_PIR_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Guestroom_PIR.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Guestroom_PIR_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Front_door.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Front_door_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Back_door.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Back_door_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Security_system.hex"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Security_system.elf"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\Security_system.map"
+Deleting file ".\Security_system.cycdx"
+Deleting file ".\Security_system.svd"
+Deleting file ".\Security_system.rpt"
+Deleting file ".\Security_system_timing.html"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe -.appdatapath "C:\Users\IEUser\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\Security_system.cyprj" -d CY8C4245AXI-483 -s "C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM0\ARM_GCC_493\Debug\main.o
+In file included from c:\program files\cypress\psoc creator\3.3\psoc creator\import\gnu\arm\4.9.3\arm-none-eabi\include\stdint.h:12:0,
+                 from c:\program files\cypress\psoc creator\3.3\psoc creator\import\gnu\arm\4.9.3\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h:9,
+                 from Generated_Source\PSoC4/cytypes.h:35,
+                 from Generated_Source\PSoC4/cyfitter_cfg.h:20,
+                 from Generated_Source\PSoC4/project.h:17,
+                 from .\main.c:12:
+c:\program files\cypress\psoc creator\3.3\psoc creator\import\gnu\arm\4.9.3\arm-none-eabi\include\machine\_default_types.h:27:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'typedef'
+ typedef __INT8_TYPE__ __int8_t;
+ ^
+In file included from c:\program files\cypress\psoc creator\3.3\psoc creator\import\gnu\arm\4.9.3\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h:9:0,
+                 from Generated_Source\PSoC4/cytypes.h:35,
+                 from Generated_Source\PSoC4/cyfitter_cfg.h:20,
+                 from Generated_Source\PSoC4/project.h:17,
+                 from .\main.c:12:
+c:\program files\cypress\psoc creator\3.3\psoc creator\import\gnu\arm\4.9.3\arm-none-eabi\include\stdint.h:20:9: error: unknown type name '__int8_t'
+ typedef __int8_t int8_t ;
+         ^
+.\main.c: In function 'detected':
+.\main.c:146:15: warning: passing argument 1 of 'LCD_print' discards 'const' qualifier from pointer target type
+     LCD_print(str);
+               ^
+In file included from .\main.c:14:0:
+.\LiquidCrystal_I2C.h:139:6: note: expected 'char *' but argument is of type 'const char *'
+ void LCD_print(char word[]);
+      ^
+.\main.c: In function 'check_password':
+.\main.c:292:12: warning: passing argument 1 of 'memset' discards 'const' qualifier from pointer target type
+     memset(a, 0x00, strlen(a));    
+            ^
+In file included from c:\program files\cypress\psoc creator\3.3\psoc creator\import\gnu\arm\4.9.3\arm-none-eabi\include\string.h:10:0,
+                 from Generated_Source\PSoC4/CyLib.h:25,
+                 from Generated_Source\PSoC4/Debounce_Timer.h:24,
+                 from Generated_Source\PSoC4/project.h:23,
+                 from .\main.c:12:
+c:\program files\cypress\psoc creator\3.3\psoc creator\import\gnu\arm\4.9.3\arm-none-eabi\include\string.h:25:7: note: expected 'void *' but argument is of type 'const char *'
+ _PTR  _EXFUN(memset,(_PTR, int, size_t));
+       ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 06/01/2016 22:22:17 ---------------

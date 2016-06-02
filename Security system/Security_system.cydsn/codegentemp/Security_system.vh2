@@ -2,7 +2,7 @@
 --	Conversion of Security_system.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun May 29 14:32:50 2016
+--	Thu Jun 02 22:50:29 2016
 --
 
 USE cypress.cypress.all;
@@ -305,6 +305,7 @@ SIGNAL tmpOE__Kitchen_PIR_net_0 : bit;
 SIGNAL tmpFB_0__Kitchen_PIR_net_0 : bit;
 SIGNAL tmpIO_0__Kitchen_PIR_net_0 : bit;
 TERMINAL tmpSIOVREF__Kitchen_PIR_net_0 : bit;
+TERMINAL Net_242 : bit;
 SIGNAL tmpINTERRUPT_0__Kitchen_PIR_net_0 : bit;
 SIGNAL tmpOE__LED_RED_net_0 : bit;
 SIGNAL tmpFB_0__LED_RED_net_0 : bit;
@@ -445,7 +446,7 @@ SIGNAL \Alarm_Timer:TimerUDB:tc_reg_i\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:hwEnable_reg\ : bit;
 SIGNAL Net_29 : bit;
 SIGNAL \Alarm_Timer:TimerUDB:capture_out_reg_i\ : bit;
-SIGNAL Net_168 : bit;
+SIGNAL Net_190 : bit;
 SIGNAL \Alarm_Timer:TimerUDB:capt_fifo_load_int\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:runmode_enable\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:trig_reg\ : bit;
@@ -458,7 +459,7 @@ SIGNAL \Alarm_Timer:TimerUDB:status_2\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:fifo_full\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:status_3\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:fifo_nempty\ : bit;
-SIGNAL Net_164 : bit;
+SIGNAL Net_186 : bit;
 SIGNAL \Alarm_Timer:TimerUDB:cs_addr_2\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:cs_addr_1\ : bit;
 SIGNAL \Alarm_Timer:TimerUDB:cs_addr_0\ : bit;
@@ -529,17 +530,38 @@ SIGNAL tmpOE__Hall_PIR_net_0 : bit;
 SIGNAL tmpFB_0__Hall_PIR_net_0 : bit;
 SIGNAL tmpIO_0__Hall_PIR_net_0 : bit;
 TERMINAL tmpSIOVREF__Hall_PIR_net_0 : bit;
+TERMINAL Net_345 : bit;
 SIGNAL tmpINTERRUPT_0__Hall_PIR_net_0 : bit;
 SIGNAL tmpOE__Bedroom_PIR_net_0 : bit;
 SIGNAL tmpFB_0__Bedroom_PIR_net_0 : bit;
 SIGNAL tmpIO_0__Bedroom_PIR_net_0 : bit;
 TERMINAL tmpSIOVREF__Bedroom_PIR_net_0 : bit;
+TERMINAL Net_343 : bit;
 SIGNAL tmpINTERRUPT_0__Bedroom_PIR_net_0 : bit;
 SIGNAL tmpOE__Guestroom_PIR_net_0 : bit;
 SIGNAL tmpFB_0__Guestroom_PIR_net_0 : bit;
 SIGNAL tmpIO_0__Guestroom_PIR_net_0 : bit;
 TERMINAL tmpSIOVREF__Guestroom_PIR_net_0 : bit;
+TERMINAL Net_240 : bit;
 SIGNAL tmpINTERRUPT_0__Guestroom_PIR_net_0 : bit;
+SIGNAL tmpOE__Front_door_net_0 : bit;
+SIGNAL tmpFB_0__Front_door_net_0 : bit;
+SIGNAL tmpIO_0__Front_door_net_0 : bit;
+TERMINAL tmpSIOVREF__Front_door_net_0 : bit;
+TERMINAL Net_179 : bit;
+SIGNAL tmpINTERRUPT_0__Front_door_net_0 : bit;
+TERMINAL Net_181 : bit;
+SIGNAL tmpOE__Back_door_net_0 : bit;
+SIGNAL tmpFB_0__Back_door_net_0 : bit;
+SIGNAL tmpIO_0__Back_door_net_0 : bit;
+TERMINAL tmpSIOVREF__Back_door_net_0 : bit;
+TERMINAL Net_183 : bit;
+SIGNAL tmpINTERRUPT_0__Back_door_net_0 : bit;
+TERMINAL Net_184 : bit;
+TERMINAL Net_344 : bit;
+TERMINAL Net_342 : bit;
+TERMINAL Net_248 : bit;
+TERMINAL Net_250 : bit;
 SIGNAL \Debounce_Timer:TimerUDB:capture_last\\D\ : bit;
 SIGNAL \Debounce_Timer:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Debounce_Timer:TimerUDB:hwEnable_reg\\D\ : bit;
@@ -1000,7 +1022,7 @@ KBD_COLPins:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__KBD_COLPins_net_0);
 Kitchen_PIR:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"7301d793-ad6a-4de1-88bf-695e9f12f480",
-		drive_mode=>"010",
+		drive_mode=>"001",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
 		input_sync=>"0",
@@ -1043,7 +1065,7 @@ Kitchen_PIR:cy_psoc3_pins_v1_10
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"0",
+		use_annotation=>"1",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -1060,7 +1082,7 @@ Kitchen_PIR:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__Kitchen_PIR_net_0),
 		siovref=>(tmpSIOVREF__Kitchen_PIR_net_0),
-		annotation=>(open),
+		annotation=>Net_242,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__KBD_ROWPins_net_3,
 		in_reset=>zero,
@@ -1521,7 +1543,7 @@ timer_clock_2:cy_clock_v1_0
 		clock=>\Alarm_Timer:TimerUDB:ClockOutFromEnBlock\,
 		status=>(zero, zero, zero, \Alarm_Timer:TimerUDB:status_3\,
 			\Alarm_Timer:TimerUDB:status_2\, zero, \Alarm_Timer:TimerUDB:status_tc\),
-		interrupt=>Net_164);
+		interrupt=>Net_186);
 \Alarm_Timer:TimerUDB:sT8:timerdp:u0\:cy_psoc3_dp
 	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
 		d0_init=>"00000000",
@@ -1683,7 +1705,7 @@ Buzzer:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__Buzzer_net_0);
 Hall_PIR:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"4ca23d19-8a9b-474b-85e8-fe330d163b00",
-		drive_mode=>"010",
+		drive_mode=>"001",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
 		input_sync=>"0",
@@ -1726,7 +1748,7 @@ Hall_PIR:cy_psoc3_pins_v1_10
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"0",
+		use_annotation=>"1",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -1743,7 +1765,7 @@ Hall_PIR:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__Hall_PIR_net_0),
 		siovref=>(tmpSIOVREF__Hall_PIR_net_0),
-		annotation=>(open),
+		annotation=>Net_345,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__KBD_ROWPins_net_3,
 		in_reset=>zero,
@@ -1753,7 +1775,7 @@ Hall_PIR:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__Hall_PIR_net_0);
 Bedroom_PIR:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"d7794ed1-be5c-4251-a8f9-3ead5ec512a1",
-		drive_mode=>"010",
+		drive_mode=>"001",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
 		input_sync=>"0",
@@ -1796,7 +1818,7 @@ Bedroom_PIR:cy_psoc3_pins_v1_10
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"0",
+		use_annotation=>"1",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -1813,7 +1835,7 @@ Bedroom_PIR:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__Bedroom_PIR_net_0),
 		siovref=>(tmpSIOVREF__Bedroom_PIR_net_0),
-		annotation=>(open),
+		annotation=>Net_343,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__KBD_ROWPins_net_3,
 		in_reset=>zero,
@@ -1823,6 +1845,76 @@ Bedroom_PIR:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__Bedroom_PIR_net_0);
 Guestroom_PIR:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"4e28abf6-452b-4a25-903b-7d7cac5c23f9",
+		drive_mode=>"001",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"1",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__KBD_ROWPins_net_3),
+		y=>(zero),
+		fb=>(tmpFB_0__Guestroom_PIR_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__Guestroom_PIR_net_0),
+		siovref=>(tmpSIOVREF__Guestroom_PIR_net_0),
+		annotation=>Net_240,
+		in_clock=>zero,
+		in_clock_en=>tmpOE__KBD_ROWPins_net_3,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__KBD_ROWPins_net_3,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Guestroom_PIR_net_0);
+Front_door:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
 		drive_mode=>"010",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
@@ -1866,7 +1958,7 @@ Guestroom_PIR:cy_psoc3_pins_v1_10
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"0",
+		use_annotation=>"1",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -1879,18 +1971,148 @@ Guestroom_PIR:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__KBD_ROWPins_net_3),
 		y=>(zero),
-		fb=>(tmpFB_0__Guestroom_PIR_net_0),
+		fb=>(tmpFB_0__Front_door_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Guestroom_PIR_net_0),
-		siovref=>(tmpSIOVREF__Guestroom_PIR_net_0),
-		annotation=>(open),
+		io=>(tmpIO_0__Front_door_net_0),
+		siovref=>(tmpSIOVREF__Front_door_net_0),
+		annotation=>Net_179,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__KBD_ROWPins_net_3,
 		in_reset=>zero,
 		out_clock=>zero,
 		out_clock_en=>tmpOE__KBD_ROWPins_net_3,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Guestroom_PIR_net_0);
+		interrupt=>tmpINTERRUPT_0__Front_door_net_0);
+R_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_181, Net_179));
+GND_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_181);
+Back_door:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"535aa595-023e-4187-ba5f-a45bc62da07b",
+		drive_mode=>"010",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"1",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__KBD_ROWPins_net_3),
+		y=>(zero),
+		fb=>(tmpFB_0__Back_door_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__Back_door_net_0),
+		siovref=>(tmpSIOVREF__Back_door_net_0),
+		annotation=>Net_183,
+		in_clock=>zero,
+		in_clock_en=>tmpOE__KBD_ROWPins_net_3,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__KBD_ROWPins_net_3,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Back_door_net_0);
+R_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_184, Net_183));
+GND_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_184);
+R_3:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_344, Net_345));
+GND_3:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_344);
+R_4:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_342, Net_343));
+GND_4:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_342);
+R_5:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_248, Net_240));
+GND_5:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_248);
+R_6:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_250, Net_242));
+GND_6:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_250);
 \Debounce_Timer:TimerUDB:capture_last\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Debounce_Timer:TimerUDB:ClockOutFromEnBlock\,
