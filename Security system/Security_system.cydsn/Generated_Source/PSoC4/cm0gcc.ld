@@ -38,7 +38,7 @@ CY_FLASH_ROW_SIZE               = 128;
 CY_APPL_NUM                     = 1;
 CY_APPL_MAX                     = 1;
 CY_METADATA_SIZE                = 64;
-CY_APPL_LOADABLE                = 0;
+CY_APPL_LOADABLE                = 1;
 CY_CHECKSUM_EXCLUDE_SIZE        = ALIGN(0, CY_FLASH_ROW_SIZE);
 CY_APP_FOR_STACK_AND_COPIER     = 0;
 
@@ -195,7 +195,7 @@ SECTIONS
     /***************************************************************************
     * Checksum Exclude Section for non-bootloadable projects. See below.
     ***************************************************************************/
-    .cy_checksum_exclude : { KEEP(*(.cy_checksum_exclude)) } >rom
+    
 
 
     .ramvectors (NOLOAD) : ALIGN(8)
@@ -205,6 +205,11 @@ SECTIONS
     }
 
     
+    .btldr_run (NOLOAD) : ALIGN(8)
+    {
+        KEEP(*(.bootloaderruntype))
+    }
+
 
     .noinit (NOLOAD) : ALIGN(8)
     {
@@ -355,7 +360,7 @@ SECTIONS
      * | BTLDR                         |
      * |_______________________________|
      */
-    
+    .cy_checksum_exclude ((LENGTH(rom) - CY_FLASH_ROW_SIZE * CY_APPL_MAX) - CY_CHECKSUM_EXCLUDE_SIZE): { KEEP(*(.cy_checksum_exclude)) }
 
 
     /* Bootloadable applications only: verify that size of the data in the section is within the specified limit. */

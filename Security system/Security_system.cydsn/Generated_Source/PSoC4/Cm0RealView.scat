@@ -116,7 +116,7 @@ APPLICATION APPL_START (CY_FLASH_SIZE - APPL_START)
         * (.noinit)
     }
 
-    DATA +0
+    DATA +1
     {
         .ANY (+RW, +ZI)
     }
@@ -156,7 +156,7 @@ APPLICATION APPL_START (CY_FLASH_SIZE - APPL_START)
             #endif
 
             /* App for SP+L */
-            #if ((CYDEV_IS_IMPORTING_CODE == 1) && (0 == 2))
+            #if ((CYDEV_IS_IMPORTING_CODE == 1) && (1 == 2))
                 #define CY_CHECKSUM_EXCLUDE_START           AlignExpr((CY_FLASH_SIZE - CY_FLASH_ROW_SIZE * 2) - CY_CHECKSUM_EXCLUDE_SIZE, CY_FLASH_ROW_SIZE)
             #endif
         #endif
@@ -206,7 +206,7 @@ APPLICATION APPL_START (CY_FLASH_SIZE - APPL_START)
     #endif
 
     /* App for SP+L */
-    #if ((CYDEV_IS_IMPORTING_CODE == 1) && (0 == 2))
+    #if ((CYDEV_IS_IMPORTING_CODE == 1) && (1 == 2))
        #define CY_APPL_METADATA_SLOT_NUM        (1)
     #endif
 

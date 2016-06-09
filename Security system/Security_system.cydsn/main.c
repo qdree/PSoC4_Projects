@@ -36,6 +36,8 @@ uint j = 0;    //index of element stored in key id array
 bool security_active = false;    //state of system
 bool is_box_opened = false;   //box with keypad is closed
 bool motion_inhall = false;    //motion in hall
+bool triggered = false;
+
 
 typedef enum MotionDetected
 {
@@ -62,7 +64,7 @@ void beep();
 void error();
 void confirmed();
 
-void alarm();
+bool alarm();
 void alarm_hall();
 CY_ISR(alarm_countdown);
 
@@ -81,8 +83,8 @@ int main()
     Alarm_Int_StartEx(alarm_countdown);
 //    Alarm_Timer_Sleep();
     
-    LED_GREEN_Write(0);
-    LED_RED_Write(0);
+    //LED_GREEN_Write(0);
+    //LED_RED_Write(1);
     Buzzer_Write(1);
     
 
@@ -109,8 +111,8 @@ int main()
                         security_active = false;
                         detected_status = NotDetected;
                         
-                        LED_GREEN_Write(0);
-                        LED_RED_Write(1);
+                        //LED_GREEN_Write(0);
+                        //LED_RED_Write(1);
                         Buzzer_Write(1);
                         
                         clear();
@@ -120,6 +122,23 @@ int main()
                     }
                 }
             }
+            else if(key_id())
+            {
+                if(password())
+                {
+                    security_active = false;
+                    detected_status = NotDetected;
+                    
+                    //LED_GREEN_Write(0);
+                    //LED_RED_Write(1);
+                    Buzzer_Write(1);
+                    
+                    clear();
+                    setCursor(0,0);
+                    LCD_print("Not observing");
+                    setCursor(0,1);
+                }
+            }
         }
         else if(password()) 
         {
@@ -127,8 +146,8 @@ int main()
             is_box_opened = false;
             detected_status = NotDetected;
             
-            LED_GREEN_Write(0);
-            LED_RED_Write(0);
+            //LED_GREEN_Write(0);
+            //LED_RED_Write(0);
             
             clear();
             setCursor(0,0);
@@ -149,8 +168,8 @@ void detected(DetectedStatus status, const char *str)
     setCursor(0,1);
     LCD_print(str);
     
-    LED_GREEN_Write(1);
-    LED_RED_Write(0);
+    //LED_GREEN_Write(1);
+    //LED_RED_Write(0);
     
 //    if (detected_status != NotDetected && detected_status != Hall) 
     //alarm();
@@ -158,7 +177,7 @@ void detected(DetectedStatus status, const char *str)
 
 bool key_id()
 {
-    if (!is_box_opened && detected_status != NotDetected)
+    if (!is_box_opened/* && detected_status != NotDetected*/)
     {
         ch = UART_UartGetChar();
         if(ch != 0)
@@ -177,7 +196,7 @@ bool key_id()
                         setCursor(0,1);
                         LCD_print("ID: ");
                         LCD_print(id_arr);
-                        confirmed();
+                        if(detected_status == NotDetected)confirmed();
                         
                         is_box_opened = true;
                         
@@ -202,11 +221,11 @@ bool key_id()
                     
             }
         }
-        else
-        {
-            LED_GREEN_Write(1);
-            LED_RED_Write(0);
-        }
+//        else
+//        {
+//            LED_GREEN_Write(1);
+//            LED_RED_Write(1);
+//        }
     }
     
     return is_box_opened;
@@ -214,7 +233,7 @@ bool key_id()
 
 void input_char(const char el)
 {   
-    if(is_box_opened || !security_active) beep();
+    if(detected_status == NotDetected) beep();
     write(el);
     pass_arr[i++] = el;
 }
@@ -329,6 +348,39 @@ DetectedStatus motion_detection()
     return detected_status;
 }
 
+bool alarm()
+{
+    if(detected_status != NotDetected)
+    {
+        triggered = true; 
+        if(++a_count == 50000)
+        {
+            Buzzer_Write(!Buzzer_Read());
+            a_count = 0;
+        }
+    }
+    return triggered;
+}
+
+CY_ISR(alarm_countdown)
+{
+    if(alarm())
+    {
+        if(++b_count == 500000)
+        {
+            triggered = false;
+            detected_status = NotDetected;
+            Buzzer_Write(1);
+            clear();
+            setCursor(0,0);
+            LCD_print("Observing");
+            setCursor(0,1);
+            b_count = 0;
+        }
+        
+    }
+}
+
 void beep()
 {
     Buzzer_Write(0);
@@ -358,49 +410,14 @@ void error()
     Buzzer_Write(1);
 }
 
-void alarm_hall()
-{
-    if(++a_count == 300000)
-    {
-        Buzzer_Write(0);
-        CyDelay(500);
-        Buzzer_Write(1);
-        a_count = 0;
-    }
-}
-
-void alarm()
-{
-    if(++a_count == 50000)
-    {
-        Buzzer_Write(0);
-        CyDelay(500);
-        Buzzer_Write(1);
-        a_count = 0;
-    }
-}
-
-CY_ISR(alarm_countdown)
-{
-    if(detected_status != NotDetected && !is_box_opened)
-    {    
-//        if(detected_status == FrontDoor)
-//        {
-//            if(b_count == 500000)
-//            {
-//                alarm();
-//                //b_count = 0;
-//            }
-//            else
-//            {
-//                while(++b_count < 500000) alarm_hall();
-//            }
-//        }
-//        else
-        {
-            alarm();
-        }
-    }
-}
-
+//void alarm_hall()
+//{
+//    if(++a_count == 300000)
+//    {
+//        Buzzer_Write(0);
+//        CyDelay(500);
+//        Buzzer_Write(1);
+//        a_count = 0;
+//    }
+//}
 /* [] END OF FILE */

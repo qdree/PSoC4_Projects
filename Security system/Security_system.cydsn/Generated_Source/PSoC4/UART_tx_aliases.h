@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: LED_RED.h  
+* File Name: UART_tx.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_LED_RED_ALIASES_H) /* Pins LED_RED_ALIASES_H */
-#define CY_PINS_LED_RED_ALIASES_H
+#if !defined(CY_PINS_UART_tx_ALIASES_H) /* Pins UART_tx_ALIASES_H */
+#define CY_PINS_UART_tx_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -26,17 +26,17 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define LED_RED_0			(LED_RED__0__PC)
-#define LED_RED_0_PS		(LED_RED__0__PS)
-#define LED_RED_0_PC		(LED_RED__0__PC)
-#define LED_RED_0_DR		(LED_RED__0__DR)
-#define LED_RED_0_SHIFT	(LED_RED__0__SHIFT)
-#define LED_RED_0_INTR	((uint16)((uint16)0x0003u << (LED_RED__0__SHIFT*2u)))
+#define UART_tx_0			(UART_tx__0__PC)
+#define UART_tx_0_PS		(UART_tx__0__PS)
+#define UART_tx_0_PC		(UART_tx__0__PC)
+#define UART_tx_0_DR		(UART_tx__0__DR)
+#define UART_tx_0_SHIFT	(UART_tx__0__SHIFT)
+#define UART_tx_0_INTR	((uint16)((uint16)0x0003u << (UART_tx__0__SHIFT*2u)))
 
-#define LED_RED_INTR_ALL	 ((uint16)(LED_RED_0_INTR))
+#define UART_tx_INTR_ALL	 ((uint16)(UART_tx_0_INTR))
 
 
-#endif /* End Pins LED_RED_ALIASES_H */
+#endif /* End Pins UART_tx_ALIASES_H */
 
 
 /* [] END OF FILE */

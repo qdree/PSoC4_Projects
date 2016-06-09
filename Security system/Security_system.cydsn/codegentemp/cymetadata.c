@@ -19,47 +19,22 @@
 
 
 #if defined(__GNUC__) || defined(__ARMCC_VERSION)
-#ifndef CY_FLASH_PROT_SECTION
-#define CY_FLASH_PROT_SECTION __attribute__ ((__section__(".cyflashprotect"), used))
+#ifndef CY_LOADABLE_META_SECTION
+#define CY_LOADABLE_META_SECTION __attribute__ ((__section__(".cyloadablemeta"), used))
 #endif
-CY_FLASH_PROT_SECTION
+CY_LOADABLE_META_SECTION
 #elif defined(__ICCARM__)
-#pragma  location=".cyflashprotect"
+#pragma  location=".cyloadablemeta"
 #else
 #error "Unsupported toolchain"
 #endif
-const uint8 cy_meta_flashprotect[] = {
+const uint8 cy_meta_loadable[] = {
+    0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u,
+    0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u,
+    0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u,
+    0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u,
     0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u,
     0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u,
     0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u,
     0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u
-};
-
-#if defined(__GNUC__) || defined(__ARMCC_VERSION)
-#ifndef CY_META_SECTION
-#define CY_META_SECTION __attribute__ ((__section__(".cymeta"), used))
-#endif
-CY_META_SECTION
-#elif defined(__ICCARM__)
-#pragma  location=".cymeta"
-#else
-#error "Unsupported toolchain"
-#endif
-const uint8 cy_metadata[] = {
-    0x00u, 0x02u, 0x04u, 0xC8u, 0x11u, 0x93u, 0x11u, 0x01u,
-    0x00u, 0x00u, 0x00u, 0x00u
-};
-
-#if defined(__GNUC__) || defined(__ARMCC_VERSION)
-#ifndef CY_CHIP_PROT_SECTION
-#define CY_CHIP_PROT_SECTION __attribute__ ((__section__(".cychipprotect"), used))
-#endif
-CY_CHIP_PROT_SECTION
-#elif defined(__ICCARM__)
-#pragma  location=".cychipprotect"
-#else
-#error "Unsupported toolchain"
-#endif
-const uint8 cy_meta_chipprotect[] = {
-    0x01u
 };

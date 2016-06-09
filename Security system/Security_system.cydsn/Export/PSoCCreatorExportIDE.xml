@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Security_system" Path="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn" Version="5.30" Type="Normal">
+  <Project Name="Security_system" Path="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn" Version="5.30" Type="Bootloadable">
     <CMSIS_SVD_File>Security_system.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -97,14 +97,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\KBD_COLPins.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\KBD_COLPins_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\KBD_COLPins_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_RED.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_RED.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_RED_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_RED_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_GREEN.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_GREEN.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_GREEN_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_GREEN_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_I2C.h</File>
@@ -182,6 +174,10 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Back_door.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Back_door_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Back_door_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cybootloader.icf</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cybootloader.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Bootloadable_1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Bootloadable_1.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\Export\ARM_GCC_Generic">

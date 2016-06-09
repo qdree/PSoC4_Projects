@@ -184,8 +184,8 @@ net ClockBlock_HFCLK
 	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.busclk"
 	switch ":m0s8clockblockcell.hfclk==>:interrupt_2.clock"
 	term   ":interrupt_2.clock"
-	switch ":m0s8clockblockcell.hfclk==>:interrupt_11.clock"
-	term   ":interrupt_11.clock"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_10.clock"
+	term   ":interrupt_10.clock"
 	switch ":m0s8clockblockcell.hfclk==>:udb@[UDB=(0,0)]:clockreset:clk_sc_mux.in_9"
 	switch ":udb@[UDB=(0,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(0,0)]:controlcell.clock"
 	term   ":udb@[UDB=(0,0)]:controlcell.clock"
@@ -224,10 +224,10 @@ net Net_10
 	term   ":interrupt_2.interrupt"
 end Net_10
 net Net_15
-	term   ":m0s8scbcell_1.interrupt"
-	switch ":m0s8scbcell_1.interrupt==>:interrupt_idmux_11.in_0"
-	switch ":interrupt_idmux_11.interrupt_idmux_11__out==>:interrupt_11.interrupt"
-	term   ":interrupt_11.interrupt"
+	term   ":m0s8scbcell_0.interrupt"
+	switch ":m0s8scbcell_0.interrupt==>:interrupt_idmux_10.in_0"
+	switch ":interrupt_idmux_10.interrupt_idmux_10__out==>:interrupt_10.interrupt"
+	term   ":interrupt_10.interrupt"
 end Net_15
 net Net_29
 	term   ":udb@[UDB=(0,0)]:pld0:mc1.q"
