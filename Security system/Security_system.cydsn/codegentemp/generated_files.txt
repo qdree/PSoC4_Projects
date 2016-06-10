@@ -33,6 +33,14 @@
   <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\Kitchen_PIR.h" value="NONE;Kitchen_PIR" />
   <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\Kitchen_PIR_aliases.h" value="NONE;Kitchen_PIR" />
   <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\Kitchen_PIR_PM.c" value="ARM_C_FILE;Kitchen_PIR" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_RED.c" value="ARM_C_FILE;LED_RED" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_RED.h" value="NONE;LED_RED" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_RED_aliases.h" value="NONE;LED_RED" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_RED_PM.c" value="ARM_C_FILE;LED_RED" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_GREEN.c" value="ARM_C_FILE;LED_GREEN" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_GREEN.h" value="NONE;LED_GREEN" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_GREEN_aliases.h" value="NONE;LED_GREEN" />
+  <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\LED_GREEN_PM.c" value="ARM_C_FILE;LED_GREEN" />
   <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\I2C.c" value="ARM_C_FILE;I2C" />
   <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\I2C.h" value="NONE;I2C" />
   <file name="C:\Users\IEUser\PSoC4_Projects\Security system\Security_system.cydsn\codegentemp\I2C_I2C.h" value="NONE;I2C" />

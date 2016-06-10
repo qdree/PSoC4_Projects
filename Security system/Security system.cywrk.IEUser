@@ -125,6 +125,16 @@
 <v>Security system\Security_system\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins_aliases.h</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\KBD_ROWPins\KBD_ROWPins_PM.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN\LED_GREEN.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN\LED_GREEN.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN\LED_GREEN_aliases.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_GREEN\LED_GREEN_PM.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_RED</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_RED\LED_RED.c</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_RED\LED_RED.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_RED\LED_RED_aliases.h</v>
+<v>Security system\Security_system\Generated_Source\PSoC4\LED_RED\LED_RED_PM.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\UART</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\UART\UART.c</v>
 <v>Security system\Security_system\Generated_Source\PSoC4\UART\UART.h</v>
@@ -278,6 +288,10 @@
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Keyboard.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Kitchen_PIR.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\Kitchen_PIR_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_GREEN.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_GREEN_PM.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_RED.lst</v>
+<v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_RED_PM.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\LiquidCrystal_I2C.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
 <v>Security system\Security_system\CortexM0\ARM_GCC_493\Debug\Listing Files\UART.lst</v>

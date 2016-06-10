@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2016-06-09T10:19:44Z")
+ (DATE "2016-06-10T11:45:57Z")
  (DESIGN "Security_system")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -102,6 +102,8 @@
     (INTERCONNECT KBD_COLPins\(1\)_PAD KBD_COLPins\(1\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT KBD_COLPins\(2\)_PAD KBD_COLPins\(2\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Kitchen_PIR\(0\)_PAD Kitchen_PIR\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED_RED\(0\)_PAD LED_RED\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED_GREEN\(0\)_PAD LED_GREEN\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\I2C\:sda\(0\)_PAD\\ \\I2C\:sda\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\I2C\:scl\(0\)_PAD\\ \\I2C\:scl\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\UART\:rx\(0\)_PAD\\ \\UART\:rx\(0\)\\.pad_in (0.000:0.000:0.000))

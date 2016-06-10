@@ -83,8 +83,8 @@ int main()
     Alarm_Int_StartEx(alarm_countdown);
 //    Alarm_Timer_Sleep();
     
-    //LED_GREEN_Write(0);
-    //LED_RED_Write(1);
+    LED_GREEN_Write(0);
+    LED_RED_Write(1);
     Buzzer_Write(1);
     
 
@@ -111,8 +111,8 @@ int main()
                         security_active = false;
                         detected_status = NotDetected;
                         
-                        //LED_GREEN_Write(0);
-                        //LED_RED_Write(1);
+                        LED_GREEN_Write(0);
+                        LED_RED_Write(1);
                         Buzzer_Write(1);
                         
                         clear();
@@ -129,8 +129,8 @@ int main()
                     security_active = false;
                     detected_status = NotDetected;
                     
-                    //LED_GREEN_Write(0);
-                    //LED_RED_Write(1);
+                    LED_GREEN_Write(0);
+                    LED_RED_Write(1);
                     Buzzer_Write(1);
                     
                     clear();
@@ -146,8 +146,8 @@ int main()
             is_box_opened = false;
             detected_status = NotDetected;
             
-            //LED_GREEN_Write(0);
-            //LED_RED_Write(0);
+            LED_GREEN_Write(0);
+            LED_RED_Write(1);
             
             clear();
             setCursor(0,0);
@@ -161,15 +161,15 @@ void detected(DetectedStatus status, const char *str)
 {
     //Alarm_Timer_Wakeup();
     detected_status = status;
-    
+
     clear();
     setCursor(0,0);
     LCD_print("Motion triggered");
     setCursor(0,1);
     LCD_print(str);
     
-    //LED_GREEN_Write(1);
-    //LED_RED_Write(0);
+    LED_GREEN_Write(1);
+    LED_RED_Write(0);
     
 //    if (detected_status != NotDetected && detected_status != Hall) 
     //alarm();
@@ -373,7 +373,8 @@ CY_ISR(alarm_countdown)
             Buzzer_Write(1);
             clear();
             setCursor(0,0);
-            LCD_print("Observing");
+            if(!security_active) LCD_print("Not observing");
+            else LCD_print("Observing");
             setCursor(0,1);
             b_count = 0;
         }
